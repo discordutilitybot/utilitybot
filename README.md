@@ -9,8 +9,9 @@ Utility Bot is a bot that has tons of fun commands and utility commands for user
 
 - [discord.py](https://github.com/Rapptz/discord.py)
 - [asyncpg](https://github.com/MagicStack/asyncpg)
-- [postgres](https://www.postgresql.org/)
+- [postgreSQL](https://www.postgresql.org/)
 - [heroku](https://dashboard.heroku.com/)
+- [flask](https://github.com/pallets/flask)
 
 ## How to contribute !
 
