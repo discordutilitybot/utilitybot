@@ -38,4 +38,12 @@ class Database:
             async with self._pool.acquire() as con:
                 return await con.execute(query *args)
 
-    async def get
+    async def get_user(self, user_id: int, get_messages: bool = False):
+        query = "SELECT * users WHERE id = $1"
+
+        record = await self.fetchrow(query, user_id)
+        if record is None:
+            # If there is no user that pops up in the table/row we create a new row
+            user = User(bot=self.bot, id=user_id, messages=[].)
+            await user.post()
+            return user
