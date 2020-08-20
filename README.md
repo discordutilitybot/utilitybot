@@ -5,7 +5,7 @@
 Utility Bot is a bot that has tons of fun commands and utility commands for users and moderators to use!
 
 
-## Our bot lovess using
+## Our bot loves using
 
 - [discord.py](https://github.com/Rapptz/discord.py)
 - [asyncpg](https://github.com/MagicStack/asyncpg)
