@@ -19,4 +19,4 @@ If you want contribute to make a new module/cog or a new api call or function do
 Flop#7234 
 
 Also You have to be at least a little bit familiar with **asyncio** and **discord.py** python library 
-and with python in general.
+and with python in general if you want to contribute.
