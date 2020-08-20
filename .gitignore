@@ -1,6 +1,6 @@
 *.pyc
 /private
-data.json
+*data.json
 
 /idea
 /__pycache__
