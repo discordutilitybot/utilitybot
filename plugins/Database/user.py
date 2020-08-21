@@ -17,7 +17,7 @@ class User:
 
 async def post(self):
     """""""
-    query = "SELECT * from users WHERE ID = $1"
+    query = "SELECT * from users WHERE id = $1"
     assure_exclusive = await self.bot.db.fetch(query, self.id)
     if len(assure_exclusive) == 0:
         query = "INSERT INTO users ( id, commands_sent, joined_at, messages_sent ) VALUES ( $1, $2, $3, $4 )"
