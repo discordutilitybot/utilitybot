@@ -1,0 +1,37 @@
+[[source]] # Package sources
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]  # Required python version..
+python_version = "3.6"
+
+
+[packages] # Packages requirments..
+aiohttp=="*"
+async-timeout=="*"
+asyncpg=="*"
+attrs=="*"
+certifi=="*"
+cffi=="*"
+chardet=="*"
+click=="*"
+discord.py=="*"
+Flask=="*"
+idna="*"
+idna-ssl=="*"
+itsdangerous=="*"
+Jinja2=="*"
+MarkupSafe=="*"
+multidict=="*"
+pycparser=="*"
+PyNaCl=="*"
+python-dotenv=="*"
+six=="*"
+typing-extensions=="*"
+websockets=="*"
+Werkzeug=="*"
+yarl=="*"
+youtube-dl=="*"
+
+

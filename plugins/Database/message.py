@@ -16,4 +16,5 @@ class Message(object):
         query = """INSERT INTO Messages ( message_id, guild_id, author_id, channel_id )
                 VALUES ($1 $2 $3 $4)
                 """
+                
         await bot.db.execute(query, self.message_id, self.guild_id, self.author_id, self.channel_id)
