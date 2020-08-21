@@ -26,7 +26,7 @@ class User:
     @classmethod
     async def on_command(cls, bot, user: Union[Member, Discord_User]):
 
-        await bot.db.get_user(self.d) # Make sure a user object is in db
+        await bot.db.get_user(self.id) # Make sure a user object is in db
         query = "UPDATE users SET commands_sent = commands_sent +1 WHERE id = $1"
         await bot.db.execute(query, self.id)
 

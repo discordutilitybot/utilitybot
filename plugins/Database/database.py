@@ -44,6 +44,6 @@ class Database:
         record = await self.fetchrow(query, user_id)
         if record is None:
             # If there is no user that pops up in the table/row we create a new row
-            user = User(bot=self.bot, id=user_id, messages=[].)
+            user = User(bot=self.bot, id=user_id, messages=[])
             await user.post()
             return user
