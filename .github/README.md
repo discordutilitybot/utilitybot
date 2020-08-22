@@ -1,5 +1,5 @@
 # Utility Bot : The Discord bot
-**
+
 
 ## What is it?
 Utility Bot is a bot that has tons of fun commands and utility commands for users and moderators to use!
