@@ -1,8 +1,8 @@
-# Utility Bot : The Discord bot
+# Utility Bot : The ultimate server management bot with many utilitys to manage your server.
 
 
 ## What is it?
-Utility Bot is a bot that has tons of fun commands and utility commands for users and moderators to use!
+Utility Bot is a bot that has tons of fun commands a meme genarator and much more for your server to use
 
 
 ## Our bot loves using
