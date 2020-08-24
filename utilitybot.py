@@ -5,12 +5,15 @@ import asyncio
 import asyncpg
 import os
 
-from logging import log
+from .plugins.commands import Commands
+from .plugins.help import Help
+from .plugins.utility import Utility
+from .plugins.stats import Stats
+from .plugins.mod import Mod
 
 
 class UtilityBot(commands.Bot):
-    """"This is the main class which subclasses 
-    from commands.Bot so we can load all the modules/cogs"""
+    """Main file to load all modules"""
 
     def __init__(self, token, command_prefix):
         self.token = token
