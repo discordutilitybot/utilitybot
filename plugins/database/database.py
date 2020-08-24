@@ -3,11 +3,15 @@ import asyncpg
 import json
 import discord
 
-from discord import Message, User
+from discord import User
 from discord import Guild
 from discord import Message
 
-class Database:
+from .plugins.database.user import User
+from .plugins.database.message import Message
+from .plugins.database.server import server
+
+class Database(object):
     def __init__(self, bot, pool, loop=None, timeout: float = 60.0):
         self.bot = bot
         self.pool = pool
@@ -27,12 +31,12 @@ class Database:
         async with self._rate_limit:
             async with self._pool.acquire() as con:
                 return await con.fetch(query, *args, timeout=self.timeout)
-
+    """Fetch a row"""
     async def fetchrow(self, query, *args):
         async with self._rate_limit:
             async with self._pool.acquire() as con:
                 return await con.fetch(query, *args)
-    
+    """"Execute querys"""
     async def execute(self, query, *args):
         async with self._rate_limit:
             async with self._pool.acquire() as con:
@@ -43,7 +47,14 @@ class Database:
 
         record = await self.fetchrow(query, user_id)
         if record is None:
-            # If there is no user that pops up in the table/row we create a new row
+            # If there a user doesnt have its own row then we add one:
             user = User(bot=self.bot, id=user_id, messages=[])
             await user.post()
             return user
+    """Get all users in the db **not** a the servers"""
+
+    async def get_all_users(self, user_id: int get_messages: bool = False):
+        query = "SELECT * users"
+        
+        await self.fetchrow(query, user_id)
+        

@@ -1,10 +1,15 @@
+import discord
 from discord import Member, User
-from .database import Database
+
 import datetime
 from datetime import datetime
 
+from .database import Database
+from .message import Message
+from .server import Server
+"""User object"""
 
-class User:
+class User(object):
     def __init__(self, bot, id: int, *,  messages_sent: int = 0, commands_sent: int = 0, joined_at: datetime = datetime.utcnow()):
         self.bot = bot
         self.id = id
