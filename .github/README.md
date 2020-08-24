@@ -1,9 +1,8 @@
-# Utility Bot : The ultimate server management bot with many utilitys to manage your server.
+# Utility Bot : The ultimate server management bot with many utilitys to manage your server 
 
 
 ## What is it?
-Utility Bot is a bot that has tons of fun commands a meme genarator and much more for your server to use
-
+Utility Bot is a bot that has tons of utility commands like kick, ban and it also has an image generator for memes alot of stats commands example: to find the amount of coronavirus cases in each country image generator and much much more!!
 
 ## Our bot loves using
 
@@ -15,7 +14,7 @@ Utility Bot is a bot that has tons of fun commands a meme genarator and much mor
 
 ## How to contribute !
 
-If you want contribute to make a new module/cog or a new api call or function don't hesitate to contact me on discord
+If you want to contribute or add a feature don't hesitate to contact me on discord!
 Flop#7234 
 
 Also You have to be at least a little bit familiar with **asyncio** and **discord.py** python library 
