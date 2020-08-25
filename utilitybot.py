@@ -22,4 +22,4 @@ class UtilityBot(commands.Bot):
     """Main file to load all modules"""
 
     def __init__(self, token, command_prefix):
-        pqss
+        pass
