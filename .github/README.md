@@ -2,7 +2,7 @@
 
 
 ## What is it?
-Utility Bot is a bot that has tons of utility commands like kick, ban and it also has an image generator for memes alot of stats commands example: to find the amount of coronavirus cases in each country image generator and much much more!!
+Utility Bot is a bot that can generate memes generate images create polls manage your server with many moderation commands and much more!
 
 ## Our bot loves using
 
