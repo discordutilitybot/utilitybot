@@ -11,6 +11,10 @@ from .plugins.utility import Utility
 from .plugins.stats import Stats
 from .plugins.mod import Mod
 
+from .plugins.database.user import User
+from .plugins.database.server import Server
+from .plugins.database.message import message
+from .plugins.database.bot import Bot
 
 class UtilityBot(commands.Bot):
     """Main file to load all modules"""
