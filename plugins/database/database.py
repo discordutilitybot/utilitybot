@@ -1,4 +1,4 @@
-import asyncio
+mport asyncio
 import asyncpg
 import json
 import discord
