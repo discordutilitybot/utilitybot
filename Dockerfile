@@ -1,18 +1,11 @@
-FROM ubuntu:18.04 
+FROM python:3.6
 
-MAINTAINER Andrew Nijmeh
+WORKDIR /bot
 
-RUN apt-get update -y %% \
-    apt-get install -y python3-pip python3-dev
+COPY . .
 
-COPY ./requirements.txt /requirements.txt
+RUN pip install -r requirements.txt
 
-WORKDIR /
+ENTRYPOINT ["python"]
 
-RUN pip3 install -r requirements.txt
-
-COPY . /
-
-ENTRYPOINT ["python3"]
-
-CMD ["bot/utilitybot.py"]
+CMD ["utilitybot.py"]
