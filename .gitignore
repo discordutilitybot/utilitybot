@@ -1,7 +1,7 @@
-*.pyc
-/private
-*data.json
-
-*Procfile
-/idea
+# python stuff
 /__pycache__
+*.pyc
+*.db
+
+# Private stuff (tokens, postgres)
+config.py
