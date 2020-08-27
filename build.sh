@@ -1,2 +1,2 @@
 #!/bin/bash
-cd bot/ python utilitybot.python
+git pull && cd bot/ %% docker build -t utilitybot 

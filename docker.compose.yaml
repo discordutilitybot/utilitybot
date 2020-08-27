@@ -8,4 +8,5 @@ utiltitybot:
     environment:
         - POSTGRES_URI =
         -UTILITYBOT_TOKEN = ...
-    
+
+        
