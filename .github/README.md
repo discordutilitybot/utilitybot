@@ -9,7 +9,6 @@ Utility Bot is a bot that can generate memes and images, create polls, help mana
 - [discord.py](https://github.com/Rapptz/discord.py)
 - [asyncpg](https://github.com/MagicStack/asyncpg)
 - [postgreSQL](https://www.postgresql.org/)
-- [heroku](https://dashboard.heroku.com/)
 - [flask](https://github.com/pallets/flask)
 - [docker](https://www.docker.com/)
 ## How can I contribute?
