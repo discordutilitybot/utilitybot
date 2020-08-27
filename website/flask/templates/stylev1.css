@@ -1,0 +1,148 @@
+/*Base styles*/
+html {
+    background:#35354d;
+    color:white;
+    font-family:Heebo;
+}
+
+a {
+    color:white;
+    text-decoration-skip-ink: all;
+    transition:100ms;
+}
+
+a:hover {
+    font-weight:bold;
+}
+h1 {
+    font-family:Work Sans, sans-serif;
+}
+
+ul {
+    list-style-type:none;
+}
+
+.main {
+    background:#4c465e;
+    z-index:1;
+    width:70%;
+    float:right;
+    margin-top:-520px;
+}
+
+.main-title {
+    font-family:Work Sans;
+    color:white;
+    font-size:100px;
+    text-align:center;
+    margin-top:0px;
+}
+
+.main-subtitle {
+    font-family:Heebo, sans-serif;
+    font-weight:300;
+    color:#aaa;
+    text-align:center;
+    margin-top:0px;
+}
+
+.separator {
+    background-color:#515177;
+    height:3px;
+    width:70%;
+    margin-top:-70px;
+    margin-left:15%;
+    border-radius:2px;
+    align-items:center;
+}
+
+.main-content {
+    margin-left:150px;
+}
+
+.nav {
+    background:#282831;
+}
+
+.nav-items-list {
+    list-style:none;
+    color:white;
+    font-family: News Cycle, sans-serif;
+    background:#282831;
+    width:30%;
+    height:500px;
+    margin-top:-10px;
+    box-shadow:30px 0px 20px 0px rgba(99, 68, 68, 0.434);
+    font-weight:200;
+    left:0px;
+    text-transform: uppercase;
+    z-index:2;
+}
+
+.nav-item {
+     width:100%;
+     margin-left:-40px;
+     left:0px;
+     margin-top:10px;
+     font-stretch: condensed;
+     padding:10px;
+     transition:0.2s ease-in-out;
+     text-decoration:none;
+    color:white;
+}
+
+.nav-img {
+    padding:10px;
+}
+
+.nav-item:hover {
+    transform:translateX(10px) skew(-10deg);
+    padding-left:10px;
+    text-decoration:none;
+    color:white;
+}
+
+.nav-item-gradient {
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(to right, rgb(140, 34, 101), rgba(97, 9, 9, 0));
+    width:100%;
+     margin-left:-40px;
+     left:0px;
+     margin-top:10px;
+     font-stretch: condensed;
+     padding:10px;
+     transition:0.2s ease-in-out;
+     text-decoration:none;
+    color:white;
+    font-weight:300;
+}
+
+.nav-item-gradient:hover {
+    filter:hue-rotate(-40deg);
+    transform:translateY(0px) translateX(0);
+    font-weight:700;
+}
+
+.nav-item-text {
+    color:white;
+    text-decoration:none;
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-items-list {
+        margin-top:500px;
+        width:100%;
+        font-size:4vw;
+    }
+
+    .main {
+        width:100%;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .nav-items-list {
+        font-size:2vw;
+    }
+}
