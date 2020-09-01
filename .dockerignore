@@ -1,0 +1,12 @@
+# IDE
+.idea/
+
+.private/
+
+# github stuff
+.git/
+.github/
+
+# ignore or exclude build directory
+*/build*
+*/*/build*

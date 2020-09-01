@@ -1,0 +1,12 @@
+postgres:
+    image: postgres
+
+utiltitybot:
+    image: utility-bot
+    links:
+        - redis
+    environment:
+        - POSTGRES_URI =
+        -UTILITYBOT_TOKEN = ...
+
+        
