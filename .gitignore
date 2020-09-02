@@ -98,12 +98,5 @@ ENV/
 .vscode/
 
 
-# Logfiles
-log.*
-
-
-# xmlrunner unittest XML reports
-TEST-**.xml
-
 # Mac OS .DS_Store, which is a file that stores custom attributes of its containing folder (this is for fellow mac users.)
 .DS_Store

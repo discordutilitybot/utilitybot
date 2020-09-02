@@ -23,8 +23,4 @@ class Server(object):
         if assure_server == 0:
             query = "INSERT INTO servers (id, server_messages, server_name, server_joined_at) VALUES ( $1, $2, $3, $4 )"
 
-    @classmethod
-    async def server_message(cls, bot, user: Union[Member, Discord_User]):
-        await bot.db.get_server(self.server.id)
-        query = "UPDATE server SET server_messages = server_messages + 1 WHERE id = $1"
-        await bot.db.execute(query, self.server_id)
+    
