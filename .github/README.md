@@ -4,7 +4,7 @@
 ## What is it?
 Our bot can help you manage your server with many useful commands! You can kick, ban, create polls, and much more! If you want more information about commands, check out our [complete list](utilitybot.co/commands) of all of our bot's commands.
 
-## Our bot is built with ;D
+## Our bot is built with:
 
 - [discord.py](https://github.com/Rapptz/discord.py)
 - [linode](https://www.linode.com/) 
