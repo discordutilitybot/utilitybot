@@ -20,8 +20,5 @@ class GuildJoin(commands.Cog):
 
 
 def setup(bot):
-    try:
-        bot.add_cog(GuildJoin(bot))
-        """Ill add logging later so its alot easier to find bugs"""
-    
-    """exception here (probably a discord exception)"""
+    bot.add_cog(GuildJoin(bot))
+    """Ill add logging later so its alot easier to find bugs"""
