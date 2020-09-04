@@ -2,7 +2,8 @@ from .user import User
 from .database import Database
 from .message import Message
 from discord import User, Guild 
-
+import datetime
+from datetime import datetime
 class Server(object):
     def __init__(self, id: int, server_messages: int, server_name: str, server_joined_at: datetime = datetime.utcnow()):
         self.id = id

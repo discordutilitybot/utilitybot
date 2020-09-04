@@ -1,5 +1,7 @@
 from .user import User
 from .database import Database
+import discord 
+from discord import Guild, Message, User
 
 class Message(object):
 
