@@ -1,4 +1,4 @@
-mport asyncio
+import asyncio
 import asyncpg
 import json
 import discord
@@ -53,8 +53,9 @@ class Database(object):
             return user
     """Get all users in the db **not** a the servers"""
 
-    async def get_all_users(self, user_id: int get_messages: bool = False):
-        query = "SELECT * users"
-        
+    async def get_all_users(self, user_id: int, get_messages: bool = False):
+        query = "SELECT * users WHERE id = $1"
         await self.fetchrow(query, user_id)
+
+
         

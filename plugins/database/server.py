@@ -9,11 +9,7 @@ class Server(object):
         self.server_messages = server_messages
         self.server_name = server_name
         self.server_joined_at = server_joined_at # When the server has joined the database not when the bot has joined the server
-    """ Ill put a function to get the server_id's.."""
-
-    async def get_server(self):
-        pass
-
+   
     """Query/Function to check if a server is in the db if not then we add it manually.."""
     async def post(self):
         query = "SELECT * from servers WHERE id = $1"
@@ -21,6 +17,7 @@ class Server(object):
         assure_server = await self.bot.db.fetch(query, self.server_id)
         # Creates a new server row if the server already doesnt have one..
         if assure_server == 0:
-            query = "INSERT INTO servers (id, server_messages, server_name, server_joined_at) VALUES ( $1, $2, $3, $4 )"
+            query = "INSERT INTO servers (guild_id, server_messages, server_name, server_joined_at) VALUES ( $1, $2, $3, $4 )"
 
-    
+    async def get_all_servers(self, id: int, server_messages: int):
+        pass
