@@ -9,25 +9,36 @@ import re
 # Local modules
 
 
-class on_command_error(commands.Cog):
+class Commanderror(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
-
-        # Make sure it doenst confuse local python errors/ handlers with discord errors
+            
+        """checks the discord errors vs the python exceptions/errors and returns true if there is none"""
         if hasattr(ctx.command, "on_error"):
             return
-        
-        if isinstance(error, commands.CommandNotFound):
-            await ctx.error('Command not found, there may be a typo in the command.')
 
+        if isinstance(error, commands.CommandNotFound):
+            await ctx.send('Command not found, there may be a typo in the command.')
+        """Not sure if the bot can actually respond to commands in dm so this may not be needed"""
         if isinstance(error, commands.NoPrivateMessage):
-            await ctx.error("You cannot use commands in a dm.")
+            await ctx.send("You cannot use commands in a dm.")
         
         if isinstance(error, commands.MissingPermissions):
-            ctx.error("You are missing the permissions to use this command.")
+            ctx.send("You are missing the permissions to use this command.")
 
         if isinstance(error, commands.BotMissingPermissions):
-            await ctx.error("I am missing permissions to perform this command :(.")
+            await ctx.send("I am missing permissions to perform this command :(.")
+
+        if isinstance(error, commands.NoPrivateMessage):
+            await ctx.send("You need to run this command in a server for it to work")
+
+        if isinstance(error, commands.CommandOnCooldown):
+            td = datetime.timedelta(seconds=error.retry_after)
+            await ctx.send(f"This command is on cooldown please wait {humanfriendly.format_timespan(td)}"", delete_after=5)
+
+
+    
+        
