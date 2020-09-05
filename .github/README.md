@@ -28,7 +28,8 @@ Alnernitivley you can,
 
 - [Donate with PayPal](https://www.paypal.com)
 
-
+## Security 
+To report security/vuneriablites in the bot or code contant security@utilitybot.co
 ## Help
 The default command to get help is u!help. 
 For further help, join our [support discord]().
