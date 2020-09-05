@@ -1,0 +1,168 @@
+html {
+	background-color: rgb(75, 75, 75);
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+	text-align:center;
+	animation:adjust 10s infinite;
+}
+
+.text-404 > div {
+	font-size:100px;
+	font-weight:600;
+}
+
+.error-404 {
+	color:rgba(255, 0, 0, 0.596);
+	animation:flash-3 1s infinite 0.5s;
+}
+
+.error-404-2 {
+	color:rgba(4, 0, 255, 0.8);
+	margin-top:-116px;
+	animation:flash 1s infinite 0.3s;
+}
+
+.error-404-3 {
+	color:rgba(0, 0, 0, 0.678);
+	margin-top:-119px;
+	animation:flash-2 1s infinite;
+}
+
+.error-message {
+	background: rgb(184, 184, 184);
+	max-width: 360px;
+	margin: 100px auto 16px;
+	padding: 32px 24px 16px;
+	border-radius: 3px;
+	z-index:2;
+}
+
+.error-message h1 {
+	font-size: 30px;
+	font-weight: 300;
+	color: rgba(0,0,0,0.6);
+	margin: 0 0 16px;
+	text-shadow:1px 1px 2px white;
+	z-index:2;
+}
+
+.error-message p {
+    color:black;
+	z-index:2;
+}
+
+.error-message button {
+  color: black;
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  margin: 0 0 2em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left:22%;
+  border:none;
+  border-radius:10px;
+  background:none;
+  transition: all 280ms ease-in-out;
+}
+
+.error-message button:after, .error-message button:before {
+	backface-visibility:hidden;
+	border: 1px solid rgba(255,255,255,0);
+	content:"";
+	display:block;
+	margin:2px auto;
+	transition: all 280ms ease-in-out;
+  	width: 0;
+	  color:black;
+}
+
+.error-message button:hover:after,
+.error-message button:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 90%;
+  padding:0;
+  color:white;
+}
+
+.error-message button:hover {
+	letter-spacing: 2px;
+	margin-left:17%;
+	color:white;
+}
+
+.error-message button:active {
+	letter-spacing: -1px;
+	margin-left:25%;
+}
+.error-message, .error-message a {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+@keyframes adjust {
+	0% {background-color:rgb(102, 146, 146);}
+	20% {background-color:rgb(94, 119, 94);}
+	40% {background-color:rgb(136, 111, 111);}
+	60% {background-color:rgb(119, 94, 118);}
+	80% {background-color:rgb(77, 85, 112);}
+	100% {background-color:rgb(102, 146, 146);}
+}
+
+@keyframes flash-2 {
+	0% {
+		transform:translate(0,0);
+	}
+
+	1% {
+		transform:translate(1px,3px);
+	}
+
+	20% {
+		transform:translate(1px,3px);
+	}
+
+	21% {
+		transform:translate(-3px,1px);
+	}
+
+	45% {
+		transform:translate(-3px,-1px);
+	}
+
+	46% {
+		transform:translate(-5px, 3px);
+	}
+
+	89% {
+		transform:translate(-5px, 3px);
+	}
+	90% {transform:translate(3px,-5px);}
+	99% {transform:translate(3px,-5px);}
+}
+
+@keyframes flash {
+	0% {transform:translate(1px,-3px);}
+	1% {transform:translate(3px,-7px);}
+	20% {transform:translate(3px,-7px);}
+	21% {transform:translate(-4px,4px);}
+	45% {transform:translate(-4px,4px);}
+	46% {transform:translate(-3px, 5px);}
+	89% {transform:translate(-5px, 3px);}
+	90% {transform:translate(10px,8px);}
+	99% {transform:translate(1px,-9px);}
+}
+
+@keyframes flash-3 {
+	0% {transform:translate(0px,3åpx);}
+	1% {transform:translate(3px,-7px);}
+	20% {transform:translate(3px,-7px);}
+	21% {transform:translate(-4px,4px);}
+	45% {transform:translate(-4px,4px);}
+	46% {transform:translate(-3px, 5px);}
+	89% {transform:translate(-5px, 3px);}
+	90% {transform:translate(10px,8px);}
+	99% {transform:translate(1px,-9px);}
+}
