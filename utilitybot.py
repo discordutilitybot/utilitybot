@@ -5,7 +5,7 @@ import asyncio
 import asyncpg
 import os
 
-"""Local modules""""
+"""Local modules"""
 from .plugins.commands import Commands
 from .plugins.help import Help
 from .plugins.utility import Utility
@@ -22,4 +22,4 @@ class UtilityBot(commands.Bot):
     """Main file to load all modules"""
 
     def __init__(self, token, command_prefix):
-        
+        pass
