@@ -20,7 +20,7 @@ You have to be at least a little bit familiar with **asyncio** and **discord.py*
 and with python in general if you want to contribute.
 
 ## Donating
-This project is an open source project and the volunteers are **not** paid we need funds for hardware/hosting 
+This project is an open source project and currently we need funds for hardware/hosting 
 to develop a better experience for users. Every donation will be spent on making utilitybot better for our users
 Please consider a donation through [GitHub Sponsors](https://github.com/sponsors/discordutilitybot) or [Patreon](https://www.patreon.com).
 
