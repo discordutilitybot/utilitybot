@@ -2,8 +2,8 @@ import discord
 from discord.ext import commands
 
 
-def has_permission(permission: str, **kwargs):
-    def preficate(ctx):
+def has_permission(permission : str, **kwargs):
+    def predicate(ctx):
         if ctx.bot.has_permission(ctx.author, permission):
             return True
         else:
