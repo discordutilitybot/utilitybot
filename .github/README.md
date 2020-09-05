@@ -2,7 +2,7 @@
 
 
 ## What is it?
-Our bot can help you manage your server with many useful commands! You can kick, ban, create polls, and much more! If you want more information about commands, check out our [complete list](utilitybot.co/commands) of all of our bot's commands.
+Our bot can help you manage your server with many useful commands. You can kick, ban, create polls, and much more! If you want more information, check out our [complete list](utilitybot.co/commands) of all of our bot's commands.
 
 ## Our bot is built with:
 
@@ -20,10 +20,6 @@ If you want to contribute or add a feature, don't hesitate to contact me on Disc
 You have to be at least a little bit familiar with **asyncio** and **discord.py** python library, 
 and with python in general if you want to contribute.
 
-
-## Support
-
-For support, join our discord:
-
 ## Help
-the default command to get help is u!help
+The default command to get help is u!help. 
+For further help, join our [support discord]().
