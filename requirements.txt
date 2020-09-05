@@ -82,7 +82,7 @@ typed-ast==1.4.1
 typing-extensions==3.7.4.3
 ufw==0.36
 unattended-upgrades==0.1
-urllib3==1.22
+urllib3==1.24.2
 virtualenv==20.0.31
 virtualenv-clone==0.5.4
 websockets==8.1
