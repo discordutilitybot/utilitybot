@@ -23,4 +23,3 @@ async def ping(ctx):
     await ctx.send("Pong")
 
 
-bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.G5sE5VCe9nNTvuUXTdZKdwzO1t4")
