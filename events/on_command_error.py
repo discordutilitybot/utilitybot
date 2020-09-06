@@ -2,9 +2,12 @@ import discord
 from discord.ext import commands
 import datetime
 import aiohttp
+import logging
+from logging import log
 import random
 import os
 import re
+
 
 # Local modules
 
@@ -37,10 +40,9 @@ class Commanderror(commands.Cog):
 
         if isinstance(error, commands.CommandOnCooldown):
             td = datetime.timedelta(seconds=error.retry_after)
-            await ctx.send(f"This command is on cooldown please wait {humanfriendly.format_timespan(td)}"", delete_after=5)
-
-
-    
+            await ctx.send(f"This command is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
+            
+"""Add the cog"""
 def setup(bot):
     bot.add_cog(Commanderror(bot))
     
