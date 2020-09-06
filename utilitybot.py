@@ -16,10 +16,3 @@ import os
 #from .plugins.database.server import Server
 #from .plugins.database.user import User
 
-bot = commands.Bot(command_prefix="u!")
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send("Pong")
-
-
