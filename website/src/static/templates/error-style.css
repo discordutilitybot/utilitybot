@@ -1,6 +1,5 @@
 html {
 	background-color: rgb(75, 75, 75);
-	font-family: Roboto, Helvetica, Arial, sans-serif;
 	text-align:center;
 	animation:adjust 10s infinite;
 }
@@ -13,32 +12,37 @@ html {
 .error-404 {
 	color:rgba(255, 0, 0, 0.596);
 	animation:flash-3 1s infinite 0.5s;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 .error-404-2 {
 	color:rgba(4, 0, 255, 0.8);
 	margin-top:-116px;
 	animation:flash 1s infinite 0.3s;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 .error-404-3 {
 	color:rgba(0, 0, 0, 0.678);
 	margin-top:-119px;
 	animation:flash-2 1s infinite;
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 .error-message {
 	background: rgb(184, 184, 184);
-	max-width: 360px;
+	max-width: 400px;
 	margin: 100px auto 16px;
 	padding: 32px 24px 16px;
 	border-radius: 3px;
 	z-index:2;
+	font-family:Work Sans, Helvetica, sans-serif;
+	box-shadow: 0 10px 30px 18px rgba(0, 0, 0, 0.377);
 }
 
 .error-message h1 {
 	font-size: 30px;
-	font-weight: 300;
+	font-weight: 580;
 	color: rgba(0,0,0,0.6);
 	margin: 0 0 16px;
 	text-shadow:1px 1px 2px white;
@@ -60,11 +64,11 @@ html {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  margin-left:22%;
   border:none;
-  border-radius:10px;
   background:none;
-  transition: all 280ms ease-in-out;
+  transition: all 1000ms cubic-bezier(.93,0,.12,.98);
+  width:100%;
+  text-align:center;
 }
 
 .error-message button:after, .error-message button:before {
@@ -73,33 +77,33 @@ html {
 	content:"";
 	display:block;
 	margin:2px auto;
-	transition: all 280ms ease-in-out;
+	transition: all 1000ms cubic-bezier(.93,0,.12,.98);
   	width: 0;
-	  color:black;
+	color:black;
 }
 
 .error-message button:hover:after,
 .error-message button:hover:before {
   backface-visibility: hidden;
   border-color: #fff;
-  transition: width 350ms ease-in-out;
-  width: 90%;
+  transition: all 1000ms cubic-bezier(.93,0,.12,.98);
+  width: 30%;
   padding:0;
   color:white;
+  transform:scale(1.15);
 }
 
 .error-message button:hover {
 	letter-spacing: 2px;
-	margin-left:17%;
 	color:white;
+	transform:scale(1.05);
+	font-size:17px;
 }
 
 .error-message button:active {
 	letter-spacing: -1px;
-	margin-left:25%;
-}
-.error-message, .error-message a {
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition:200ms cubic-bezier(.93,0,.12,.98);
+	transform:scale(0.95);
 }
 
 @keyframes adjust {
@@ -112,33 +116,13 @@ html {
 }
 
 @keyframes flash-2 {
-	0% {
-		transform:translate(0,0);
-	}
-
-	1% {
-		transform:translate(1px,3px);
-	}
-
-	20% {
-		transform:translate(1px,3px);
-	}
-
-	21% {
-		transform:translate(-3px,1px);
-	}
-
-	45% {
-		transform:translate(-3px,-1px);
-	}
-
-	46% {
-		transform:translate(-5px, 3px);
-	}
-
-	89% {
-		transform:translate(-5px, 3px);
-	}
+	0% {transform:translate(0,0);}
+	1% {transform:translate(1px,3px);}
+	20% {transform:translate(1px,3px);}
+	21% {transform:translate(-3px,1px);}
+	45% {transform:translate(-3px,-1px);}
+	46% {transform:translate(-5px, 3px);}
+	89% {transform:translate(-5px, 3px);}
 	90% {transform:translate(3px,-5px);}
 	99% {transform:translate(3px,-5px);}
 }
