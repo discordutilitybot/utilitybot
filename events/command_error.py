@@ -32,10 +32,10 @@ class Commanderror(commands.Cog):
         
         if isinstance(error, commands.MissingPermissions):
             for roles in ctx.guild.roles:
-                if roles == True:
+                if roles == Falses:
                     await ctx.send("You dont have the permissions to perform this command")
                 else:
-                    return False
+                    return True
             
         if isinstance(error, commands.BotMissingPermissions):
             await ctx.send("I am missing permissions to perform this command :(.")
