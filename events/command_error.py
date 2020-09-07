@@ -39,7 +39,9 @@ class Commanderror(commands.Cog):
                     return True
             
         if isinstance(error, commands.BotMissingPermissions):
-           for roles in ctx.bot.permissions:
+           for permission in ctx.bot.permissions:
+               if permission == False:
+                   return await ctx.send("I am missing permissions to perform this command.")
                
 
         if isinstance(error, commands.NoPrivateMessage):
@@ -55,8 +57,6 @@ class Commanderror(commands.Cog):
             
         
         
-
-
 """Add the cog"""
 def setup(bot):
     bot.add_cog(Commanderror(bot))
