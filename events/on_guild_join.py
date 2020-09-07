@@ -14,7 +14,7 @@ class GuildJoin(commands.Cog):
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
         """Add muted role with its permissions and insert guild info into the db"""
-        pass
+        pass  
 
 
 

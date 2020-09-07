@@ -25,9 +25,9 @@ class Commanderror(commands.Cog):
 
         if isinstance(error, commands.CommandNotFound):
             await ctx.send('Command not found, there may be a typo in the command.')
-        """Not sure if the bot can actually respond to commands in dm so this may not be needed"""
+       
         if isinstance(error, commands.NoPrivateMessage):
-            await ctx.send("You cannot use commands in a dm.")
+            await ctx.send("You cannot use commands in a private message please go to a server to run commands.")
         
         if isinstance(error, commands.MissingPermissions):
             ctx.send("You are missing the permissions to use this command.")
@@ -41,7 +41,11 @@ class Commanderror(commands.Cog):
         if isinstance(error, commands.CommandOnCooldown):
             td = datetime.timedelta(seconds=error.retry_after)
             await ctx.send(f"This command is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
-            
+
+        """Probably wont need this since the commands wont be NSFW."""
+        if isinstance(error, commands.NSFWChannelRequired):
+            await ctx.send("You need to use this command in a NSFW channel.")
+
 """Add the cog"""
 def setup(bot):
     bot.add_cog(Commanderror(bot))
