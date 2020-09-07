@@ -1,22 +1,25 @@
 import discord
 from discord.ext import commands
 from discord import Guild
+
 import datetime
-import aiohttp
 import logging
 from logging import log
+
+import aiohttp
 import random
 import os
-import re
 
+"""Local stuff (commands)"""
 
-# Local modules
 
 
 class Commanderror(commands.Cog):
+
     def __init__(self, bot):
         self.bot = bot
     
+
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
             
@@ -40,9 +43,10 @@ class Commanderror(commands.Cog):
             
         if isinstance(error, commands.BotMissingPermissions):
            for permission in ctx.bot.permissions:
-               if permission == False:
+                if permission == False:
                    return await ctx.send("I am missing permissions to perform this command.")
-               
+                else:
+                    return True
 
         if isinstance(error, commands.NoPrivateMessage):
             await ctx.send("You need to run this command in a server for it to work")
@@ -54,9 +58,12 @@ class Commanderror(commands.Cog):
         """Probably wont need this since the commands wont be NSFW. yuck."""
         if isinstance(error, commands.NSFWChannelRequired):
                 await ctx.send("You need to have a NSFW channel to use this command")
+        
+        
             
         
-        
+
+
 """Add the cog"""
 def setup(bot):
     bot.add_cog(Commanderror(bot))
