@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from discord import Guild
 import datetime
 import aiohttp
 import logging
@@ -30,8 +31,12 @@ class Commanderror(commands.Cog):
             await ctx.send("You cannot use commands in a private message please go to a server to run commands.")
         
         if isinstance(error, commands.MissingPermissions):
-            ctx.send("You are missing the permissions to use this command.")
-
+            for roles in ctx.guild.roles:
+                if roles == True:
+                    await ctx.send("You dont have the permissions to perform this command")
+                else:
+                    return False
+            
         if isinstance(error, commands.BotMissingPermissions):
             await ctx.send("I am missing permissions to perform this command :(.")
 
@@ -45,6 +50,8 @@ class Commanderror(commands.Cog):
         """Probably wont need this since the commands wont be NSFW."""
         if isinstance(error, commands.NSFWChannelRequired):
             await ctx.send("You need to use this command in a NSFW channel.")
+        
+        
 
     
 """Add the cog"""
