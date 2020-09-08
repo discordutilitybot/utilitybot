@@ -5,6 +5,8 @@ from discord import Guild, User
 import asyncpg
 import logging
 
+
+
 class GuildJoin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -13,11 +15,13 @@ class GuildJoin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        """Add muted role with its permissions and insert guild info into the db"""
-        pass  
+        """Make sure to add muted role before any calls are made to the DB."""
 
-
-
+       async with asyncpg.create_pool()
+        
+       async with pool.acquire() as con:
+           await con.execute("""query""")
+        
 
 def setup(bot):
     bot.add_cog(GuildJoin(bot))
