@@ -20,7 +20,7 @@ class GuildJoin(commands.Cog):
        async with asyncpg.create_pool()
         
        async with pool.acquire() as con:
-           await con.execute("""query""")
+           await con.execute("""INSERT INTO Guilds""")
         
 
 def setup(bot):
