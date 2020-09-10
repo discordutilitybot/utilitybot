@@ -27,9 +27,9 @@ Although, You can also create an issue on github to request a feature just make 
 ## Donating
 This project is an open source project and we currently need funds for hardware/hosting 
 to develop a better user experience. Every donation will be spent on making utilitybot better for our users.
-Please consider a donation through [GitHub Sponsors](https://github.com/sponsors/discordutilitybot) or [Patreon](https://www.patreon.com).
+[Patreon](https://www.patreon.com).
 
-Alternatively you can,
+Or.
 
 - [Donate with PayPal](https://www.paypal.com)
 
