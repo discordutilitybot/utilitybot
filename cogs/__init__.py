@@ -1,8 +1,5 @@
+import cogs
 from .cogs import (
-    .avatar
-    .games
-    .guildinfo
-    .help
-    .mod 
-    .utility
+    from .help import Help
+    
 )
