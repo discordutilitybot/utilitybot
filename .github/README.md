@@ -10,6 +10,7 @@ Our bot can help you manage your server with many useful commands. You can kick,
 - [linode](https://www.linode.com/) 
 - [postgreSQL](https://www.postgresql.org/)
 - [flask](https://github.com/pallets/flask)
+- [quart](https://github.com/pgjones/quart)
 - [docker](https://www.docker.com/)
 
 ## How can I contribute?
