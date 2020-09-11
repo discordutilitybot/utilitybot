@@ -66,7 +66,6 @@ python-apt==1.6.5+ubuntu0.3
 python-debian==0.1.32
 pytoml==0.1.21
 pyxdg==0.25
-PyYAML==3.12
 Quart==0.6.15
 requests==2.18.4
 requests-unixsocket==0.1.5
@@ -83,12 +82,9 @@ typing-extensions==3.7.4.3
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.24.2
-virtualenv==20.0.31
-virtualenv-clone==0.5.4
 websockets==8.1
 Werkzeug==1.0.1
 wrapt==1.12.1
 wsproto==0.15.0
 yarl==1.4.2
-youtube-dl==2020.6.16.1
 zipp==3.1.0w
