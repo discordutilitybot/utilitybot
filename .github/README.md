@@ -43,7 +43,3 @@ For further help, join our [support discord]().
 <<<<<<< HEAD
 ### Join our community/support discord for support or just to chat with other users ;D
 [![JOINSERVER](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
-=======
-### Join our support/community server for support or just to chat ;D
-[![JOINSERVER](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
->>>>>>> 6e2c5bafc644e23b3b6dd9ac54a75192bda1abec
