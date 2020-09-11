@@ -40,6 +40,6 @@ To report security/vulnerabilities in the bot or code contact security@utilitybo
 The default command to get help is u!help. 
 For further help, join our [support discord]().
 
-<<<<<<< HEAD
+
 ### Join our community/support discord for support or just to chat with other users ;D
 [![JOINSERVER](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
