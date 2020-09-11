@@ -13,7 +13,7 @@ Our bot can help you manage your server with many useful commands. You can kick,
 - [quart](https://github.com/pgjones/quart)
 - [docker](https://www.docker.com/)
 
-## How can I contribute?
+## How can I contribute??
 
 If you want to contribute or add a feature, don't hesitate to contact me on Discord @Flop#7234
 
