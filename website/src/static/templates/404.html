@@ -1,23 +1,22 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1">
-    <title>Utility Bot - Error 404</title>
-    <link rel="stylesheet" href="website/src/static/templates/css/error-style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,192;0,256;0,300;0,531;0,700;0,900;1,183;1,300;1,531;1,700;1,900&display=swap" rel="stylesheet">
-  </head>
-  <body class="error">
-    <div class="error-message">
-      <div class="text-404">
-        <div class="error-404">404</div>
-        <div class="error-404-2">404</div>
-        <div class="error-404-3">404</div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width" initial-scale="1">
+      <title>Utility Bot - Error 404</title>
+      <link rel="stylesheet" href="css/error-style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,192;0,256;0,300;0,531;0,700;0,900;1,183;1,300;1,531;1,700;1,900&amp;display=swap" rel="stylesheet">
+   </head>
+   <body class="error">
+      <div class="error-message" id="mainBox" style="background-color: rgb(164, 164, 138);">
+         <div class="text-404">
+            <div class="error-404">404</div>
+            <div class="error-404-2">404</div>
+            <div class="error-404-3">404</div>
+         </div>
+         <h1>Page Not Found</h1>
+         <p id="errorText">The specified URL may be incorrect. Click on the button below to return to the UtilityBot homepage.</p>
+         <button>Return to Homepage</button>
       </div>
-      <h1>Page Not Found</h1>
-      <p id="errorText"></p>
-      <button>Return to Homepage</button>
-    </div>
-    <script src="website/src/static/templates/js"></script>
-  </body>
+      <script src="js/error-script.js"></script>
+   </body>
 </html>
