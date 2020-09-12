@@ -6,10 +6,9 @@
     <title>Utility Bot - The Ultimate Server Management Bot</title>
     <script src="https://kit.fontawesome.com/37b7d8c548.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Epilogue:ital,wght@0,100;0,263;0,531;1,312;1,531&display=swap');
         </style> 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="nav">
@@ -22,7 +21,16 @@
             <li class="nav-item"><i class="fas fa-question nav-img"></i><a>FAQ</a></li>
         </ul>
     </div>
-
+    <i class="fas fa-bars" onclick="openNav()" id="openButton"></i>
+    <div class="nav-collapsed" id="navCollapsed">
+        <a href="javascript:void(0)" class="close-nav-button" onclick="closeNav()">&times;</a>
+        <ul class="nav-itemt-list small-screens">
+            <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="#"><!-- Put oauth link in between quote marks  -->add to server</a></li>
+            <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a>contact us</a></li>
+            <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a>list of commands</a></li>
+            <li class="nav-item"><i class="fas fa-question nav-img"></i><a>FAQ</a></li>
+        </ul>
+    </div>
     <div class="main">
         <div class="header">
         <h1 class="main-title">
@@ -36,36 +44,28 @@
         <div class="main-content">
         <h1>What is it?</h1>
         <p>Utility Bot is a bot that has tons of utility commands for users and moderators to use.</p>
-        <h1>Our bot loves using</h1>
-        <ul><li>- <a href="https://github.com/Rapptz/discord.py">discord.py</a></li>
-            <li>- <a href="https://github.com/MagicStack/asyncpg">Asyncpg</a></li>
-            <li>- <a href="https://www.postgresql.org/">postgreSQL</a></li>
-            <li> - <a href="https://dashboard.heroku.com/">Heroku</li>
-            <li> - <a href="https://github.com/pallets/flask">Flask</a></li></ul>
         </div>
     </div>
-
+   
     <div class="footer-row">
-            <p>
-                2020-2021 Utility Bot, The Ultimate Server Management Bot
-                <br>
-                <a href="/privacy" class="footer-link" >Privacy Policy</a>
-                <br>
-                    <a href="malto:support@utilitybot.co">support@utilitybot.co</a>
-       
-            </p>    
-            <p>
-                <hr>
-                <i class="fa fa-envelope" aria-hidden="true">
-                </i>
-                <a href="/contact" class="footer-link">Contact us</a>
-    
-                    <br>
-                    <i class="fa fa-user-friends" aria-hidden="true">
+        <p>2020-2021 Utility Bot, The Ultimate Server Management Bot
+            <br>
+            <a href="/privacy" class="footer-link">Privacy Policy</a>
+            <br>
+            <a href="malto:support@utilitybot.co">support@utilitybot.co</a>
+    </p>
+    <hr>
+            <i class="fa fa-envelope" aria-hidden="true">
                     </i>
-                <a href="/reviews" class="footer-link">Reviews</a>
-                    
-            </p>
+            <a href="/contact" class="footer-link">Contact us</a>
+    
+            <br>
+            <i class="fa fa-user-friends" aria-hidden="true">
+                        </i>
+            <a href="/reviews" class="footer-link">Reviews</a>
+    
+        </p>
     </div>
+    <script src="js/nav.js"></script>
     </body>
     </html>
