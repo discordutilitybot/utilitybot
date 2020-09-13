@@ -162,6 +162,7 @@ ul {
     transition:1s;
     opacity:0;
     text-decoration:none;
+    transform:scale(1.3);
 }
 
 .nav-items-list {
@@ -202,6 +203,7 @@ ul {
     text-transform:uppercase;
     text-align:center;
     width:80%;
+    transition:700ms;
 }
 
 .nav-item-gradient:hover {
