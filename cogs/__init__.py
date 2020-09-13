@@ -1,5 +1,5 @@
 import cogs
-from .cogs import (
-    from .help import Help
+from cogs import (
+    from help import Help
     
 )

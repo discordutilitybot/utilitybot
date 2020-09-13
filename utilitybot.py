@@ -5,10 +5,6 @@ import os
 from config import TOKEN
 
 """Local modules"""
-from plugins.database.database import Database
-from plugins.database.message import Message
-from plugins.database.server import Server
-from plugins.database.user import User
 
 bot = commands.Bot(command_prefix="u!")
 
