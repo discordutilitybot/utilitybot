@@ -10,6 +10,7 @@ a {
     text-decoration-skip-ink: all;
     transition:100ms;
     font-family:Heebo;
+    text-decoration:none;
 }
 
 a:hover {
@@ -19,25 +20,70 @@ h1 {
     font-family:Work Sans, sans-serif;
 }
 
+hr {
+    width:50%;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.158);
+}
+
 ul {
     list-style-type:none;
+    text-decoration:none;
 }
 
-.close-nav-button {
-    float:right;
+.close-nav {
     padding:10px;
     font-size:35px;
-    background:rgba(255,255,255, 0.2);
+    background:rgba(255,255,255,0.2);
     border-radius:10px;
-    text-align:center;
-    line-height:calc(1vh + 1vw);
+    text-align:center; 
     text-decoration:none;
     transition:0.5s;
-    margin-right:20px;
+    z-index:100;
+    width:height;
+    right:0;
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px rgba(67, 67, 67, 0.3),
+        4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.close-nav-button:hover {
+.close-nav:hover {
     transform:scale(1.15,1.15);
+}
+
+
+.fa-bars {
+    color: rgba(255, 255, 255);
+	background: rgba(0,0,0,0.2);
+	text-align: center;
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	z-index: 500;
+	width: 50px;
+	height: 50px;
+    border-radius: 3px;
+    line-height:50px;
+    padding:0;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+}
+
+.fa-bars:hover {
+    background:rgba(0,0,0,0.6);
+    transform:scale(1.1);
+}
+
+.fa-plus {
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px rgba(67, 67, 67, 0.3),
+        4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin:10px;
+    border-radius:50%;
+    background-color:rgba(0, 0, 0, 0.24);
+    transition:1s;
+    width:25px;
+    height:25px;
 }
 
 .footer-row {
@@ -61,12 +107,11 @@ ul {
     display:block;
     width:80px;
     height:80px;
-    background:url(imgs/logo.png);
     background-size:contain;
     border-radius:10px;
     object-fit:cover;
-    margin-left:30px;
     margin-top:12px;
+    margin-left:-20px;
 }
 
 .main {
@@ -76,6 +121,10 @@ ul {
     height:fit-content;
     position:absolute;
     margin-top:0px;
+}
+
+.main-content {
+    padding:20px;
 }
 
 .main-title {
@@ -95,30 +144,6 @@ ul {
     margin-top:0px;
 }
 
-.page-subtitle {
-    text-align:justify;
-    margin-top:40px;
-    font-weight:400;
-    text-transform:capitalize;
-    font-family:work sans, sans-serif;
-    font-size:30px;
-    margin-left:10px;
-}
-
-.separator {
-    background-color:#515177;
-    height:3px;
-    width:70%;
-    margin-top:-70px;
-    margin-left:15%;
-    border-radius:2px;
-    align-items:center;
-}
-
-.main-content {
-    margin-left: 140px;
-}
-
 .nav {
     background:#282831;
     z-index:2;
@@ -136,6 +161,7 @@ ul {
     background-color: rgba(0,0,0, 0.9);
     transition:1s;
     opacity:0;
+    text-decoration:none;
 }
 
 .nav-items-list {
@@ -146,10 +172,7 @@ ul {
     padding: 8px;
     font-size:25px;
     font-family:Epilogue, sans-serif;
-}
-
-.nav-items-list.small-screens {
-    margin-top:40px;
+    text-decoration:none;
 }
 
 .nav-item {
@@ -187,37 +210,54 @@ ul {
     font-weight:700;
 }
 
+.nav-item-gradient:hover .fa-plus {
+    transform:scale(1.1,1.1) rotateZ(90deg);
+    background-color:rgba(126, 126, 126, 0.274)
+}
+
 .nav-item-text {
     color:white;
     text-decoration:none;
 }
 
-.fa-bars {
-    color: rgba(255, 255, 255);
-	background: rgba(0,0,0,0.2);
-	text-align: center;
-	display: none;
-	cursor: pointer;
-	position: absolute;
-	z-index: 500;
-	width: 50px;
-	height: 50px;
-    border-radius: 3px;
-    line-height:50px;
-    padding:0;
+.page-subtitle {
+    text-align:justify;
+    margin-top:40px;
+    font-weight:400;
+    text-transform:capitalize;
+    font-family:work sans, sans-serif;
+    font-size:30px;
+    margin-left:10px;
 }
 
-@media only screen and (max-width: 600px) {
+.separator {
+    background-color:#515177;
+    height:3px;
+    width:70%;
+    margin-top:-70px;
+    margin-left:15%;
+    border-radius:2px;
+    align-items:center;
+}
+
+@keyframes float-down {
+    from {transform:translateY(-100px);}
+}
+@keyframes float-up {
+    from {transform:translateY(0px);}
+    to {transform:translateY(-100px);}
+}
+
+@media only screen and (max-width: 1100px) {
     .nav-items-list {
         display:none;
         position:relative;
 
     }
-
-    .main {
-        width:90%;
-    }
     
+    .main {
+        width:100%;
+    }
     .nav-collapsed, .fa-bars {
         display:block;
     }
