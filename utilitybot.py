@@ -5,12 +5,6 @@ import os
 from config import TOKEN
 
 """Local modules"""
-from plugins.commands import Commands
-from plugins.help import Help
-from plugins.utility import Utility
-from plugins.stats import Stats
-from plugins.mod import Mod
-
 from plugins.database.database import Database
 from plugins.database.message import Message
 from plugins.database.server import Server
@@ -25,8 +19,12 @@ cogs = [
     "cogs.help"
     "cogs.mod"
     "cogs.utility"
+    "events.command_error"
+    "events.command_error"
 ]
 
+for cog in cogs:
+    bot.load_extension(cog)
 
 
 bot.run(TOKEN)
