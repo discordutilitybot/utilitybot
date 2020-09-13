@@ -13,37 +13,29 @@ Our bot can help you manage your server with many useful commands. You can kick,
 - [quart](https://github.com/pgjones/quart)
 - [docker](https://www.docker.com/)
 
-## How can I contribute?
+## How can I contribute??
 
 If you want to contribute or add a feature, don't hesitate to contact me on Discord @Flop#7234
 
 You have to be at least a little bit familiar with **asyncio** and **discord.py** python library, 
 and with python in general if you want to contribute.
 
-## How to request a new functionality or feature.or wh
-If you want to request a new feature or functionality you can go on the community discord and go to #feature-request to request a feature.
-Although, You can also create an issue on github to request a feature just make sure to explain the feature with screenshots if necessary.
+## How to request a new functionality or feature
+Use the Discord channel #feature-request to request a new feature.
+Although, you can also create an issue on github to request a feature. If necessary, explain the feature with screenshots.
 
 ## Donating
 This project is an open source project and we currently need funds for hardware/hosting 
 to develop a better user experience. Every donation will be spent on making utilitybot better for our users.
-[Patreon](https://www.patreon.com).
+You can find several ways to donate below.
 
-Or.
-
+ - [Patreon](https://www.patreon.com)
 - [Donate with PayPal](https://www.paypal.com)
 
 ## Security 
-To report security/vulnerabilities in the bot or code contact security@utilitybot.co
+To report security/vulnerabilities in the bot or code, contact security@utilitybot.co
 
 ## Help
 The default command to get help is u!help. 
-For further help, join our [support discord]().
-
-<<<<<<< HEAD
-### Join our community/support discord for support or just to chat with other users ;D
+##### Join our community/support discord for support, or just to chat with other users!
 [![JOINSERVER](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
-=======
-### Join our support/community server for support or just to chat ;D
-[![JOINSERVER](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
->>>>>>> 6e2c5bafc644e23b3b6dd9ac54a75192bda1abec
