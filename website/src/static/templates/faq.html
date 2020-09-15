@@ -9,68 +9,62 @@
       @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
     </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+
+
     <div class="nav">
-      <div class="logo"></div>
-      <!-- Needs to be added. will add later -->
       <ul class="nav-items-list">
-        <br>
-        <li class="nav-item-gradient">
-          <i class="fas fa-plus nav-img"></i>
-          <a class="nav-item-text" href="#">
-            <!-- Put oauth link in between quote marks  -->add to server
-          </a>
-        </li>
-        <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a>contact us</a></li>
-        <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a>list of commands</a></li>
-        <li class="nav-item"><i class="fas fa-question nav-img"></i><a>FAQ</a></li>
+          <br>
+          <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="#"><!-- Put oauth link in between quote marks  -->add to server</a></li>
+          <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">contact us</a></li>
+          <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of commands</a></li>
+          <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
       </ul>
-    </div>
+  </div>
+
+  <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
+  <div class="nav-collapsed" id="navCollapsed">
+      <ul>
+          <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="#"><!-- Put oauth link in between quote marks  -->add to server</a></li>
+          <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">contact us</a></li>
+          <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of commands</a></li>
+          <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
+      </ul>
+  </div>
+
+
     <div class="main">
+
     <div class="header">
       <h1 class="main-title">
         Utility Bot
       </h1>
       <div class="separator"></div>
-      <h1 class="main-subtitle">
-        The ultimate server management bot
-      </h1>
-    </div>
-    <div class="main">
+      <h1 class="main-subtitle">The ultimate server management bot</h1>
       <div class="main-content">
-        <h2 class="page-subtitle">frequently asked questions</h2>
-        <p>
-          Which prefix does Utility Bot use? <!-- Put answers below these... --> 
-        </p>
-        <p>How can I contribute to Utility Bot's development?</p>
-        <p>What does the bot do?</p>
-        <hr>
-      </div>
+        <h2 class="page-title">Frequently Asked Questions</h2>
+      </div> 
     </div>
-    <div class="footer-row">
-      <p>
-        2020-2021 Utility Bot, The Ultimate Server Management Bot
+  </div>
+
+  <div class="footer-row">
+    <p>2020-2021 Utility Bot, The Ultimate Server Management Bot
         <br>
-        <a href="/privacy" class="footer-link" >Privacy Policy</a>
+        <a href="/privacy" class="footer-link">Privacy Policy</a>
         <br>
         <a href="malto:support@utilitybot.co">support@utilitybot.co</a>
-      </p>
-      <p>
-      <hr>
-      <div class="footer-btn contact-us">
-        <i class="fa fa-envelope" aria-hidden="true">
-        </i>
+</p>
+<hr>
+        <i class="fa fa-envelope" aria-hidden="true"></i>
         <a href="/contact" class="footer-link">Contact us</a>
-      </div>
-      <br>
-      <div class="footer-btn review-us">
-        <i class="fa fa-user-friends" aria-hidden="true">
-        </i>
+        <br>
+        <i class="fa fa-user-friends" aria-hidden="true"></i>
         <a href="/reviews" class="footer-link">Reviews</a>
-      </div>
-      </p>
-    </div>
+    <hr>
+    <p>Web design by <a class="web-design-credit" target="_blank" href="https://github.com/PineappleRind">PineappleRind</a></p>
+</div>
+  <script src="js/nav.js"></script>
   </body>
-</html>
+  </html>

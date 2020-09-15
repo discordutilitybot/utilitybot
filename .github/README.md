@@ -13,7 +13,7 @@ Our bot can help you manage your server with many useful commands. You can kick,
 - [quart](https://github.com/pgjones/quart)
 - [docker](https://www.docker.com/)
 
-## How can I contribute??
+## How can I contribute?
 
 If you want to contribute or add a feature, don't hesitate to contact me on Discord @Flop#7234
 
@@ -22,11 +22,11 @@ and with python in general if you want to contribute.
 
 ## How to request a new functionality or feature
 Use the Discord channel #feature-request to request a new feature.
-Although, you can also create an issue on github to request a feature. If necessary, explain the feature with screenshots.
+You can also create an issue on GitHub to request a feature. If necessary, explain the feature with screenshots.
 
 ## Donating
 This project is an open source project and we currently need funds for hardware/hosting 
-to develop a better user experience. Every donation will be spent on making utilitybot better for our users.
+to develop a better user experience. Every donation will be spent on making UtilityBot better for our users.
 You can find several ways to donate below.
 
  - [Patreon](https://www.patreon.com)
