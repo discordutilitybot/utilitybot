@@ -6,21 +6,21 @@ from config import TOKEN
 
 """Local modules"""
 
-bot = commands.Bot(command_prefix="u!")
-
-cogs = [
-    "cogs.avatar"
-    "cogs.games"
-    "cogs.guildinfo"
-    "cogs.help"
-    "cogs.mod"
-    "cogs.utility"
-    "events.command_error"
-    "events.command_error"
-]
-
-for cog in cogs:
-    bot.load_extension(cog)
+class Utilitybot(commands.Bot):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
 
 
-bot.run(TOKEN)
+        
+    """Loading events"""
+    async def load_events(self):
+        pass
+
+    """Loading utils"""
+    async def load_utils(self):
+        pass
+    
+    """Load commands."""
+    async def load_cogs(self):
+        pass
