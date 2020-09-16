@@ -1,5 +1,5 @@
 # Utility Bot: The ultimate server management bot.
-.. image: https://discord.com/api/guilds/336642139381301249/embed.png
+    :image: https://discord.com/api/guilds/336642139381301249/embed.png
    :target: https://discord.gg/r3sSKJJ
 
 ## What is it?
