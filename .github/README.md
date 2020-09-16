@@ -1,6 +1,5 @@
 # Utility Bot: The ultimate server management bot.
-   :image: https://discord.com/api/guilds/336642139381301249/embed.png
-   :target: https://discord.gg/r3sSKJJ
+ 
 
 ## What is it?
 Our bot can help you manage your server with many useful commands. You can kick, ban, create polls, and much more! If you want more information, check out our [complete list](utilitybot.co/commands) of all of our bot's commands.
