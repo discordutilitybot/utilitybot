@@ -12,7 +12,6 @@ class Utilitybot(commands.Bot):
         
 
 
-        
     """Loading events"""
     async def load_events(self):
         pass
