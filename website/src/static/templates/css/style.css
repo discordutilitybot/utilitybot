@@ -67,6 +67,14 @@ ul {
     height:25px;
 }
 
+.faq-list {
+	list-style-type:none;
+	background-color:#282831;
+	height:fit-content;
+	transition: 1s cubic-bezier(.83,.01,.14,.99);
+	border:2px solid #111;
+}
+
 .footer-row {
     border-top: 6px solid #282831;
     position:absolute; 
