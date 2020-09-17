@@ -1,4 +1,4 @@
-from .permissions import permissions
-from .errors import (
+from permissions import permissions
+from errors import (
     
 )
