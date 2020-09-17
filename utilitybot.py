@@ -1,25 +1,46 @@
 import discord
 from discord.ext import commands
 import asyncio
-import os
-from config import TOKEN
+import asyncpg
+import datetime
+from datetime import datetime
+import json
+
 
 """Local modules"""
 
 class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        
+        self.launctime = datetime.datime.utcnow(datetime.timezone.utc)
+        """Common attributes"""
+
+        """Logging (log files levels etc..)"""
+
+        """Other"""
 
 
-    """Loading events"""
+
+    self.load_cogs()
+
+    self.load_events()
+
+    self.load_utils()
+
+    """Loading cogs/events functions"""
     async def load_events(self):
-        pass
+        for ext in resolve_extensions(self, 'events.*'):
+           self.load_extension(ext)
 
-    """Loading utils"""
-    async def load_utils(self):
-        pass
     
-    """Load commands."""
+    async def load_utils(self):
+        for ext in resolve_extensions(self, 'utils.*'):
+            self.load_extension(ext)
+          
+                
+
     async def load_cogs(self):
-        pass
+        for ext in resolveextensions(self, 'cogs.*'):
+            self.load_extension(ext)
+            
+         
