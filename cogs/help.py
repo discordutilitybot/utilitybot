@@ -73,8 +73,8 @@ class Help(commands.Cog):
             try:
                 embed = discord.Embed(
                     title = "Fun commands",
-                    description = "List of all fun commands."
-                    color = discord.Color.dark_grey()
+                    description = "List of all fun commands.",
+                    colour = discord.Color.dark_grey()
 
             )
 
@@ -95,8 +95,8 @@ class Help(commands.Cog):
         if module_name == "images":
             try:
                 embed = discord.Embed(
-                    title = "Image commands"
-                    description = "List of image commands to find images"
+                    title = "Image commands",
+                    description = "List of image commands to find images",
                     color = discord.Color.dark_grey()
                 )
 
