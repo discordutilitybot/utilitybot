@@ -1,18 +1,18 @@
 let nav = document.getElementById("navCollapsed"); // The navbar
 let openBtn = document.getElementById('openButton'); // The trigger
 
-function navView() {
-    if (nav.style.height = "0%") {
-        nav.style.height = "100%";
-        openBtn.setAttribute("onclick", "navClose();");
-    }
+function navView() { // Open nav function
+  if (nav.style.height = "0%") { // If it is invisible,
+    nav.style.height = "100%"; // Make it visible
+    openBtn.setAttribute("onclick", "navClose();"); // Sets button to close navbar function
+  }
 }
 
-function navClose() {
-    if (nav.style.height = "100%") {
-        nav.style.height = "0%";
-        openBtn.setAttribute("onclick", "navView();")
-    }
+function navClose() { // Close navbar function
+  if (nav.style.height = "100%") { // If it's visible,
+    nav.style.height = "0%"; // Make it invisible
+    openBtn.setAttribute("onclick", "navView();") // Sets button to open nav function
+  }
 }
 
 // The following code is based off of: https://bit.ly/32C1vfo
@@ -28,19 +28,5 @@ for (let i = 0; i < acc.length; i++) {
             content.style.maxHeight = content.scrollHeight + "px";
         }
     }
-}
-
-function navView() { // Open nav function
-  if (nav.style.height = "0%") { // If it is invisible,
-    nav.style.height = "100%"; // Make it visible
-    openBtn.setAttribute("onclick", "navClose();"); // Sets button to close navbar function
-  }
-}
-
-function navClose() { // Close navbar function
-  if (nav.style.height = "100%") { // If it's visible,
-    nav.style.height = "0%"; // Make it invisible
-    openBtn.setAttribute("onclick", "navView();") // Sets button to open nav function
-  }
 }
 
