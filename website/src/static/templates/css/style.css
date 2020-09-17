@@ -68,25 +68,39 @@ ul {
 }
 
 .faq-question {
-    height:fit-content;
-    width:fit-content;
-    padding:2px;
-    transition: 1s cubic-bezier(.83,.01,.14,.99);
-    font-size:18px;
-    font-weight:500;
-    background-color:rgba(0, 0, 0, 0.1);
-    margin-left:10px;
+  background-color: #6e6e93;
+  text-align: left;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition:0.2s;
+  margin-bottom:0px;
 }
 
-.footer-row {
-    border-top: 6px solid #282831;
-    position:fixed; 
-    bottom:0; 
-    width:100%; 
-    height:250px; 
+.faq-question:hover {
+    background-color:#7f7fa9;
+}
+
+.faq-answer {
+    overflow:hidden;
+    max-height:0;
+    transition: 0.4s cubic-bezier(.83,.01,.14,.99);
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.footer-row { /* Bug: The footer is too fixed and blocks some content on the page. Will try to fix later */
+    position:fixed;
+	bottom:0;
+	width:100%;
+    height:300px;			
     background:#35354d;
-    text-align:center;
     left:0;
+    right:0;
+    padding:10px;
+    border-top:#1d1d28 3px solid;
+    text-align: center;
 }
 
 .footer-link {
@@ -141,9 +155,8 @@ ul {
     width: 100%;
     position: absolute;
     z-index: 1;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    transition:cubic-bezier(.98,0,0,.99) 1s;
+    background-color: rgba(0, 0, 0, 0.616);
+    transition:cubic-bezier(.82,.01,.41,.99) 1s;
     overflow:hidden;
     left:0;
     right:0;
@@ -163,11 +176,12 @@ ul {
     width: 30%;
     position: fixed;
     left: 10px;
-    background: rgb(75, 73, 87);
+    background: rgba(123, 116, 162, 0.6);
     padding: 8px;
     font-size:25px;
     font-family:Epilogue, sans-serif;
     text-decoration:none;
+    border-radius:5px;
 }
 
 .nav-item {
@@ -196,7 +210,7 @@ ul {
     font-size:25px;
     text-transform:uppercase;
     text-align:center;
-    width:80%;
+    width:100%;
     transition:700ms;
 }
 
@@ -215,13 +229,15 @@ ul {
     4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.nav-item-text {
-    color:white;
-    text-decoration:none;
+.nav-item-gradient.collapsed {
+    width:80%;
+}
+
+.nav-item.active {
+    color:lightcyan;
 }
 
 .page-title {
-    text-align:justify;
     margin-top:40px;
     font-weight:400;
     text-transform:capitalize;
