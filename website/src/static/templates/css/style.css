@@ -25,9 +25,54 @@ hr {
     box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.158);
 }
 
+
+hr.no-margin {
+    background-color:#72729a;
+    height:3px;
+    width:70%;
+    margin-top:-70px;
+    margin-left:15%;
+    border-radius:2px;
+    align-items:center;
+    border:none;
+}
+
+hr.left-separator {
+    margin-left:0;
+    margin:0;
+}
+
 ul {
     list-style-type:none;
     text-decoration:none;
+}
+
+.contact-btns { /* This is the contact button row. */
+    display:flex;
+    flex-direction:row;
+}
+
+.contact-btn {
+    border:none;
+    border-radius:9px;
+    background:linear-gradient(45deg,#efa1a1,#ffc2b2);
+    padding:10px;
+    width:fit-content;
+    margin:10px;
+    display:flex;
+    flex-direction:row;
+    opacity:0.8;
+    transition:0.5s cubic-bezier(.8,0,.39,1);
+}
+
+.contact-btn.second-row {
+    background:linear-gradient(45deg,#6fd288,#42c0af); 
+}
+
+.contact-btn:hover {
+    opacity:1;
+    border-radius:15px;
+    transform:scale(1.1)
 }
 
 .fa-bars {
@@ -46,6 +91,7 @@ ul {
     transition:cubic-bezier(.83,.01,.14,.99) 1s;
     transform:scale(1.5);
     margin:20px;
+    box-shadow:0px 10px 10px rgba(0, 0, 0, 0.158)
 
 }
 
@@ -91,8 +137,6 @@ ul {
 }
 
 .footer-row { /* Bug: The footer is too fixed and blocks some content on the page. Will try to fix later */
-    position:fixed;
-	bottom:0;
 	width:100%;
     height:300px;			
     background:#35354d;
@@ -126,7 +170,7 @@ ul {
     width:65%;
     right:0;
     height:fit-content;
-    position:absolute;
+    float:right;
     margin-top:0px;
 }
 
@@ -174,9 +218,9 @@ ul {
 
 .nav-items-list {
     width: 30%;
-    position: fixed;
+    position: absolute;
     left: 10px;
-    background: rgba(123, 116, 162, 0.6);
+    background: rgba(101, 96, 125, 0.6);
     padding: 8px;
     font-size:25px;
     font-family:Epilogue, sans-serif;
@@ -244,16 +288,6 @@ ul {
     font-family:work sans, sans-serif;
     font-size:36px;
     margin-left:10px;
-}
-
-.separator {
-    background-color:#515177;
-    height:3px;
-    width:70%;
-    margin-top:-70px;
-    margin-left:15%;
-    border-radius:2px;
-    align-items:center;
 }
 
 .web-design-credit {

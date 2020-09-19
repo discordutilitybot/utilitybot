@@ -15,17 +15,18 @@ function navClose() { // Close navbar function
   }
 }
 
-// The following code is based off of: https://bit.ly/32C1vfo
+/* The following code is based off of: https://bit.ly/32C1vfo
+Comments added by me. */
 
-let acc = document.getElementsByClassName("faq-question");
+let acc = document.getElementsByClassName("faq-question"); // accordion variable
 
 for (let i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-        let content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
+    acc[i].onclick = function() { // When click is detected execute the following
+        let content = this.nextElementSibling; // The accordion content
+        if (content.style.maxHeight) { // if the height is not null...
+            content.style.maxHeight = null; // make it null
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = content.scrollHeight + "px"; // If it's null, make it not null
         }
     }
 }
