@@ -35,7 +35,7 @@ You can find several ways to donate below.
 ## Security 
 To report security/vulnerabilities in the bot or code, contact security@utilitybot.co
 
-## Help
+## Help and Support
 The default command to get help is u!help. 
-## Join our community/support discord for support, or just to chat with other users!
+You can also join our community/support discord for support, or just to chat with other users!
 [![JOINSERVER](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
