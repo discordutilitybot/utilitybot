@@ -197,9 +197,9 @@ ul {
 
 .nav-collapsed {
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.616);
+    background-color: rgba(16, 16, 16, 0.92);
     transition:cubic-bezier(.82,.01,.41,.99) 1s;
     overflow:hidden;
     left:0;
@@ -208,12 +208,24 @@ ul {
     bottom:0;
 }
 
+.nav-collapsed > ul {
+    position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
 .nav-collapsed > ul > li {
     font-size:25px;
     margin-left:auto;
     margin-right:auto;
     text-align:center;
     padding:0px;
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-top:40px;
 }
 
 .nav-items-list {
@@ -274,7 +286,7 @@ ul {
 }
 
 .nav-item-gradient.collapsed {
-    width:80%;
+    width:40%;
 }
 
 .nav-item.active {
