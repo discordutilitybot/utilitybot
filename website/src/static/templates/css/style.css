@@ -7,7 +7,7 @@ html {
 
 a {
     color:white;
-    text-decoration-skip-ink: all;
+    text-decoration-skip-ink: all; /* Underline skips letter descenders */
     transition:100ms;
     font-family:Heebo;
     text-decoration:none;
@@ -16,6 +16,7 @@ a {
 a:hover {
     font-weight:bold;
 }
+
 h1 {
     font-family:Work Sans, sans-serif;
 }
@@ -61,18 +62,18 @@ ul {
     margin:10px;
     display:flex;
     flex-direction:row;
-    opacity:0.8;
+    opacity:0.8; /* Low opacity set; on hover, opacity will be 1 */
     transition:0.5s cubic-bezier(.8,0,.39,1);
 }
 
-.contact-btn.second-row {
-    background:linear-gradient(45deg,#6fd288,#42c0af); 
+.contact-btn.second-row {/* for second contact btn */
+    background:linear-gradient(45deg, #6fd288, #42c0af); 
 }
 
 .contact-btn:hover {
     opacity:1;
     border-radius:15px;
-    transform:scale(1.1)
+    transform:scale(1.1);
 }
 
 .fa-bars {
@@ -81,17 +82,17 @@ ul {
 	text-align: center;
 	display: none;
 	cursor: pointer;
-	position: absolute;
-	z-index: 500;
+	position: absolute; /* Bypasses other elements' collisions */
+	z-index: 50;
 	width: 40px;
 	height: 40px;
-    border-radius: 3px;
-    line-height:40px;
-    padding:0;
-    transition:linear 1s;
-    transform:scale(1.5);
-    margin:20px;
-    box-shadow:0px 10px 10px rgba(0, 0, 0, 0.158)
+    	border-radius: 3px;
+    	line-height:40px; /* Vertically centers icon */
+    	padding:0;
+    	transition:ease 1s;
+    	transform:scale(1.5);
+    	margin:20px;
+    	box-shadow:0px 10px 10px rgba(0, 0, 0, 0.158);
 
 }
 
@@ -104,7 +105,7 @@ ul {
     box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
         inset 4px 4px 10px rgba(0, 0, 0, 0.5),
         inset -4px -4px 10px rgba(67, 67, 67, 0.3),
-        4px 4px 10px rgba(0, 0, 0, 0.3);
+        4px 4px 10px rgba(0, 0, 0, 0.3); /* cool inset shadows */
     margin:10px;
     border-radius:50%;
     background-color:rgba(0, 0, 0, 0.24);
@@ -118,7 +119,7 @@ ul {
   padding: 10px 20px;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  cursor: pointer;
+  cursor: pointer; /* helps with js */
   transition:0.2s;
   margin-bottom:0px;
 }
@@ -135,14 +136,14 @@ ul {
     margin-top:10px;
 }
 
-.footer-row { /* Bug: The footer is too fixed and blocks some content on the page. Will try to fix later */
-	width:100%;
+.footer-row { /* Bug fixed!! :D */
+    width:100%;
     height:300px;			
     background:#35354d;
     left:0;
     right:0;
     padding:10px;
-    border-top:#1d1d28 3px solid;
+    border-top:#1d1d28 3px solid; /* separates footer from main page */
     text-align:center;
 }
 
@@ -152,7 +153,7 @@ ul {
     background:#35354d;
 }
 
-.logo {
+.logo { /* so uh the logo is positioned in a kind of forced way. its not the best way to position it so ill fix it later. */
     position:absolute;
     display:block;
     width:80px;
@@ -199,7 +200,7 @@ ul {
     z-index: 1;
     background-color: rgba(16, 16, 16, 0.92);
     transition:cubic-bezier(.82,.01,.41,.99) 1s;
-    overflow:hidden;
+    overflow:hidden; /* Just so the contents don't glitch out of the nav. */
     left:0;
     right:0;
     top:0;
@@ -228,7 +229,7 @@ ul {
 
 .nav-items-list {
     width: 30%;
-    position: absolute;
+    position: absolute; /* On scroll it remains fixed */
     left: 10px;
     background: rgba(101, 96, 125, 0.6);
     padding: 8px;
@@ -240,8 +241,7 @@ ul {
 
 .nav-item {
      width:100%;
-     margin-top:10px;
-     font-stretch: condensed;
+     margin-top:10px; /* Unnecessary font-strech removed */
      transition:0.2s ease-in-out;
      text-decoration:none;
      color:white;
@@ -265,7 +265,7 @@ ul {
     text-transform:uppercase;
     text-align:center;
     width:100%;
-    transition:200ms linear;
+    transition:200ms linear; /* linear ease fixes some bugs */
 }
 
 .nav-item-gradient:hover {
@@ -292,20 +292,17 @@ ul {
 }
 
 .web-design-credit {
- padding:1px;
- border-radius:10px;
- text-decoration:underline;
+	 padding:1px;
+	 border-radius:10px;
+	 text-decoration:underline;
 }
 
 .web-design-credit:hover {
-    box-shadow:1px 1px 3000px 300px rgba(255, 255, 255, 0.014);
+    box-shadow:1px 1px 3000px 300px rgba(255, 255, 255, 0.014); /* this is weird and inefficient so it'll be removed. */
     text-decoration:none;
 }
-  
-.web-design-credit:hover:before,
-.web-design-credit:focus:before { 
-    transform: scaleX(1.1) scaleY(1.1);
-}
+
+/* not sure what an ::after pseudoelement was doing here :/ */
 
 @media only screen and (max-width: 1500px) {
     .nav-items-list {
