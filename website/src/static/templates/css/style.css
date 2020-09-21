@@ -56,14 +56,14 @@ ul {
 .contact-btn {
     border:none;
     border-radius:9px;
-    background:linear-gradient(45deg,#efa1a1,#ffc2b2);
+    background:linear-gradient(45deg,#f27e7e,#ba5fe7);
     padding:10px;
     width:fit-content;
     margin:10px;
     display:flex;
     flex-direction:row;
     opacity:0.8; /* Low opacity set; on hover, opacity will be 1 */
-    transition:0.5s cubic-bezier(.8,0,.39,1);
+    transition:0.5s ease;
 }
 
 .contact-btn.second-row {/* for second contact btn */
@@ -74,7 +74,41 @@ ul {
     opacity:1;
     border-radius:15px;
     transform:scale(1.1);
+    border-radius:18px;
+    transform:scale(1);
+    font-weight:500;
 }
+
+.contact-btn .contact-tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: fixed;
+    z-index: 1;
+    bottom: 110%;
+    left:-50px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.contact-btn .contact-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.contact-btn:hover .contact-tooltip {
+    visibility: visible;
+    opacity: 1;
+    font-weight:400;
+  }
 
 .fa-bars {
     color: rgba(255, 255, 255);
@@ -212,7 +246,6 @@ ul {
     top: 25%;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
 }
 
 .nav-collapsed > ul > li {
