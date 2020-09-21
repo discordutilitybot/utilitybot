@@ -1,0 +1,22 @@
+# File storing config stuff
+.env 
+.config
+
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+
+# vscode
+.vscode/
+
+# logs
+logs/
+utility.log
+utility.log.*
+
+# jetbrains ide
+.idea
+*.iml
