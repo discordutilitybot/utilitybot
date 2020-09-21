@@ -20,8 +20,8 @@ If you want to contribute or add a feature, don't hesitate to contact me on Disc
 You have to be at least a little bit familiar with **asyncio** and **discord.py** python library, 
 and with python in general if you want to contribute.
 
-## How to request a new functionality or feature
-Use the Discord channel #feature-request to request a new feature.
+## How can i suggest a feature or request one?
+You can use the Discord channel #feature-request to request a new feature.
 You can also create an issue on GitHub to request a feature. If necessary, explain the feature with screenshots.
 
 ## Donating
