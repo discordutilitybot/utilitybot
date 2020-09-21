@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +11,15 @@
         <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-
+    <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
+    <div class="nav-collapsed" id="navCollapsed" style="height: 0%;">
+        <ul id="navList">
+            <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="/"><!-- Put oauth link in between quote marks  -->add to server</a></li>
+            <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">contact us</a></li>
+            <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of commands</a></li>
+            <li class="nav-item active"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
+        </ul>
+    </div>
     <div class="nav">
         <ul class="nav-items-list">
             <br>
@@ -24,127 +30,40 @@
         </ul>
     </div>
 
-    <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
-    <div class="nav-collapsed" id="navCollapsed">
-        <ul>
-            <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="#"><!-- Put oauth link in between quote marks  -->add to server</a></li>
-            <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">contact us</a></li>
-            <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of commands</a></li>
-            <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
-        </ul>
-    </div>
-
-
     <div class="main">
-        <div class="header">
+      <div class="header">
+        <img class="logo" src="imgs/logo.png"></img>
         <h1 class="main-title">
-            <img class="logo" src="imgs/logo.png"></img>
-            Utility Bot
+          Utility Bot
         </h1>
-        <div class="separator"></div>
-        <h1 class="main-subtitle">
-            The ultimate server management bot
-        </h1>
-        </div>
+        <hr class="no-margin">
+        <h1 class="main-subtitle">The ultimate server management bot</h1>
         <div class="main-content">
+          <hr class="left-separator">
         <h1>What is it?</h1>
         <p>Utility Bot is a bot that has tons of utility commands for users and moderators to use.</p>
 
         <h1>How can I use it?</h1>
-        <p>To add it to your Discord server, click "Add to Server" in the menu at the top left of the page. You can use it by typing one of the commands listed on our <a>Commands</a>list.</p>
-        </div>
-    </div>
-   
-    <div class="footer-row">
-        <p>2020-2021 Utility Bot, The Ultimate Server Management Bot
-            <br>
-            <a href="/privacy" class="footer-link">Privacy Policy</a>
-            <br>
-            <a href="malto:support@utilitybot.co">support@utilitybot.co</a>
-    </p>
-    <hr>
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <a href="/contact" class="footer-link">Contact us</a>
-            <br>
-            <i class="fa fa-user-friends" aria-hidden="true"></i>
-            <a href="/reviews" class="footer-link">Reviews</a>
-        <hr>
-        <p>Web design by <a class="web-design-credit" target="_blank" href="https://github.com/PineappleRind">PineappleRind</a></p>
-    </div>
-    <script src="js/nav.js"></script>
-    </body>
-    </html>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-16">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utility Bot - The Ultimate Server Management Bot</title>
-    <script src="https://kit.fontawesome.com/37b7d8c548.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Epilogue:ital,wght@0,100;0,263;0,531;1,312;1,531&display=swap');
-        </style> 
-        <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-
-    <div class="nav">
-        <ul class="nav-items-list">
-            <br>
-            <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="#"><!-- Put oauth link in between quote marks  -->add to server</a></li>
-            <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">contact us</a></li>
-            <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of commands</a></li>
-            <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
-        </ul>
-    </div>
-
-    <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
-    <div class="nav-collapsed" id="navCollapsed">
-        <ul>
-            <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="#"><!-- Put oauth link in between quote marks  -->add to server</a></li>
-            <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">contact us</a></li>
-            <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of commands</a></li>
-            <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
-        </ul>
-    </div>
-
-
-    <div class="main">
-        <div class="header">
-        <h1 class="main-title">
-            <img class="logo" src="imgs/logo.png"></img>
-            Utility Bot
-        </h1>
-        <div class="separator"></div>
-        <h1 class="main-subtitle">
-            The ultimate server management bot
-        </h1>
-        </div>
-        <div class="main-content">
-        <h1>What is it?</h1>
-        <p>Utility Bot is a bot that has tons of utility commands for users and moderators to use.</p>
-
-        <h1>How can I use it?</h1>
-        <p>To add it to your Discord server, click "Add to Server" in the menu at the top left of the page. You can use it by typing one of the commands listed on our <a>Commands</a>list.</p>
+        <p>To add it to your Discord server, click "Add to Server" in the menu at the top left of the page. You can use it by typing one of the commands listed on our <a>Commands</a> list.</p>
         </div>
     </div>
    
     <div class="footer-row">
         <p>2020-2021 Utility Bot, The Ultimate Server Management Bot</p>
+            <br>
             <a href="/privacy" class="footer-link">Privacy Policy</a>
             <a href="malto:support@utilitybot.co">support@utilitybot.co</a>
-        <hr>
+
+    <hr>
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <a href="/contact" class="footer-link">Contact us</a>
         
             <i class="fa fa-user-friends" aria-hidden="true"></i>
             <a href="/reviews" class="footer-link">Reviews</a>
         <hr>
-        <p>Web design by <a class="web-design-credit" target="_blank" href="https://github.com/PineappleRind">PineappleRind</a></p> <!-- @TheCodingGuru - If you work on this you can also put your name here -->
-    </div>
-    <script src="js/nav.js"></script>
-    </body>
-    </html>
->>>>>>> eccbb5ef801eac1da36074bfb74effce077cf55c
+        <p>Web design by <a class="web-design-credit" target="_blank" href="https://github.com/PineappleRind">PineappleRind</a></p>
+        </div>
+      
+      <script src="js/site.js"></script>
+      </body>
+      </html>
