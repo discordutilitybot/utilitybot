@@ -38,4 +38,4 @@ To report security/vulnerabilities in the bot or code, contact security@utilityb
 ## Help and Support
 The default command to get help is u!help. 
 You can also join our community/support discord for support, or just to chat with other users!
-[![JOINSERVER](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
+   [![Hya](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
