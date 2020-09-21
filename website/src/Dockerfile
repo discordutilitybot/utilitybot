@@ -1,4 +1,4 @@
-FROM python3.6
+FROM python3.6-alpine
 
 ADD website/src / 
 
