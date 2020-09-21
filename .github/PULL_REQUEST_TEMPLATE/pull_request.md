@@ -12,7 +12,7 @@ d
 2. once your down compare both repos and create a pull request
 
 ** Describe the change/fix**
-A clear and concise description of the change/fix
+And a  clear and concise description of the change/fix
 
 **addition context**
 Add any other info here about the change
