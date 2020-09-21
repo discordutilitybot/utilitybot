@@ -9,8 +9,8 @@ Our bot can help you manage your server with many useful commands. You can kick,
 - [discord.py](https://github.com/Rapptz/discord.py)
 - [linode](https://www.linode.com/) 
 - [postgreSQL](https://www.postgresql.org/)
-- [flask](https://github.com/pallets/flask)
-- [docker](https://www.docker.com/)
+- [Flask](https://github.com/pallets/flask)
+- [Docker](https://www.docker.com/)
 
 ## How can I contribute?
 
