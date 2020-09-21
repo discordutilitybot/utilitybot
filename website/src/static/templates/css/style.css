@@ -17,6 +17,27 @@ a:hover {
     font-weight:bold;
 }
 
+button {
+    border:none;
+    background:none;
+    color:white;
+    border-bottom:1px solid white;
+    transition:0.2s ease;
+    margin:2px;
+    padding:5px;
+    font-size:15px;
+}
+
+button:hover {
+     letter-spacing:0.1px;
+     color:lightblue;
+}
+
+button:hover .fa-arrow-right {
+    transform:translate(4px,0px) scale(1.4);
+    color:white;
+}
+
 h1 {
     font-family:Work Sans, sans-serif;
 }
@@ -48,6 +69,13 @@ ul {
     text-decoration:none;
 }
 
+
+.fa-arrow-right {
+    padding-left:2px;
+    position:relative;
+    transform:scale(1.4);
+    transition:0.2s ease;
+}
 .contact-btns { /* This is the contact button row. */
     display:flex;
     flex-direction:row;
@@ -145,10 +173,10 @@ ul {
 .faq-question {
   background-color: #6e6e93;
   text-align: left;
-  padding: 10px 20px;
+  padding: 10px 30px;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  cursor: pointer; /* helps with js */
+  cursor: pointer;
   transition:0.2s;
   margin-bottom:0px;
 }
