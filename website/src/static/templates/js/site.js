@@ -1,10 +1,12 @@
 let nav = document.getElementById("navCollapsed"); // The navbar
 let openBtn = document.getElementById('openButton'); // The trigger
+let navContents = document.getElementById('navList'); // The navbar contents
 
 function navView() { // Open nav function
   if (nav.style.height = "0%") { // If it is invisible,
     nav.style.height = "100%"; // Make it visible
     openBtn.setAttribute("onclick", "navClose();"); // Sets button to close navbar function
+    navContents.style.display = 'block'; // Nav contents made visible on opening nav
   }
 }
 
@@ -12,6 +14,7 @@ function navClose() { // Close navbar function
   if (nav.style.height = "100%") { // If it's visible,
     nav.style.height = "0%"; // Make it invisible
     openBtn.setAttribute("onclick", "navView();") // Sets button to open nav function
+    setTimeout(function(){navContents.style.display = 'none';}, 700) // Nav contents made invisible after 0.7s of closing nav
   }
 }
 

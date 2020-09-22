@@ -9,8 +9,8 @@ Our bot can help you manage your server with many useful commands. You can kick,
 - [discord.py](https://github.com/Rapptz/discord.py)
 - [linode](https://www.linode.com/) 
 - [postgreSQL](https://www.postgresql.org/)
-- [flask](https://github.com/pallets/flask)
-- [docker](https://www.docker.com/)
+- [Flask](https://github.com/pallets/flask)
+- [Docker](https://www.docker.com/)
 
 ## How can I contribute?
 
@@ -32,9 +32,10 @@ You can find several ways to donate below.
 - [Donate with PayPal](https://www.paypal.com)
 
 ## Security 
-To report security/vulnerabilities in the bot or code, contact security@utilitybot.co
+To report security/vulnerabilities in the bot or code, email security@utilitybot.co
 
 ## Help and Support
 The default command to get help is u!help. 
-You can also join our community/support discord for support, or just to chat with other users!
-   [![Hya](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
+
+Join our community/support discord for further support or to chat with other users! The invite link is below.
+  [![server](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
