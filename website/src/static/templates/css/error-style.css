@@ -1,7 +1,7 @@
 html {
 	background-color: rgb(75, 75, 75);
 	text-align:center;
-	animation:adjust 10s infinite;
+	animation:adjust 10s infinite; /* Changes bg color of website every 2 or so seconds */
 }
 
 .text-404 > div {
@@ -9,21 +9,21 @@ html {
 	font-weight:600;
 }
 
-.error-404 {
+.error-404 { /* The first 404 */
 	color:rgba(255, 0, 0, 0.596);
 	animation:flash-3 1s infinite 0.5s;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
-.error-404-2 {
-	color:rgba(4, 0, 255, 0.8);
+.error-404-2 { /* one of the glitching 404s */
+	color:rgba(4, 0, 255, 0.8); /* Lower opacity than norm so can see other glitching 404s */
 	margin-top:-116px;
 	animation:flash 1s infinite 0.3s;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
-.error-404-3 {
-	color:rgba(0, 0, 0, 0.678);
+.error-404-3 { /* last glitching 404 */
+	color:rgba(0, 0, 0, 0.678); /* even lower opacity!! */
 	margin-top:-119px;
 	animation:flash-2 1s infinite;
 	font-family:Arial, Helvetica, sans-serif;
@@ -35,9 +35,9 @@ html {
 	margin: 100px auto 16px;
 	padding: 32px 24px 16px;
 	border-radius: 3px;
-	z-index:2;
+	z-index:2; /* will appear on top of bg */
 	font-family:Work Sans, Helvetica, sans-serif;
-	box-shadow: 0 10px 30px 18px rgba(0, 0, 0, 0.377);
+	box-shadow: 0 10px 30px 18px rgba(0, 0, 0, 0.377); /* cool shadows */
 }
 
 .error-message h1 {
@@ -71,7 +71,7 @@ html {
   text-align:center;
 }
 
-.error-message button:after, .error-message button:before {
+.error-message button:after, .error-message button:before {c/* top and bottom borders of button */
 	backface-visibility:hidden;
 	border: 1px solid rgba(255,255,255,0);
 	content:"";
@@ -83,7 +83,7 @@ html {
 }
 
 .error-message button:hover:after,
-.error-message button:hover:before {
+.error-message button:hover:before { /* on hover show borders */
   backface-visibility: hidden;
   border-color: #fff;
   transition: all 1000ms cubic-bezier(.93,0,.12,.98);
@@ -106,7 +106,7 @@ html {
 	transform:scale(0.95);
 }
 
-@keyframes adjust {
+@keyframes adjust { /* @keyframes for color changing bg */
 	0% {background-color:rgb(102, 146, 146);}
 	20% {background-color:rgb(94, 119, 94);}
 	40% {background-color:rgb(136, 111, 111);}
@@ -115,7 +115,7 @@ html {
 	100% {background-color:rgb(102, 146, 146);}
 }
 
-@keyframes flash-2 {
+@keyframes flash-2 { /* glitching 404 animations below*/
 	0% {transform:translate(0,0);}
 	1% {transform:translate(1px,3px);}
 	20% {transform:translate(1px,3px);}
