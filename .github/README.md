@@ -36,5 +36,6 @@ To report security/vulnerabilities in the bot or code, email security@utilitybot
 
 ## Help and Support
 The default command to get help is u!help. 
-You can also join our community/support discord for support, or just to chat with other users! The invite link is below.
+
+Join our community/support discord for further support or to chat with other users! The invite link is below.
   [![server](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
