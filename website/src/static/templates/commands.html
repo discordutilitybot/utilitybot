@@ -13,7 +13,6 @@
   </head>
   <body>
 
-
     <div class="nav">
       <ul class="nav-items-list">
           <br>
@@ -25,12 +24,12 @@
   </div>
 
   <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
-  <div class="nav-collapsed" id="navCollapsed">
-      <ul>
+  <div class="nav-collapsed" id="navCollapsed" style="height: 0%;">
+      <ul id="navList">
           <li class="nav-item-gradient"><i class="fas fa-plus nav-img"></i><a class="nav-item-text" href="#"><!-- Put oauth link in between quote marks  -->add to server</a></li>
           <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">contact us</a></li>
           <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of commands</a></li>
-          <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
+          <li class="nav-item active"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
       </ul>
   </div>
 
@@ -45,13 +44,37 @@
       <h1 class="main-subtitle">The ultimate server management bot</h1>
       <div class="main-content">
        <h2 class="page-title">Complete list of UtilityBot commands</h2>
-       <ul class="commands-list-category">Moderation
-         <li>Command</li>
-         <li>Command</li>
-         <li>Command</li>
-         <li>Command</li>
-         <li>Command</li>
-       </ul>
+       <h1 class="commands-title" id="commandTitle" onclick="showHideCommands()">Moderation <i class="fas fa-angle-down"></i></h1>
+       <table id="table" class="commands-list-category">
+         <tr>
+         <th>Command</th>
+         <th>Description</th>
+         </tr>
+         <tr>
+           <td>u!kick [member] (reason)</td>
+           <td>Kicks a member.</td>
+         </tr>
+         <tr>
+          <td>u!ban [member] (reason)</td>
+          <td>Bans a member.</td>
+        </tr>
+        <tr>
+          <td>u!unban [member] (reason)</td>
+          <td>Unbans a member.</td>
+        </tr>
+        <tr>
+          <td>u!mute [member]</td>
+          <td>Mutes a member.</td>
+        </tr>
+        <tr>
+          <td>u!unmute [member]</td>
+          <td>Unmutes a member.</td>
+        </tr>
+        <tr>
+          <td>u!purge [amount]</td>
+          <td>Purges a specified amount of messages.</td>
+        </tr>
+       </table>
        <ul class="commands-list-category">Fun
         <li>Command</li>
         <li>Command</li>

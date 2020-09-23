@@ -64,6 +64,26 @@ hr.left-separator {
     margin:0;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  display:none;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(134, 134, 134, 0.103);
+  }
+
 ul {
     list-style-type:none;
     text-decoration:none;
@@ -75,6 +95,15 @@ ul {
     position:relative;
     transform:scale(1.4);
     transition:0.2s ease;
+}
+
+.commands-title { /*The title for the commands list tables */
+    background-color:rgba(255,255,255,0.1);
+    border:1px solid white;
+    margin:0;
+    padding-left:7px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
 }
 .contact-btns { /* This is the contact button row. */
     display:flex;
