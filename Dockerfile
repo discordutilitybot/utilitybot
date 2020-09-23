@@ -1,4 +1,4 @@
-FROM python:3-ubuntu
+FROM python:3
 
 ADD utilitybot.py /
 
