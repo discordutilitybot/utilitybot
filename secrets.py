@@ -13,7 +13,7 @@ DATABASE_HOST = "db host"
 DATABASE_PASSWORD = "databasepassword"
 
 # Discord bot token/ discord oauth stuff
-TOKEN = "TOKENs"
+TOKEN = "NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.TcDE3-jEOVdiATKsY6MQoPoZEVM"
 
 # Make sure i put the clientid for the authorization and the token url ;)
 AUTHORIZATION = "https://discord.com/api/oauth2/authorize"
