@@ -21,12 +21,6 @@ class Utilitybot(commands.Bot):
 
 
 
-    self.load_cogs()
-
-    self.load_events()
-
-    self.load_utils()
-
     """Loading cogs/events functions"""
     async def load_events(self):
         for ext in resolve_extensions(self, 'events.*'):
@@ -43,4 +37,10 @@ class Utilitybot(commands.Bot):
         for ext in resolveextensions(self, 'cogs.*'):
             self.load_extension(ext)
             
-         
+    
+
+    self.load_cogs()
+
+    self.load_events()
+
+    self.load_utils()

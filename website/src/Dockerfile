@@ -1,6 +1,6 @@
 FROM python:3.7-buster
 
-ADD website/src 
+ADD app.py /d
 
 COPY requirements.txt .
 
