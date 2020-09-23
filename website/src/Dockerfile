@@ -1,6 +1,6 @@
-FROM python3.6-alpine
+FROM python:3.7-buster
 
-ADD website/src / 
+ADD website/src 
 
 COPY requirements.txt .
 
