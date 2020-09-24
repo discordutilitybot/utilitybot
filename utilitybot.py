@@ -34,7 +34,7 @@ class Utilitybot(commands.Bot):
                 
 
     async def load_cogs(self):
-        for ext in resolveextensions(self, 'cogs.*'):
+        for ext in resolve_xtensions(self, 'cogs.*'):
             self.load_extension(ext)
             
     
