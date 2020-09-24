@@ -9,7 +9,7 @@ Our bot can help you manage your server with many useful commands. You can kick,
 ## Our bot loves and is built with:
 
 - [discord.py](https://github.com/Rapptz/discord.py)
-- [linode](https://www.linode.com/) 
+- [asyncio](https://github.com/python/asyncio/tree/master)
 - [postgreSQL](https://www.postgresql.org/)
 - [Flask](https://github.com/pallets/flask)
 - [Docker](https://www.docker.com/)
