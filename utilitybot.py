@@ -12,7 +12,7 @@ import json
 class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.launctime = datetime.datime.utcnow(datetime.timezone.utc)
+        self.launchtime = datetime.datime.utcnow(datetime.timezone.utc)
         """Common attributes"""
 
         """Logging (log files levels etc..)"""
