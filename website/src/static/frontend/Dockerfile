@@ -1,6 +1,6 @@
 FROM python:3.7-buster
 
-WORKDIR /src
+WORKDIR /src/frontend/templates
 
 ENV FLASK_APP=app.py
 
