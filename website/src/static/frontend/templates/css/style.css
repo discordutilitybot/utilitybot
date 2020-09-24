@@ -10,7 +10,6 @@ a {
     text-decoration-skip-ink: all; /* Underline skips letter descenders */
     transition:100ms;
     font-family:Heebo;
-    text-decoration:none;
 }
 
 a:hover {
@@ -52,7 +51,7 @@ hr.no-margin {
     background-color:#72729a;
     height:3px;
     width:70%;
-    margin-top:-70px;
+    margin-top:-60px;
     margin-left:15%;
     border-radius:2px;
     align-items:center;
@@ -78,10 +77,19 @@ td, th {
     text-align: left;
     padding: 8px;
     background-color:rgba(0, 0, 0, 0.2);
+    width:min-content;
 }
 
 tr:nth-child(even) {
     background-color: rgba(134, 134, 134, 0.103);
+  }
+
+  td {
+      width:50%;
+  }
+
+  tr {
+      width:50%;
   }
 
 ul {
@@ -102,9 +110,10 @@ ul {
     border:1px solid white;
     margin:0;
     padding-left:7px;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
+    border-radius:3px;
+    width:100%;
 }
+
 .contact-btns { /* This is the contact button row. */
     display:flex;
     flex-direction:row;
@@ -193,10 +202,9 @@ ul {
         inset -4px -4px 10px rgba(67, 67, 67, 0.3),
         4px 4px 10px rgba(0, 0, 0, 0.3); /* cool inset shadows */
     margin:10px;
-    border-radius:50%;
+    border-radius:100%;
     background-color:rgba(0, 0, 0, 0.24);
-    width:25px;
-    height:25px;
+    transition:0.2s;
 }
 
 .faq-question {
@@ -222,14 +230,13 @@ ul {
     margin-top:10px;
 }
 
-.footer-row { /* Bug fixed!! :D */
+.footer-row { /* Bug fixed!! I'm so happy ^////^ */
     width:100%;
     height:300px;			
     background:#35354d;
     padding:10px;
     border-top:#1d1d28 3px solid; /* separates footer from main page */
     text-align:center;
-    padding-top:calc(50vh + 1px);
 }
 
 .footer-link {
@@ -238,18 +245,15 @@ ul {
     background:#35354d;
 }
 
-.logo { /* so uh the logo is positioned in a kind of forced way. its not the best way to position it so ill fix it later. */
-    position:absolute;
-    display:block;
-    width:80px;
-    height:80px;
-    background-size:contain;
+.logo { 
+    width:100px;
+    height:100px;
     border-radius:10px;
-    object-fit:cover;
-    margin-top:12px;
-    margin-left:-20px;
+    position:static;
+    margin-bottom:-20px;
+    box-shadow:-10px 10px 10px 0px rgba(0, 0, 0, 0.158);
+    background:none;
 }
-
 .main {
     background:#4c465e;
     width:65%;
@@ -312,23 +316,30 @@ ul {
 }
 
 .nav-items-list {
-    width: 30%;
+    width: 35%;
     position: absolute; /* On scroll it remains fixed */
-    left: 10px;
-    background: rgba(101, 96, 125, 0.6);
+    left: 0px;
+    background: rgb(34, 32, 38);
     padding: 8px;
     font-size:25px;
     font-family:Epilogue, sans-serif;
     text-decoration:none;
     border-radius:5px;
+    height:100%;
+    top:0;
+    margin:0;
+    box-shadow:20px 0px 40px 30px rgba(0, 0, 0, 0.2);
+    text-decoration:none;
 }
 
 .nav-item {
      width:100%;
-     margin-top:10px; /* Unnecessary font-strech removed */
      transition:0.2s ease-in-out;
      text-decoration:none;
      color:white;
+     text-align:center;
+     margin-top:40px;
+     font-size:30px;
 }
 
 .nav-img {
@@ -345,11 +356,12 @@ ul {
     color:white;
     background:linear-gradient(to right, rgba(97, 9, 9, 0), rgb(140, 34, 101), rgba(97, 9, 9, 0));
     position:static;
-    font-size:25px;
+    font-size:35px;
     text-transform:uppercase;
     text-align:center;
     width:100%;
     transition:200ms linear; /* linear ease fixes some bugs */
+    height:fit-content;
 }
 
 .nav-item-gradient:hover {
@@ -358,6 +370,12 @@ ul {
     font-weight:700;
 }
 
+.nav-item-gradient:hover .fa-plus {
+    transform:rotateZ(90deg) rotateY(10deg);
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+        inset 20px 4px 10px rgba(0, 0, 0, 0.5),
+        4px 4px 10px rgba(0, 0, 0, 0.3); /* cool inset shadows */
+}
 .nav-item-gradient.collapsed {
     width:40%;
 }
@@ -412,7 +430,7 @@ ul {
 }
 
 @media only screen and (min-width: 1500px) {
-    .nav-items-list > ul > li {
+    .nav-collapsed {
         display: none;
     }
 }
