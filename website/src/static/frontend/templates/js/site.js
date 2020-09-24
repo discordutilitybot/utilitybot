@@ -34,13 +34,26 @@ for (let i = 0; i < acc.length; i++) {
     }
 }
 
-let trig = document.getElementById('commandTitle');
+let trig = document.getElementsByClassName("commands-title"); // accordion variable
+let icon = document.getElementById("icon");
 
-function showHideCommands() {
-  let table = document.getElementById('table');
-  if (table.style.display = 'none') {
-    table.style.display = 'block';
-  } else {
-    table.style.display = 'none';
+  for (let i = 0; i < trig.length; i++) {
+    trig[i].onclick = function() { // When click is detected execute the following
+        let table = this.nextElementSibling; // The accordion content
+            if (table.style.display = 'none') {
+              table.style.display = 'block'; // make it null
+              icon.classList.remove('fa-angle-down');
+              icon.classList.add("fa-angle-up");
+            } else {
+              table.style.display = 'none';
+            }
+        }
+    }
+
+function hideCommands() {
+  if (table.style.display = 'block') {
+          table.style.display = 'none'; // make it null
+          icon.classList.add('fa-angle-down');
+          icon.classList.remove("fa-angle-up");
   }
 }

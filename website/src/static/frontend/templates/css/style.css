@@ -78,10 +78,19 @@ td, th {
     text-align: left;
     padding: 8px;
     background-color:rgba(0, 0, 0, 0.2);
+    width:min-content;
 }
 
 tr:nth-child(even) {
     background-color: rgba(134, 134, 134, 0.103);
+  }
+
+  td {
+      width:50%;
+  }
+
+  tr {
+      width:50%;
   }
 
 ul {
@@ -102,9 +111,10 @@ ul {
     border:1px solid white;
     margin:0;
     padding-left:7px;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
+    border-radius:3px;
+    width:100%;
 }
+
 .contact-btns { /* This is the contact button row. */
     display:flex;
     flex-direction:row;
