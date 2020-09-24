@@ -31,7 +31,7 @@ to develop a better user experience. Every donation will be spent on making Util
 You can find several ways to donate below.
 
  - [Patreon](https://www.patreon.com)
-- [Donate with PayPal](https://www.paypal.com)
+- [PayPal](https://www.paypal.com)
 
 ## Security 
 To report security/vulnerabilities in the bot or code, email security@utilitybot.co
