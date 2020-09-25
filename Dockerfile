@@ -2,7 +2,7 @@ FROM python:3
 
 ADD utilitybot.py /
 
-ADD /utils/config /
+ADD /utils /
 
 ADD /cogs /
 
