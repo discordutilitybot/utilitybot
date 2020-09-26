@@ -109,6 +109,19 @@ function hideInfoCommands() {
   } 
 }
 
+function hideUtilCommands() {
+  let tableUtil = document.getElementById('tableU');
+  let trigUtil = document.getElementById('trigU');
+  let iconUtil = document.getElementById('iconU');
+
+  if (tableUtil.style.display = 'block') {
+    tableUtil.style.display = 'none';
+    iconUtil.classList.remove('fa-angle-up');
+    iconUtil.classList.add("fa-angle-down");
+    trigUtil.setAttribute("onclick","showUtilCommands()");
+  } 
+}
+
 /* The following code is based off of: https://bit.ly/32C1vfo
 Comments added by me. */
 
