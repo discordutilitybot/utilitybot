@@ -34,26 +34,52 @@ for (let i = 0; i < acc.length; i++) {
     }
 }
 
-let trig = document.getElementsByClassName("commands-title"); // accordion variable
-let icon = document.getElementById("icon");
+function showModCommands() {
+  let tableMod = document.getElementById('tableM');
+  let trigMod = document.getElementById('trigM');
+  let iconMod = document.getElementById('iconM');
+  if (tableMod.style.display = 'none') {
+      tableMod.style.display = 'block'; // make it null
+      iconMod.classList.remove('fa-angle-down');
+      iconMod.classList.add("fa-angle-up");
+      trigMod.setAttribute("onclick","hideModCommands()");
+  } 
+}
 
-  for (let i = 0; i < trig.length; i++) {
-    trig[i].onclick = function() { // When click is detected execute the following
-        let table = this.nextElementSibling; // The accordion content
-            if (table.style.display = 'none') {
-              table.style.display = 'block'; // make it null
-              icon.classList.remove('fa-angle-down');
-              icon.classList.add("fa-angle-up");
-            } else {
-              table.style.display = 'none';
-            }
-        }
-    }
+function showFunCommands() {
+  let tableFun = document.getElementById('tableF');
+  let trigFun = document.getElementById('trigF');
+  let iconFun = document.getElementById('iconF');
 
-function hideCommands() {
-  if (table.style.display = 'block') {
-          table.style.display = 'none'; // make it null
-          icon.classList.add('fa-angle-down');
-          icon.classList.remove("fa-angle-up");
-  }
+  if (tableFun.style.display = 'none') {
+    tableFun.style.display = 'block'; // make it null
+    iconFun.classList.remove('fa-angle-down');
+    iconFun.classList.add("fa-angle-up");
+    trigFun.setAttribute("onclick","hideFunCommands()");
+  } 
+}
+
+function hideModCommands() {
+  let tableMod = document.getElementById('tableM');
+  let trigMod = document.getElementById('trigM');
+  let iconMod = document.getElementById('iconM');
+  if (tableMod.style.display = 'block') {
+      tableMod.style.display = 'none'; // make it null
+      iconMod.classList.remove('fa-angle-up');
+      iconMod.classList.add("fa-angle-down");
+      trigMod.setAttribute("onclick","showModCommands()");
+  } 
+}
+
+function  hideFunCommands() {
+  let tableFun = document.getElementById('tableF');
+  let trigFun = document.getElementById('trigF');
+  let iconFun = document.getElementById('iconF');
+
+  if (tableFun.style.display = 'block') {
+    tableFun.style.display = 'none'; // make it null
+    iconFun.classList.remove('fa-angle-up');
+    iconFun.classList.add("fa-angle-down");
+    trigFun.setAttribute("onclick","showFunCommands()");
+  } 
 }

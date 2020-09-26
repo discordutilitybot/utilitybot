@@ -84,25 +84,17 @@ tr:nth-child(even) {
     background-color: rgba(134, 134, 134, 0.103);
   }
 
-  td {
+td {
       width:50%;
-  }
+}
 
-  tr {
+tr {
       width:50%;
-  }
+}
 
 ul {
     list-style-type:none;
     text-decoration:none;
-}
-
-
-.fa-arrow-right {
-    padding-left:2px;
-    position:relative;
-    transform:scale(1.4);
-    transition:0.2s ease;
 }
 
 .commands-title { /*The title for the commands list tables */
@@ -129,7 +121,8 @@ ul {
     display:flex;
     flex-direction:row;
     opacity:0.8; /* Low opacity set; on hover, opacity will be 1 */
-    transition:0.5s ease;
+    transition:0.5s;
+    font-weight: 300;
 }
 
 .contact-btn.second-row {/* for second contact btn */
@@ -142,8 +135,8 @@ ul {
     transform:scale(1.1);
     border-radius:18px;
     transform:scale(1);
-    font-weight:500;
     max-height:fit-content;
+    font-weight:200;
 }
 
 .contact-btn .contact-tooltip {
@@ -167,9 +160,17 @@ ul {
     visibility: visible;
     opacity: 1;
     max-height:fit-content;
-    font-weight:400;
+    font-weight:300;
     transform:translate(0px,0px);
   }
+
+.fa-arrow-right {
+    padding-left:2px;
+    position:relative;
+    transform:scale(1.4);
+    transition:0.2s ease;
+}
+
 
 .fa-bars {
     color: rgba(255, 255, 255);
@@ -237,12 +238,16 @@ ul {
     padding:10px;
     border-top:#1d1d28 3px solid; /* separates footer from main page */
     text-align:center;
+    display:flex;
+    flex-direction:column;
 }
+
 
 .footer-link {
     color:#eeeeee;
     text-decoration:none;
     background:#35354d;
+    flex-direction:row;
 }
 
 .logo { 
@@ -316,8 +321,8 @@ ul {
 }
 
 .nav-items-list {
-    width: 25%;
-    position: absolute; /* On scroll it remains fixed */
+    width: 21%;
+    position: fixed; /* On scroll it remains fixed */
     left: -10px;
     background: rgb(34, 32, 38);
     padding: 8px;
@@ -337,7 +342,11 @@ ul {
 .nav-items-list:hover {
     opacity:1.0;
     left:0;
-    width:30%;
+    width:27%;
+}
+
+.nav-items-list > .nav-item {
+    font-size:30px;
 }
 
 .nav-items-list > .fa-bars {
@@ -348,12 +357,17 @@ ul {
 
 .nav-item {
      width:100%;
-     transition:0.2s ease-in-out;
+     transition:0.5s;
      text-decoration:none;
      color:white;
      text-align:center;
      margin-top:40px;
-     font-size:30px;
+     font-size:20px;
+}
+
+.nav-item a {
+    transition:0.5s;
+    text-decoration:none;
 }
 
 .nav-img {

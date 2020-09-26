@@ -45,8 +45,8 @@
       <div class="main-content">
         <hr class="left-separator">
        <h2 class="page-title">Complete list of UtilityBot commands</h2>
-       <h1 class="commands-title" id="commandTitle" onclick="hideCommands()">Moderation <i class="fas fa-angle-down" id="icon"></i></h1>
-       <table id="table" class="commands-list-category">
+       <h1 class="commands-title" id="trigM" onclick="showModCommands()">Moderation <i class="fas fa-angle-down" id="iconM"></i></h1>
+       <table id="tableM" class="commands-list-category">
          <tr>
          <th>Command</th>
          <th>Description</th>
@@ -76,34 +76,24 @@
           <td>Purges a specified amount of messages.</td>
         </tr>
        </table>
-       <table class="commands-list-category">
+<br>
+       <h1 class="commands-title" id="trigF" onclick="showFunCommands()">Fun <i class="fas fa-angle-down" id="iconF"></i></h1>
+       <table id="tableF" class="commands-list-category">
         <tr>
         <th>Command</th>
         <th>Description</th>
         </tr>
         <tr>
-          <td>u!kick [member] (reason)</td>
-          <td>Kicks a member.</td>
+          <td>u!roast [member]</td>
+          <td>Roasts a member.</td>
         </tr>
         <tr>
-         <td>u!ban [member] (reason)</td>
-         <td>Bans a member.</td>
+         <td>u!slap [member]</td>
+         <td>Slaps a member.</td>
        </tr>
        <tr>
          <td>u!unban [member] (reason)</td>
          <td>Unbans a member.</td>
-       </tr>
-       <tr>
-         <td>u!mute [member]</td>
-         <td>Mutes a member.</td>
-       </tr>
-       <tr>
-         <td>u!unmute [member]</td>
-         <td>Unmutes a member.</td>
-       </tr>
-       <tr>
-         <td>u!purge [amount]</td>
-         <td>Purges a specified amount of messages.</td>
        </tr>
       </table>
 </div>
