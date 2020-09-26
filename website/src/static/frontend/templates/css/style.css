@@ -428,11 +428,9 @@ ul {
 }
 
 .web-design-credit:hover {
-    box-shadow:1px 1px 0px 300px rgba(255, 255, 255, 0.429); /* this is weird and inefficient so it'll be removed. */
+    text-shadow:1px 1px 10px rgba(255, 255, 255, 0.429); /* Removed! */
     text-decoration:none;
 }
-
-/* not sure what an ::after pseudoelement was doing here :/ */
 
 @media only screen and (max-width: 1500px) {
     .nav-items-list {
