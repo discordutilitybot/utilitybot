@@ -20,7 +20,7 @@ Our bot can help you manage your server with many useful commands. You can kick,
 
 If you want to contribute or add a feature, don't hesitate to contact me on Discord @Flop#7234
 
-You have to be at least a little bit familiar with **asyncio** and **discord.py** python library, 
+You have to be at least a little bit familiar with the **asyncio** and **discord.py** python libraries, 
 and with python in general if you want to contribute.
 
 ## How can I request/suggest a feature?
