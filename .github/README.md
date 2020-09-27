@@ -1,6 +1,6 @@
 # Utility Bot: The ultimate server management bot.
 
-[![Discord Server](hi)](https://discordbots.org/bot/742196911523627068)
+[![Discord Server](https://discord.com/api/guilds/336642139381301249/embed.png)](https://discordbots.org/bot/742196911523627068)
 [![Discord Bots](https://discordbots.org/api/widget/status/74219691152362706.svg)](https://discord.gg/xAmmxPG)
 
 
