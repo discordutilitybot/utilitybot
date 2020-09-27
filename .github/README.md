@@ -2,7 +2,7 @@
 
 [![Discord Bots](https://discordbots.org/api/widget/status/74219691152362706.svg)](https://discordbots.org/bot/742196911523627068)
 
-.. image: https://discord.com/api/guilds/336642139381301249/embed.png
+   :image: https://discord.com/api/guilds/336642139381301249/embed.png
    :target: https://discord.gg/xAmmxPG
    :alt: Discord server invite
 
