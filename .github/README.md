@@ -4,7 +4,7 @@
 
 
 ## What is it?
-Our bot can help you manage your server with many useful commands. You can kick, ban, create polls, and much more! If you want more information, check out our [complete list](utilitybot.co/commands) of all of our bot's commands.
+Our bot can help you manage your server with many useful commands. You can kick, ban, create polls, and much more! If you want more information, check out our [complete list](utilitybot.co/commands) of all of its commands.
 
 ## Our bot loves and is built with:
 
@@ -21,7 +21,7 @@ If you want to contribute or add a feature, don't hesitate to contact me on Disc
 You have to be at least a little bit familiar with **asyncio** and **discord.py** python library, 
 and with python in general if you want to contribute.
 
-## How can i suggest a feature or request one?
+## How can I request/suggest a feature?
 You can use the Discord channel #feature-request to request a new feature.
 You can also create an issue on GitHub to request a feature. If necessary, explain the feature with screenshots.
 
