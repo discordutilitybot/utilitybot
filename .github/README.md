@@ -2,15 +2,10 @@
 
 [![Discord Bots](https://discordbots.org/api/widget/status/74219691152362706.svg)](https://discordbots.org/bot/742196911523627068)
 
-.. image:: https://discord.com/api/guilds/336642139381301249/embed.png
-   :target: https://discord.gg/r3sSKJJ
+.. image: https://discord.com/api/guilds/336642139381301249/embed.png
+   :target: https://discord.gg/xAmmxPG
    :alt: Discord server invite
-.. image:: https://img.shields.io/pypi/v/discord.py.svg
-   :target: https://pypi.python.org/pypi/discord.py
-   :alt: PyPI version info
-.. image:: https://img.shields.io/pypi/pyversions/discord.py.svg
-   :target: https://pypi.python.org/pypi/discord.py
-   :alt: PyPI supported Python versions
+
 
 
 ## What is it?
