@@ -1,6 +1,6 @@
 # Utility Bot: The ultimate server management bot.
 
-[![Discord Server]https://www.adl.org/sites/default/files/styles/open_graph_image_1200_x_628_/public/2019-08/discord-logo.jpg?itok=LMNTgq_N)](https://discordbots.org/bot/742196911523627068)
+[![Discord Server](hi)](https://discordbots.org/bot/742196911523627068)
 [![Discord Bots](https://discordbots.org/api/widget/status/74219691152362706.svg)](https://discord.gg/xAmmxPG)
 
 
