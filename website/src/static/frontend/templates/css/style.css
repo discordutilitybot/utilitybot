@@ -65,11 +65,13 @@ hr.left-separator {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
   display:none;
+  animation-duration:1s;
+  opacity:1;
 }
 
 td, th {
@@ -77,20 +79,12 @@ td, th {
     text-align: left;
     padding: 8px;
     background-color:rgba(0, 0, 0, 0.2);
-    width:min-content;
 }
 
 tr:nth-child(even) {
     background-color: rgba(134, 134, 134, 0.103);
   }
 
-td {
-      width:50%;
-}
-
-tr {
-      width:50%;
-}
 
 ul {
     list-style-type:none;
@@ -98,12 +92,21 @@ ul {
 }
 
 .commands-title { /*The title for the commands list tables */
-    background-color:rgba(255,255,255,0.1);
+    background:linear-gradient(to right,rgba(148, 59, 162, 0.141), rgba(66, 52, 192, 0.257));
     border:1px solid white;
     margin:0;
     padding-left:7px;
+    padding:8px;
     border-radius:3px;
-    width:100%;
+    width:80%;
+}
+
+.commands-title:nth-child(even) {
+    background:linear-gradient(to right,rgba(162, 59, 80, 0.141), rgba(192, 115, 52, 0.257));
+}
+
+.commands-title:nth-child(4n) {
+    background:linear-gradient(to right,rgba(152, 162, 59, 0.141), rgba(82, 192, 52, 0.257));
 }
 
 .contact-btns { /* This is the contact button row. */
@@ -407,7 +410,7 @@ ul {
     transform:rotateZ(90deg) rotateY(10deg);
 }
 .nav-item-gradient.collapsed {
-    width:40%;
+    width:40vw;
     margin:0;
     padding:10px 13px;
 }
@@ -438,6 +441,14 @@ ul {
 .web-design-credit:hover {
     text-shadow:1px 1px 10px rgba(255, 255, 255, 0.429); /* Removed! */
     text-decoration:none;
+}
+
+@keyframes float-down {
+    from {transform:translateY(-50px); opacity:0;}
+}
+
+@keyframes float-up {
+    to {transform:translateY(-50px); opacity:0;}
 }
 
 @media only screen and (max-width: 1500px) {
