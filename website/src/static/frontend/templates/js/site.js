@@ -26,6 +26,7 @@ function showModCommands() {
   let iconMod = document.getElementById('iconM'); // the down arrow
   if (tableMod.style.display = 'none') { // if it is not shown:
       tableMod.style.display = 'block'; // show it,
+      tableMod.style.animationName = 'float-down';
       iconMod.classList.remove('fa-angle-down'); // change arrow,
       iconMod.classList.add("fa-angle-up");
       trigMod.setAttribute("onclick","hideModCommands()"); // and set onclick function to hide the commands
@@ -39,6 +40,7 @@ function showFunCommands() {
 
   if (tableFun.style.display = 'none') {
     tableFun.style.display = 'block';
+    tableFun.style.animationName = 'float-down';
     iconFun.classList.remove('fa-angle-down');
     iconFun.classList.add("fa-angle-up");
     trigFun.setAttribute("onclick","hideFunCommands()");
@@ -52,6 +54,8 @@ function showInfoCommands() {
 
   if (tableInf.style.display = 'none') {
     tableInf.style.display = 'block';
+    tableInf.style.animationName = 'float-down';
+    tableInf.style.animationDirection = 'n';
     iconInf.classList.remove('fa-angle-down');
     iconInf.classList.add("fa-angle-up");
     trigInf.setAttribute("onclick","hideInfoCommands()");
@@ -65,6 +69,7 @@ function showUtilCommands() {
 
   if (tableUtil.style.display = 'none') {
     tableUtil.style.display = 'block';
+    tableUtil.style.animationName = 'float-down';
     iconUtil.classList.remove('fa-angle-down');
     iconUtil.classList.add("fa-angle-up");
     trigUtil.setAttribute("onclick","hideUtilCommands()");
@@ -76,20 +81,22 @@ function hideModCommands() {
   let trigMod = document.getElementById('trigM');
   let iconMod = document.getElementById('iconM');
   if (tableMod.style.display = 'block') {
-      tableMod.style.display = 'none';
+      setTimeout(function(){tableMod.style.display = 'none'}, 400);
       iconMod.classList.remove('fa-angle-up');
+      tableMod.style.animationName = 'float-up';
       iconMod.classList.add("fa-angle-down");
       trigMod.setAttribute("onclick","showModCommands()");
   } 
 }
 
-function  hideFunCommands() {
+function hideFunCommands() {
   let tableFun = document.getElementById('tableF');
   let trigFun = document.getElementById('trigF');
   let iconFun = document.getElementById('iconF');
 
   if (tableFun.style.display = 'block') {
-    tableFun.style.display = 'none';
+    setTimeout(function(){tableFun.style.display = 'none'}, 400);
+    tableFun.style.animationName = 'float-up';
     iconFun.classList.remove('fa-angle-up');
     iconFun.classList.add("fa-angle-down");
     trigFun.setAttribute("onclick","showFunCommands()");
@@ -102,7 +109,8 @@ function hideInfoCommands() {
   let iconInf = document.getElementById('iconI');
 
   if (tableInf.style.display = 'block') {
-    tableInf.style.display = 'none';
+    setTimeout(function(){tableInf.style.display = 'none'}, 400);
+    tableInf.style.animationName = 'float-up';
     iconInf.classList.remove('fa-angle-up');
     iconInf.classList.add("fa-angle-down");
     trigInf.setAttribute("onclick","showInfoCommands()");
@@ -115,7 +123,8 @@ function hideUtilCommands() {
   let iconUtil = document.getElementById('iconU');
 
   if (tableUtil.style.display = 'block') {
-    tableUtil.style.display = 'none';
+    setTimeout(function(){tableUtil.style.display = 'none'}, 400);
+    tableUtil.style.animationName = 'float-up';
     iconUtil.classList.remove('fa-angle-up');
     iconUtil.classList.add("fa-angle-down");
     trigUtil.setAttribute("onclick","showUtilCommands()");
