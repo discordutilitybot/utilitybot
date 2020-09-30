@@ -1,3 +1,467 @@
+<<<<<<< HEAD
+/*Base styles*/
+html {
+    background:#35354d;
+    color:white;
+    font-family:Heebo;
+}
+
+a {
+    color:white;
+    text-decoration-skip-ink: all; /* Underline skips letter descenders */
+    transition:100ms;
+    font-family:Heebo;
+}
+
+a:hover {
+    font-weight:bold;
+}
+
+button {
+    border:none;
+    background:none;
+    color:white;
+    border-bottom:1px solid white;
+    transition:0.2s ease;
+    margin:2px;
+    padding:5px;
+    font-size:15px;
+}
+
+button:hover {
+     letter-spacing:0.1px;
+     color:lightblue;
+}
+
+button:hover .fa-arrow-right {
+    transform:translate(4px,0px) scale(1.4);
+    color:white;
+}
+
+h1 {
+    font-family:Work Sans, sans-serif;
+}
+
+hr {
+    width:50%;
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.158);
+}
+
+
+hr.no-margin {
+    background-color:#72729a;
+    height:3px;
+    width:70%;
+    margin-top:-60px;
+    margin-left:15%;
+    border-radius:2px;
+    align-items:center;
+    border:none;
+}
+
+hr.left-separator {
+    margin-left:0;
+    margin:0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  display:none;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    background-color:rgba(0, 0, 0, 0.2);
+    width:min-content;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(134, 134, 134, 0.103);
+  }
+
+td {
+      width:50%;
+}
+
+tr {
+      width:50%;
+}
+
+ul {
+    list-style-type:none;
+    text-decoration:none;
+}
+
+.commands-title { /*The title for the commands list tables */
+    background-color:rgba(255,255,255,0.1);
+    border:1px solid white;
+    margin:0;
+    padding-left:7px;
+    border-radius:3px;
+    width:100%;
+}
+
+.contact-btns { /* This is the contact button row. */
+    display:flex;
+    flex-direction:row;
+}
+
+.contact-btn {
+    border:none;
+    border-radius:9px;
+    background:linear-gradient(45deg,#f27e7e,#ba5fe7);
+    padding:10px;
+    width:fit-content;
+    margin:10px;
+    display:flex;
+    flex-direction:row;
+    opacity:0.8; /* Low opacity set; on hover, opacity will be 1 */
+    transition:0.5s;
+    font-weight: 300;
+}
+
+.contact-btn.second-row {/* for second contact btn */
+    background:linear-gradient(45deg, #6fd288, #42c0af); 
+}
+
+.contact-btn:hover {
+    opacity:1;
+    border-radius:15px;
+    transform:scale(1.1);
+    border-radius:18px;
+    transform:scale(1);
+    max-height:fit-content;
+    font-weight:200;
+}
+
+.contact-btn .contact-tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: fixed;
+    z-index: 1;
+    bottom: 110%;
+    left:-50px;
+    opacity: 0;
+    transition: 0.5s;
+    transform:translate(0px,30px);
+    overflow:hidden;
+}
+
+.contact-btn:hover .contact-tooltip {
+    visibility: visible;
+    opacity: 1;
+    max-height:fit-content;
+    font-weight:300;
+    transform:translate(0px,0px);
+  }
+
+.fa-arrow-right {
+    padding-left:2px;
+    position:relative;
+    transform:scale(1.4);
+    transition:0.2s ease;
+}
+
+
+.fa-bars {
+    color: rgba(255, 255, 255);
+	background: rgba(0,0,0,0.2);
+	text-align: center;
+	display: none;
+	cursor: pointer;
+	position: absolute; /* Bypasses other elements' collisions */
+	z-index: 50;
+	width: 40px;
+	height: 40px;
+    	border-radius: 3px;
+    	line-height:40px; /* Vertically centers icon */
+    	padding:0;
+    	transition:ease 1s;
+    	transform:scale(1.5);
+    	margin:20px;
+    	box-shadow:0px 10px 10px rgba(0, 0, 0, 0.158);
+
+}
+
+.fa-bars:hover {
+    background:rgba(0,0,0,0.6);
+    transform:scale(1.8);
+}
+
+.fa-plus {
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+        inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 10px rgba(67, 67, 67, 0.3),
+        4px 4px 10px rgba(0, 0, 0, 0.3); /* cool inset shadows */
+    margin:10px;
+    border-radius:100%;
+    background-color:rgba(0, 0, 0, 0.24);
+    transition:0.2s;
+}
+
+.faq-question {
+  background-color: #6e6e93;
+  text-align: left;
+  padding: 10px 30px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition:0.2s;
+  margin-bottom:0px;
+}
+
+.faq-question:hover {
+    background-color:#7f7fa9;
+}
+
+.faq-answer {
+    overflow:hidden;
+    max-height:0;
+    transition: 0.4s cubic-bezier(.83,.01,.14,.99);
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.footer-row {
+    width:100%;
+    height:300px;			
+    padding:10px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0px -10px 20px 10px rgba(0, 0, 0, 0.2);
+    z-index:3;
+}
+
+
+.footer-link {
+    color:#eeeeee;
+    text-decoration:none;
+    background:#35354d;
+    flex-direction:row;
+}
+
+.logo { 
+    width:100px;
+    height:100px;
+    border-radius:10px;
+    position:static;
+    margin-bottom:-20px;
+    box-shadow:-10px 10px 10px 0px rgba(0, 0, 0, 0.158);
+    background:none;
+}
+.main {
+    background:#4c465e;
+    width:75%;
+    right:0;
+    height:fit-content;
+    float:right;
+}
+
+.main-content {
+    padding:20px;
+}
+
+.main-title {
+    font-family:Work Sans;
+    color:white;
+    font-size:90px;
+    text-align:center;
+    margin-top:0px;
+    margin-left:40px;
+}
+
+.main-subtitle {
+    font-family:Heebo, sans-serif;
+    font-weight:300;
+    color:#aaa;
+    text-align:center;
+    margin-top:0px;
+}
+
+.nav-collapsed {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(16, 16, 16, 0.92);
+    transition:cubic-bezier(.82,.01,.41,.99) 1s;
+    overflow:hidden; /* Just so the contents don't glitch out of the nav. */
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+.nav-collapsed > ul {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-collapsed > ul > li {
+    font-size:25px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    padding:0px;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    margin-top:40px;
+}
+
+.nav-items-list {
+    width: 21%;
+    position: fixed; /* On scroll it remains fixed */
+    left: -10px;
+    background: rgb(34, 32, 38);
+    padding: 8px;
+    font-size:25px;
+    font-family:Epilogue, sans-serif;
+    text-decoration:none;
+    border-radius:5px;
+    height:100%;
+    top:0;
+    margin:0;
+    box-shadow:20px 0px 40px 30px rgba(0, 0, 0, 0.2);
+    text-decoration:none;
+    opacity:0.4;
+    transition:0.5s;
+}
+
+.nav-items-list:hover {
+    opacity:1.0;
+    left:0;
+    width:27%;
+}
+
+.nav-items-list > .nav-item {
+    font-size:30px;
+}
+
+.nav-items-list > .fa-bars {
+    position:fixed;
+    right:0;
+    top:0;
+}
+
+.nav-item {
+     width:100%;
+     transition:0.5s;
+     text-decoration:none;
+     color:white;
+     text-align:center;
+     margin-top:40px;
+     font-size:20px;
+}
+
+.nav-item a {
+    transition:0.5s;
+    text-decoration:none;
+}
+
+.nav-img {
+    padding:10px;
+}
+
+.nav-item:hover {
+    text-decoration:none;
+    color:white;
+}
+
+.nav-item-gradient {
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(to right, rgba(97, 9, 9, 0), rgb(140, 34, 101), rgba(97, 9, 9, 0));
+    position:static;
+    font-size:35px;
+    text-transform:uppercase;
+    text-align:center;
+    width:100%;
+    transition:200ms linear; /* linear ease fixes some bugs */
+    height:fit-content;
+}
+
+.nav-item-gradient:hover {
+    filter:hue-rotate(-40deg);
+    transform:translateY(0px) translateX(0);
+    font-weight:700;
+}
+
+.nav-item-gradient:hover .fa-plus {
+    transform:rotateZ(90deg) rotateY(10deg);
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+        inset 20px 4px 10px rgba(0, 0, 0, 0.5),
+        4px 4px 10px rgba(0, 0, 0, 0.3); /* cool inset shadows */
+}
+.nav-item-gradient.collapsed {
+    width:40%;
+}
+
+.nav-item.active {
+    color:lightcyan;
+}
+
+.page-title {
+    margin-top:40px;
+    font-weight:400;
+    text-transform:capitalize;
+    font-family:work sans, sans-serif;
+    font-size:36px;
+    margin-left:10px;
+}
+
+.web-design-credit {
+	 padding:1px;
+	 border-radius:10px;
+	 text-decoration:underline;
+}
+
+.web-design-credit:hover {
+    text-shadow:1px 1px 10px rgba(255, 255, 255, 0.429); /* Removed! */
+    text-decoration:none;
+}
+
+@media only screen and (max-width: 1500px) {
+    .nav-items-list {
+        display:none;
+        position:relative;
+    }
+    
+    .main {
+        width:100%;
+    }
+    .nav-collapsed, .fa-bars {
+        display:block;
+    }
+
+    .nav-items-list > ul > li {
+        display: block;
+    }
+
+    .footer-row {
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .nav-collapsed {
+        display: none;
+    }
+}
+=======
 /*Base styles*/
 html {
     background:#35354d;
@@ -485,3 +949,4 @@ ul {
         font-size:larger;
     }
 }
+>>>>>>> 20a8844cc87152d9a49ade95e5844e474c9fe61e
