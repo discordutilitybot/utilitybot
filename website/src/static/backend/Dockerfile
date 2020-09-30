@@ -2,9 +2,7 @@ FROM python:3.7
 
 WORKDIR /src/frontend/templates
 
-ENV FLASK_APP=app.py
-
-ENV FLASK_RUN_HOST=0.0.0
+ADD /src/backend /
 
 COPY requirements.txt .
 
@@ -16,4 +14,4 @@ COPY . .
 
 ENTRYPOINT ["python"]
 
-CMD [ "./app.py"] 
+CMD [ "./main.py"] 
