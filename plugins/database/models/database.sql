@@ -1,2 +1,3 @@
--- Create a new database called 'utilitydb'
-CREATE DATABASE utilitydb;
+CREATE TABLE guilds (
+    guild_id BIGINT NOT NULL DEFAULT 0
+)
