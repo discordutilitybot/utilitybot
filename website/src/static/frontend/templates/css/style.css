@@ -92,7 +92,7 @@ ul {
 }
 
 .commands-title { /*The title for the commands list tables */
-    background:linear-gradient(to right,rgba(148, 59, 162, 0.141), rgba(66, 52, 192, 0.257));
+    background:linear-gradient(to right,rgba(71, 77, 140, 0.141), rgba(77, 98, 174, 0.257));
     border:1px solid white;
     margin:0;
     padding-left:7px;
