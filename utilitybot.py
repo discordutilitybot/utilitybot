@@ -38,7 +38,7 @@ class Utilitybot(commands.Bot):
             self.load_extension(ext)
             
     
-    hi et
+    
     self.load_cogs()
 
     self.load_events()
