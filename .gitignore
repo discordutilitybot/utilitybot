@@ -4,8 +4,8 @@ __pycache__/
 *$py.class
 
 # Private .env stuff where data is stored
-secrets.py
-private/
+*secrets.py
+
 
 # Distribution / packaging
 .Python
