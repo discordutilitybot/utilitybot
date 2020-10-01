@@ -14,13 +14,19 @@ class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.launchtime = datetime.datime.utcnow(datetime.timezone.utc)
-        self.db = asyncpg.pool.Pool = None
+        self.db = None
         """Common attributes"""
 
         """Logging (log files levels etc..)"""
 
         """Other"""
 
+
+    
+    async def connect(self):
+        """Initialize asyncpg Pool"""
+        self.db = await asyncpg.create_pool(user='postgres', host='127.0.0.1')
+        
 
     """Loading cogs/events functions"""
     async def load_events(self):
