@@ -4,6 +4,16 @@ services:
   frontend-service:
     build: ./frontend
     volumes:
-      - ./front:/usr/src/app
+      - ./frontend:/usr/src/app
     ports:
       - 8080:8080
+
+services:
+  backend-services:
+    build: ./backend
+    volumes: 
+      - ./backend:/usr/src/app
+    ports:
+      8081:8081
+    depends_on:
+      - frontend-service
