@@ -25,7 +25,7 @@ class Utilitybot(commands.Bot):
     
     async def connect(self):
         """Initialize asyncpg Pool"""
-        self.db = await asyncpg.create_pool(user='postgres', host='127.0.0.1')
+        self.db = await asyncpg.create_pool(user='postgres', host='127.0.0.1', max_size=None, min_size=None)
         
 
     """Loading cogs/events functions"""
