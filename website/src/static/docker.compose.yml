@@ -1,2 +1,9 @@
 version: '3'
 
+services:
+  frontend-service:
+    build: ./frontend
+    volumes:
+      - ./front:/usr/src/app
+    ports:
+      - 8080:8080
