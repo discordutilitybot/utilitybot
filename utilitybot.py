@@ -3,6 +3,7 @@ from discord.ext import commands
 import asyncio
 import asyncpg
 import datetime
+import aiohttp
 from datetime import datetime
 import json
 
@@ -13,7 +14,7 @@ class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.launchtime = datetime.datime.utcnow(datetime.timezone.utc)
-        self.db = await asyncpg.create_pool(host='host', user='user', password="pass", database='db', min_size=1, max_size=5)
+        self.db = asyncpg.pool.Pool = None
         """Common attributes"""
 
         """Logging (log files levels etc..)"""
