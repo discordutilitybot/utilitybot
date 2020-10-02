@@ -9,7 +9,7 @@ services:
       dockerfile: Dockerfile
 
     volumes:
-      - ./frontend:/var/www/app
+      - ./frontend:/src/static/backend
 
     ports:
       - 5000:8080
@@ -31,6 +31,8 @@ services:
 
     depends_on:
        - postgres
+       - ./backend:/src/static/backend
+       - ./frontend:/src/static/frontend
       
     environnment:
       POSTGRES_HOST: ""
