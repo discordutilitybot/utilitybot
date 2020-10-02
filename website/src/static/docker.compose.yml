@@ -4,7 +4,7 @@ services:
   frontend:
     build: ./frontend
     volumes:
-      - ./frontend:/usr/src/app
+      - ./frontend:/src/static/frontend
     ports:
       - 8080:8080
 
