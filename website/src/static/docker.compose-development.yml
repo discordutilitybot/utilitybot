@@ -1,63 +1,52 @@
 version: '3'
 
 services:
+
   frontend-services:
-    image: frontend-services:1.0
 
-    build: 
-      context: ./static/frontend
-      dockerfile: Dockerfile
-
+    build: ./frontend
+      
     depends_on:
       - ./backend:/src/static/backend
 
     volumes:
-      - ./frontend:/src/static/frontend
+      - ./frontend:/usr/src/frontend
 
     ports:
-      - 5000:8080
+      - 8080:8080
 
   backend-services:
-
-    build: 
-      context: ./static/backend
-      dockerfile: Dockerfile
-    
+    build: ./src/static/backend
+      
     depends_on:
       - ./frontend:/src/static/frontend
 
     volumes:
-      - ./backend:/src/static/backend
+      - ./backend:/usr/src/backend
 
     ports:
-      - 5000:8081
+      - 8081:8081
 
-  
-  api-services:
-    depends_on:
-       - postgres
-       - ./backend:/src/static/backend
-       - ./frontend:/src/static/frontend
-      
-    environnment:
-      POSTGRES_HOST: ""
-      POSTGRES_USER: ""
-      POSTGRES_PASSWORD: ""
-      POSTGRES_PORT: ""
+
+  api-service:
 
     build: 
-      context: ./static/api
-      dockerfile: Dockerfile
+      - ./api
+    
+    environnment:
+      - POSTGRES_HOST: ""
+      - POSTGRES_USER: ""
+      - POSTGRES_PASSWORD: ""
 
     volumes: 
-      - ./api:/src/static/api
+      - ./api:/usr/src/api
 
     ports:
-     - 5000:8082
+      - 8082:8082
 
-  postgres:
+    depends_on:
+    -  frontend-services
+    - db
+
+  db:
     image: postgres
-  
-    
-  
-    
