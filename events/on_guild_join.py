@@ -17,10 +17,7 @@ class GuildJoin(commands.Cog):
     async def on_guild_join(self, guild):
         """Make sure to add muted role before any calls are made to the DB."""
 
-       async with asyncpg.create_pool()
-        
-       async with pool.acquire() as con:
-           await con.execute("""INSERT INTO Guilds""")
+    
         
 
 def setup(bot):
