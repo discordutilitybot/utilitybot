@@ -3,9 +3,11 @@ version: '3'
 services:
   frontend-services:
     image: frontend-services:1.0
-    build: ./frontend
+    build: 
+      context: ./static/frontend
+      dockerfile: Dockerfile
     volumes:
-      - ./frontend:/src/static/frontend
+      - ./frontend:/var/www/app
     ports:
       - 8080:8080
 
@@ -20,7 +22,10 @@ services:
   api-services:
     image: api-services:1.0
     environnment:
-      POSTGRES_URI: ""
+      POSTGRES_HOST: ""
+      POSTGRES_USER: ""
+      POSTGRES_PASSWORD: ""
+
     build: ./api
     volumes: 
       - ./api:/src/static/api
