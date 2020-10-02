@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  frontend-services:
+    image: frontend-services:1.0
+    build: ./frontend
+    volumes:
+      - ./frontend:/src/static/frontend
+    ports:
+      - 5000:8080
+
+  backend-services:
+    image: backend-services:1.0
+    build: ./backend
+    volumes:
+      - ./backend:/src/static/backend
+    ports:
+      - 5000:8081
+
+  api-services:
+    image: api-services:1.0
+    environnment:
+      POSTGRES_URI: ""
+    build: ./api
+    volumes: 
+      - ./api:/src/static/api
+    ports:
+      - 5000:8082
+
+    
+    
+    
