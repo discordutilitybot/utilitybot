@@ -7,4 +7,6 @@ class Github(commands.Cog):
         self.bot = bot
 
 
-    @command.commands()
+    @command.commands(aliases=['code, src,'])
+    async def github(self, *, ctx):
+        await ctx.send("You can find Utility Bot's source code here: \n https://github.com/discordutilitybot/utilitybot.")
