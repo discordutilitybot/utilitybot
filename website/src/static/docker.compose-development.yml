@@ -15,9 +15,12 @@ services:
       - 5000:8080
 
   backend-services:
-    image: backend-services:1.0
 
-    build: ./backend
+    build: 
+      context: ./static/backend
+      dockerfile: Dockerfile
+
+
 
     volumes:
       - ./backend:/src/static/backend
@@ -25,8 +28,11 @@ services:
     ports:
       - 5000:8081
 
+  db:
+    image: postgres
+
   api-services:
-    image: api-services:1.0
+
     environnment:
       POSTGRES_HOST: ""
       POSTGRES_USER: ""
@@ -41,8 +47,9 @@ services:
       - ./api:/src/static/api
 
     ports:
-      - 5000:8082
+     - 5000:8082
 
+  
     
-    
+  
     
