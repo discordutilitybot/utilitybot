@@ -12,3 +12,5 @@ services:
     image: 
       volumes:
         ./backend:/src/static/backend
+      ports:
+        8081:8081
