@@ -8,8 +8,11 @@ services:
       context: ./static/frontend
       dockerfile: Dockerfile
 
+    depends_on:
+      - ./backend:/src/static/backend
+
     volumes:
-      - ./frontend:/src/static/backend
+      - ./frontend:/src/static/frontend
 
     ports:
       - 5000:8080
@@ -20,6 +23,9 @@ services:
       context: ./static/backend
       dockerfile: Dockerfile
     
+    depends_on:
+      - ./frontend:/src/static/frontend
+
     volumes:
       - ./backend:/src/static/backend
 
@@ -28,7 +34,6 @@ services:
 
   
   api-services:
-
     depends_on:
        - postgres
        - ./backend:/src/static/backend
