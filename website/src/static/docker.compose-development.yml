@@ -28,8 +28,10 @@ services:
 
   
   api-services:
+
     depends_on:
-      - image: postgres
+       - postgres
+      
     environnment:
       POSTGRES_HOST: ""
       POSTGRES_USER: ""
