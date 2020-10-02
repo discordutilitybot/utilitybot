@@ -202,7 +202,7 @@ ul {
 
 .fa-plus {
     margin:10px;
-    transition:0.2s;
+    transition:0.6s;
 }
 
 .fa-lock, .fa-question, .fa-envelope, .fa-user-friends {
@@ -294,7 +294,7 @@ ul {
     width: 100%;
     position: absolute;
     z-index: 1;
-    background-color: rgba(16, 16, 16, 0.92);
+    background-color: rgba(0, 0, 0, 0.986);
     transition:cubic-bezier(.82,.01,.41,.99) 1s;
     overflow:hidden; /* Just so the contents don't glitch out of the nav. */
     left:0;
@@ -385,29 +385,32 @@ ul {
 .nav-item-gradient {
     background: transparent;
     font-weight: 500;
-    border-radius: 0;
-    transition: all 1s;
-    background: linear-gradient(270deg,rgba(129, 52, 192, 0.8), rgba(212, 156, 52, 0.8), rgba(34,34,34,0), rgba(34,34,34,0));
-    background-position: 0% 100%;
-    background-size: 300% 300%;
+    transition: 1s;
     margin: 0.625rem;
     border: none;
     padding:10px 13px;
     font-size:30px;
     text-align:center;
-    border-radius:100px;
   }
   
   .nav-item-gradient:hover {
     color: #fff;
     border: 1px solid rgba(223,190,106,0);
     background-position: 99% 50%;
-    box-shadow:0 0 60px 100px rgba(255, 255, 255, 0.055);
+    box-shadow:0 0 60px 10px rgba(255, 255, 255, 0.661), 0px 20px 60px 10px rgba(0,0,0,0.2);
+    opacity:1;
+    filter:brightness(0.8) contrast(2);
+    color:black;
   }
 
 
 .nav-item-gradient:hover .fa-plus {
-    transform:rotateZ(90deg) rotateY(10deg);
+    transform:rotateZ(90deg) rotateY(10deg) scale(1.5);
+}
+
+.nav-item-gradient:hover .nav-item-text {
+    color:black;
+    transition:0.5s;
 }
 .nav-item-gradient.collapsed {
     width:40vw;

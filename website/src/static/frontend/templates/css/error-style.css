@@ -71,7 +71,7 @@ html {
   text-align:center;
 }
 
-.error-message button:after, .error-message button:before {c/* top and bottom borders of button */
+.error-message button:after, .error-message button:before {/* top and bottom borders of button */
 	backface-visibility:hidden;
 	border: 1px solid rgba(255,255,255,0);
 	content:"";
