@@ -17,7 +17,7 @@ services:
 
     depends_on:
       - ./frontend:/src/static/frontend
-      
+
     volumes:
       - ./backend:/usr/src/backend
 
@@ -41,7 +41,6 @@ services:
     depends_on:
     -  frontend-services
     - db
-
 
   db:
     image: postgres
