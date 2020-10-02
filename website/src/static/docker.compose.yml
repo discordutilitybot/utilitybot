@@ -8,4 +8,7 @@ services:
     ports:
       - 8080:8080
 
-    
+  website:
+    image: 
+      volumes:
+        ./backend:/src/static/backend
