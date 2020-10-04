@@ -1,6 +1,6 @@
 FROM python:3.6-onbuild
 
-ADD utilitybot.py /
+ADD utilitybot-dev.py /
 
 ADD /utils /
 
@@ -11,4 +11,4 @@ ADD /events /
 
 ENTRYPOINT [ "python" ]
 
-CMD ["./utilitybot.py" ]
+CMD ["./utilitybot-dev.py" ]
