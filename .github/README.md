@@ -44,5 +44,5 @@ The default command to get help is u!help.
 
 > **NOTE**: Support will not be provided if you attempt to self-host Utility Bot. It is NOT recommended!
 
-Join our support discord for further support or just to chat with other users! The invite link is below.
+Join our support discord for further support or just to chat with other users! The invite link is below:
   [![server](https://discord.com/api/guilds/742193197673087027/widget.png?style=banner4)](https://discord.gg/BBQc6X)
