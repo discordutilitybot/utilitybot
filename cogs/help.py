@@ -13,8 +13,8 @@ class Help(commands.Cog):
     async def help(self, ctx, module_name: str):
         if module_name is None:
             embed = discord.Embed(
-                title = "Command's use the prefix u!",
-                description = "List of commands and modules!",
+                title = "Modules",
+                description = "List of all the modules you can search up!",
                 colour = discord.Colour.blue()
             )
         
