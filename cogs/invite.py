@@ -9,5 +9,5 @@ class Invite(commands.Cog):
 
     
     @commands.command()
-    async def invite(self, *, bot):
+    async def invite(self, *, ctx, bot):
         await ctx.send("Here is the invite link for utilitybot: ")
