@@ -6,6 +6,7 @@ import datetime
 import aiohttp
 from datetime import datetime
 import json
+from secrets import *
 
 
 """Local modules"""
@@ -25,7 +26,7 @@ class Utilitybot(commands.Bot):
     
     async def connect(self):
         """Initialize asyncpg Pool"""
-        self.db = await asyncpg.create_pool(user='postgres', host='127.0.0.1', max_size=None, min_size=None)
+        self.db = await asyncpg.create_pool(user='postgres', host=, max_size=None, min_size=None)
         
 
     """Loading cogs/events functions"""
