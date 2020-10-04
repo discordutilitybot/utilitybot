@@ -6,7 +6,7 @@ CREATE TABLE guilds (
 )
 
 CREATE TABLE guild_settings (
-    muted_role INT(20) DEAULT 'Muted'
+    muted_role INT(20) DEFAULT 'Muted',
     guild_prefix VARCHAR(15) DEFAULT 'u!',
     log_channel INT(20) DEFAULT NULL,
     join_channel INT(20) DEFAULT NULL,
