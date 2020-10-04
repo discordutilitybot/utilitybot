@@ -3,9 +3,12 @@ version: '3'
 services:
 
   frontend-services:
-    build: ./frontend
+    build: 
+      image: frontend-services:1.0
+
     depends_on:
       - ./backend:/src/static/backend
+      
     volumes:
       - ./frontend:/usr/src/frontend
 
@@ -13,7 +16,8 @@ services:
       - 8080:8080
 
   backend-services:
-    build: ./src/static/backend
+    build: 
+      image: backend-services:1.0
 
     depends_on:
       - ./frontend:/src/static/frontend
@@ -27,7 +31,8 @@ services:
 
   api-service:
     build: 
-      - ./api
+      image: api-service:1.0
+
     environnment:
       - POSTGRES_HOST: ""
       - POSTGRES_USER: ""
