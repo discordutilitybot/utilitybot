@@ -24,7 +24,9 @@ class Help(commands.Cog):
             embed.add_field(name=":information_source :Info", value="u!info")
 
         
-        await ctx.send(embed=embed)
-            
+            await ctx.send(embed=embed)
+        
+
+    
 def setup(bot):
     bot.add_cog(bot(Help))
