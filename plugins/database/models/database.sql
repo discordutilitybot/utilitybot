@@ -1,7 +1,7 @@
 /* This is were we collect global info of each guild e.g: messages, role count, channel count,guild_id*/
 CREATE TABLE guilds (
     
-    guild_id BIGINT NOT NULL DEFAULT 0
+    guild_id INT(20) DEFAULT NULL
     
 )
 
