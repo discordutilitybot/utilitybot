@@ -7,9 +7,10 @@ from secrets import *
 
 bot = commands.Bot(command_prefix="u!")
 
-cogs = [
-    'cogs.github',
-    'cogs.help'
-]
+extensions = ('cogs.github', 'cogs.help')
+
+
+for ext in extensions:
+    bot.load_extension(extensions)
 
 bot.run(token)
