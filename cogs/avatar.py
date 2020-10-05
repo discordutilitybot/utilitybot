@@ -7,7 +7,7 @@ class Avatar(commands.Cog):
 
     
 
-    @commands.commands(alias=["av"])
+    @commands.command(alias=["av"])
     async def avatar(self, ctx, *, user: discord.Member):
         if not user:
             user = ctx.author
