@@ -8,7 +8,7 @@ config.py
 
 #logs
 *utility.log
-*utility-test.log
+*utility-test.loge
 # Distribution / packaging
 .Python
 env/
