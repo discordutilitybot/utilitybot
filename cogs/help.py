@@ -27,6 +27,6 @@ class Help(commands.Cog):
             await ctx.send(embed=embed)
         
 
-        if module_name == ""
+        
 def setup(bot):
     bot.add_cog(bot(Help))
