@@ -4,7 +4,7 @@ from discord.utils import get
 
 class Botinfo(commands.Cog):
     def __init__(self, bot):
-        self.bot
+        self.bot = bot
 
 
 def setup(bot):
