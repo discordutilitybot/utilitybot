@@ -39,15 +39,18 @@ services:
       - POSTGRES_USER: ""
       - POSTGRES_PASSWORD: ""
 
+
     volumes: 
       - ./api:/usr/src/api
+_
     ports:
 
       - 8082:8082
-
+    restart: always
     depends_on:
     -  frontend-services
     - db
 
+    
   db:
     image: postgres
