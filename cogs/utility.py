@@ -11,8 +11,6 @@ class Utility(commands.Cog):
         self.bot = bot
 
 
-    async def mute(self, ctx, member: discord.Member):
-        pass
         
 
 def setup(bot):
