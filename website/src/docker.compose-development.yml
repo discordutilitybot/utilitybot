@@ -37,10 +37,9 @@ services:
   
     volumes: 
       - ./api:/usr/src/api
-_
+
     ports:
     - 8082:8082
-
 
     depends_on:
       - frontend-services
