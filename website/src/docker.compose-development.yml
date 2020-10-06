@@ -60,7 +60,6 @@ services:
     
 db:
   image: postgres
-  expose:
+  ports:
   - 5432
 
-  
