@@ -16,7 +16,7 @@ services:
       - 8080:8080
 
   backend-services:
-  
+
     build: 
       context: .
       image: backend-services:1.0
@@ -31,7 +31,7 @@ services:
       - 8081:8081
 
 
-  api-service:
+  api-services:
     
     build: 
       context: .
