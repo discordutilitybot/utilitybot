@@ -32,6 +32,7 @@ services:
   api-service:
     
     build: 
+      context: .
       image: api-service:1.0
 
   
