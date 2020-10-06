@@ -3,7 +3,7 @@ import os
 from discord.ext import commands
 
 import secrets
-from secrets import *
+from secrets import token
 
 bot = commands.Bot(command_prefix="u!")
 
