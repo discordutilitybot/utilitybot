@@ -1,6 +1,6 @@
 FROM python:3.6-onbuild
 
-MAINTAINER utilitybot
+MAINTAINER Andrew Nijmeh
 
 ADD utilitybot-dev.py /
 
