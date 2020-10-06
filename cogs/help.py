@@ -29,4 +29,5 @@ class Help(commands.Cog):
 
         
 def setup(bot):
+    bot.remove_cog(Help(bot))
     bot.add_cog(Help(bot))
