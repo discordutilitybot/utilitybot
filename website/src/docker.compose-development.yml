@@ -17,6 +17,7 @@ services:
 
   backend-services:
     build: 
+      context: .
       image: backend-services:1.0
 
     depends_on:
