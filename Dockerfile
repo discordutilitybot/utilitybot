@@ -1,4 +1,4 @@
-FROM python:3.6-onbuild
+FROM python:3.6
 
 ADD utilitybot-dev.py /
 
