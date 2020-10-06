@@ -8,7 +8,9 @@ ADD /cogs /
 
 ADD /events /
 
+COPY requirements.txt .
 
+pip install requirements.txt
 ENTRYPOINT [ "python" ]
 
 CMD ["./utilitybot-dev.py" ]
