@@ -6,7 +6,7 @@ import asyncio
 import re
 
 
-class Moderation(commands.Cog, name="Mod commands"):
+class Moderation(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
@@ -15,3 +15,6 @@ class Moderation(commands.Cog, name="Mod commands"):
     async def mute(self, ctx, member: discord.Member):
         pass
         
+
+def setup(bot):
+    bot.add_cog(Moderation(bot))
