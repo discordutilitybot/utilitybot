@@ -22,4 +22,4 @@ class GuildJoin(commands.Cog):
 
 def setup(bot):
     bot.add_cog(GuildJoin(bot))
-    """Ill add logging later so its alot easier to find bugs"""
+    """Ill add logging later so its alot easier to find bugs""" 
