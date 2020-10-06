@@ -58,8 +58,8 @@ services:
       - db
 
     
-db:
-  image: postgres
-  expose:
-  - 5432
+  db:
+    image: postgres
+    expose:
+    - 5432
 
