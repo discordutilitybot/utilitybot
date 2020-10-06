@@ -36,13 +36,15 @@ services:
     build: 
       context: .
       image: api-service:1.0
+      
+    restart: always
 
     volumes: 
       - ./api:/usr/src/api
 
     ports:
     - 8082:8082
-
+    
     depends_on:
       - frontend-services
       - db
