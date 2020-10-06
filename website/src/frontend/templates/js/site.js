@@ -154,7 +154,7 @@ function randomColour(colours) {
   return colours[Math.floor(Math.random()*colours.length)]; 
 }
 
-const colours = ['linear-gradient(#f4a4cd, #f4dda4)', 'linear-gradient(#f4eba4, #dbf4a4)', 'linear-gradient(#b9f4a4, #a4f4d9)', 'linear-gradient(#a4f4ec, #a4c4f4)'];
+const colours = ['linear-gradient(#e494ad, #e4dd84)', 'linear-gradient(#e4cb74, #bbe474)', 'linear-gradient(#99d474, #64b4a9)', 'linear-gradient(#a4f4ec, #a4c4f4)'];
 
 addToServer.style.background = randomColour(colours);
 addToServerCollapsed.style.background = randomColour(colours);
