@@ -4,6 +4,7 @@ services:
 
   frontend-services:
     build: 
+      context: .
       image: frontend-services:1.0
 
     depends_on:
@@ -11,6 +12,7 @@ services:
 
     volumes:
       - ./frontend:/usr/src/frontend
+      
     restart: always
 
     ports:
