@@ -1,7 +1,5 @@
 FROM python:3.6-onbuild
 
-MAINTAINER Andrew Nijmeh
-
 ADD utilitybot-dev.py /
 
 ADD /cogs /
