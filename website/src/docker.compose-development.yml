@@ -16,6 +16,7 @@ services:
       - 8080:8080
 
   backend-services:
+  
     build: 
       context: .
       image: backend-services:1.0
@@ -36,7 +37,6 @@ services:
       context: .
       image: api-service:1.0
 
-  
     volumes: 
       - ./api:/usr/src/api
 
