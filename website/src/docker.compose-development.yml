@@ -55,10 +55,10 @@ services:
     
     depends_on:
       - frontend-services
-      - postgres
+      - db
 
-    
-  postgres:
+  
+  db:
 
     image: postgres:13-ubuntu
 
