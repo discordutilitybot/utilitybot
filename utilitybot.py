@@ -9,7 +9,7 @@ import aiohttp
 from datetime import datetime
 import json
 from secrets import database_password, database_host, database_user, client_id, token, oauth_redirect
-
+from .plugins.database import Database
 
 
 """Local modules"""
