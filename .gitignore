@@ -5,7 +5,7 @@ __pycache__/
 
 # Private .env stuff where data is stored
 *secrets.py
-models/
+
 
 
 # Distribution / packaging
