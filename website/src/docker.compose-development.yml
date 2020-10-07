@@ -67,6 +67,6 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-      POSTGRES_dB: ${POSTGRES_dB}
+      POSTGRES_DB: ${POSTGRES_dB}
 
 
