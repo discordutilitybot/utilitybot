@@ -40,7 +40,7 @@ To report security/vulnerabilities in the bot or code, email security@utilitybot
 
 
 ## Help and Support
-The default command to get help is u!help, You can also join our discord server with the link above.
+The default command to get help is u!help, You can also join our support/community server with the link above.
 
 > **NOTE**: Support will not be provided if you attempt to self-host Utility Bot. It is NOT recommended!
 
