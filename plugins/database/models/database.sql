@@ -11,6 +11,6 @@ CREATE TABLE guild_settings (
     join_channel BIGINT NOT NULL  DEFAULT NULL,
     leave_channel BIGINT NOT NULL DEFAULT NULL,
     PRIMARY KEY (log_channel, join_channel, leave_channel)
-
+    
 )
 
