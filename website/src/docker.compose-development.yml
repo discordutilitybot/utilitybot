@@ -60,7 +60,7 @@ services:
     
   postgres:
 
-    image: postgres
+    image: postgres:13
 
     expose:
     - 5432
