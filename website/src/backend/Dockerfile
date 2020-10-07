@@ -2,7 +2,7 @@ FROM python:3.7
 
 WORKDIR /src/frontend/templates
 
-ADD /src/statoc/backend /
+ADD /src/static/backend /
 
 COPY requirements.txt .
 
