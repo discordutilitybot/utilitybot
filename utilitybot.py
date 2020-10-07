@@ -8,8 +8,8 @@ import datetime
 import aiohttp
 from datetime import datetime
 import json
-from secrets import *
-from secrets import database_host
+from secrets import database_password, database_host, database_user, client_id, token, oaauth_redirect
+
 
 
 """Local modules"""
