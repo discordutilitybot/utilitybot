@@ -1,3 +1,5 @@
+"""Main file with all attributes and extensions"""
+
 import discord
 from discord.ext import commands
 import asyncio
