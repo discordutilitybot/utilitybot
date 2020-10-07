@@ -434,7 +434,7 @@ ul {
     filter:brightness(100%)
   }
 
-  .nav-item-gradient:before{
+  .nav-item-gradient.collapsed:before{
 	border-radius: inherit;
 	display: block;
 	width: 200%;
@@ -450,7 +450,7 @@ ul {
     transition:1s;
 }
 
-.nav-item-gradient:hover:before{
+.nav-item-gradient.collapsed:hover:before{
 	opacity:1;
 }
 
