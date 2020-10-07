@@ -60,6 +60,11 @@ services:
     
   db:
     image: postgres
+
     expose:
     - 5432
+
+    environment:
+    POSTGRES_USER: ${POSTGRES_USER}
+
 
