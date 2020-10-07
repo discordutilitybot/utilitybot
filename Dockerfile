@@ -8,7 +8,7 @@ ADD /events /
 
 COPY requirements.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install --upgrade -r requirements.txt
 
 ENTRYPOINT [ "python" ]
 
