@@ -12,7 +12,7 @@ DATABASE_HOST = "db host"
 
 DATABASE_PASSWORD = "databasepassword"
 
-# Discord bot token/ discord stuff
+# Discord token
 TOKEN = "token"
 
 
