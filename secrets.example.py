@@ -15,7 +15,6 @@ DATABASE_PASSWORD = "databasepassword"
 # Discord token
 TOKEN = "token"
 
-
 AUTHORIZATION = "authorization url"
 
 TOKENURL = "https://discord.com/api/oauth2/token"
