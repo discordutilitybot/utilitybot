@@ -65,6 +65,6 @@ services:
     - 5432
 
     environment:
-    POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_USER: ${POSTGRES_USER}
 
 
