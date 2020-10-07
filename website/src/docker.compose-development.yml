@@ -60,7 +60,7 @@ services:
     
   postgres:
 
-    image: postgres:13
+    image: postgres:13-ubuntu
 
     expose:
     - 5432
