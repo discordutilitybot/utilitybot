@@ -27,7 +27,8 @@ class Help(commands.Cog):
             await ctx.send(embed=embed)
         
 
-        
+        if module_name == "Mod" or "Moderation":
+            pass
 def setup(bot):
     bot.remove_cog('help')
     bot.add_cog(Help(bot))
