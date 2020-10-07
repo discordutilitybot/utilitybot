@@ -10,6 +10,4 @@ COPY requirements.txt .
 
 RUN pip install --upgrade -r requirements.txt
 
-ENTRYPOINT [ "python" ]
-
-CMD ["./utilitybot-dev.py" ]
+CMD ["python, utilitybot.py"]
