@@ -24,7 +24,6 @@ class Database(object):
         timeout=60.0, loop=None, **kwargs):
         pool = await asyncpg.create_pool(uri, min_size=min_connections, max_size=max_connections, **kwargs)
         self = cls(bot=bot, pool=pool, loop=loop, timeout=timeout)
-        print('Established DataBase pool with {} - {} connections\n'.format(min_connections, max_connections))
         return self 
         
     async def fetch(self, query, *args):
