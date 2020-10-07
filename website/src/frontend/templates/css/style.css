@@ -409,7 +409,6 @@ ul {
 
 
 .nav-item-gradient {
-    background: black;
     font-weight: 500;
     transition: 1s;
     margin: 0.625rem;
@@ -418,8 +417,9 @@ ul {
     font-size:30px;
     text-align:center;
     border-radius:30px;
-    filter:brightness(50%);
-    transform:scale(0.95);
+    transform:scale(1);
+    background:linear-gradient(rgb(101, 85, 113),rgb(99, 72, 93));
+    overflow: hidden;
   }
   
   .nav-item-gradient:hover {
@@ -429,19 +429,33 @@ ul {
     box-shadow:0 0 60px 10px rgba(255, 255, 255, 0.661), 0px 20px 60px 10px rgba(0,0,0,0.2);
     opacity:1;
     color:black;
-    filter:brightness(100%);
     transform:scale(1.05);
+    background:linear-gradient(rgb(132, 110, 149),rgb(152,100,139));
+    filter:brightness(100%)
   }
 
-
-.nav-item-gradient:hover .fa-plus {
-    transform:rotateZ(90deg) scale(1.3) rotateX(25deg);
-    color:white;
+  .nav-item-gradient:before{
+	border-radius: inherit;
+	display: block;
+	width: 200%;
+	height: 200%;
+	content: '';
+        position: absolute;
+        top: 0; 
+        left: 0;
+	background: linear-gradient(135deg, #21d4fd 25%, #b721ff 75%);	
+    transition: all 0.5s;
+    opacity:0;
+    z-index: -10;
+    transition:1s;
 }
 
-.nav-item-gradient:hover .nav-item-text {
-    color:black;
-    transition:0.5s;
+.nav-item-gradient:hover:before{
+	opacity:1;
+}
+
+.nav-item-gradient:hover .fa-plus {
+    color:white;
 }
 
 .nav-item-gradient.collapsed {

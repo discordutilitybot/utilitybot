@@ -18,7 +18,7 @@ function navClose() { // Close navbar function
   }
 }
 
-/*The following code was a last resort so it's not the best :(*/
+/* This next bit of code is a last resort so it's HORRIBLE. T-T */
 
 function showModCommands() {
   let tableMod = document.getElementById('tableM'); // the table
@@ -146,15 +146,3 @@ for (let i = 0; i < acc.length; i++) {
         }
     }
 }
-
-let addToServer = document.getElementById('addToServer');
-let addToServerCollapsed = document.getElementById('addToServerCollapsed');
-
-function randomColour(colours) {
-  return colours[Math.floor(Math.random()*colours.length)]; 
-}
-
-const colours = ['linear-gradient(#e494ad, #e4dd84)', 'linear-gradient(#e4cb74, #bbe474)', 'linear-gradient(#99d474, #64b4a9)', 'linear-gradient(#a4f4ec, #a4c4f4)'];
-
-addToServer.style.background = randomColour(colours);
-addToServerCollapsed.style.background = randomColour(colours);
