@@ -33,7 +33,8 @@ class Help(commands.Cog):
         if module_name == "Utility" or "Utilites":
             pass
 
-        if
+        if module_name == "Info" or "info":
+            pass
 def setup(bot):
     bot.remove_cog('help')
     bot.add_cog(Help(bot))
