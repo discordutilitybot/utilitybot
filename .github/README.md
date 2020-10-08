@@ -28,7 +28,7 @@ You can use the Discord channel #feature-request to request a new feature.
 You can also create an issue on GitHub to request a feature. If necessary, explain the feature with screenshots.
 
 ## Donating
-This project is an open source project and we currently need funds for hardware/hosting. Every donation will be spent on improving UtilityBot to develoop a better user experience.
+This project is an open source project and we currently need funds for hardware/hosting. Every donation will be spent on improving Utility Bot to develop a better user experience.
 You can find several ways to donate below.
 
  - [Patreon](https://www.patreon.com)
