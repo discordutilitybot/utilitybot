@@ -25,7 +25,7 @@ class Database(object):
         
     async def fetch(self, query, *args):
         async with self._rate_limit:
-            async with self._pool.acquire() as con:
+            async with self.pool.acquire() as con:
                 return await con.fetch(query, *args, timeout=self.timeout)
     """Fetch a row"""
     async def fetchrow(self, query, *args):
