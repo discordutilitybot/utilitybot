@@ -10,7 +10,7 @@ class Invite(commands.Cog):
     
     @commands.command(aliases=['inv, botinvite'])
     async def invite(self, ctx):
-        await ctx.send("Here is the invite link for utilitybot: ")
+        await ctx.send("Here is the invite link for utilitybot: \n")
 
 def setup(bot):
     bot.add_cog(Invite(bot))
