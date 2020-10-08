@@ -2,14 +2,14 @@
 html {
     background:#35354d;
     color:white;
-    font-family:Heebo;
+    font-family:Inter;
 }
 
 a {
     color:white;
     text-decoration-skip-ink: all; /* Underline skips letter descenders */
     transition:100ms;
-    font-family:Heebo;
+    font-family:Inter;
 }
 
 a:hover {
@@ -38,7 +38,7 @@ button:hover .fa-arrow-right {
 }
 
 h1 {
-    font-family:Work Sans, sans-serif;
+    font-family:Epilogue, sans-serif;
 }
 
 hr {
@@ -263,17 +263,18 @@ ul {
 }
 
 .main-title {
-    font-family:Work Sans;
+    font-family:Work Sans, sans-serif;
     color:white;
     font-size:90px;
     text-align:center;
     margin-top:0px;
     margin:0;
     margin-left:40px;
+    font-weight:600;
 }
 
 .main-subtitle {
-    font-family:Heebo, sans-serif;
+    font-family:Inter, sans-serif;
     font-weight:300;
     color:#aaa;
     text-align:center;
@@ -506,6 +507,9 @@ ul {
     to {transform:translateY(-50px); opacity:0;}
 }
 
+@keyframes float-right {
+    from {transform:translateX(-20px); opacity:0;}
+}
 @media only screen and (max-width: 1500px) {
     .nav-items-list {
         display:none;
