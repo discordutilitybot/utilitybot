@@ -28,19 +28,19 @@ You can use the Discord channel #feature-request to request a new feature.
 You can also create an issue on GitHub to request a feature. If necessary, explain the feature with screenshots.
 
 ## Donating
-This project is an open source project and we currently need funds for hardware/hosting 
-to develop a better user experience. Every donation will be spent on making UtilityBot better for our users.
+This project is an open source project and we currently need funds for hardware/hosting. Every donation will be spent on improving UtilityBot to develoop a better user experience.
 You can find several ways to donate below.
 
  - [Patreon](https://www.patreon.com)
 - [Paypal](https://www.paypal.com)
 
 ## Security 
-To report security/vulnerabilities in the bot or code, email security@utilitybot.co.
+To report security/vulnerabilities in the bot or code, please email security@utilitybot.co.
 
 
 ## Help and Support
-The default command to get help is u!help, You can also join our support/community server with the link above.
+The default command to get help is u!help. 
+You can also join our support/community server with the link above.
 
 > **NOTE**: Support will not be provided if you attempt to self-host Utility Bot. It is NOT recommended!
 
