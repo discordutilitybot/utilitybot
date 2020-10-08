@@ -7,9 +7,6 @@ from discord import User
 from discord import Guild
 from discord import Message
 
-from .plugins.database.user import User
-from .plugins.database.message import Message
-from .plugins.database.server import server
 
 class Database(object):
     def __init__(self, bot, pool, loop=None, timeout: float = 60.0):
