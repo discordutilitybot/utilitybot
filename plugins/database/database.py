@@ -14,7 +14,7 @@ class Database(object):
         self.pool = pool
         self._loop = loop or asyncio
         self.timeout = timeout
-        self._rate_limit = asyncio.Semaphore(value=self._pool._maxsize, loop=self._loop)
+        self._rate_limit = asyncio.Semaphore(value=self.pool._maxsize, loop=self._loop)
 
     @classmethod
     async def create_pool(cls, bot, uri=None, *, min_connections=10, max_connections=10,
@@ -27,7 +27,7 @@ class Database(object):
         async with self._rate_limit:
             async with self.pool.acquire() as con:
                 return await con.fetch(query, *args, timeout=self.timeout)
-                
+
     """Fetch a row"""
     async def fetchrow(self, query, *args):
         async with self._rate_limit:
