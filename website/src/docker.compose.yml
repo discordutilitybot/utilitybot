@@ -59,7 +59,6 @@ services:
 
   
   db:
-
     image: postgres:13-ubuntu
 
     expose:

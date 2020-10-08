@@ -14,7 +14,7 @@ class Help(commands.Cog):
         if module_name is None:
             embed = discord.Embed(
                 title = "Modules",
-                description = "List of all the modules you can search up!",
+                description = "List of all the modules you can find!",
                 colour = discord.Colour.blue()
             )
         
@@ -27,7 +27,14 @@ class Help(commands.Cog):
             await ctx.send(embed=embed)
         
 
-        
+        if module_name == "Mod" or "Moderation":
+            pass
+            
+        if module_name == "Utility" or "Utilites":
+            pass
+
+        if module_name == "Info" or "info":
+            pass
 def setup(bot):
     bot.remove_cog('help')
     bot.add_cog(Help(bot))
