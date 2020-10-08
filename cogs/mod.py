@@ -11,7 +11,7 @@ class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command()
+    @commands.command(aliases=["silence"])
     async def mute(self, ctx, member: discord.Member):
         pass
         
