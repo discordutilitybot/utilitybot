@@ -6,6 +6,7 @@ function navView() { // Open nav function
   if (nav.style.height = "0%") { // If it is invisible,
     nav.style.height = "100%"; // Make it visible
     openBtn.setAttribute("onclick", "navClose();"); // Sets button to close navbar function
+    navContents.style.animationName = 'float-right';
     navContents.style.display = 'block'; // Nav contents made visible on opening nav
   }
 }
