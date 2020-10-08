@@ -10,6 +10,8 @@ services:
 
     depends_on:
       - ./backend:/src/static/backend
+      - api-services
+
 
     volumes:
       - ./frontend:/usr/src/frontend
