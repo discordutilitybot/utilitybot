@@ -10,6 +10,8 @@ class Botinfo(commands.Cog):
     async def botinfo(self, ctx):
         embed = discord.Embed(
             title = "All about utility bot"
+            description = "Something here"
+            color = discord.Colour.grey
         )   
 
 def setup(bot):
