@@ -6,7 +6,7 @@ services:
     build: 
 
       context: .
-      image: frontend-services:1.0
+      image: frontend-services
 
     depends_on:
       - ./backend:/src/static/backend
@@ -26,7 +26,7 @@ services:
     build: 
 
       context: .
-      image: backend-services:1.0
+      image: backend-services
 
     depends_on:
       - ./frontend:/src/static/frontend
@@ -45,7 +45,7 @@ services:
     build: 
 
       context: .
-      image: api-service:1.0
+      image: api-service
 
     restart: always
 
