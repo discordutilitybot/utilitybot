@@ -35,7 +35,7 @@ class Database(object):
     """"Execute querys"""
     async def execute(self, query, *args):
         async with self._rate_limit:
-            async with self._pool.acquire() as con:
+            async with self.pool.acquire() as con:
                 return await con.execute(query *args)
 
  
