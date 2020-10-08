@@ -38,20 +38,7 @@ class Database(object):
             async with self._pool.acquire() as con:
                 return await con.execute(query *args)
 
-    async def get_user(self, user_id: int, get_messages: bool = False):
-        query = "SELECT * users WHERE id = $1"
-
-        record = await self.fetchrow(query, user_id)
-        if record is None:
-            # If there a user doesnt have its own row then we add one:
-            user = User(bot=self.bot, id=user_id, messages=[])
-            await user.post()
-            return user
-    """Get all users in the db **not** a the servers"""
-
-    async def get_all_users(self, user_id: int, get_messages: bool = False):
-        query = "SELECT * users WHERE id = $1"
-        await self.fetchrow(query, user_id)
+ 
 
 
         
