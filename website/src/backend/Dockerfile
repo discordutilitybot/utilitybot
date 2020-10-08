@@ -1,8 +1,8 @@
 FROM python:3.7
 
-WORKDIR /src/frontend/templates
+WORKDIR /src/backend
 
-ADD /src/static/backend /
+ADD /src/frontend/templates
 
 COPY requirements.txt .
 
