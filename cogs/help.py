@@ -28,8 +28,14 @@ class Help(commands.Cog):
         
 
         if module_name == "Mod" or "Moderation":
-            pass
-            
+            embed = discord.Embed(
+                title = "Moderation"
+                description = "List of the moderation commands"
+                colour = discord.Colour.blue()
+
+            )
+
+            embed.add_field()
         if module_name == "Utility" or "Utilites":
             pass
 

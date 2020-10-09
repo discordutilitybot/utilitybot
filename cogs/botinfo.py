@@ -9,10 +9,11 @@ class Botinfo(commands.Cog):
     @commands.command(aliases=['infobot, info'])
     async def botinfo(self, ctx):
         embed = discord.Embed(
-            title = "All about utility bot"
-            description = "Something here"
+            title = "All about utility bot",
+            description = "Something here",
             color = discord.Colour.grey
         )   
+
 
 def setup(bot):
     bot.add_cog(Botinfo(bot))
