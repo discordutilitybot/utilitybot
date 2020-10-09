@@ -14,6 +14,8 @@ class Botinfo(commands.Cog):
             color = discord.Colour.grey()
         )   
 
+        await ctx.send(embed=embed)
+
 
 def setup(bot):
     bot.add_cog(Botinfo(bot))
