@@ -1,6 +1,6 @@
 
 CREATE TABLE guilds (
-    guild_id BIGINT NOT NULL DEFAULT 0
+    guild_id INT(20) NOT NULL DEFAULT 0
     
 )
 
