@@ -14,3 +14,7 @@ CREATE TABLE guild_settings (
     
 )
 
+CREATE TABLE users (
+    
+)
+
