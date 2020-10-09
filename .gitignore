@@ -87,3 +87,4 @@ ENV/
 .vscode/
 
 
+*.DS_STORE
