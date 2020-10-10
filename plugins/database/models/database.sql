@@ -8,6 +8,7 @@ CREATE TABLE guilds (
 )
 
 CREATE TABLE guild_settings (
+    /* The muted role can be updated but everytime our bot joins a guild it creates a muted role */
     muted_role INT(20) DEFAULT 'Muted',
     guild_prefix VARCHAR(15) DEFAULT 'u!',
     log_channel BIGINT NOT NULL DEFAULT NULL,
@@ -19,5 +20,6 @@ CREATE TABLE guild_settings (
 
 CREATE TABLE users (
     user_id INT(20) NOT NULL DEFAULT 0
+
 )
 
