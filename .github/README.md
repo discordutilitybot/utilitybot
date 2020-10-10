@@ -1,6 +1,7 @@
-# Utility Bot The ultimate server management bot With Moderation Memes And Much More!
+# Utility Bot the server management bot.
+[![Discord](https://img.shields.io/static/v1?label=Utilitybot%20Discord&logo=discord&message=%3E11%20members&color=%237289DA&logoColor=white)](https://discord.gg/xAmmxPG)
+[![Website](https://img.shields.io/badge/website-visit-brightgreen)](https://utilitybot.co)
 
-[![Discord Server](https://discord.com/api/guilds/336642139381301249/embed.png)](https://discordbots.org/bot/742196911523627068)
 
 
 
