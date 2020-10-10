@@ -13,7 +13,6 @@ class GuildJoin(commands.Cog):
         self.bot = bot
 
 
-
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
         permissions = discord.Permissions(send_messages=False, read_messages=True)
@@ -21,7 +20,6 @@ class GuildJoin(commands.Cog):
 
     
         
-
 def setup(bot):
     bot.add_cog(GuildJoin(bot))
     """Ill add logging later so its alot easier to find bugs""" 
