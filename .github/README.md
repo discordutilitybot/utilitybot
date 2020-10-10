@@ -1,5 +1,5 @@
 # Utility Bot the server management bot.
-[![Discord](https://img.shields.io/static/v1?label=UtilityBot%20Discord&logo=discord&message=%3E11%20members&color=%237289DA&logoColor=white)](https://discord.gg/2B963hn)
+[![Discord](https://img.shields.io/static/v1?label=UtilityBot%20Discord&logo=discord&message=%3E11%20members&color=%237289DA&logoColor=white)](https://discord.gg/xAmmxPG)
 [![Website](https://img.shields.io/badge/website-visit-brightgreen)](https://utilitybot.co)
 
 
