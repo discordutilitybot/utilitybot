@@ -17,7 +17,7 @@ class GuildJoin(commands.Cog):
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
         permissions = discord.Permissions(send_messages=False, read_messages=True)
-        await self.bot.create_role(name="Muted", permissions=perms)
+        await self.bot.create_role(name="Muted", permissions=permissions)
 
     
         
