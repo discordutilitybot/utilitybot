@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import Guild, User
+from discord.utils import get
 
 import asyncpg
 import logging
@@ -15,7 +16,7 @@ class GuildJoin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        """Make sure to add muted role before any calls are made to the DB."""
+        
 
     
         
