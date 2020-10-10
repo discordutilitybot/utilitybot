@@ -132,6 +132,11 @@ function hideUtilCommands() {
   } 
 }
 
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
 /* The following code is based off of: https://bit.ly/32C1vfo
 Comments added by me. */
 

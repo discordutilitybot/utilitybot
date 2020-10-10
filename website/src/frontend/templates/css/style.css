@@ -430,15 +430,16 @@ ul {
     transform:scale(1);
     overflow: hidden;
     border-radius: 20px;
-background: #e392ff;
-box-shadow:  20px 20px 60px #c27cd964, 
-             -20px -20px 60px #ffa8ff48;
+background: #b892ff;
+box-shadow:  20px 20px 60px #c27cd92a, 
+             -20px -20px 60px #ffa8ff05;
   }
   
   .nav-item-gradient:hover {
     border-radius: 50px;
-    box-shadow:  20px 20px 60px #c27cd949, 
-                 -20px -20px 60px #ffa8ff4d
+    background: #e392ff;
+    box-shadow:  20px 20px 60px #c27cd964, 
+    -20px -20px 60px #ffa8ff48,
                  inset 20px 20px 60px #c17cd9, 
     inset -20px -20px 60px #ffa8ff00;;
   }
