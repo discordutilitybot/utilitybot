@@ -35,7 +35,7 @@ class Help(commands.Cog):
 
             )
 
-            embed.add_field()
+          
         if module_name == "Utility" or "Utilites":
             pass
 
