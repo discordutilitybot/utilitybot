@@ -2,6 +2,7 @@
 
 [![Discord Server](https://discord.com/api/guilds/336642139381301249/embed.png)](https://discordbots.org/bot/742196911523627068)
 
+[![Website](https://img.shields.io/badge/website-visit-brightgreen)](https://utilitybot.co)
 
 
 
