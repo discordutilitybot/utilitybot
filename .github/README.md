@@ -1,4 +1,4 @@
-# Utility Bot The ultimate server management bot With Moderation Memes And Much More!
+# Utility Bot the server management bot.
 
 [![Discord Server](https://discord.com/api/guilds/336642139381301249/embed.png)](https://discordbots.org/bot/742196911523627068)
 
