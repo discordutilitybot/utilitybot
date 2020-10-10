@@ -312,7 +312,11 @@ ul {
     flex-direction:column;
 }
 
-.nav-collapsed > ul > li {
+.nav-item.collapsed, .nav-item-gradient.collapsed {
+    font-size:calc(4vh + 1vw);
+}
+
+.nav-item {
     font-size:25px;
     margin-left:auto;
     margin-right:auto;
@@ -323,7 +327,7 @@ ul {
     margin-top:40px;
 }
 
-.nav-collapsed > ul > li:after {
+.nav-item:after {
     background: #000000;
     width: 0;
     height: 3px;
@@ -337,7 +341,7 @@ ul {
 }
 
 
-.nav-collapsed > ul > li:hover::after {
+.nav-item:hover::after {
     width:100%;
 }
 
@@ -440,7 +444,7 @@ box-shadow:  20px 20px 60px #c27cd92a,
   }
   
   .nav-item-gradient:hover {
-    border-radius: 50px;
+    border-radius: 1em;
     background: #e392ff;
     box-shadow:  20px 20px 60px #c27cd964, 
     -20px -20px 60px #ffa8ff48,
