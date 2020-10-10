@@ -358,6 +358,10 @@ ul {
     text-decoration:none;
     opacity:0.4;
     transition:0.5s;
+    display:flex;
+    flex-direction:column;
+    justify-content:top;
+    padding-top:10%;
 }
 
 .nav-items-list:hover {
