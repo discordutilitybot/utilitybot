@@ -10,7 +10,7 @@ class Help(commands.Cog):
 
     """Global help command (there will be help commands for each module)"""
 
-    async def help(self, ctx, module_name: str):
+    async def help(self, ctx):
         if module_name is None:
             embed = discord.Embed(
                 title = "Modules",
