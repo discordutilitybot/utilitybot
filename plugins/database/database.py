@@ -28,12 +28,6 @@ class Database(object):
             async with self.pool.acquire() as con:
                 return await con.fetch(query, *args, timeout=self.timeout)
 
-    """Fetch a row"""
-    async def fetchrow(self, query, *args):
-        async with self._rate_limit:
-            async with self.pool.acquire() as con:
-                return await con.fetch(query, *args)
-
     """"Execute querys"""
     async def execute(self, query, *args):
         async with self._rate_limit:

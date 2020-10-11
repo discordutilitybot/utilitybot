@@ -9,6 +9,7 @@ class Avatar(commands.Cog):
 
     @commands.command(alias=["av"])
     async def avatar(self, ctx, *, user: discord.Member):
+        
         if not user:
             user = ctx.author
         if ctx.guild:
