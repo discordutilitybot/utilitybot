@@ -37,10 +37,10 @@ services:
       - ./api:/usr/src/api
     ports:
     - 5001:8082
-    
+
     environment:
       - POSTGRES_USER: ${POSTGRES_USER}
-      - sPOSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      - POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
       - POSTGRES_DB: ${POSTGRES_DB}
       - POSTGRES_HOST: ${POSTGRES_HOST}
