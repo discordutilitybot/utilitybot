@@ -26,7 +26,7 @@ services:
       context: .
       image: backend-services
     depends_on:
-      - .frontend-services
+      - frontend-services
 
     volumes:
       - ./backend:/usr/src/backend
