@@ -4,10 +4,8 @@ services:
 
   frontend-services:
     build: 
-
       context: .
       image: frontend-services
-
     depends_on:
       - backend-services
       - api-services
