@@ -41,27 +41,21 @@ services:
 
 
   api-services:
-    
     build: 
-
       context: .
       image: api-service
-
     restart: always
-
     volumes: 
       - ./api:/usr/src/api
-
     ports:
     - 8082:8082
-    
     depends_on:
       - frontend-services
       - db
 
   
   db:
-    image: postgres:13-ubuntu
+    image: postgres:13-
 
     expose:
     - 5432
