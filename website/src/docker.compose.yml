@@ -45,7 +45,7 @@ services:
 
   
   db:
-    image: postgres:13-
+    image: postgres:latest
 
     expose:
     - 5432
