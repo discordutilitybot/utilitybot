@@ -19,6 +19,7 @@ class Help(commands.Cog):
     [Invite Me](invitelinkhere)
         ''')
 
+        await ctx.send(embed=embed)
             
 
         
