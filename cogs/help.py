@@ -20,3 +20,7 @@ class Help(commands.Cog):
 def setup(bot):
     bot.add_help = bot.remove_command("help")
     bot.add_cog(Help(bot))
+
+
+def teardown(bot):
+    bot.add_command(bot.old_help)
