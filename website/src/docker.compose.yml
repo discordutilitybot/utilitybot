@@ -11,13 +11,9 @@ services:
     depends_on:
       - backend-services
       - api-services
-
-
     volumes:
       - ./frontend:/usr/src/frontend
-
     restart: always
-
     ports:
       - 8080:8080
 
@@ -27,14 +23,12 @@ services:
       image: backend-services
     depends_on:
       - frontend-services
-
     volumes:
       - ./backend:/usr/src/backend
-
     restart: always
 
     ports:
-      - 8081:8081
+      - 5000:8081
 
 
   api-services:
