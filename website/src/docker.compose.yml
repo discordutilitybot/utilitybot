@@ -15,7 +15,7 @@ services:
       - ./frontend:/usr/src/frontend
     restart: always
     ports:
-      - 8080:8080
+      - 5001:8080
 
   backend-services:
     build: 
@@ -26,9 +26,8 @@ services:
     volumes:
       - ./backend:/usr/src/backend
     restart: always
-
     ports:
-      - 5000:8081
+      - 5001:8081
 
 
   api-services:
@@ -39,7 +38,7 @@ services:
     volumes: 
       - ./api:/usr/src/api
     ports:
-    - 8082:8082
+    - 5001:8082
     depends_on:
       - frontend-services
       - db
