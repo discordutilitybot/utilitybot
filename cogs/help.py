@@ -12,7 +12,7 @@ class Help(commands.Cog):
 
     async def help(self, ctx):
         embed = discord.Embed(
-             embed = discord.Embed(colour=ctx.author.color, description=f"Here\'s some helpful links:
+            embed = discord.Embed(colour=ctx.author.color, description=f"Here\'s some helpful links:
 [Commands](websiteredirecthere)      
 [Suppport Server](supportserverhere)
 ")
