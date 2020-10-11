@@ -9,7 +9,7 @@ services:
       image: frontend-services
 
     depends_on:
-      - ./backend:/src/static/backend
+      - backend-services
       - api-services
 
 
@@ -22,14 +22,11 @@ services:
       - 8080:8080
 
   backend-services:
-
     build: 
-
       context: .
       image: backend-services
-
     depends_on:
-      - ./frontend:/src/static/frontend
+      - .frontend-services
 
     volumes:
       - ./backend:/usr/src/backend
