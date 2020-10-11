@@ -23,8 +23,6 @@ class Help(commands.Cog):
             
 
         
-
 def setup(bot):
     bot.remove_command("help")
     bot.add_cog(Help(bot))
-
