@@ -7,7 +7,7 @@ from secrets import token
 
 bot = commands.Bot(command_prefix="u!")
 
-bot.remove_cog('help')
+
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):

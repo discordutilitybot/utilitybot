@@ -22,7 +22,7 @@ class Help(commands.Cog):
         await ctx.send(embed=embed)
             
 
-        
+            
 def setup(bot):
     bot.remove_command("help")
     bot.add_cog(Help(bot))
