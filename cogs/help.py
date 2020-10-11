@@ -3,8 +3,10 @@ from discord.ext import commands
 from discord.ext.commands import errors
 
 
-
 class Help(commands.Cog):
+
+    """Custom help command for Utility Bot rather than auto generated one by discord.py"""
+    
     def __init__(self, bot):
         self.bot = bot
 
