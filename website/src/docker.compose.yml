@@ -48,11 +48,11 @@ services:
 
     depends_on:
       - frontend-services
-      - db
+      - postgres
 
 
   
-  db:
+  postgres:
     image: postgres:latest
 
     expose:
