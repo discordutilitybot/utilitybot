@@ -33,8 +33,3 @@ class Database(object):
         async with self._rate_limit:
             async with self.pool.acquire() as con:
                 return await con.execute(query *args)
-
- 
-
-
-        
