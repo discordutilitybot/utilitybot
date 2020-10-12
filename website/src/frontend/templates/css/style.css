@@ -312,7 +312,7 @@ ul {
     flex-direction:column;
 }
 
-.nav-collapsed > ul > li {
+.nav-collapsed > ul > li > a {
 	text-decoration:none;
 }
 
