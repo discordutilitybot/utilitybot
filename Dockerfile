@@ -2,9 +2,9 @@ FROM python:3.6
 
 ADD utilitybot-dev.py /
 
-ADD /cogs /
+COPY /cogs /
 
-ADD /events /
+COPY /events /
 
 COPY requirements.txt .
 
