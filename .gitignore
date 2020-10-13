@@ -3,8 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Config for discord tokens
-*secrets.py
+# Config file for private data
+*.env
 
 
 # Distribution / packaging
