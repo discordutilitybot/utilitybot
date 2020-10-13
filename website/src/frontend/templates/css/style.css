@@ -312,6 +312,10 @@ ul {
     flex-direction:column;
 }
 
+.nav-collapsed > ul > li > a {
+	text-decoration:none;
+}
+
 .nav-item.collapsed, .nav-item-gradient.collapsed {
     font-size:calc(2vw + 1vh);
 }
@@ -397,6 +401,11 @@ ul {
     text-decoration:none;
     transition:all 500ms;
 }
+
+.nav-item-text a {
+	text-decoration:none;
+}
+
 .nav-img {
     padding:10px;
 }
@@ -476,11 +485,6 @@ box-shadow:  20px 20px 60px #c27cd92a,
 .nav-item.active {
     color:lightcyan;
 }
-
-.nav-item-text {
-    text-decoration: none;
-}
-
 .page-title {
     margin-top:40px;
     font-weight:400;
