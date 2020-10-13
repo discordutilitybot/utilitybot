@@ -11,8 +11,3 @@ database_port = ""
 discord_client_id = ""
 
 oauth_redirect = ""
-
-
-
-
-
