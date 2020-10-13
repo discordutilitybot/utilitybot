@@ -46,20 +46,19 @@ hr {
     box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.158);
 }
 
-hr.left-separator {
+hr.left-separator { /* The separator between the page and the title */
     margin-left:0;
     margin:0;
 }
 
-table {
+table { /*Styles the commands table */
   border-collapse: collapse;
   width: 80%;
-  border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-  display:none;
   animation-duration:1s;
-  opacity:1;
+  overflow:hidden;
+  max-height:0px;
 }
 
 td, th {
@@ -67,6 +66,7 @@ td, th {
     text-align: left;
     padding: 8px;
     background-color:rgba(0, 0, 0, 0.2);
+    max-height:0px;
 }
 
 tr:nth-child(even) {
@@ -80,21 +80,35 @@ ul {
 }
 
 .commands-title { /*The title for the commands list tables */
-    background:linear-gradient(to right,rgba(71, 77, 140, 0.141), rgba(77, 98, 174, 0.257));
+    background:rgb(85, 117, 215);
     border:1px solid white;
     margin:0;
-    padding-left:7px;
-    padding:8px;
+    padding:10px;
+    padding-left:25px;
     border-radius:3px;
-    width:80%;
+    width:70%;
+    cursor:pointer;
+    font-family:Inter;
+    font-weight:300;
+    transition:0.5s;
+    max-height:29px;
+    overflow: hidden;
+}
+
+.commands-title:hover {
+    background:rgb(125, 143, 208);
+}
+
+.commands-title:nth-child(even):hover {
+    background:rgb(102,  190, 241);
 }
 
 .commands-title:nth-child(even) {
-    background:linear-gradient(to right,rgba(162, 59, 80, 0.141), rgba(192, 115, 52, 0.257));
+    background:rgb(85, 167, 215);
 }
 
-.commands-title:nth-child(4n) {
-    background:linear-gradient(to right,rgba(152, 162, 59, 0.141), rgba(82, 192, 52, 0.257));
+.commands-title table {
+    font-size:20px;
 }
 
 .contact-btns { /* This is the contact button row. */

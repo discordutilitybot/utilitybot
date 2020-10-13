@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Utility Bot - The Ultimate Server Management Bot With Moderation Memes And Much More!</title>
-    <script src="https://kit.fontawesome.com/37b7d8c548.js" crossorigin="anonymous"></script>
+    <meta name="description" content="UtilityBot, the ultimate server management bot">
+    <meta name="keywords" content="discord bot, bot, utilitybot">
+    <title>Utility Bot - The Ultimate Server Management Bot</title>
+    <script src="https://kit.fontawesome.com/66d1518bf8.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,263;0,531;1,312;1,531&display=swap');
 
@@ -51,7 +53,7 @@
             <div class="main-content">
         <hr class="left-separator">
        <h2 class="page-title">Complete list of UtilityBot commands</h2>
-       <h1 class="commands-title" id="trigM" onclick="showModCommands()">Moderation <i class="fas fa-angle-down" id="iconM"></i></h1>
+       <h1 id="modCommands" class="commands-title" onclick="modCommands()">Moderation
        <table id="tableM" class="commands-list-category">
          <tr>
          <th>Command</th>
@@ -82,8 +84,9 @@
           <td>Purges a specified amount of messages.</td>
         </tr>
        </table>
+      </h1>
 <br>
-       <h1 class="commands-title" id="trigF" onclick="showFunCommands()">Fun <i class="fas fa-angle-down" id="iconF"></i></h1>
+       <h1 class="commands-title" onclick="Commands()">Fun
        <table id="tableF" class="commands-list-category">
         <tr>
         <th>Command</th>
@@ -102,9 +105,10 @@
          <td>Flips a coin.</td>
        </tr>
       </table>
+    </h1>
       <br>
-      <h1 class="commands-title" id="trigI" onclick="showInfoCommands()">Information <i class="fas fa-angle-down" id="iconI"></i></h1>
-      <table class="commands-list-category" id="tableI">
+      <h1 class="commands-title" id="infoCommands" onclick="infoCommands()">Information
+      <table class="commands-list-category">
         <tr>
           <th>Command</th>
           <th>Description</th>
@@ -142,8 +146,9 @@
           <td>Get the information about a user.</td>
         </tr>
       </table>
+    </h1>
       <br>
-      <h1 class="commands-title" id="trigU" onclick="showUtilCommands()">Utility <i class="fas fa-angle-down" id="iconU"></i></h1>
+      <h1 class="commands-title" id="utilCommands" onclick="utilCommands()">Utility
       <table class="commands-list-category" id="tableU">
         <tr>
           <th>Command</th>
@@ -154,6 +159,7 @@
           <td>Ping.</td>
         </tr>
       </table>
+    </h1>
 </div>
 </div>
 </div>
