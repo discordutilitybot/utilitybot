@@ -6,6 +6,10 @@ class GuildInfo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    """Simple guildinfo command to check amount of roles, server_id and more."""
+    @commands.command()
+    async def guildinfo(self, ctx):
+        pass
 
     
 
