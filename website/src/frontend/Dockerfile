@@ -1,6 +1,8 @@
 FROM python:3.7
 
-WORKDIR /src/frontend/templates
+WORKDIR /src/frontend/templates /
+
+COPY /website/src/backend /
 
 COPY requirements.txt .
 
