@@ -13,15 +13,16 @@ class Moderation(commands.Cog):
 
     @commands.command
     async def ban(self, ctx, member: discord.Member, reason=None):
-        pass
+        await member.ban(reason=reason)
+        await ctx.send(f"{member} was banned for {reason}.")
 
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
-        pass
+        
 
     @commands.command()
     async def unmute(self, ctx, member: discord.Member):
-        pass
+        
 
     """Set the muted default muted role by utility bot to a custom one."""
     @commands.command()
@@ -45,6 +46,7 @@ class Moderation(commands.Cog):
             if not members:
                 await ctx.send("Please specify a user/member to warn.")
             else:
-                return True
+                return Truediscor
+
 def setup(bot):
     bot.add_cog(Moderation(bot))
