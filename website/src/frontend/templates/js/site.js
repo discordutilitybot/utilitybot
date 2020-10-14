@@ -24,8 +24,6 @@ function navClose() { // Close navbar function
   }
 }
 
-/* This next bit of code is a last resort so it's HORRIBLE. T-T */
-
 function openInNewTab(url) {
   var win = window.open(url, '_blank');
   win.focus();

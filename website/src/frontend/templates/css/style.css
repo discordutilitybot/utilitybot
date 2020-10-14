@@ -1,4 +1,8 @@
 /*Base styles*/
+
+* {
+    box-sizing: border-box;
+}
 html {
     background:#35354d;
     color:white;
@@ -9,7 +13,7 @@ a {
     color:white;
     text-decoration-skip-ink: all; /* Underline skips letter descenders */
     transition:100ms;
-    font-family:Inter;
+    font-family:Chilanka;
 }
 
 a:hover {
@@ -313,7 +317,9 @@ ul {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
-    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.449)
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.449);
+    align-items: center;
+    flex-direction: column;
 }
 
 .nav-collapsed > ul {
@@ -335,10 +341,9 @@ ul {
 
 .nav-item {
     font-size:25px;
-    margin-left:auto;
-    margin-right:auto;
     text-align:center;
     padding:0px;
+    margin:auto;
     position: relative;
     width: fit-content;
     margin-top:40px;
@@ -355,7 +360,6 @@ ul {
     transition: all 0.3s ease;
     background-color: rgb(163, 231, 239);
 }
-
 
 .nav-item:hover::after {
     width:100%;
@@ -379,9 +383,9 @@ ul {
     opacity:0.4;
     transition:0.5s;
     display:flex;
-    flex-direction:column;
-    justify-content:top;
     padding-top:10%;
+    align-items: center;
+    flex-direction: column;
 }
 
 .nav-items-list:hover {
@@ -407,6 +411,10 @@ ul {
      text-align:center;
      margin-top:40px;
      font-size:20px;
+     word-break: keep-all;
+     word-wrap: normal;
+     flex-wrap: nowrap;
+     white-space: nowrap
 }
 
 .nav-item-text {
@@ -450,12 +458,11 @@ ul {
     font-size:30px;
     text-align:center;
     border-radius:30px;
-    transform:scale(1);
     overflow: hidden;
-    border-radius: 20px;
-background: #b892ff;
-box-shadow:  20px 20px 60px #c27cd92a, 
+    background: #b892ff;
+    box-shadow:  20px 20px 60px #c27cd92a, 
              -20px -20px 60px #ffa8ff05;
+    padding:10px;
   }
   
   .nav-item-gradient:hover {
@@ -464,7 +471,8 @@ box-shadow:  20px 20px 60px #c27cd92a,
     box-shadow:  20px 20px 60px #c27cd964, 
     -20px -20px 60px #ffa8ff48,
                  inset 20px 20px 60px #c17cd9, 
-    inset -20px -20px 60px #ffa8ff00;;
+    inset -20px -20px 60px #ffa8ff00;
+    font-weight:400;
   }
 
   .nav-item-gradient:active {
@@ -476,17 +484,6 @@ box-shadow:  20px 20px 60px #c27cd92a,
 
 .nav-item-gradient:hover .fa-plus {
     color:white;
-}
-
-.nav-item-gradient.collapsed {
-    width:20vw;
-    margin:0;
-    padding:5px 6px;
-}
-
-.nav-item-gradient.collapsed::after {
-    content:'';
-    background:none;
 }
 
 .nav-item.active {
@@ -521,10 +518,10 @@ box-shadow:  20px 20px 60px #c27cd92a,
 }
 
 @keyframes float-right {
-    from {transform:scale(0.2); opacity:0;}
+    from {transform:translate(-100px, 0); opacity:0;}
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1100px) {
     .nav-items-list {
         display:none;
         position:relative;
@@ -547,7 +544,7 @@ box-shadow:  20px 20px 60px #c27cd92a,
     }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1100px) {
     .nav-collapsed {
         display: none;
     }
@@ -562,18 +559,3 @@ box-shadow:  20px 20px 60px #c27cd92a,
         font-size:larger;
     }
 }
-
-
-
-/* ---------------
-
-width: 100%;
-position: absolute;
-z-index: 1;
-background-color: rgba(0, 0, 0, 0.986);
-transition:cubic-bezier(.82,.01,.41,.99) 1s;
-overflow:hidden; /* Just so the contents don't glitch out of the nav. 
-left:0;
-right:0;
-top:0;
-bottom:0;
