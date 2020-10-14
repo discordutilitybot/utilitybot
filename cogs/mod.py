@@ -16,7 +16,7 @@ class Moderation(commands.Cog):
         pass
 
     @commands.command()
-    async def unmute(self, ctx, member: discord.Member)
+    async def unmute(self, ctx, member: discord.Member):
 
     @commands.command()
     async def muterole(self, ctx, role_id: int):
