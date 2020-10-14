@@ -26,7 +26,7 @@ class Moderation(commands.Cog):
     """Set the muted default muted role by utility bot to a custom one."""
     @commands.command()
     async def mutedrole(self, ctx, role_id: int):
-        pass
+        
     
     
     @commands.command()

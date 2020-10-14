@@ -1,0 +1,1 @@
+"""This is used to check your guilds config settings these are not config commands.""""
