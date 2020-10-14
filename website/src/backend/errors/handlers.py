@@ -8,3 +8,7 @@ errors =  Blueprint('errors', __name__)
 @errors.app_errorhandler(404)
 def error_404(error):
     return render_template('website/src/frontend/templates/404.html'), 404
+
+@errors.app_errorhandler(403)
+def error_403(error):
+    return render_template('website/src/frontend/templates/404.html'), 403
