@@ -328,7 +328,7 @@ ul {
     flex-direction:column;
     justify-content: space-between;
     display:none;
-    animation-duration:1s;
+    animation-duration:1.5s;
 }
 
 .nav-collapsed ul li a {
@@ -518,7 +518,11 @@ ul {
 }
 
 @keyframes float-right {
-    from {transform:translate(-100px, 0); opacity:0;}
+    from {transform:translate(0, -20px); opacity:0;}
+}
+
+@keyframes float-left {
+    to {transform:translate(0, -20px); opacity:0;}
 }
 
 @media only screen and (max-width: 1100px) {
