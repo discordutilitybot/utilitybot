@@ -2,15 +2,15 @@ let nav = document.getElementById("navCollapsed"); // The navbar
 let openBtn = document.getElementById('openButton'); // The trigger
 let navContents = document.getElementById('navList'); // The navbar contents
 
-let main = document.getElementById('main'); // the main page to be 'pushed' to the right
-let footer = document.getElementById('foot') // the footer will be 'pushed' also
+let main = document.getElementById('main');
+let footer = document.getElementById('foot')
 function navView() { // Open nav function
   if (nav.style.width = "0px") { // If it is invisible,
     nav.style.width = "350px"; // Make it visible
     openBtn.setAttribute("onclick", "navClose();"); // Sets button to close navbar function
     setTimeout(function(){navContents.style.animationName = 'float-right'; navContents.style.display = 'block';}, 700); // Loading animation for nav contents
     main.style.marginLeft = '350px';
-    footer.style.marginLeft = '350px'; // 'Pushes' items to right
+    footer.style.marginLeft = '350px';
   }
 }
 
@@ -24,7 +24,9 @@ function navClose() { // Close navbar function
   }
 }
 
-function openInNewTab(url) { // Opens oauth link by clicking on <li>
+/* This next bit of code is a last resort so it's HORRIBLE. T-T */
+
+function openInNewTab(url) {
   var win = window.open(url, '_blank');
   win.focus();
 }
@@ -42,14 +44,14 @@ for (let i = 0; i < acc.length; i++) {
     }
 }
 
-let commandsTitle = document.getElementsByClassName("commands-title");
+let commandsTitle = document.getElementsByClassName("commands-title"); // accordion variable
 
 for (let i = 0; i < commandsTitle.length; i++) {
-  commandsTitle[i].onclick = function() { // When click is detected execute the following
-    if (this.style.maxHeight != '600px') { // if the table is not open,
-          this.style.maxHeight = '600px'; // open it
-    } else { // if it's not closed,
-      this.style.maxHeight = '29px'; // close it
+  commandsTitle[i].onclick = function() { // When click is detected execute the following // The accordion content
+    if (this.style.maxHeight != '600px') {
+          this.style.maxHeight = '600px'; // make it null
+    } else {
+      this.style.maxHeight = '29px';
     }
   }
 }

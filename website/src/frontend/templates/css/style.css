@@ -562,3 +562,18 @@ box-shadow:  20px 20px 60px #c27cd92a,
         font-size:larger;
     }
 }
+
+
+
+/* ---------------
+
+width: 100%;
+position: absolute;
+z-index: 1;
+background-color: rgba(0, 0, 0, 0.986);
+transition:cubic-bezier(.82,.01,.41,.99) 1s;
+overflow:hidden; /* Just so the contents don't glitch out of the nav. 
+left:0;
+right:0;
+top:0;
+bottom:0;
