@@ -5,6 +5,7 @@ from flask import Flask, Blueprint, render_template
 """Initialise a blueprint"""
 errors =  Blueprint('errors', __name__)
 
+"""Currently all we need is 3 errors 404, 403, and 401 if we need to update for other situations we will"""
 @errors.app_errorhandler(404)
 def error_404(error):
     return render_template('website/src/backend/errors/404.html'), 404
