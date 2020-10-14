@@ -23,12 +23,13 @@ class Moderation(commands.Cog):
     async def unmute(self, ctx, member: discord.Member):
         pass
 
+    """Set the muted default muted role by utility bot to a custom one."""
     @commands.command()
     async def mutedrole(self, ctx, role_id: int):
         pass
     
     @commands.command()
-    async def warn(self, ctx, reason=reason):
+    async def warn(self, ctx, reason=None):
         pass
 
 def setup(bot):
