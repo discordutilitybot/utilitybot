@@ -15,4 +15,4 @@ def error_403(error):
 
 @errors.app_errorhandler(401)
 def error_401():
-    return render_template(''), 401
+    return render_template('website/src/backend/errors/401.html'), 401
