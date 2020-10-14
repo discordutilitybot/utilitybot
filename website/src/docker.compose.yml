@@ -27,7 +27,6 @@ services:
     ports:
       - 5001:8081
 
-
   api-services:
     build: 
       context: .
@@ -51,7 +50,6 @@ services:
       - postgres
 
 
-  
   postgres:
     image: postgres:latest
 
