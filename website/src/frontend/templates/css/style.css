@@ -2,7 +2,7 @@
 html {
     background:#35354d;
     color:white;
-    font-family:Inter;
+    font-family:Chilanka;
 }
 
 a {
@@ -38,7 +38,7 @@ button:hover .fa-arrow-right {
 }
 
 h1 {
-    font-family:Epilogue, sans-serif;
+    font-family:Work Sans, sans-serif;
 }
 
 hr {
@@ -88,10 +88,10 @@ ul {
     border-radius:3px;
     width:70%;
     cursor:pointer;
-    font-family:Inter;
+    font-family:Chilanka;
     font-weight:300;
     transition:0.5s;
-    max-height:29px;
+    max-height:25px;
     overflow: hidden;
 }
 
@@ -295,7 +295,7 @@ ul {
 }
 
 .main-subtitle {
-    font-family:Inter, sans-serif;
+    font-family:Chilanka, sans-serif;
     font-weight:300;
     color:#aaa;
     text-align:center;
