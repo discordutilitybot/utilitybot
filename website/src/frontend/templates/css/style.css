@@ -179,7 +179,7 @@ ul {
 	text-align: center;
 	display: none;
 	cursor: pointer;
-	position: absolute; /* Bypasses other elements' collisions */
+	position: fixed; /* Bypasses other elements' collisions */
 	z-index: 50;
 	width: 40px;
 	height: 40px;
@@ -244,6 +244,7 @@ ul {
     box-shadow:0px 0px 40px 10px rgba(0, 0, 0, 0.158);
     justify-content: space-evenly;
     background:#4c465e;
+    transition:margin-left .5s;
 }
 
 
@@ -272,9 +273,10 @@ ul {
 }
 .main {
     width:75%;
-    right:0;
     height:fit-content;
-    float:right;
+    transition: margin-left .5s;
+    padding: 20px;
+    float:none;
 }
 
 .main-content {
@@ -301,25 +303,24 @@ ul {
 }
 
 .nav-collapsed {
-    width: 100%;
-    position: absolute;
+    height: 100%;
+    width: 0;
+    position: fixed;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.986);
-    transition:cubic-bezier(.82,.01,.41,.99) 1s;
-    overflow:hidden; /* Just so the contents don't glitch out of the nav. */
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#111,rgb(54, 27, 51));
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.449)
 }
 
 .nav-collapsed > ul {
     position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
     display:flex;
     flex-direction:column;
+    justify-content: space-between;
     display:none;
     animation-duration:1s;
 }
@@ -480,7 +481,6 @@ box-shadow:  20px 20px 60px #c27cd92a,
 .nav-item-gradient.collapsed {
     width:20vw;
     margin:0;
-    margin-left:40vw;
     padding:5px 6px;
 }
 
@@ -551,6 +551,10 @@ box-shadow:  20px 20px 60px #c27cd92a,
     .nav-collapsed {
         display: none;
     }
+
+    .main {
+        float:right;
+    }
 }
 
 @media only screen and (min-height: 800px) {
@@ -558,3 +562,18 @@ box-shadow:  20px 20px 60px #c27cd92a,
         font-size:larger;
     }
 }
+
+
+
+/* ---------------
+
+width: 100%;
+position: absolute;
+z-index: 1;
+background-color: rgba(0, 0, 0, 0.986);
+transition:cubic-bezier(.82,.01,.41,.99) 1s;
+overflow:hidden; /* Just so the contents don't glitch out of the nav. 
+left:0;
+right:0;
+top:0;
+bottom:0;
