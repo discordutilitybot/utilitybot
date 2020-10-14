@@ -26,12 +26,25 @@ class Moderation(commands.Cog):
     """Set the muted default muted role by utility bot to a custom one."""
     @commands.command()
     async def mutedrole(self, ctx, role_id: int):
-        
+        pass
     
     
     @commands.command()
     async def warn(self, ctx, member: discord.Member, reason=None):
-        pass
+        await ctx.send(f"{member} was warned for {reason}")
 
+        for reasons in reason:
+            if not reasons:
+
+                await ctx.send("Please provide a reason to warn a member")
+
+            else:
+                return True
+        
+        for members in member:
+            if not members:
+                await ctx.send("Please specify a user/member to warn.")
+            else:
+                return True
 def setup(bot):
     bot.add_cog(Moderation(bot))
