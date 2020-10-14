@@ -58,7 +58,7 @@ class Moderation(commands.Cog):
             if not members:
                 await ctx.send(f"Please specify a member to warn {member.mention}")
             else:
-                return Truediscor
+                return True
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
