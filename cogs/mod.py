@@ -30,7 +30,7 @@ class Moderation(commands.Cog):
     
     
     @commands.command()
-    async def warn(self, ctx, reason=None):
+    async def warn(self, ctx, member: discord.Member, reason=None):
         pass
 
 def setup(bot):
