@@ -12,7 +12,14 @@ class Moderation(commands.Cog):
         self.bot = bot
 
     @commands.command(aliases=["silence, stfu"])
-    async def mute(self, ctx, member: discord.Member):
+    async def mute(self, ctx, member: discord.Member, reason=None):
+        pass
+
+    @commands.command()
+    async def unmute(self, ctx, member: discord.Member)
+
+    @commands.command()
+    async def muterole(self, ctx, role_id: int):
         pass
         
 
