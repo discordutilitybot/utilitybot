@@ -11,6 +11,7 @@ class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.has_permissions(mute_members=True)
     @commands.command
     async def ban(self, ctx, member: discord.Member, reason=None):
         await member.ban(reason=reason)
@@ -24,6 +25,7 @@ class Moderation(commands.Cog):
             if members is None:
                 await ctx.send(f"Pleasy specify a member to ban {member.mention}")
 
+    @commands.has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
         pass
