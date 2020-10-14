@@ -14,7 +14,7 @@ class Moderation(commands.Cog):
     @commands.command
     async def ban(self, ctx, member: discord.Member, reason=None):
         await member.ban(reason=reason)
-        await ctx.send(f"{member} was banned for {reason}.")
+        await ctx.send(f"{member.mention} was banned for {reason}.")
 
         for reasons in reason:
             if reasons is None:
@@ -40,7 +40,7 @@ class Moderation(commands.Cog):
     
     @commands.command()
     async def warn(self, ctx, member: discord.Member, reason=None):
-        await ctx.send(f"{member} was warned for {reason}")
+        await ctx.send(f"{member.mention} was warned for {reason}")
 
         for reasons in reason:
             if not reasons:
