@@ -29,7 +29,8 @@ class Moderation(commands.Cog):
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
         pass
-
+    
+    @commands.has_permissions(mute_members=True)
     @commands.command()
     async def unmute(self, ctx, member: discord.Member):
         pass
