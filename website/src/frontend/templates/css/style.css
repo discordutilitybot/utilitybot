@@ -96,15 +96,11 @@ ul {
 }
 
 .commands-title:hover {
-    background:rgb(125, 143, 208);
+    opacity:0.8;
 }
 
-.commands-title:nth-child(even):hover {
-    background:rgb(102,  190, 241);
-}
-
-.commands-title:nth-child(even) {
-    background:rgb(85, 167, 215);
+.commands-title[css-data-number="1"], .commands-title[css-data-number="3"] {
+    background:rgb(116, 122, 203);
 }
 
 .commands-title table {
@@ -183,7 +179,7 @@ ul {
 	text-align: center;
 	display: none;
 	cursor: pointer;
-	position: absolute; /* Bypasses other elements' collisions */
+	position: fixed; /* Bypasses other elements' collisions */
 	z-index: 50;
 	width: 40px;
 	height: 40px;
@@ -248,6 +244,7 @@ ul {
     box-shadow:0px 0px 40px 10px rgba(0, 0, 0, 0.158);
     justify-content: space-evenly;
     background:#4c465e;
+    transition:margin-left .5s;
 }
 
 
@@ -276,9 +273,10 @@ ul {
 }
 .main {
     width:75%;
-    right:0;
     height:fit-content;
-    float:right;
+    transition: margin-left .5s;
+    padding: 20px;
+    float:none;
 }
 
 .main-content {
@@ -305,33 +303,34 @@ ul {
 }
 
 .nav-collapsed {
-    width: 100%;
-    position: absolute;
+    height: 100%;
+    width: 0;
+    position: fixed;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.986);
-    transition:cubic-bezier(.82,.01,.41,.99) 1s;
-    overflow:hidden; /* Just so the contents don't glitch out of the nav. */
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#111,rgb(54, 27, 51));
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.449)
 }
 
 .nav-collapsed > ul {
     position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
     display:flex;
     flex-direction:column;
+    justify-content: space-between;
+    display:none;
+    animation-duration:1s;
 }
 
-.nav-collapsed > ul > li > a {
+.nav-collapsed ul li a {
 	text-decoration:none;
 }
 
 .nav-item.collapsed, .nav-item-gradient.collapsed {
-    font-size:calc(2vw + 1vh);
+    font-size:calc(2vw + 2vh);
 }
 
 .nav-item {
@@ -346,7 +345,6 @@ ul {
 }
 
 .nav-item:after {
-    background: #000000;
     width: 0;
     height: 3px;
     position: absolute;
@@ -434,16 +432,13 @@ ul {
     height: 3px;
     position: absolute;
     bottom: 0;
-    left:50%;
     content: '';
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background: linear-gradient(to right, rgb(163, 231, 239),rgb(238, 144, 144));
 }
 
 .nav-item:hover::after {
     width: 100%;
-    left:0;
 }
 
 
@@ -452,7 +447,6 @@ ul {
     transition: 1s;
     margin: 0.625rem;
     border: none;
-    padding:10px 13px;
     font-size:30px;
     text-align:center;
     border-radius:30px;
@@ -485,10 +479,9 @@ box-shadow:  20px 20px 60px #c27cd92a,
 }
 
 .nav-item-gradient.collapsed {
-    width:40vw;
+    width:20vw;
     margin:0;
-    padding:10px 13px;
-    margin-left:28vw;
+    padding:5px 6px;
 }
 
 .nav-item-gradient.collapsed::after {
@@ -528,8 +521,9 @@ box-shadow:  20px 20px 60px #c27cd92a,
 }
 
 @keyframes float-right {
-    from {transform:translateX(-20px); opacity:0;}
+    from {transform:scale(0.2); opacity:0;}
 }
+
 @media only screen and (max-width: 1500px) {
     .nav-items-list {
         display:none;
@@ -557,6 +551,10 @@ box-shadow:  20px 20px 60px #c27cd92a,
     .nav-collapsed {
         display: none;
     }
+
+    .main {
+        float:right;
+    }
 }
 
 @media only screen and (min-height: 800px) {
@@ -564,3 +562,18 @@ box-shadow:  20px 20px 60px #c27cd92a,
         font-size:larger;
     }
 }
+
+
+
+/* ---------------
+
+width: 100%;
+position: absolute;
+z-index: 1;
+background-color: rgba(0, 0, 0, 0.986);
+transition:cubic-bezier(.82,.01,.41,.99) 1s;
+overflow:hidden; /* Just so the contents don't glitch out of the nav. 
+left:0;
+right:0;
+top:0;
+bottom:0;

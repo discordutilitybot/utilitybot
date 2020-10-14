@@ -9,13 +9,12 @@
     <script src="https://kit.fontawesome.com/66d1518bf8.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,100;0,263;0,531;1,312;1,531&display=swap');
-
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
-    <div class="nav-collapsed" id="navCollapsed" style="height: 0%;">
+    <div class="nav-collapsed" id="navCollapsed">
         <ul id="navList">
             <li onclick="openInNewTab('https://google.com')" class="nav-item-gradient collapsed" id="addToServerCollapsed"><i class="fas fa-plus nav-img"></i><a class="nav-item-text"
                     href="/">
@@ -40,11 +39,11 @@
                     Us</a></li>
             <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">
                     Commands</a></li>
-            <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
+            <li class="nav-item"><i class="fas fa-question-mark"></i><a href="/faq">FAQ</a></li>
         </ul>
     </div>
 
-    <div class="main">
+    <div id="main" class="main">
         <div class="header">
             <h1 class="main-title">
                 <img class="logo" src="imgs/utilitybot.png"></img>Utility Bot
@@ -53,8 +52,8 @@
             <div class="main-content">
         <hr class="left-separator">
        <h2 class="page-title">Complete list of UtilityBot commands</h2>
-       <h1 id="modCommands" class="commands-title" onclick="modCommands()">Moderation
-       <table id="tableM" class="commands-list-category">
+       <h1 id="modCommands" class="commands-title" style="max-height:29px;" css-data-number="1">Moderation
+       <table class="commands-list-category">
          <tr>
          <th>Command</th>
          <th>Description</th>
@@ -86,8 +85,8 @@
        </table>
       </h1>
 <br>
-       <h1 class="commands-title" onclick="Commands()">Fun
-       <table id="tableF" class="commands-list-category">
+       <h1 class="commands-title" style="max-height:29px;" css-data-number="2">Fun
+       <table style="max-height:29px;" class="commands-list-category">
         <tr>
         <th>Command</th>
         <th>Description</th>
@@ -104,10 +103,14 @@
          <td>u!coinflip</td>
          <td>Flips a coin.</td>
        </tr>
+       <tr>
+         <td>u!roll [sides]</td>
+         <td>Rolls a die.</td>
+       </tr>
       </table>
     </h1>
       <br>
-      <h1 class="commands-title" id="infoCommands" onclick="infoCommands()">Information
+      <h1 class="commands-title" style="max-height:29px;" css-data-number="3">Information
       <table class="commands-list-category">
         <tr>
           <th>Command</th>
@@ -148,7 +151,7 @@
       </table>
     </h1>
       <br>
-      <h1 class="commands-title" id="utilCommands" onclick="utilCommands()">Utility
+      <h1 class="commands-title" style="max-height:29px;" css-data-number="4">Utility
       <table class="commands-list-category" id="tableU">
         <tr>
           <th>Command</th>
@@ -158,6 +161,10 @@
           <td>u!ping</td>
           <td>Ping.</td>
         </tr>
+        <tr>
+          <td>u!status</td>
+          <td>Finds the bot status.</td>
+        </tr>
       </table>
     </h1>
 </div>
@@ -165,7 +172,7 @@
 </div>
 </div>
 
-<div class="footer-row">
+<div class="footer-row" id="foot">
   <p>2020-2021 Utility Bot, The Ultimate Server Management Bot</p>
   <i class="fa fa-lock">
   <a class="footer-link" href="/privacy">Privacy Policy</a></i>
