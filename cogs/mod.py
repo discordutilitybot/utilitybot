@@ -22,11 +22,14 @@ class Moderation(commands.Cog):
     @commands.command()
     async def unmute(self, ctx, member: discord.Member):
         pass
-    
+
     @commands.command()
     async def mutedrole(self, ctx, role_id: int):
         pass
-        
+    
+    @commands.command()
+    async def warn(self, ctx, reason=reason):
+        pass
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
