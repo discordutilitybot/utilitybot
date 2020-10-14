@@ -20,7 +20,8 @@ CREATE TABLE guild_settings (
 )
 
 CREATE TABLE users (
-    user_id INT(20) NOT NULL DEFAULT 0
+    user_id INT(20) NOT NULL DEFAULT 0,
+    user_warns BIGINT NOT NULL DEFAULT 0,
 
 )
 
