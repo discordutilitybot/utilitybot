@@ -16,6 +16,14 @@ class Moderation(commands.Cog):
         await member.ban(reason=reason)
         await ctx.send(f"{member} was banned for {reason}.")
 
+        for reasons in reason:
+            if reasons is None:
+                await ctx.send(f"Please specify a reason to ban {member}.")
+
+        for members in member:
+            if members is None:
+                await ctx.send(f"Pleasy specify a member to ban {member.mention}")
+
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
         pass
@@ -37,14 +45,14 @@ class Moderation(commands.Cog):
         for reasons in reason:
             if not reasons:
 
-                await ctx.send("Please provide a reason to warn a member")
+                await ctx.send(f"Please provide a reason to warn a {member}")
 
             else:
                 return True
         
         for members in member:
             if not members:
-                await ctx.send("Please specify a user/member to warn.")
+                await ctx.send(f"Please specify a member to warn {member.mention}")
             else:
                 return Truediscor
 
