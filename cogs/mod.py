@@ -28,7 +28,7 @@ class Moderation(commands.Cog):
     @commands.has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
-        pass
+        
     
     @commands.has_permissions(mute_members=True)
     @commands.command()
@@ -44,21 +44,24 @@ class Moderation(commands.Cog):
     
     @commands.command()
     async def warn(self, ctx, member: discord.Member, reason=None):
+        
         await ctx.send(f"{member.mention} was warned for {reason}")
 
-        for reasons in reason:
-            if not reasons:
+        if not member:
+            await ctx.send("You have specify a member to warn")
+            return
 
-                await ctx.send(f"Please provide a reason to warn a {member}")
+        if len(reason) > 250:
+            await ctx.send("Reason's have to be less than 250 characters.")
+            return
 
-            else:
-                return True
-        
-        for members in member:
-            if not members:
-                await ctx.send(f"Please specify a member to warn {member.mention}")
-            else:
-                return True
+        if ctx.author.id != ctx.guild.owner.id:
+            await ctx.send("You can't warn the Owner of the Server!")
+            return
 
+        if ctx.author == member:
+            await ctx.send("You can't wwarn your self.")
+            return
+            
 def setup(bot):
     bot.add_cog(Moderation(bot))
