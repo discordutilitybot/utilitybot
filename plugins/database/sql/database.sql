@@ -21,13 +21,13 @@ CREATE TABLE guild_settings (
 
 CREATE TABLE warns (
     user_id int FOREIGN KEY REFERENCES users(user_id),
-    user_warns
+    user_warns int FOREIGN KEY REFERENCES users(user_warns)
 )
 
 
 CREATE TABLE users (
     user_id INT(20) NOT NULL DEFAULT 0,
     user_warns BIGINT NOT NULL DEFAULT 0,
-
+    PRIMARY KEY (user_id, user_warns)
 )
 
