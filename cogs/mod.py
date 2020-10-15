@@ -47,6 +47,7 @@ class Moderation(commands.Cog):
         
         await ctx.send(f"{member.mention} was warned for {reason}")
 
+        """Error Handlers"""
         if not member:
             await ctx.send("You have specify a member to warn")
             return
@@ -63,7 +64,7 @@ class Moderation(commands.Cog):
             await ctx.send("You can't wwarn your self.")
             return
         
-        # Update warnings for a user
+        # Update warnings for the user
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
