@@ -12,11 +12,14 @@ a {
     color:white;
     text-decoration-skip-ink: all; /* Underline skips letter descenders */
     transition:100ms;
-    font-family:Chilanka, cursive
+    font-family:Chilanka, cursive;
+    text-decoration: underline;
 }
 
 a:hover {
-    font-weight:bold;
+    font-weight:500;
+    color:rgb(231, 249, 255);
+    text-decoration:none;
 }
 
 button {
@@ -54,6 +57,10 @@ hr.left-separator { /* The separator between the page and the title */
     margin:0;
 }
 
+p {
+    font-family:Chilanka, cursive;
+    cursor:text;
+}
 table { /*Styles the commands table */
   border-collapse: collapse;
   width: 80%;
@@ -70,6 +77,7 @@ td, th {
     padding: 8px;
     background-color:rgba(0, 0, 0, 0.2);
     max-height:0px;
+    cursor:text;
 }
 
 tr:nth-child(even) {
@@ -84,9 +92,8 @@ ul {
 
 .commands-title { /*The title for the commands list tables */
     background:rgb(85, 117, 215);
-    border:1px solid white;
     margin:0;
-    padding:10px;
+    padding:13px;
     border-radius:3px;
     width:70%;
     cursor: pointer;;
@@ -95,6 +102,8 @@ ul {
     transition:0.5s;
     overflow: hidden;
     max-height:47px;
+    text-align:center;
+    margin-left:15%;
 }
 
 .commands-title:hover {
@@ -248,13 +257,12 @@ ul {
 
 .footer-link {
     color:#eeeeee;
-    text-decoration:none;
 }
 
 .logo { 
-    width:100px;
-    height:100px;
-    border-radius:10px;
+    width:120px;
+    height:120px;
+    border-radius:40px;
     position:static;
     margin-bottom:-20px;
     background:none;
@@ -263,7 +271,7 @@ ul {
 }
 
 .logo:hover {
-    box-shadow:0 0 30px 20px rgba(255, 255, 255,0.1), inset 20px 20px 60px #4e4e63;
+    box-shadow:0 0 40px 20px rgba(0, 0, 0, 0.288), inset 20px 20px 60px rgba(0, 0, 0, 0.705);
     filter:saturate(1.2) contrast(1.2);
     border-radius:50%;
     transform:scale(1.05);
@@ -284,7 +292,7 @@ ul {
 .main-title {
     font-family:Work Sans, sans-serif;
     color:white;
-    font-size:90px;
+    font-size:110px;
     text-align:center;
     margin-top:0px;
     margin:0;
@@ -317,11 +325,8 @@ ul {
 }
 
 .nav-collapsed > ul {
-    position: relative;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
     display:none;
+    padding:0;
     animation-duration:1.5s;
 }
 
@@ -341,6 +346,7 @@ ul {
     position: relative;
     width: fit-content;
     margin-top:40px;
+    text-decoration:none;
 }
 
 .nav-item:after {
@@ -362,13 +368,12 @@ ul {
 .nav-items-list {
     width: 21%;
     position: fixed; /* On scroll it remains fixed */
-    left: -10px;
     background: rgb(34, 32, 38);
     padding: 8px;
     font-size:25px;
     font-family:Epilogue, sans-serif;
     text-decoration:none;
-    border-radius:5px;
+    border-radius:20px;
     height:100%;
     top:0;
     margin:0;
