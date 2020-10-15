@@ -11,7 +11,7 @@ function navView() { // Open nav function
     nav.style.width = "350px"; // Make it visible
     navContents.style.display = 'block';
     openBtn.setAttribute("onclick", "navClose();"); // Sets button to close navbar function
-    navContents.style.animationName = 'float-right'; 
+    navContents.style.animationName = 'float-appear'; 
     main.style.marginLeft = '350px';
     footer.style.marginLeft = '350px';
   }
@@ -19,14 +19,14 @@ function navView() { // Open nav function
 
 function navClose() { // Close navbar function
   if (nav.style.width = "350px") { // If it's visible,
-    setTimeout(function(){
-      nav.style.width = "0px"; // Make it invisible
-      main.style.marginLeft = '0';
-      footer.style.marginLeft = '0';
+  nav.style.width = "0px"; // Make it invisible
+  main.style.marginLeft = '0';
+  footer.style.marginLeft = '0';
+
+    setTimeout(function(){ // Timeout for display:none; so that it doesn't unexpectedly disappear
       navContents.style.display = 'none';
     },1000)
     openBtn.setAttribute("onclick", "navView();") // Sets button to open nav function
-    navContents.style.animationName = 'float-left';
   }
 }
 
@@ -51,10 +51,10 @@ for (let i = 0; i < acc.length; i++) {
 let commandsTitle = document.getElementsByClassName("commands-title"); // accordion variable
 for (let i = 0; i < commandsTitle.length; i++) {
   commandsTitle[i].onclick = function() { // When click is detected execute the following // The accordion content
-    if (this.style.maxHeight != '600px') {
-          this.style.maxHeight = '600px'; // make it null
+    if (this.style.maxHeight != '475px') {
+          this.style.maxHeight = '475px'; // make it null
     } else {
-      this.style.maxHeight = '29px';
+      this.style.maxHeight = '47px';
     }
   }
 }

@@ -6,14 +6,13 @@
 html {
     background:#35354d;
     color:white;
-    font-family:Chilanka;
 }
 
 a {
     color:white;
     text-decoration-skip-ink: all; /* Underline skips letter descenders */
     transition:100ms;
-    font-family:Chilanka;
+    font-family:Chilanka, cursive
 }
 
 a:hover {
@@ -88,15 +87,14 @@ ul {
     border:1px solid white;
     margin:0;
     padding:10px;
-    padding-left:25px;
     border-radius:3px;
     width:70%;
-    cursor:pointer;
-    font-family:Chilanka;
+    cursor: pointer;;
+    font-family:Chilanka, cursive;
     font-weight:300;
     transition:0.5s;
-    max-height:25px;
     overflow: hidden;
+    max-height:47px;
 }
 
 .commands-title:hover {
@@ -209,10 +207,6 @@ ul {
     padding:0;
 }
 
-.fa-lock, .fa-question, .fa-envelope, .fa-user-friends {
-    font-weight:400;
-    text-decoration:none;
-}
 
 .faq-question {
   background-color: #6e6e93;
@@ -411,9 +405,10 @@ ul {
      text-align:center;
      margin-top:40px;
      font-size:20px;
-     word-break: keep-all;
-     word-wrap: normal;
-     flex-wrap: nowrap;
+     white-space: -moz-pre-wrap; /* Firefox */
+     white-space: -o-pre-wrap; /* Opera */
+     white-space: pre-wrap; /* Chrome */
+     word-wrap: break-word; /* IE */
      white-space: nowrap
 }
 
@@ -517,12 +512,8 @@ ul {
     to {transform:translateY(-50px); opacity:0;}
 }
 
-@keyframes float-right {
+@keyframes float-appear {
     from {transform:translate(0, -20px); opacity:0;}
-}
-
-@keyframes float-left {
-    to {transform:translate(0, -20px); opacity:0;}
 }
 
 @media only screen and (max-width: 1100px) {
