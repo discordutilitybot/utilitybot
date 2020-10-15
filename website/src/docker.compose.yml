@@ -4,7 +4,7 @@ services:
 
   frontend-services:
     build: 
-      context: .
+      context: ./website/src/frontend /
       image: frontend-services
     depends_on:
       - backend-services
@@ -17,7 +17,7 @@ services:
 
   backend-services:
     build: 
-      context: .
+      context: ./website/src/backend /
       image: backend-services
     depends_on:
       - frontend-services
