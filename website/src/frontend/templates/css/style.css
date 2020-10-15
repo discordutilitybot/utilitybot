@@ -257,11 +257,8 @@ ul {
     height:30vh;			
     padding:10px;
     text-align:center;
-    display:flex;
-    flex-direction:column;
     z-index:3;
     box-shadow:0px 0px 40px 10px rgba(0, 0, 0, 0.158);
-    justify-content: space-evenly;
     background:#4c465e;
     transition:margin-left .5s;
 }

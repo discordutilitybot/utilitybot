@@ -5,7 +5,6 @@ let openBtn = document.getElementById('openButton'); // The trigger
 let navContents = document.getElementById('navList'); // The navbar contents
 
 let main = document.getElementById('main');
-let footer = document.getElementById('foot')
 function navView() { // Open nav function
   if (nav.style.width = "0px") { // If it is invisible,
     nav.style.width = "350px"; // Make it visible
@@ -13,7 +12,6 @@ function navView() { // Open nav function
     openBtn.setAttribute("onclick", "navClose();"); // Sets button to close navbar function
     navContents.style.animationName = 'float-appear'; 
     main.style.marginLeft = '350px';
-    footer.style.marginLeft = '350px';
   }
 }
 
