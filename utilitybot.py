@@ -8,7 +8,6 @@ import datetime
 import aiohttp
 from datetime import datetime
 import json
-from secrets import *
 from plugins.database import Database
 
 

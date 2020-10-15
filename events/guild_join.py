@@ -19,6 +19,7 @@ class GuildJoin(commands.Cog):
         permissions = discord.Permissions(send_messages=False, speak=False, read_messages=True)
         await self.bot.create_role(name="Muted", permissions=permissions)
 
+        
     
         
 def setup(bot):
