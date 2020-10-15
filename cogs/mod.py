@@ -28,7 +28,7 @@ class Moderation(commands.Cog):
     @commands.has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
-        
+        pass
     
     @commands.has_permissions(mute_members=True)
     @commands.command()
@@ -62,6 +62,6 @@ class Moderation(commands.Cog):
         if ctx.author == member:
             await ctx.send("You can't wwarn your self.")
             return
-            
+
 def setup(bot):
     bot.add_cog(Moderation(bot))
