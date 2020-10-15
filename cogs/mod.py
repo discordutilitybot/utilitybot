@@ -64,7 +64,7 @@ class Moderation(commands.Cog):
             await ctx.send("You can't wwarn your self.")
             return
         
-        # Update warnings for the user
+        # Update warnings for the user in db
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
