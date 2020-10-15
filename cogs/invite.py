@@ -12,7 +12,6 @@ class Invite(commands.Cog):
     async def invite(self, ctx):
         
         """Add invite when bot is in production"""
-
         await ctx.send("Here is the invite link for utilitybot: \n")
 
 def setup(bot):

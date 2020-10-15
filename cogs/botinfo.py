@@ -11,7 +11,7 @@ class Botinfo(commands.Cog):
         embed = discord.Embed(
             title = "All about utility bot",
             description = "Something here",
-            color = discord.Colour.grey()
+            color = discord.Color.grey()
         )   
 
         await ctx.send(embed=embed)

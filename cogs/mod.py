@@ -62,6 +62,8 @@ class Moderation(commands.Cog):
         if ctx.author == member:
             await ctx.send("You can't wwarn your self.")
             return
+        
+        # Update warnings for a user
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
