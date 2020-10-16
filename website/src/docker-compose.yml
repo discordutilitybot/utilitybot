@@ -4,7 +4,7 @@ services:
 
   frontend-services:
     build: 
-      context: ./website/src/frontend /
+      context: ./website/src/frontend 
     depends_on:
       - backend-services
       - api-services
@@ -16,7 +16,7 @@ services:
 
   backend-services:
     build: 
-      context: ./website/src/backend /
+      context: ./website/src/backend 
     depends_on:
       - frontend-services
     volumes:
