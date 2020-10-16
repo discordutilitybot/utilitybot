@@ -4,7 +4,7 @@ services:
 
   frontend-services:
     build: 
-      context: .
+      context: ./website/src/frontend/Dockerfile
     depends_on:
       - backend-services
       - api-services
@@ -16,7 +16,7 @@ services:
 
   backend-services:
     build: 
-      context: .
+      context: ./website/src/backend/Dockerfile
     depends_on:
       - frontend-services
     volumes:
@@ -37,7 +37,6 @@ services:
     depends_on:
       - frontend-services
       - postgres
-
 
   postgres:
     image: postgres:latest
