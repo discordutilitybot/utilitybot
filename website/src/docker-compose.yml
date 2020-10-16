@@ -9,7 +9,7 @@ services:
       - backend-services
       - api-services
     volumes:
-      - ./frontend:/usr/src/frontend
+      - frontend:/usr/src/frontend
     restart: always
     ports:
       - 5001:8080
@@ -20,7 +20,7 @@ services:
     depends_on:
       - frontend-services
     volumes:
-      - ./backend:/usr/src/backend
+      - backend:/usr/src/backend
     restart: always
     ports:
       - 5001:8081
@@ -30,13 +30,12 @@ services:
       context: .
     restart: always
     volumes: 
-      - ./api:/usr/src/api
+      - api:/usr/src/api
     ports:
     - 5001:8082
 
     depends_on:
       - frontend-services
-      - backend-services
       - postgres
 
 
