@@ -10,36 +10,20 @@
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
-    <div class="nav-collapsed" id="navCollapsed" style="height: 0%;">
-        <ul id="navList">
-            <li onclick="openInNewTab('https://google.com')" class="nav-item-gradient collapsed" id="addToServerCollapsed"><i class="fas fa-plus nav-img"></i><a class="nav-item-text"
-                    href="/">
-                    <!-- Put oauth link in between quote marks  -->Invite
-                </a></li>
-            <li class="nav-item collapsed"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">Contact Us
-                    us</a></li>
-            <li class="nav-item collapsed"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of
-                    commands</a></li>
-            <li class="nav-item collapsed"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
-        </ul>
-    </div>
-    <div class="nav">
-        <ul class="nav-items-list">
-            <br>
-            <i class="fas fa-bars" id="openButton" onclick="navView();"></i>
-            <li onclick="openInNewTab('oauth link for discord bot')" class="nav-item-gradient" id="addToServer"><i class="fas fa-plus nav-img"></i><a class="nav-item-text"
-                    href="#">
-                    Invite Utility Bot
-                </a></li>
-            <li class="nav-item"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">Contact
-                    Us</a></li>
-            <li class="nav-item"><i class="fas fa-list-ul nav-img"></i><a href="/commands">
-                    Commands</a></li>
-            <li class="nav-item"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
-        </ul>
-    </div>
+<i class="fas fa-bars" id="openButton" onclick="navView();"></i>
+<div class="nav-collapsed" id="navCollapsed">
+    <ul id="navList">
+        <li onclick="openInNewTab('https://google.com')" class="nav-item-gradient collapsed" id="addToServerCollapsed"><i class="fas fa-plus nav-img"></i><a class="nav-item-text"
+                href="/">
+                <!-- Put oauth link in between quote marks  -->Invite
+            </a></li>
+        <li class="nav-item collapsed"><i class="fas fa-envelope-square nav-img"></i><a href="/contact">Contact Us
+                us</a></li>
+        <li class="nav-item collapsed"><i class="fas fa-list-ul nav-img"></i><a href="/commands">list of
+                commands</a></li>
+        <li class="nav-item collapsed"><i class="fas fa-question nav-img"></i><a href="/faq">FAQ</a></li>
+    </ul>
+</div>
 
     <div class="main" id="main">
         <div class="header">
@@ -56,17 +40,20 @@
             <p>2020-2021 Utility Bot, The Ultimate Server Management Bot</p>
             <i class="fa fa-lock">
             <a class="footer-link" href="/privacy">Privacy Policy</a></i>
+            <br>
             <i class="fa fa-question">
             <a class="footer-link" href="mailto:support@utilitybot.co">Support</a></i>
+            <br>
             <i class="fa fa-envelope" aria-hidden="true">
             <a class="footer-link" href="/contact">Contact us</a></i>
+            <br>
             <i class="fa fa-user-friends">
             <a class="footer-link" href="/reviews">
                 Reviews</a></i>
             <hr>
             <p>Web design by <a class="web-design-credit" target="_blank"
                     href="https://github.com/PineappleRind">PineappleRind</a> and <a class="web-design-credit" target="_blank"  href="https://twitter.com/The_Coding_Guru"> Aditya Kapoor </a></p>
-        </div>
+        </div></div>
         <script src="js/site.js"></script>
 </body>
 </html>
