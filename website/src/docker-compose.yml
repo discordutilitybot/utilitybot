@@ -18,7 +18,7 @@ services:
     build: 
       context: ./website/src/backend/Dockerfile
     depends_on:
-      - frontend-services
+      - postgres
     volumes:
       - backend:/usr/src/backend
     restart: always
@@ -35,7 +35,6 @@ services:
     - 5001:8082
 
     depends_on:
-      - frontend-services
       - postgres
 
   postgres:
