@@ -2,7 +2,7 @@ version: '3'
 
 services:
 
-  frontend-services:
+  frontend:
     build: 
       context: ./website/src/frontend/Dockerfile
     depends_on:
@@ -14,7 +14,7 @@ services:
     ports:
       - 5001:8080
 
-  backend-services:
+  backend:
     build: 
       context: ./website/src/backend/Dockerfile
     depends_on:
