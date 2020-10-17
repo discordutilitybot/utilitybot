@@ -19,11 +19,6 @@ function navClose() { // Close navbar function
   if (nav.style.width = "350px") { // If it's visible,
   nav.style.width = "0px"; // Make it invisible
   main.style.marginLeft = '0';
-  footer.style.marginLeft = '0';
-
-    setTimeout(function(){ // Timeout for display:none; so that it doesn't unexpectedly disappear
-      navContents.style.display = 'none';
-    },1000)
     openBtn.setAttribute("onclick", "navView();") // Sets button to open nav function
   }
 }
