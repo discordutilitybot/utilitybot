@@ -25,7 +25,7 @@ services:
     ports:
       - 5001:8081
 
-  api-services:
+  api:
     build: 
       context: .
     restart: always
