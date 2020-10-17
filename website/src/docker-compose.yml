@@ -23,7 +23,7 @@ services:
       - backend:/usr/src/backend
     restart: always
     ports:
-      - 5001:8081
+      - 5002:8081
 
   api:
     build: 
@@ -32,7 +32,7 @@ services:
     volumes: 
       - api:/usr/src/api
     ports:
-    - 5001:8082
+    - 5003:8082
 
     depends_on:
       - postgres
