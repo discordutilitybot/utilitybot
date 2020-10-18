@@ -1,17 +1,21 @@
-FROM python:3.7
+FROM python:3.7-onbuild
 
-WORKDIR /src/backend /
+COPY . /website/src/backend
+WORKDIR /website/src/backend .
 
-COPY /src/frontend/templates /
+COPY /website/src/frotend .
+COPY /website/src/backend/templates .
+
+# Update system dependencies and system.
+
+RUN apt-get update 
+RUN apt-get upgrade
+RUN pip3 install --upgrade pip
 
 COPY requirements.txt .
-
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r --upgrade requirements.txt
 
 EXPOSE 8081
 
-COPY . .
-
-ENTRYPOINT ["python"]
-
-CMD [ "./main.py"] 
+ENTRYPOINT [ "python" ]
+CMD ["main.py"]
