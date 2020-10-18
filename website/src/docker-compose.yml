@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
 
@@ -9,7 +9,7 @@ services:
       - backend-services
       - api-services
     volumes:
-      - frontend:/usr/src/frontend
+      - frontend
     restart: always
     ports:
       - 5001:8080
@@ -20,7 +20,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - backend:/usr/src/backend
+      - backend
     restart: always
     ports:
       - 5002:8081
@@ -30,12 +30,23 @@ services:
       context: .
     restart: always
     volumes: 
-      - api:/usr/src/api
+      - api
     ports:
     - 5003:8082
 
     depends_on:
       - postgres
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./website/src/nginx/Dockerfile
+    ports:
+      - 443:443
+    depends_on:
+      - api
+      - backend
+      - frontend
 
   postgres:
     image: postgres:latest
@@ -47,5 +58,12 @@ services:
       POSTGRES_USER: "utilitybot"
       POSTGRES_PASSWORD: "password"
       POSTGRES_DB: "databasename"
-
-  
+    
+  volumes:
+    frontend:
+     - ./frontend/:/usr/src/frontend
+    backend:
+      - ./backend/:/usr/src/backend
+    api:
+      - ./api/:/usr/src/api
+      

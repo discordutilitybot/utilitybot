@@ -447,27 +447,14 @@ ul {
     text-align:center;
     border-radius:30px;
     overflow: hidden;
-    background: #b892ff;
-    box-shadow:  20px 20px 60px #c27cd92a, 
-             -20px -20px 60px #ffa8ff05;
+    border: 3px solid #9d6bf9;
+    background:#9d6bf950;
     padding:10px;
   }
   
   .nav-item-gradient:hover {
-    border-radius: 1em;
-    background: #e392ff;
-    box-shadow:  20px 20px 60px #c27cd964, 
-    -20px -20px 60px #ffa8ff48,
-                 inset 20px 20px 60px #c17cd9, 
-    inset -20px -20px 60px #ffa8ff00;
     font-weight:400;
-  }
-
-  .nav-item-gradient:active {
-    box-shadow: 20px 20px 60px #c27cd900, 
-    -20px -20px 60px #ffa8ff00,
-    inset 20px 20px 47px #815391, 
-            inset -20px -20px 47px #ffd1ff;
+    background:#a371ff90;
   }
 
 .nav-item-gradient:hover .fa-plus {
