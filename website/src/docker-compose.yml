@@ -48,7 +48,6 @@ services:
       - backend
       - frontend
 
-
   postgres:
     image: postgres:latest
 
@@ -63,5 +62,7 @@ services:
   volumes:
     frontend:
      - ./frontend/:/usr/src/frontend
-   
+    backend:
+      - ./backend/:/usr/src/backend
+    
       
