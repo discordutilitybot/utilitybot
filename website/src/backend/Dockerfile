@@ -12,7 +12,7 @@ RUN apt-get update && apt-get upgrade
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt .
-RUN pip install -r --upgrade requirements.txt
+RUN pip3 install -r --upgrade requirements.txt
 
 ENTRYPOINT [ "python" ]
 CMD ["main.py"]
