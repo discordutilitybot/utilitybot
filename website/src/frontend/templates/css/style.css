@@ -14,13 +14,14 @@ a {
     transition:100ms;
     font-family:Commissioner, sans-serif;
     font-weight:400;
-    text-decoration: none;
+    text-decoration:underline;
 }
 
 a:hover {
     font-weight:500;
     color:rgb(231, 249, 255);
     text-decoration:none;
+    text-shadow:1px 1px 10px rgba(255, 255, 255, 0.429);
 }
 
 button {
@@ -483,12 +484,6 @@ ul {
 .web-design-credit {
 	 padding:1px;
 	 border-radius:10px;
-	 text-decoration:underline;
-}
-
-.web-design-credit:hover {
-    text-shadow:1px 1px 10px rgba(255, 255, 255, 0.429); /* Removed! */
-    text-decoration:none;
 }
 
 @keyframes float-down {
