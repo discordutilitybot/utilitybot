@@ -64,5 +64,6 @@ services:
      - ./frontend/:/usr/src/frontend
     backend:
       - ./backend/:/usr/src/backend
-    
+    api:
+      - ./api/:/usr/src/api
       
