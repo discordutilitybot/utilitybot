@@ -9,3 +9,4 @@ RUN apt-get update && apt-get upgrade
 RUN pip install --upgrade pip
 
 COPY requirements.txt .
+RUN pip install -r --upgrade requirements.txt
