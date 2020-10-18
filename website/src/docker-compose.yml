@@ -59,5 +59,9 @@ services:
       POSTGRES_USER: "utilitybot"
       POSTGRES_PASSWORD: "password"
       POSTGRES_DB: "databasename"
+    
+  volumes:
+    frontend:
+     - /frontend/:/usr/src/frontend
 
   
