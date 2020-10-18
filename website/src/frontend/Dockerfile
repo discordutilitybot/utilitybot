@@ -1,6 +1,6 @@
 FROM python:3.7-onbuild
 
-WORKDIR /src/frontend/templates /
+WORKDIR /src/frontend /
 
 COPY /website/src/backend .
 
