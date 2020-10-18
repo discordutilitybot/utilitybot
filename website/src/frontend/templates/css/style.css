@@ -268,6 +268,39 @@ ul {
     color:#eeeeee;
 }
 
+.info-wrapper {
+    width:100%;
+    padding:10px;
+    justify-content: space-around;
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.info-container {
+    background-color: rgba(0, 0, 0, 0.267);
+    padding:20px;
+    border-radius:10px;
+    min-width:260px;
+    margin:2px;
+    max-width:600px;
+    max-height:600px;
+    min-height:200px;
+}
+
+.info-container h1 {
+    font-size: 42px;
+    background: -webkit-linear-gradient(45deg, rgb(200, 46, 231), rgb(196, 114, 7));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width:fit-content
+}
+
+.info-container p {
+    word-wrap: break-word;
+    display:inline-block;
+}
+
 .logo { 
     width:120px;
     height:120px;
