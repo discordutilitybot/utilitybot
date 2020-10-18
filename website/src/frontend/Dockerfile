@@ -7,3 +7,5 @@ COPY /website/src/backend .
 # Update system dependencies and system.
 RUN apt-get update && apt-get upgrade
 RUN pip install --upgrade pip
+
+COPY requirements.txt .
