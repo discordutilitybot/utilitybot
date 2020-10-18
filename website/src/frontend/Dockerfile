@@ -1,8 +1,8 @@
-FROM python:3.7
+FROM python:3.7-onbuild
 
 WORKDIR /src/frontend/templates /
 
-COPY /website/src/backend /
+COPY /website/src/backend .
 
 COPY requirements.txt .
 
