@@ -8,7 +8,8 @@ COPY /website/src/backend/blueprints .
 
 # Update system dependencies and system.
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update 
+RUN apt-get upgrade
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt .
