@@ -278,7 +278,7 @@ ul {
 }
 
 .info-container {
-    background-color: rgba(0, 0, 0, 0.267);
+    background: linear-gradient(to left, rgba(51, 0, 51, 0.466), rgba(0,0,0,0));
     padding:20px;
     border-radius:10px;
     min-width:260px;
@@ -288,6 +288,13 @@ ul {
     min-height:200px;
 }
 
+.info-container:nth-child(2) {
+    background: rgba(51, 0, 51, 0.466)
+}
+
+.info-container:nth-child(3) {
+    background: linear-gradient(to right, rgba(51, 0, 51, 0.466), rgba(0,0,0,0));
+}
 .info-container h1 {
     font-size: 42px;
     background: -webkit-linear-gradient(45deg, rgb(200, 46, 231), rgb(196, 114, 7));
