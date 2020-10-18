@@ -21,7 +21,7 @@ UtilityBot can help you manage your server with many useful commands. You can ki
 
 If you want to contribute or add a feature, don't hesitate to contact Andrew or Aditya on Discord; @Flop#7234 or @TheCodingGuru#7649 respectively. 
 
-You have to be at least a little bit familiar with the **asyncio** and **discord.py** python libraries, 
+You have to be at least a little bit familiar with the **asyncio** and **discord.py** 
 and with python in general if you want to contribute.
 
 ## How can I request/suggest a feature?
