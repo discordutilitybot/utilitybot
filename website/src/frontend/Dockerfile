@@ -13,7 +13,9 @@ RUN apt-get upgrade
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt .
-RUN pip3 install -r --upgrade requirements.txt
+RUN pip3 install -r --upgrade requirements.
+
+EXPOSE 8080
 
 ENTRYPOINT [ "python" ]
 CMD ["main.py"]

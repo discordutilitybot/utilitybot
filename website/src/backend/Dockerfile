@@ -15,5 +15,7 @@ RUN pip3 install --upgrade pip
 COPY requirements.txt .
 RUN pip3 install -r --upgrade requirements.txt
 
+EXPOSE 8081
+
 ENTRYPOINT [ "python" ]
 CMD ["main.py"]
