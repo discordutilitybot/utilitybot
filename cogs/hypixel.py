@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Hypixel:
+class Hypixel(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
