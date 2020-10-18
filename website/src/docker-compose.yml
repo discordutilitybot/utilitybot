@@ -62,6 +62,6 @@ services:
     
   volumes:
     frontend:
-     - /frontend/:/usr/src/frontend
-
-  
+     - ./frontend/:/usr/src/frontend
+   
+      
