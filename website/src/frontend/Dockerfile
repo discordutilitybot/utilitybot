@@ -12,3 +12,5 @@ RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r --upgrade requirements.txt
 
+ENTRYPOINT [ "python" ]
+CMD ["main.py"]
