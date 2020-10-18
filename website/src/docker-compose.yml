@@ -38,6 +38,10 @@ services:
       - postgres
 
   nginx:
+    build:
+      context: .
+      dockerfile: ./website/src/nginx/Dockerfile
+
 
   postgres:
     image: postgres:latest
