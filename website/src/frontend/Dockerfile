@@ -1,6 +1,6 @@
 FROM python:3.7-onbuild
 
-COPY . /website/src/frotnend 
+COPY . /website/src/frontend
 WORKDIR /website/src/frontend .
 
 COPY /website/src/backend .
