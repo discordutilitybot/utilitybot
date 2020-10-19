@@ -1,7 +1,7 @@
 /*Base styles*/
+
 * {
-    box-sizing: border-box;
-    transition:0.5s;
+    transition:0.5s; /* Transition for all elements */
 }
 
 html {
@@ -27,7 +27,7 @@ a:hover {
 }
 
 button {
-    border:none;
+    border:0px solid white;
     background:none;
     color:white;
     border-bottom:1px solid white;
@@ -35,6 +35,10 @@ button {
     margin:2px;
     padding:5px;
     font-size:15px;
+}
+
+button .fa-arrow-right {
+    padding:10px;
 }
 
 button:hover {
@@ -99,16 +103,11 @@ ul {
     text-decoration:none;
 }
 
-.commands {
-    display:flex;
-    flex-direction:column;
-}
 
 .commands-title { /*The title for the commands list tables */
     background:rgb(85, 117, 215);
+    border: 3px solid rgb(69, 98, 185);
     margin:0;
-    padding:10px;
-    padding-top:5px;
     border-radius:3px;
     width:70%;
     cursor: pointer;
@@ -116,8 +115,11 @@ ul {
     font-weight:300;
     transition:0.5s ease-in-out;
     overflow: hidden;
-    max-height:47px;
+    max-height:45px;
     text-align:center;
+    font-family:Work Sans, sans-serif;
+    font-size:40px;
+    padding:5px;
 }
 
 .commands-title:hover {
@@ -126,11 +128,14 @@ ul {
 
 .commands-title[css-data-number="1"], .commands-title[css-data-number="3"] {
     background:rgb(116, 122, 203);
+    border: 3px solid rgb(97, 102, 173);
 }
 
 .commands-title table {
     font-size:20px;
-    margin-top:20px;
+    padding:0;
+    margin:0;
+    cursor: pointer;
 }
 
 .contact-btns { /* This is the contact button row. */
@@ -254,15 +259,17 @@ ul {
     margin-top:10px;
 }
 
-.footer-row {
+.footer {
+    max-height:200px;	
+}
+
+.footer-wrapper {
     width:100%;
-    height:30vh;			
-    padding:10px;
+    height:200px;			
     text-align:center;
     z-index:3;
     box-shadow:-3px 3px 0px #3f3a50;
     background:#4c465e;
-    transition:margin-left .5s;
     margin:0;
 }
 
@@ -302,6 +309,7 @@ ul {
     font-size: 42px;
     background: -webkit-linear-gradient(45deg, rgb(200, 46, 231), rgb(196, 114, 7));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     width:fit-content
 }

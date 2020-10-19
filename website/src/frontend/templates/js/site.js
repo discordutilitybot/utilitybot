@@ -51,7 +51,7 @@ for (let i = 0; i < commandsTitle.length; i++) {
     if (this.style.maxHeight != '475px') {
           this.style.maxHeight = '475px'; // make it null
     } else {
-      this.style.maxHeight = '47px';
+      this.style.maxHeight = '40px';
     }
   }
 }
