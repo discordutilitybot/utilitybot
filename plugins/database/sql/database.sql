@@ -5,7 +5,8 @@ CREATE TABLE guilds (
     guild_roles BIGINT NOT NULL DEFAULT 0,
     guild_channels BIGINT NOT NULL DEFAULT 0,
     guild_messages BIGINT NOT NULL DEFAULT 0,
-    guild_voice_channels BIGINT NOT NULL DEFAULT 0
+    guild_voice_channels BIGINT NOT NULL DEFAULT 0,
+    guild_categorys BIGINT NOT NULL DEFAULT 0
 
 )
 
@@ -16,7 +17,7 @@ CREATE TABLE guild_settings (
     /* These are different types of logging you can have moderation logs e.g: a ban log or just action logs..*/
     logging_moderation BIGINT DEFAULT NULL,
     logging_action BIGINT DEFAULT NULL,
-    /* You can toggle join logs but action logs already toggles it on but if you want less logs you cna toggle logging_leave or logging_join.*/
+    /* You can toggle join logs but action logs already toggles it on but if you want less logs you can toggle logging_leave or logging_join.*/
     logging_leave BIGINT DEFAULT NULL,
     logging_join BIGINT DEFAULT NULL
     PRIMARY KEY (muted_role, guild_prefix, logging_moderation, logging_action, logging_leave, logging_join)
