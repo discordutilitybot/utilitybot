@@ -28,7 +28,13 @@ class Moderation(commands.Cog):
     @commands.has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
-        pass
+        if not reason:
+            reason = "No Reason Provided."
+
+        discord.utils.get(
+            # Pull default muted role or the custom muted role from the server
+            ctx.roles, name="Muted"
+        )  
     
     @commands.has_permissions(mute_members=True)
     @commands.command()
