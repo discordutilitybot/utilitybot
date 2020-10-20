@@ -15,7 +15,7 @@ class GuildJoin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        """Make the default muted role Utility Bot uses before making calls to the db"""
+       
         permissions = discord.Permissions(send_messages=False, speak=False, read_messages=True)
         await self.bot.create_role(
             name="Muted", 
@@ -26,6 +26,6 @@ class GuildJoin(commands.Cog):
         
     
         
-def setup(bot):
+def setp(bot):
     bot.add_cog(GuildJoin(bot))
     """Ill add logging later so its alot easier to find bugs""" 
