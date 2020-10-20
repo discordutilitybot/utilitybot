@@ -19,7 +19,7 @@ class GuildJoin(commands.Cog):
         permissions = discord.Permissions(send_messages=False, speak=False, read_messages=True)
         await self.bot.create_role(
             name="Muted", 
-            reason="Utility bot's Default Muted Role on join. (used for muting)"
+            reason="Utility bot's Default Muted Role on join. (used for muting)",
             permissions=permissions)
 
         
