@@ -1,4 +1,3 @@
-
 CREATE TABLE guilds (
     guild_id INT(20) NOT NULL DEFAULT 0,
     /* Amount of roles the guild has not the role id's...*/

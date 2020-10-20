@@ -53,11 +53,11 @@ class Commanderror(commands.Cog):
 
         if isinstance(error, commands.CommandOnCooldown):
             td = datetime.timedelta(seconds=error.retry_after)
-            await ctx.send(f"This command is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
+            await ctx.send(f"This Command Is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
 
         """Probably wont need this since the commands wont be NSFW. yuck."""
         if isinstance(error, commands.NSFWChannelRequired):
-                await ctx.send("You need to have a NSFW channel to use this command")
+                await ctx.send("You need NSFW channel permissions to run this command.")
         
         
             
