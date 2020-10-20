@@ -1,3 +1,5 @@
+/* JavaScript by PineappleRind (https://github.com/pineapplerind) and Aditya Kapoor (twitter.com/The_Coding_Guru) */
+
 let box = document.getElementById('mainBox'); // The error message
 function randomColour() { // sets random color for error message 
     let colorTemplate = ['#afa09e','#8f847d','#a4a48a','#7d8f78','#83928f','#738da2','#8a8395','#959093']; // the colours to pick

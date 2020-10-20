@@ -1,4 +1,4 @@
-/* JavaScript by PineappleRind (https://github.com/pineapplerind) */
+/* JavaScript by PineappleRind (https://github.com/pineapplerind) and Aditya Kapoor (twitter.com/The_Coding_Guru) */
 
 let nav = document.getElementById("navCollapsed"); // The navbar
 let openBtn = document.getElementById('openButton'); // The trigger
