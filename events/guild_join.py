@@ -20,7 +20,8 @@ class GuildJoin(commands.Cog):
         await self.bot.create_role(
             name="Muted", 
             reason="Utility bot's Default Muted Role on join. (used for muting)",
-            permissions=permissions)
+            permissions=permissions,
+            color=discord.Color.orange())
 
         
     
