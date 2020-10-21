@@ -38,7 +38,6 @@ services:
       mode:  replicated
       replicas: 3
       endpoint_mode: dnsrr
-
     volumes: .
     restart: always
     ports:
@@ -56,7 +55,7 @@ services:
       - 443:443
 
   postgres:
-    image: postgres:latest
+    image: db
     expose:
     - 5432
     environment:
@@ -64,5 +63,6 @@ services:
       POSTGRES_PASSWORD: "password"
       POSTGRES_DB: "databasename"
     
-
+  db:
+    image: postgres:13
       
