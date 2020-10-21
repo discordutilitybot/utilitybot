@@ -40,7 +40,7 @@ services:
   nginx:
     build:
       context: .
-      image: .
+      image: nginx:alpine
 
     ports:
       - 443:443
@@ -60,11 +60,5 @@ services:
       POSTGRES_PASSWORD: "password"
       POSTGRES_DB: "databasename"
     
-  volumes:
-    frontend:
-     - ./frontend/:/usr/src/frontend
-    backend:
-      - ./backend/:/usr/src/backend
-    api:
-      - ./api/:/usr/src/api
+
       
