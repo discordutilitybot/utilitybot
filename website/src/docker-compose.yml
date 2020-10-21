@@ -5,9 +5,16 @@ services:
   frontend:
     build: 
       context: ./website/src/frontend/Dockerfile
+      
     depends_on:
       - backend-services
       - api-services
+      
+    deploy:
+      mode: replicated
+      replicas: 3
+      endpoint_mode: dnsrr
+
     volumes:
       - frontend
     restart: always
@@ -48,6 +55,10 @@ services:
       - api
       - backend
       - frontend
+    deploy:
+      mode: replicated
+      replicas: 3
+      endpoint_mode: dnsrr
 
   postgres:
     image: postgres:latest
