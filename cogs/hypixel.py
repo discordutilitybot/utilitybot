@@ -8,4 +8,4 @@ class Hypixel(commands.Cog):
     
 
 def setup(bot):
-    bot.add_cog(Hypixel)
+    bot.add_cog(Hypixel(bot))
