@@ -40,7 +40,8 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: ./website/src/nginx/Dockerfile
+      image: .
+
     ports:
       - 443:443
     depends_on:
