@@ -16,14 +16,12 @@ class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.launchtime = datetime.datime.utcnow(datetime.timezone.utc)
-        self.db = None
+        self.db = asyncpg.pool.Pool = None
         """Common attributes"""
 
         """Logging (log files levels etc..)"""
 	
         """Other"""
 
-    async def connect(self):
-        """Initialize asyncpg Pool"""
-        self.db = await asyncpg.create_pool()
+    
         
