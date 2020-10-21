@@ -9,4 +9,4 @@ class Conf(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Conf)
+    bot.add_cog(Conf(bot))
