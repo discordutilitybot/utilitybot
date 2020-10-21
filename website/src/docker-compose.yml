@@ -10,6 +10,7 @@ services:
       - api-services
     deploy:
       mode: replicated
+      # Add more replicas when i need more availibity... right now 3 is completely fine
       replicas: 3
       endpoint_mode: dnsrr
     volumes:
@@ -36,6 +37,7 @@ services:
       - db
     deploy:
       mode:  replicated
+      # Add more replicas when i need more availibity... right now 3 is completely fine
       replicas: 3
       endpoint_mode: dnsrr
     volumes: .
@@ -49,7 +51,7 @@ services:
     depends_on:
       - api
       - backend
-      - frontend #
+      - frontend 
     restart: always
     ports:
       - 443:443
