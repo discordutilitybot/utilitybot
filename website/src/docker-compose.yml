@@ -48,7 +48,7 @@ services:
       - frontend
     restart: always
     ports:
-      - 5000:80
+      - 443:443
 
   postgres:
     image: postgres:latest
