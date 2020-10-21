@@ -1,5 +1,3 @@
-"""Main file with all attributes and extensions"""
-
 import discord
 from discord.ext import commands
 import asyncio
@@ -9,7 +7,8 @@ import aiohttp
 from datetime import datetime
 import json
 from plugins.database import Database
-
+import logging
+from logging import logging
 
 """Local modules"""
 
@@ -21,7 +20,7 @@ class Utilitybot(commands.Bot):
         """Common attributes"""
 
         """Logging (log files levels etc..)"""
-
+	
         """Other"""
 
     async def connect(self):
