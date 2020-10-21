@@ -32,14 +32,12 @@ services:
   api:
     build: 
       context: .
-    restart: always
-    volumes: 
-      - api
-    ports:
-    - 5003:8082
-
-    depends_on:
+    depends_on: 
       - postgres
+    volumes: .
+    restart: always
+    ports:
+      - 5003:8082
 
   nginx:
     build:
@@ -54,10 +52,8 @@ services:
 
   postgres:
     image: postgres:latest
-
     expose:
     - 5432
-
     environment:
       POSTGRES_USER: "utilitybot"
       POSTGRES_PASSWORD: "password"
