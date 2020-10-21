@@ -22,7 +22,12 @@ class Database(object):
         pool = await asyncpg.create_pool(uri, min_size=min_connections, max_size=max_connections, **kwargs)
         self = cls(bot=bot, pool=pool, loop=loop, timeout=timeout)
         return self 
-        
+
+    async def fetchrow(self, query, *args):
+        async with self._rate_limit:
+            async with self.pool.acquire() as con:
+                return await con.fetchrow(query, *args)
+                
     async def fetch(self, query, *args):
         async with self._rate_limit:
             async with self.pool.acquire() as con:
