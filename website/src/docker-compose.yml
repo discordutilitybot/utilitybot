@@ -49,7 +49,7 @@ services:
     depends_on:
       - api
       - backend
-      - frontend
+      - frontend #
     restart: always
     ports:
       - 443:443
