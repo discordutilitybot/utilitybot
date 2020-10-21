@@ -22,7 +22,7 @@ services:
     build: 
       context: ./website/src/backend/Dockerfile
     depends_on:
-      - postgres
+      - db
     volumes:
       - backend
     restart: always
@@ -33,7 +33,7 @@ services:
     build: 
       context: .
     depends_on: 
-      - postgres
+      - db
     deploy:
       mode:  replicated
       replicas: 3
