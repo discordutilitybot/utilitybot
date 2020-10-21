@@ -5,16 +5,13 @@ services:
   frontend:
     build: 
       context: ./website/src/frontend/Dockerfile
-      
     depends_on:
       - backend-services
       - api-services
-      
     deploy:
       mode: replicated
       replicas: 3
       endpoint_mode: dnsrr
-
     volumes:
       - frontend
     restart: always
@@ -47,18 +44,13 @@ services:
   nginx:
     build:
       context: .
-      image: nginx:alpine
-
-    ports:
-      - 443:443
     depends_on:
       - api
       - backend
       - frontend
-    deploy:
-      mode: replicated
-      replicas: 3
-      endpoint_mode: dnsrr
+    restart: always
+    ports:
+      - 5000:80
 
   postgres:
     image: postgres:latest
