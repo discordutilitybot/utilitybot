@@ -50,7 +50,8 @@ class Moderation(commands.Cog):
     @commands.bot_has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
-        if not user:
+        
+        if not member:
             await ctx.send(f"You need to specify a user to mute {member.mention}")
 
         if not reason:
