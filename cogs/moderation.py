@@ -8,7 +8,7 @@ import asyncio
 import re
 
 
-class Moderation(commands.Cog):
+class Moderation(commands.Cog, name="Moderation"):
 
     def __init__(self, bot):
         self.bot = bot
