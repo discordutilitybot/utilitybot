@@ -14,7 +14,16 @@ class Moderation(commands.Cog):
     @commands.has_permissions(ban_members=True)
     @commands.bot_has_permissions(ban_members=True)
     @commands.command(aliases=["banish," "begone", "perish"])
-    async def ban(self, ctx, member: discord.Member, reason=None):
+    async def ban(
+    
+    self, 
+    ctx,     # Not sure if i should use discord.member or discord.User i believe discord.User is global and member is guild wise?
+    
+    member: discord.Member(),
+    reason=None
+
+
+    ):
 
         await member.ban(reason=reason)
         await ctx.send(f"{member.mention} was banned for {reason}.")
