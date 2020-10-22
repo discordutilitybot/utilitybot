@@ -6,7 +6,8 @@ from discord import Role
 import asyncpg
 import asyncio
 import re
-
+from .utils import *
+from .utils import permissions
 
 class Moderation(commands.Cog, name="Moderation"):
 
