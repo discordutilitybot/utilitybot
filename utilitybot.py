@@ -8,7 +8,7 @@ from datetime import datetime
 import json
 from plugins.database import Database
 import logging
-from logging import *
+
 
 
 """Local modules"""
