@@ -21,7 +21,8 @@ class Moderation(commands.Cog, name="Moderation"):
     self, 
     ctx,   # Not sure if i should use discord.member or discord.User i believe discord.User is global and member is guild wise?
     member: discord.Member,
-    reason=None
+    reason=None,
+    modlogs: TextChannel = None
 
 
     ):
@@ -36,7 +37,7 @@ class Moderation(commands.Cog, name="Moderation"):
     @commands.has_permissions(kick_members=True)
     @commands.bot_has_permissions(kick_members=True)
     @commands.command()
-    async def kick(self, ctx, member: discord.Member, reason=None):
+    async def kick(self, ctx, member: discord.Member, reason=None, modlogs: TextChannel = None):
         await member.kick(reason=reason)
         await ctx.send(f"{member.mention} was kicked for {reason}")
 
@@ -69,18 +70,18 @@ class Moderation(commands.Cog, name="Moderation"):
     @commands.has_permissions(mute_members=True)
     @commands.bot_has_permissions(manage_roles=True)
     @commands.command()
-    async def unmute(self, ctx, member: discord.Member):
+    async def unmute(self, ctx, member: discord.Member, modlogs: TextChannel = None):
         pass
 
     """Set the muted default muted role by utility bot to a custom one."""
     @commands.has_permissions(manage_roles=True)
     @commands.command()
-    async def mutedrole(self, ctx, role_id: int):
+    async def mutedrole(self, ctx, role_id: int, modlogs: TextChannel = None):
         pass
     
     @commands.has_permissions(mute_members=True)
     @commands.command()
-    async def warn(self, ctx, member: discord.Member, reason="No reason specified"):
+    async def warn(self, ctx, member: discord.Member, reason="No reason specified", modlogs: TextChannel = None):
         
         await ctx.send(f"{member.mention} was warned for {reason}")
 
