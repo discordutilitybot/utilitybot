@@ -8,7 +8,7 @@ from datetime import datetime
 import json
 from plugins.database import Database
 import logging
-from logging import level
+from logging import *
 
 
 """Local modules"""
@@ -20,7 +20,7 @@ class Utilitybot(commands.Bot):
         self.db = asyncpg.pool.Pool = None
         """Common attributes"""
 
-        logging.basicConfig(filename="utility.log", level=logging.INFO )
+        logging.basicConfig(filename="utility.log", level=logging.INFO)
 
     
         
