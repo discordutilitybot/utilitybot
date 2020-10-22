@@ -7,7 +7,7 @@ import asyncpg
 import asyncio
 import re
 from .utils import *
-from .utils import permissions
+from .utils.permissions import permissions
 
 class Moderation(commands.Cog, name="Moderation"):
 
