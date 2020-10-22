@@ -27,13 +27,9 @@ class Moderation(commands.Cog):
         await member.ban(reason=reason)
         await ctx.send(f"{member.mention} was banned for {reason}.")
 
-        for reasons in reason:
-            if not reasons:
-                await ctx.send(f"Please specify a reason to ban {member}.")
+        if not member:
+            await ctx.send("You must specify a user.")
 
-        for members in member:
-            if not members:
-                await ctx.send(f"Pleasy specify a member to ban {member.mention}")
 
     @commands.has_permissions(kick_members=True)
     @commands.bot_has_permissions(kick_members=True)
@@ -56,11 +52,13 @@ class Moderation(commands.Cog):
     async def mute(self, ctx, member: discord.Member, reason=None):
         if not reason:
             reason = "No Reason Provided."
-
-        discord.utils.get(
-            # Pull default muted role or the custom muted role from the server
-            ctx.roles, name="Muted"
-        )  
+        
+        query = """"""
+        muted = self.bot.db.execute(query) or discord.utils.get(
+            # Default muted role created by utiilitybot
+            ctx.guild.roles, name="Muted"
+        )
+        
     
     @commands.has_permissions(mute_members=True)
     @commands.bot_has_permissions(manage_roles=True)
