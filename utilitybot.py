@@ -21,6 +21,7 @@ class Utilitybot(commands.Bot):
         """Common attributes"""
 
         logging.basicConfig(filename="utility.log", level=logging.INFO)
+        slef.logger = logging.getLogger('Utility')
 
     
         
