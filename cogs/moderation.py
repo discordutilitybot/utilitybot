@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import utils
+from discord import TextChannel
 import asyncpg
 import asyncio
 import re
