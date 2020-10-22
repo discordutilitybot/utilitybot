@@ -13,7 +13,7 @@ class Moderation(commands.Cog):
 
     @commands.has_permissions(ban_members=True)
     @commands.bot_has_permissions(ban_members=True)
-    @commands.command()
+    @commands.command(aliases=["banish," "begone", "perish"])
     async def ban(self, ctx, member: discord.Member, reason=None):
 
         await member.ban(reason=reason)
