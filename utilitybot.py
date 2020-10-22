@@ -19,11 +19,7 @@ class Utilitybot(commands.Bot):
         self.db = asyncpg.pool.Pool = None
         """Common attributes"""
 
-        """Logging (log files levels etc..)"""
-	    logging.basicConfig(filename="utility.log", level=logging.INFO),
-	    self.logger = logging.getLogger('Utility')
-
-        """Other"""
+        logging.basicConfig()
 
     
         
