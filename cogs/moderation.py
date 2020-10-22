@@ -6,8 +6,8 @@ from discord import Role
 import asyncpg
 import asyncio
 import re
-from .utils import *
-from .utils.permissions import permissions
+#from .utils import *
+#from .utils.permissions import permissions
 
 class Moderation(commands.Cog, name="Moderation"):
 
@@ -59,10 +59,10 @@ class Moderation(commands.Cog, name="Moderation"):
             await ctx.send(f"You need to specify reason to mute {member.mention}")
         
         query = """"""
-        muted = self.bot.db.execute(query) or discord.utils.get(
+        #muted = self.bot.db.execute(query) or discord.utils.get(
             # Default muted role created by utiilitybot
-            ctx.guild.roles, name="Muted"
-        )
+            #ctx.guild.roles, name="Muted"
+        #)
         
     
     @commands.has_permissions(mute_members=True)

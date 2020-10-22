@@ -20,8 +20,8 @@ class Utilitybot(commands.Bot):
         """Common attributes"""
 
         """Logging (log files levels etc..)"""
-	logging.basicConfig(filename="utility.log", level=logging.INFO)
-	self.logger = logging.getLogger('Utility')
+	    logging.basicConfig(filename="utility.log", level=logging.INFO),
+	    self.logger = logging.getLogger('Utility')
 
         """Other"""
 
