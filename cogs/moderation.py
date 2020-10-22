@@ -12,8 +12,9 @@ class Moderation(commands.Cog):
         self.bot = bot
 
     @commands.has_permissions(ban_members=True)
-    @commands.command
+    @commands.command()
     async def ban(self, ctx, member: discord.Member, reason=None):
+
         await member.ban(reason=reason)
         await ctx.send(f"{member.mention} was banned for {reason}.")
 
@@ -24,7 +25,10 @@ class Moderation(commands.Cog):
         for members in member:
             if members is None:
                 await ctx.send(f"Pleasy specify a member to ban {member.mention}")
-
+    @commands.has_permissions(kick_members=True)
+    @commands.command()
+    async def kick():
+        pass
     @commands.has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
