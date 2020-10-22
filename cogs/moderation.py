@@ -19,16 +19,19 @@ class Moderation(commands.Cog):
         await ctx.send(f"{member.mention} was banned for {reason}.")
 
         for reasons in reason:
-            if reasons is None:
+            if not reasons:
                 await ctx.send(f"Please specify a reason to ban {member}.")
 
         for members in member:
-            if members is None:
+            if not members:
                 await ctx.send(f"Pleasy specify a member to ban {member.mention}")
     @commands.has_permissions(kick_members=True)
     @commands.command()
-    async def kick():
-        pass
+    async def kick(self, ctx, member: discord.Member, reason=None):
+        await member.kick(reason=reason)
+        await ctx.send(f"{member.mention} was kicked for {reason}")
+
+
     @commands.has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None):
