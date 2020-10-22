@@ -11,7 +11,7 @@ class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.has_permissions(mute_members=True)
+    @commands.has_permissions(ban_members=True)
     @commands.command
     async def ban(self, ctx, member: discord.Member, reason=None):
         await member.ban(reason=reason)
@@ -49,26 +49,23 @@ class Moderation(commands.Cog):
     
     
     @commands.command()
-    async def warn(self, ctx, member: discord.Member, reason=None):
+    async def warn(self, ctx, member: discord.Member, reason="No reason specified"):
         
         await ctx.send(f"{member.mention} was warned for {reason}")
 
         """Error Handlers"""
         if not member:
             await ctx.send("You have specify a member to warn")
-            return
-
+            
         if len(reason) > 250:
             await ctx.send("Reason's have to be less than 250 characters.")
-            return
 
         if ctx.author.id != ctx.guild.owner.id:
             await ctx.send("You can't warn the Owner of the Server!")
-            return
 
         if ctx.author == member:
             await ctx.send("You can't wwarn your self.")
-            return
+            
         
         # Update warnings for the user in db
 
