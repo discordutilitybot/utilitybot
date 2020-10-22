@@ -18,8 +18,8 @@ class Moderation(commands.Cog):
     
     self, 
     ctx,     # Not sure if i should use discord.member or discord.User i believe discord.User is global and member is guild wise?
-    
-    member: discord.Member(),
+
+    member: discord.Member,
     reason=None
 
 
