@@ -66,7 +66,7 @@ class Moderation(commands.Cog):
     async def mutedrole(self, ctx, role_id: int):
         pass
     
-    
+    @commands.has_permissions(mute_members=True)
     @commands.command()
     async def warn(self, ctx, member: discord.Member, reason="No reason specified"):
         
