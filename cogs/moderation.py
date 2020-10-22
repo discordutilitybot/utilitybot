@@ -41,7 +41,7 @@ class Moderation(commands.Cog):
         for members in member:
             if not members:
                 await ctx.send(f"Pleasy specify a member to ban {member.mention}")
-                
+
     @commands.has_permissions(mute_members=True)
     @commands.bot_has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
@@ -55,6 +55,7 @@ class Moderation(commands.Cog):
         )  
     
     @commands.has_permissions(mute_members=True)
+    @commands.bot_has_permissions(manage_roles=True)
     @commands.command()
     async def unmute(self, ctx, member: discord.Member):
         pass
