@@ -12,7 +12,7 @@ class Help(commands.Cog):
 
     """Global help command (there will be help commands for each module)"""
 
-    async def help(self, ctx):
+    async def commands(self, ctx):
         embed = discord.Embed(colour=ctx.author.color, description=f'''Here\'s some helpful links
     [Commands](https://utilitybot.co/commands)
     [Support Server](sereverlinkhere)
@@ -27,5 +27,3 @@ def setup(bot):
     bot.remove_command("help")
     bot.add_cog(Help(bot))
 
-def teardown(bot):
-    bot.add_command(bot.old_help)

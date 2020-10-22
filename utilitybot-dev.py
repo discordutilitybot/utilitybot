@@ -13,4 +13,4 @@ for filename in os.listdir('./cogs'):
 
 
 
-bot.run()
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.dYfTinQk5c5jFa5hkfbpYDmQqGk")

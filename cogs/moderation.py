@@ -14,7 +14,6 @@ class Moderation(commands.Cog, name="Moderation"):
         self.bot = bot
 
     @commands.has_permissions(ban_members=True)
-    @commands.bot_has_permissions(ban_members=True)
     @commands.command(aliases=["banish," "begone", "perish"])
     async def ban(
     
@@ -35,7 +34,6 @@ class Moderation(commands.Cog, name="Moderation"):
 
 
     @commands.has_permissions(kick_members=True)
-    @commands.bot_has_permissions(kick_members=True)
     @commands.command()
     async def kick(self, ctx, member: discord.Member, reason=None, modlogs: TextChannel = None):
         await member.kick(reason=reason)
@@ -50,7 +48,6 @@ class Moderation(commands.Cog, name="Moderation"):
                 await ctx.send(f"Pleasy specify a member to ban {member.mention}")
 
     @commands.has_permissions(mute_members=True)
-    @commands.bot_has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None, modlogs: TextChannel = None):
 
@@ -68,7 +65,6 @@ class Moderation(commands.Cog, name="Moderation"):
         
     
     @commands.has_permissions(mute_members=True)
-    @commands.bot_has_permissions(manage_roles=True)
     @commands.command()
     async def unmute(self, ctx, member: discord.Member, modlogs: TextChannel = None):
         pass
