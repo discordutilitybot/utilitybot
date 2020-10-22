@@ -31,6 +31,13 @@ class Moderation(commands.Cog):
         await member.kick(reason=reason)
         await ctx.send(f"{member.mention} was kicked for {reason}")
 
+        for reasons in reason:
+            if not reasons:
+                await ctx.send(f"Please specify a reason to ban {member}.")
+
+        for members in member:
+            if not members:
+                await ctx.send(f"Pleasy specify a member to ban {member.mention}")
 
     @commands.has_permissions(mute_members=True)
     @commands.command(aliases=["silence, stfu"])
