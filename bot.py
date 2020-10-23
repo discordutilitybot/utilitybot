@@ -7,6 +7,7 @@ import asyncpg
 import dotenv
 import utils
 from utils.permissions import permissions
+
 bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.dnd,
@@ -14,3 +15,8 @@ bot = Utilitybot(
     case_insensitive=True,
     owner_id=388788632686690305
 )
+bot.remove_command('help')
+extensions = [
+    "cogs.help"
+    ""
+]
