@@ -7,4 +7,5 @@ import dotenv
 
 bot = Utilitybot(
     command_prefix="u!"
+    status=discord.Status.idle
 )
