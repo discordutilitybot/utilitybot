@@ -4,3 +4,7 @@ from utilitybot import Utilitybot
 import asyncio
 import asyncpg
 import dotenv
+
+bot = Utilitybot(
+    command_prefix="u!"
+)
