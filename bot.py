@@ -9,5 +9,7 @@ import dotenv
 bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.dnd,
-    activity= discord.Game(name="Vibing", type=3)
+    activity= discord.Game(name="Vibing", type=3),
+    case_insensitive=True,
+    owner_id=388788632686690305
 )
