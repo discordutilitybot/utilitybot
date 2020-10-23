@@ -15,8 +15,16 @@ bot = Utilitybot(
     case_insensitive=True,
     owner_id=388788632686690305
 )
+
 bot.remove_command('help')
 extensions = [
-    "cogs.help"
-    ""
+    "cogs.help",
+    "cogs.botinfo",
+    "cogs.conf",
+    "cogs.avatar",
+    "cogs.github",
+    "cogs.guildinfo",
+    "cogs.hypixel",
+    "cogs.moderation",
+    "cogs.utilitys"
 ]
