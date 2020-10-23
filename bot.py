@@ -7,5 +7,6 @@ import dotenv
 
 bot = Utilitybot(
     command_prefix="u!",
-    status=discord.Status.dnd
+    status=discord.Status.dnd,
+    activity=(name=Playing("Among us")),
 )
