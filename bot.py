@@ -6,7 +6,7 @@ import asyncio
 import asyncpg
 import dotenv
 import utils
-from utils.permissions import permissions
+from utils.permissions import has_permission
 
 bot = Utilitybot(
     command_prefix="u!",
