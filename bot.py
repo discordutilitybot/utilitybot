@@ -9,5 +9,5 @@ import dotenv
 bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.dnd,
-    activity=(name=Playing("Among us")),
+    activity= discord.Game(name="Vibing", type=3)
 )
