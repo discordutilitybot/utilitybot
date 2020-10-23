@@ -18,10 +18,12 @@ class Utilitybot(commands.Bot):
         super().__init__(*args, **kwargs)
         self.launchtime = datetime.datime.utcnow(datetime.timezone.utc)
         self.db = asyncpg.pool.Pool = None
+        self.started = False
         """Common attributes"""
 
         logging.basicConfig(filename="utility.log", level=logging.INFO)
         self.logger = logging.getLogger('Utility')
+        
 
     
         
