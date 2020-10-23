@@ -5,7 +5,7 @@ from discord.ext import *
 import asyncio
 import asyncpg
 import dotenv
-
+from utils.permissions import permissions
 bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.dnd,
