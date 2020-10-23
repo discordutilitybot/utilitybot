@@ -12,6 +12,8 @@ class Avatar(commands.Cog):
         
         if not user:
             user = ctx.author
+            
+        member = None
         if ctx.guild:
             member = ctx.guild.get_member(user.id)
         await ctx.send(embed=discord.Embed(
@@ -19,7 +21,6 @@ class Avatar(commands.Cog):
         ).set_image(
             url=str(user.avatar_url_as(static_format='png', size=2048))
         ))
-
 
        
 
