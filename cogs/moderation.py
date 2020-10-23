@@ -36,7 +36,13 @@ class Moderation(commands.Cog, name="Moderation"):
 
     @commands.has_permissions(kick_members=True)
     @commands.command()
-    async def kick(self, ctx, member: discord.Member, reason=None, modlogs: TextChannel = None):
+    async def kick(
+        self, 
+        ctx, 
+        member: discord.Member, 
+        reason=None, 
+        modlogs: TextChannel = None
+    ):
         await member.kick(reason=reason)
         await ctx.send(f"{member.mention} was kicked for {reason}")
 
@@ -78,7 +84,7 @@ class Moderation(commands.Cog, name="Moderation"):
         ctx,
         role_id: int,
         modlogs: TextChannel = None
-        ):
+    ):
         
     
     @commands.has_permissions(mute_members=True)
@@ -89,7 +95,7 @@ class Moderation(commands.Cog, name="Moderation"):
         member: discord.Member,
         reason="No reason specified", 
         modlogs: TextChannel = None
-        ):
+    ):
         
         await ctx.send(f"{member.mention} was warned for {reason}")
 
