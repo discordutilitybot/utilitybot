@@ -6,6 +6,6 @@ import asyncpg
 import dotenv
 
 bot = Utilitybot(
-    command_prefix="u!"
+    command_prefix="u!",
     status=discord.Status.dnd
 )
