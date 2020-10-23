@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from utilitybot import Utilitybot
+from discord.ext import Status, Playing
 import asyncio
 import asyncpg
 import dotenv
