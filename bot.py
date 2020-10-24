@@ -16,6 +16,7 @@ bot = Utilitybot(
     owner_id=388788632686690305
 )
 
+# Remove default help command in discord.py
 bot.remove_command('help')
 extensions = [
     "cogs.help",
