@@ -26,5 +26,5 @@ extensions = [
     "cogs.guildinfo",
     "cogs.hypixel",
     "cogs.moderation",
-    "cogs.utilitys"
+    "cogs.utility"
 ]
