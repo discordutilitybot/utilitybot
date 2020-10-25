@@ -10,3 +10,4 @@ jobs:
           command: |
             echo 'export PATH=~$PATH~/.local/bin' >> $BASH_ENV && source $BASH_ENV
             pip3 install -r requirements.txt
+      
