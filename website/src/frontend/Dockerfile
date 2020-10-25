@@ -15,7 +15,7 @@ RUN pip3 install --upgrade pip
 COPY requirements.txt .
 RUN pip3 install -r --upgrade requirements.
 
-EXPOSE 8080sd
+EXPOSE 8080
 
 ENTRYPOINT [ "python" ]
 CMD ["routing.py"]
