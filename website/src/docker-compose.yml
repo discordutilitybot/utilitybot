@@ -21,6 +21,9 @@ services:
       context: ./website/src/backend/Dockerfile
     depends_on:
       - db
+    deploy:
+      mode: replicated
+      replicas: 3
     restart: always
     ports:
       - 5002:8081
