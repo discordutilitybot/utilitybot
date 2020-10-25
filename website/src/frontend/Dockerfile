@@ -18,4 +18,4 @@ RUN pip3 install -r --upgrade requirements.
 EXPOSE 8080
 
 ENTRYPOINT [ "python" ]
-CMD ["main.py"]
+CMD ["routing.py"]
