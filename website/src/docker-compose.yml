@@ -12,7 +12,6 @@ services:
       mode: replicated
       # Add more replicas when i need more availibity... right now 3 is completely fine
       replicas: 3
-      endpoint_mode: dnsrr
     restart: always
     ports:
       - 5001:8080
@@ -35,7 +34,6 @@ services:
       mode:  replicated
       # Add more replicas when i need more availibity... right now 3 is completely fine
       replicas: 3
-      endpoint_mode: dnsrr
     
     restart: always
     ports:
