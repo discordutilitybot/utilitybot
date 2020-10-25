@@ -13,8 +13,6 @@ services:
       # Add more replicas when i need more availibity... right now 3 is completely fine
       replicas: 3
       endpoint_mode: dnsrr
-    volumes:
-      - frontend
     restart: always
     ports:
       - 5001:8080
@@ -24,8 +22,6 @@ services:
       context: ./website/src/backend/Dockerfile
     depends_on:
       - db
-    volumes:
-      - backend
     restart: always
     ports:
       - 5002:8081
@@ -40,7 +36,7 @@ services:
       # Add more replicas when i need more availibity... right now 3 is completely fine
       replicas: 3
       endpoint_mode: dnsrr
-    volumes: .
+    
     restart: always
     ports:
       - 5003:8082
@@ -66,5 +62,6 @@ services:
       POSTGRES_DB: "databasename"
     
   db:
+    # Match db version on our server
     image: postgres:13
       
