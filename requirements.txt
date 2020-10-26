@@ -3,3 +3,4 @@ aiohttp==3.6.0
 asyncpg==0.21.0
 async-timeout==3.0.1
 aiofiles==0.5.0
+python-dotenv==0.14.0
