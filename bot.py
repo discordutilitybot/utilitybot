@@ -20,13 +20,12 @@ bot = Utilitybot(
 # Remove default help command in discord.py
 bot.remove_command('help')
 extensions = [
-    "cogs.help",
-    "cogs.botinfo",
-    "cogs.conf",
-    "cogs.avatar",
-    "cogs.github",
-    "cogs.guildinfo",
-    "cogs.hypixel",
-    "cogs.moderation",
-    "cogs.utility"
+    "commands.avatar"
+    "commands.botinfo"
+    "commands.help"
+    "commands.github"
+    "commands.invite"
 ]
+for e in extensions:
+    bot.load_extension(e)
+bot.run("")
