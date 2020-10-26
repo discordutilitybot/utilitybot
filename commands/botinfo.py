@@ -14,7 +14,7 @@ class Botinfo(commands.Cog):
             color = discord.Color.blue()
         )   
 
-        await ctx.send(embed=embed)
+        embed.set_footer(text=f"Guilds: {len(self.bot.guilds)}")
 
 
 def setup(bot):
