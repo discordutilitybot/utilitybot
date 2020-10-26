@@ -28,4 +28,5 @@ extensions = [
 ]
 for e in extensions:
     bot.load_extension(e)
-bot.run("")
+
+bot.run("w")
