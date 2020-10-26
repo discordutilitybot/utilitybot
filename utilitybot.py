@@ -16,7 +16,7 @@ import logging
 class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.launchtime = datetime.dateime.utcnow(datetime.timezone.utc)
+        self.launchtime = datetime.datetime.utcnow(datetime.timezone.utc)
         self.db = asyncpg.pool.Pool = None
         self.started = False
         """Common attributes"""
