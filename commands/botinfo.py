@@ -13,7 +13,8 @@ class Botinfo(commands.Cog):
             description = "Something here",
             color = discord.Color.blue()
         )   
-
+        
+        embed.set_thumbnail(url="https://discord.com/channels/@me/700807345630085201/767113082446807070")
         embed.set_footer(text=f"Guilds: {len(self.bot.guilds)}")
 
 
