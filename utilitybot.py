@@ -4,7 +4,6 @@ import asyncio
 import asyncpg
 import datetime
 import aiohttp
-from datetime import datetime
 import json
 #from plugins.database import Database
 import logging
@@ -16,7 +15,7 @@ import logging
 class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.launchtime = datetime.datetime.utcnow(datetime.timezone.utc)
+        self.launchtime = datetime.datetime.now(datetime.timezone.utc)
         self.db = asyncpg.pool.Pool = None
         self.started = False
         """Common attributes"""
