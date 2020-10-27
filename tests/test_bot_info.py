@@ -10,4 +10,4 @@ class TestBotInfo(unittest.TestCase):
         self.app.testing = True
     
     # Tests main functionality of the command :)
-    def test_bot_info()
+    def test_bot_info(self):
