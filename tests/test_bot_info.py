@@ -14,7 +14,8 @@ class TestBotInfo(unittest.TestCase):
     
     # Tests main functionality of the command :)
     async def test_bot_info(self):
-        self.assertEqual(app.botinfo())
+        greeting = "Testing bot info."
+        self.assertEqual(app.botinfo(), greeting)
 
 
 if __name__ == "__main__":
