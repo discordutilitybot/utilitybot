@@ -10,7 +10,6 @@ class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    """Global help command (there will be help commands for each module)"""
 
     async def commands(self, ctx):
         embed = discord.Embed(colour=ctx.author.color, description=f'''Here\'s some helpful links
