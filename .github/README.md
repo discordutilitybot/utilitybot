@@ -4,7 +4,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/utilitybot1?style=social)](https://twitter.com/utilitybot1)
 [![GitHub Contributors](https://img.shields.io/github/contributors/discordutilitybot/utilitybot?style=plastic)](https://github.com/discordutilitybot/utilitybot/graphs/contributors)
 [![GitHub last commit](https://img.shields.io/github/last-commit/discordutilitybot/utilitybot?style=plastic)](https://github.com/discordutilitybot/utilitybot/commits/)
-
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5)
 
 ## What is it?
 UtilityBot can help you manage your server with many useful commands. You can kick, ban, create polls, and much more! If you want more information, check out our [complete list](utilitybot.co/commands) of all of its commands.
