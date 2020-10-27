@@ -2,6 +2,7 @@ import unittest
 import unittest.mock
 import discord
 from discord.ext import commands
+from commands import botinfo
 
 class TestBotInfo(unittest.TestCase):
 
@@ -11,4 +12,4 @@ class TestBotInfo(unittest.TestCase):
     
     # Tests main functionality of the command :)
     def test_bot_info(self):
-        self.
+        self.assertEqual(app.botinfo())
