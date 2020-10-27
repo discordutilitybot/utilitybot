@@ -8,10 +8,14 @@ from .commands import botinfo
 
 class TestBotInfo(unittest.TestCase):
 
-    def setUp(self):
+    async def setUp(self):
         self.app = bot_info.app.setup()
         self.app.testing = True
     
     # Tests main functionality of the command :)
-    def test_bot_info(self):
+    async def test_bot_info(self):
         self.assertEqual(app.botinfo())
+
+
+if __name__ == "__main__":
+    unittest.main()
