@@ -3,6 +3,7 @@
 [![Website](https://img.shields.io/badge/website-visit-brightgreen)](https://utilitybot.co)
 [![Twitter Follow](https://img.shields.io/twitter/follow/utilitybot1?style=social)](https://twitter.com/utilitybot1)
 [![GitHub Contributors](https://img.shields.io/github/contributors/discordutilitybot/utilitybot?style=plastic)](https://github.com/discordutilitybot/utilitybot/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/discordutilitybot/utilitybot?style=plastic)](https://github.com/discordutilitybot/utilitybot/commits/)
 
 
 ## What is it?
