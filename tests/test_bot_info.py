@@ -2,7 +2,9 @@ import unittest
 import unittest.mock
 import discord
 from discord.ext import commands
-from commands import botinfo
+
+import commands
+from .commands import botinfo
 
 class TestBotInfo(unittest.TestCase):
 
