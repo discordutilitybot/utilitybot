@@ -44,7 +44,8 @@ services:
 
   nginx:
     build:
-      context: Dockerfile 
+      context: 
+      dockerfile: Dockerfile api-services
     depends_on:
       - api
       - backend
