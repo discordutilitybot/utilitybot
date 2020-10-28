@@ -4,7 +4,8 @@ services:
 
   frontend:
     build: 
-      context: Dockerfile             
+      context: .    
+      dockerfile: Dockerfile         
     depends_on:
       - backend-services
       - api-services
@@ -18,7 +19,8 @@ services:
 
   backend:
     build: 
-      context: Dockerfile 
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - db
     deploy:
