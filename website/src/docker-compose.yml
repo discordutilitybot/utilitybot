@@ -30,7 +30,8 @@ services:
 
   api:
     build: 
-      context: Dockerfile 
+      context: .
+      dockerfile: Dockerfile
     depends_on: 
       - db
     deploy:
