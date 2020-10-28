@@ -8,7 +8,9 @@ RUN apt-get update \
     && apt get-upgrade \
     && apt-install git \
     && apt install curl \
-RUN pip install --upgrade pip
+    && apt install python3-pip \
+
+RUN pip3 install --upgrade pip
 
 COPY requirements.txt . 
 RUN pip install -r requirements.txt
