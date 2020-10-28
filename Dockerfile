@@ -8,7 +8,7 @@ RUN apt-get update \
     && apt get-upgrade \
     && apt-install git \
     && apt install curl \
-    && apt install python3-pip \
+    && apt install python3-pip 
 
 RUN pip3 install --upgrade pip
 
