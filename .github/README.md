@@ -2,8 +2,9 @@
 [![Discord](https://img.shields.io/static/v1?label=Utilitybot%20Discord&logo=discord&message=%3E11%20members&color=%237289DA&logoColor=white)](https://discord.gg/xAmmxPG)
 [![Website](https://img.shields.io/badge/website-visit-brightgreen)](https://utilitybot.co)
 [![Twitter Follow](https://img.shields.io/twitter/follow/utilitybot1?style=social)](https://twitter.com/utilitybot1)
-
-
+[![GitHub Contributors](https://img.shields.io/github/contributors/discordutilitybot/utilitybot?style=plastic)](https://github.com/discordutilitybot/utilitybot/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/discordutilitybot/utilitybot?style=plastic)](https://github.com/discordutilitybot/utilitybot/commits/)
+[![CircleCI](https://circleci.com/gh/utilitybot/utilitybot/tree/devsvg?style=svg)](https://circleci.com/gh/utilitybot/utilitybot/tree/dev)
 
 ## What is it?
 UtilityBot can help you manage your server with many useful commands. You can kick, ban, create polls, and much more! If you want more information, check out our [complete list](utilitybot.co/commands) of all of its commands.
