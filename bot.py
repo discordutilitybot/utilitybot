@@ -7,6 +7,7 @@ import asyncio
 import asyncpg
 import dotenv
 import utils
+import logging
 import datetime
 from utils.permissions import has_permission
 
@@ -31,5 +32,6 @@ extensions = [
 for ext in extensions:
     bot.load_extension(ext)
 
+logger
 
 bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.S5f")
