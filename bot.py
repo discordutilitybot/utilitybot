@@ -1,15 +1,13 @@
 import discord
 from discord.ext import commands
+
 import utilitybot
 from utilitybot import Utilitybot
-from discord.ext import *
-import asyncio
-import asyncpg
-import dotenv
-import utils
+
 import logging
 import datetime
-from utils.permissions import has_permission
+import asyncpg
+import asyncio
 
 bot = Utilitybot(
     command_prefix="u!",
