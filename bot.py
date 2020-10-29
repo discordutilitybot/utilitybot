@@ -34,5 +34,6 @@ for ext in extensions:
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.INFO)
-
+handler = logging.FileHandler(filename='utility.log', encoding='utf-8', mode='w')
+handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.S5f")
