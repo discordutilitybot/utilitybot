@@ -22,7 +22,7 @@ class Utilitybot(commands.Bot):
         logging.basicConfig(filename="utility.log", level=logging.INFO)
         self.logger = logging.getLogger('Utility')
         
-    def load_commands(self):
+    async def load_commands(self):
         pass
 
     def load_cogs(self):
