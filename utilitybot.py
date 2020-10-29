@@ -17,10 +17,7 @@ class Utilitybot(commands.Bot):
         self.launchtime = datetime.datetime.now(datetime.timezone.utc)
         self.db = asyncpg.pool.Pool = None
         self.started = False
-        """Common attributes"""
-
-        logging.basicConfig(filename="utility.log", level=logging.INFO)
-        self.logger = logging.getLogger('Utility')
+        
         
     async def load_commands(self):
         pass
