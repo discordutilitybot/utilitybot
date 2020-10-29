@@ -25,7 +25,7 @@ class Utilitybot(commands.Bot):
     async def load_commands(self):
         pass
 
-    def load_cogs(self):
+    async def load_cogs(self):
         pass
 
     async def load_utils(self):
