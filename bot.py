@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import utilitybot
 from utilitybot import Utilitybot
 from discord.ext import *
 import asyncio
@@ -26,7 +27,9 @@ extensions = [
     "commands.github"
     "commands.invite"
 ]
-for e in extensions:
-    bot.load_extension(e)
 
-bot.run("NzQyMTk2OTExNTIzNjIfFk-Jw")
+for ext in extensions:
+    bot.load_extension(ext)
+
+
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.S5f")

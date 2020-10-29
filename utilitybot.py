@@ -11,7 +11,6 @@ import logging
 
 
 """Local modules"""
-
 class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -23,6 +22,17 @@ class Utilitybot(commands.Bot):
         logging.basicConfig(filename="utility.log", level=logging.INFO)
         self.logger = logging.getLogger('Utility')
         
+    def load_commands(self):
+        pass
+
+    def load_cogs(self):
+        pass
+
+    def load_utils(self):
+        pass
+
+    def load_events(self):
+        pass
 
     
         

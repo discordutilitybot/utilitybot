@@ -7,8 +7,8 @@ services:
       context: .    
       dockerfile: Dockerfile         
     depends_on:
-      - backend-services
-      - api-services
+      - backend
+      - api
     deploy:
       mode: replicated
       # Add more replicas when i need more availibity... right now 3 is completely fine
