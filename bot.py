@@ -32,6 +32,7 @@ extensions = [
 for ext in extensions:
     bot.load_extension(ext)
 
-logger
+logger = logging.getLogger('discord')
+logger.setLevel(logging.INFO)
 
 bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.S5f")
