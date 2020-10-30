@@ -10,6 +10,7 @@ CREATE TABLE guilds (
 
 CREATE TABLE guild_settings (
     /* Default muted role is generated everytime the bot joins the guild although this can be updated*/
+    guild_id int(20) NOT NULL DEFAULT 0,
     muted_role INT(20) DEFAULT 'Muted',
     guild_prefix VARCHAR(15) DEFAULT 'u!',
     /* These are different types of logging you can have moderation logs e.g: a ban log or just action logs..*/
