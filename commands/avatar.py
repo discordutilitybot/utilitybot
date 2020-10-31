@@ -26,4 +26,4 @@ class Avatar(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Avatar(bot))
-    print(f"Cog Avatar Loaded Sucessfully.")
+    bot.logger.info(f'$GREENLoaded $BLUE"avatar $GREENcommand!')
