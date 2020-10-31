@@ -17,3 +17,4 @@ class GuildInfo(commands.Cog):
 
 def setup(bot):
     bot.add_cog(GuildInfo(bot))
+    bot.logger.info(f'$GREENLoaded $BLUE"guildinfo" $GREENcommand!')
