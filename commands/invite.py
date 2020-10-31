@@ -14,5 +14,5 @@ class Invite(commands.Cog):
         await ctx.send("Here is the invite link for utilitybot: \n")
 
 def setup(bot):
-    bot.logger.info(f'$GREENLoaded $BLUE"invite" $GREENcommand!')
     bot.add_cog(Invite(bot))
+    bot.logger.info(f'$GREENLoaded $BLUE"invite" $GREENcommand!')
