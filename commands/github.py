@@ -14,4 +14,4 @@ class Github(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Github(bot))
-     bot.logger.info(f'$GREENLoaded $BLUE"guildinfo" $GREENcommand!')
+    bot.logger.info(f'$GREENLoaded $BLUE"guildinfo" $GREENcommand!')
