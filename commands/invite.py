@@ -1,6 +1,7 @@
 """Invite Link for the bot"""
 import discord
 from discord.ext import commands
+import logging
 
 
 class Invite(commands.Cog):
@@ -13,4 +14,5 @@ class Invite(commands.Cog):
         await ctx.send("Here is the invite link for utilitybot: \n")
 
 def setup(bot):
+    bot.logger.info(f'$GREENLoaded $BLUE"invite" $GREENcommand!')
     bot.add_cog(Invite(bot))
