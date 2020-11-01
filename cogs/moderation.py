@@ -64,8 +64,8 @@ class Moderation(commands.Cog, name="Moderation"):
         if not reason:
             await ctx.send(f"You need to specify reason to mute {member.mention}")
         
-        query = """"""
-        #muted = self.bot.db.execute(query) or discord.utils.get(
+        
+        muted = self.bot.db.execute(query, ctx.guild.id) or discord.utils.get(
             # Default muted role created by utiilitybot
             #ctx.guild.roles, name="Muted"
         #)
