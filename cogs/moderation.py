@@ -79,15 +79,11 @@ class Moderation(commands.Cog, name="Moderation"):
     """Set the muted default muted role by utility bot to a custom one."""
     @commands.has_permissions(manage_roles=True)
     @commands.command()
-    async def mutedrole(
-        self,
-        ctx,
-        role_id: int,
-        modlogs: TextChannel = None
-    ):
+    async def mutedrole(self, ctx, role: discord.Role,):
+        pass
         
     
-    @commands.has_permissions(mute_members=True)
+    
     @commands.command()
     async def warn(
         self, 
