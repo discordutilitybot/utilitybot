@@ -76,7 +76,8 @@ class Moderation(commands.Cog, name="Moderation"):
         await ctx.send(f"{member.mention} was muted for {reason}")
         # Send a dm to a member saying they were muted
         await member.send(f"You were muted in {ctx.guild.name} for {reason}")
-    
+
+        # Send a log to the log channel which is stored in db
     @commands.has_permissions(mute_members=True)
     @commands.command()
     async def unmute(self, ctx, member: discord.Member, modlogs: TextChannel = None):
