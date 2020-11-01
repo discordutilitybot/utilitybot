@@ -22,6 +22,7 @@ class GuildJoin(commands.Cog):
             reason="Utility bot's Default Muted Role on join. (used for muting)",
             permissions=permissions,
             color=discord.Color.orange())
+            
 
         
     

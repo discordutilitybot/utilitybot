@@ -20,9 +20,9 @@ bot = Utilitybot(
 # Remove default help command in discord.py
 bot.remove_command('help')
 
-bot.load_extension("commands.invite.py")
+bot.load_extension("commands.invite")
 
 logger = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
 
-bot.run("token")
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.uBrDt_ppK6p9m08ls68bnVR4Gn4")
 logger.info("Yes")
