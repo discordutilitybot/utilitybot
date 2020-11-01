@@ -32,4 +32,3 @@ CREATE TABLE users (
     user_warns BIGINT NOT NULL DEFAULT 0,
     PRIMARY KEY (user_id, user_warns)
 )
-
