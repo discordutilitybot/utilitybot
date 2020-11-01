@@ -71,9 +71,9 @@ class Moderation(commands.Cog, name="Moderation"):
         )
         
         # I believe we should add roles before saying the person was muted :)
-        await member.add_roles(muted):
+        await member.add_roles(muted)
         # Global
-        
+
         await ctx.send(f"{member.mention} was muted for {reason}")
         
         # Send a dm to a member saying they were muted
