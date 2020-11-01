@@ -89,11 +89,11 @@ class Moderation(commands.Cog, name="Moderation"):
         self, 
         ctx,
         member: discord.Member,
-        reason="No reason specified", 
+        reason=None, 
         modlogs: TextChannel = None
     ):
         
-        await ctx.send(f"{member.mention} was warned for {reason}")
+        await member.send(f"{member.mention} was warned for {reason}")
 
         """Error Handlers"""
         if not member:
