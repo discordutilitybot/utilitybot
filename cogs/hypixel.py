@@ -9,3 +9,4 @@ class Hypixel(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Hypixel(bot))
+    bot.logger.info('$GREENLoaded $BLUE"hypixel" $GREENcog!')
