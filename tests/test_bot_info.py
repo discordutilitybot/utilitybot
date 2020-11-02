@@ -12,7 +12,6 @@ class TestBotInfo(unittest.TestCase):
         self.app = bot_info.app.setup()
         self.app.testing = True
     
-    # Tests main functionality of the command :)
     async def test_bot_info(self):
         greeting = "Testing bot info."
         self.assertEqual(app.botinfo(), greeting)
