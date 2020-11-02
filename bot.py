@@ -8,7 +8,7 @@ import logging
 import datetime
 import asyncpg
 import asyncio
-
+import dotenv
 bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.dnd,
@@ -21,7 +21,11 @@ bot = Utilitybot(
 bot.remove_command('help')
 
 async def start_db():
-    pass    
+    try:
+        login_data = {
+            "user": "postgres",
+            "password": ""
+        }
 
 logger = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
 
