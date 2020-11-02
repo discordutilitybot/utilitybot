@@ -9,7 +9,7 @@ import datetime
 import asyncpg
 import asyncio
 import dotenv
-fromt dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 
 dotenv_path = join(dirname(__file__), '.env')
