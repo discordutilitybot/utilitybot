@@ -9,6 +9,14 @@ import datetime
 import asyncpg
 import asyncio
 import dotenv
+import os
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+POSTGRES_PASSWORD = os.environ.get("database_password")
+DATABASE = os.environ.get('database')
+
 bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.dnd,
@@ -24,8 +32,12 @@ async def start_db():
     try:
         login_data = {
             "user": "postgres",
-            "password": ""
+            "password": POSTGRES_PASSWORD,
+            "database": DATABASE
         }
+
+        b
+        
 
 logger = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
 
