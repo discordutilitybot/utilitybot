@@ -37,6 +37,8 @@ async def start_db():
         }
 
         bot.db = Database.create_pool(**login_data)
+    except KeyboardInterrupt:
+        exit()
         
 
 logger = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
