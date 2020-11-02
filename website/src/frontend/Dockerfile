@@ -1,21 +1,14 @@
-FROM python:3.7-onbuild
+FROM node:13.13.0-alpine
 
-COPY . /website/src/frontend
-WORKDIR /website/src/frontend .
+WORKDIR /frontend
 
-COPY /website/src/backend .
-COPY /website/src/backend/blueprints .
+ENV PATH /frontend/node_modules/.bin:$PATH
 
-# Update system dependencies and system.
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
 
-RUN apt-get update 
-RUN apt-get upgrade
-RUN pip3 install --upgrade pip
+COPY . ./
 
-COPY requirements.txt .
-RUN pip3 install -r --upgrade requirements.
-
-EXPOSE 8080
-
-ENTRYPOINT [ "python" ]
-CMD ["routing.py"]
+CMD ["npm", "start"]
