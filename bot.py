@@ -36,7 +36,7 @@ async def start_db():
             "database": DATABASE
         }
 
-        b
+        bot.db = Database.create_pool(**login_data)
         
 
 logger = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
