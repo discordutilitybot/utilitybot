@@ -47,5 +47,5 @@ async def start_db():
 
 logging = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
 
-bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.JYANJp03YivviRGKTiafY6dQU6g")
+bot.run("NzQyMTk2OTExNTIzNj.XzCmvQ.JYANJp03YivviRGKTiafY6dQU6g")
 logging.info("Yes")
