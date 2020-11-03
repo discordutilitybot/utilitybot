@@ -71,6 +71,6 @@ def setup(bot):
         bot.logging.info(f'$GREENLoaded event $CYANMemberRemove')
     except Exception:
         bot.logging.error(
-            f'$REDError while loading event $CYAN"MemberRemove"', exc_info=e
+            f'$REDError while loading event $CYAN"MemberRemove"'
         )
     
