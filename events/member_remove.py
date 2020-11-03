@@ -10,9 +10,9 @@ class MemberRemove(commands.Cog):
     @commands.Cog.listener()
     # For kick, ban it will be more specific in the log this is just a global event for kick ban etc
     async def on_member_remove(self, member):
-        query = f"""SELECT logging_leave FROM guild_settings WHERE id = {self.bot.guild.id} """
-        logch = self.bot.db.execute(query)
-        if logch:
+        query = f"""SELECT logging_leave FROM guild_settings WHERE id = {self.guild.id} """
+        leavech = self.bot.db.execute(query)
+        if leavech:
             moderator = None
             action = None
             reason = None
@@ -31,6 +31,7 @@ class MemberRemove(commands.Cog):
                         reason = e.reason
                     break
 
+                    
                     if e.action == discord.AuditLogAction.ban:
                         action = 'ban'
                         reason = e.reason
@@ -59,7 +60,7 @@ class MemberRemove(commands.Cog):
                 name='Roles', value=', '.join(roles), inline=False)    
      
         try:
-            await logch.send(embed=embed)
+            await leavech.send(embed=embed)
         except Exception:
             pass
      
