@@ -9,10 +9,11 @@ import datetime
 import asyncpg
 import asyncio
 import dotenv
-
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
+
+
 
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
@@ -39,12 +40,12 @@ async def start_db():
             "database": DATABASE
         }
 
-        bot.db = Database.create_pool(**login_data)
+        bot.db = asyncpg.create_pool(**login_data)
     except KeyboardInterrupt:
         exit()
         
 
-logger = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
+logging = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
 
-bot.run("NzQyMTk2OTExNY4.XzCmvQ.uBrDt_ppK6p9m08ls68bnVR4Gn4")
-logger.info("Yes")
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.JYANJp03YivviRGKTiafY6dQU6g")
+logging.info("Yes")
