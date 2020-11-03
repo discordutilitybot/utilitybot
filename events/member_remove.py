@@ -19,18 +19,20 @@ class MemberRemove(commands.Cog):
                     if e.action in [discord.AuditLogAction.kick, discord.AuditLogAction.ban] and e.target.id == member.id:
                         moderator = e.user
                         if moderator == member.guild.me:
-                        moderator = None
+                            moderator = None
 
                         break
 
                     if e.action == discord.AuditLogAction.kick:
-                    action = 'kick'
-                    reason = e.reason
+                        action = 'kick'
+                        reason = e.reason
+                    break
 
-                    if e.action = discord.AuditLogAction.ban:
-                    action = 'ban'
-                    reason = e.reason
-                break
+                    if e.action == discord.AuditLogAction.ban:
+                        action = 'ban'
+                        reason = e.reason
+                    break
+
         embed = discord.Embed(title="Member Left", url="https://tenor.com/view/bear-hug-wave-bye-gif-12388210")
 
         embed.set_author(name=f'{member}', icon_url=str(
