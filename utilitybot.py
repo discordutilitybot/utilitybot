@@ -5,12 +5,9 @@ import asyncpg
 import datetime
 import aiohttp
 import json
-#from plugins.database import Database
 import logging
 
 
-
-"""Local modules"""
 class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -31,5 +28,3 @@ class Utilitybot(commands.Bot):
     async def load_events(self):
         pass
 
-    
-        
