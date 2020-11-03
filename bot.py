@@ -20,6 +20,7 @@ load_dotenv(dotenv_path)
 
 POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
+TOKEN = os.environ.get('token')
 
 bot = Utilitybot(
     command_prefix="u!",
@@ -47,5 +48,5 @@ async def start_db():
 
 logging = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
 
-bot.run("NzQyMTk2OTExNTIzNj.XzCmvQ.JYANJp03YivviRGKTiafY6dQU6g")
+bot.run(TOKEN)
 logging.info("Yes")
