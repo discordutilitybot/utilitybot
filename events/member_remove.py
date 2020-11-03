@@ -23,7 +23,10 @@ class MemberRemove(commands.Cog):
                 if e.action == discord.AuditLogAction.kick:
                     action = 'kick'
                     reason = e.reason
-                
+                if e.action = discord.AuditLogAction.ban:
+                    action = 'ban'
+                    reason = e.reason
+                break
 
 
 
