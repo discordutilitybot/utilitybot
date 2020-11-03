@@ -50,7 +50,15 @@ class MemberRemove(commands.Cog):
         embed.add_field(name="Stayed for", value=delta, inline=False)
 
         if member.nick:
-            embed.add_field("Nickname",)
+            embed.add_field("Nickname",
+                            value=member.nick)
+        roles = role.mention for role in member.roles if role != member.guild.default_role]
+
+        if roles:
+            embed.add_field(
+                name='Roles', value=', '.join(roles), inline=False)    
+     
+            
      
 
 def setup(bot):
