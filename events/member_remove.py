@@ -52,13 +52,17 @@ class MemberRemove(commands.Cog):
         if member.nick:
             embed.add_field("Nickname",
                             value=member.nick)
-        roles = role.mention for role in member.roles if role != member.guild.default_role]
+        roles = [role.mention for role in member.roles if role != 
+                member.guild.default_role]
 
         if roles:
             embed.add_field(
                 name='Roles', value=', '.join(roles), inline=False)    
      
-            
+        try:
+            await logch.send(embed=embed)
+        except Exception:
+            pass
      
 
 def setup(bot):
