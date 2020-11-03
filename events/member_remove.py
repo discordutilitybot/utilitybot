@@ -31,7 +31,10 @@ class MemberRemove(commands.Cog):
                 break
         embed = discord.Embed(title="Member Left", url="https://tenor.com/view/bear-hug-wave-bye-gif-12388210")
 
-
+        embed.set_author(name=f'{member}', icon_url=str(
+            member.avatar_url_as(static_format='png', size-2048)))
+        
+     
 
 def setup(bot):
     bot.add_cog(MemberRemove(bot))
