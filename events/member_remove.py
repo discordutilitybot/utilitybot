@@ -8,7 +8,22 @@ class MemberRemove(commands.Cog):
     @commands.Cog.listener()
     # For kick, ban it will be more specific in the log this is just a global event for kick ban etc
     async def on_member_remove(self, member):
-        pass
+        logch = self.bot.db.execute('')
+        if logch:
+            moderator = None
+            action = None
+            reason = None
+        if member.guild.me.guild_permissions.view_audit_log:
+            async for e in member.guild.audit_logs(limit=5):
+                if e.action in [discord.AuditLogAction.kick, discord.AuditLogAction.ban] and e.target.id == member.id:
+                    moderator = e.user
+                    if moderator == member.guild.me:
+                        moderator = None
+                        break
+                if e.action == discord.AuditLogAction.kick:
+                    action = 'kick'
+                    reason = e.reason
+                
 
 
 
