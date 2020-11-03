@@ -8,11 +8,11 @@ class MemberRemove(commands.Cog):
     @commands.Cog.listener()
     # For kick, ban it will be more specific in the log this is just a global event for kick ban etc
     async def on_member_remove(self, member):
-        query = f"""SELECT logging_moderation FROM guild_settings WHERE id = {ctx.guild.id} """
+        query = f"""SELECT logging_moderation FROM guild_settings WHERE id = {self.bot.guild.id} """
         logch = self.bot.db.execute(query)
         if logch:
-            moderator = None
-            action = None
+            moderator = None,
+            action = None,
             reason = None
             if member.guild.me.guild_permissions.view_audit_log:
                 async for e in member.guild.audit_logs(limit=5):
