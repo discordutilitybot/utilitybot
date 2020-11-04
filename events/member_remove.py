@@ -73,4 +73,3 @@ def setup(bot):
         bot.logging.error(
             f'$REDError while loading event $CYAN"MemberRemove"'
         )
-    

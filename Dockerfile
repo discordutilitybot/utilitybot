@@ -1,4 +1,6 @@
 ARG version=3.6
+ARG entrypoint="python"
+
 FROM python:$version
 
 WORKDIR /utilitybot /
@@ -10,6 +12,7 @@ RUN apt-get update \
     && apt install curl \
     && apt install python3-pip 
 
+
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt . 
@@ -19,5 +22,5 @@ COPY /utils /
 COPY /cogs / 
 COPY /events /
 
-ENTRYPOINT [" python " ]
+ENTRYPOINT [ $entrypoint ]
 CMD ["./utilitybot.py"]
