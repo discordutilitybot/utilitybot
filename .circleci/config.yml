@@ -27,3 +27,8 @@ jobs:
         auth:
         username: andrewisamazing1
         password: $DOCKERHUB_PASSWORD
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
