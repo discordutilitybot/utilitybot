@@ -35,5 +35,10 @@ class ChannelCreate(commands.Cog):
             await actionlogch.send(embed=embed)
         except Exception:
             pass
+
 def setup(bot):
-    bot.add_cog(ChannelCreate(bot))
+    try:
+        bot.add_cog(ChannelCreate(bot))
+        bot.logging.info("$GREENLoaded event $CYANChannelCreate")
+    except Exception:
+        pass
