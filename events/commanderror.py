@@ -66,5 +66,9 @@ class Commanderror(commands.Cog):
 
 """Add the cog"""
 def setup(bot):
-    bot.add_cog(Commanderror(bot))
+    try:
+        bot.add_cog(Commanderror(bot))
+        bot.logging.info("$GREENLoaded event $CYANCommandError")
+    except Exception:
+        bot.logging.error("$REDError loading event $CYANCommandError")
     
