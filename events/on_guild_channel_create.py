@@ -30,5 +30,10 @@ class ChannelCreate(commands.Cog):
         )
         embed.set_footer(
             text=f"Channel ID: {channel.id} | Guild ID: {channel.guild.id}")
+        
+        try:
+            await actionlogch.send(embed=embed)
+        except Exception:
+            pass
 def setup(bot):
     bot.add_cog(ChannelCreate(bot))
