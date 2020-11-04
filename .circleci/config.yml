@@ -10,10 +10,14 @@ jobs:
       - image: circleci/python:3.6.0
     steps:
       - checkout
-      - run: sudo apt install pip3
-      command:
-        pip3 install -r requirements.txt
-        pip3 bot.py
+      - run
+        command: |
+          pip3 install -r requirements.txt
+
+        name: Build and run main file to load all cogs
+        command: 
+          pip3 install -r requirements.txt
+          pip3 bot.py
         
   run_tests:
     docker:
@@ -22,16 +26,15 @@ jobs:
       - checkout
       - run:
           name: Install pypi Dependencies
-          command: 
+          command: |
             echo 'export PATH=~$PATH~/.local/bin' >> $BASH_ENV && source $BASH_ENV
             pip3 install -r requirements.txt
 
-      - run:
+      - run: 
           name: Run Unit Tests
-          command: 
+          command: |
             python3 test_bot_info.py
       
-
     deploy:
       docker:
       - image: discordutilitybot/utilitybot/utilitybot:1.1
