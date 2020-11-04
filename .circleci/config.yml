@@ -1,4 +1,7 @@
 version: 2.1
+orbs:
+  python: circleci/python@1.2.1
+  
 jobs:
   run_tests:
     docker:
@@ -7,10 +10,18 @@ jobs:
       - checkout
       - run:
           name: Install pypi Dependencies
-          command: |
+          command: 
             echo 'export PATH=~$PATH~/.local/bin' >> $BASH_ENV && source $BASH_ENV
             pip3 install -r requirements.txt
 
       - run:
-        name: Run Unit run_tests
-        command: |
+          name: Run Unit run_tests
+          command: 
+            python3 test_bot_info.py
+
+    deploy:
+      docker:
+      - image: discordutilitybot/utilitybot/utilitybot:1.1
+        auth:
+        username: andrewisamazing1
+        password: $DOCKERHUB_PASSWORD
