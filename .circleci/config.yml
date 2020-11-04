@@ -6,13 +6,15 @@ orbs:
 jobs:
 
   build:
+    docker:
+      - image: circleci/python:3.6.0
     steps:
       - checkout
       - run: sudo apt install pip3
-
-
-      
-      
+      command:
+        pip3 install -r requirements.txt
+        pip3 bot.py
+        
   run_tests:
     docker:
       - image: circleci/python:3.6.0
