@@ -46,6 +46,6 @@ jobs:
 workflows:
   main:
     jobs:
-      - build
-      - run_tests
-      - deploy
+      - build:
+      - run_tests:
+      - deploy:
