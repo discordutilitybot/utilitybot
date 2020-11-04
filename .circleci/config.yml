@@ -4,6 +4,15 @@ orbs:
   python: circleci/python@1.2.1
 
 jobs:
+
+  build:
+    steps:
+      - checkout
+      - run: sudo apt install pip3
+
+
+      
+      
   run_tests:
     docker:
       - image: circleci/python:3.6.0
