@@ -28,7 +28,9 @@ jobs:
         username: andrewisamazing1
         password: $DOCKERHUB_PASSWORD
 
+
 workflows:
   main:
     jobs:
-      - build-and-test
+      - run_tests
+      - deploy
