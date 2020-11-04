@@ -28,5 +28,10 @@ class GuildJoin(commands.Cog):
     
         
 def setp(bot):
-    bot.add_cog(GuildJoin(bot))
-    """Ill add logging later so its alot easier to find bugs""" 
+    try:
+        bot.add_cog(GuildJoin(bot)) 
+        bot.logging.info("$GREENLoaded event $CYANGuildJoin")
+    except Exception:
+        bot.logging.error(
+            f'$REDError while loading event $CYAN"GuildJoin"'
+        )
