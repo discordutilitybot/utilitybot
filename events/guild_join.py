@@ -27,7 +27,7 @@ class GuildJoin(commands.Cog):
         
     
         
-def setp(bot):
+def setup(bot):
     try:
         bot.add_cog(GuildJoin(bot)) 
         bot.logging.info("$GREENLoaded event $CYANGuildJoin")
