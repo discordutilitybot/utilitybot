@@ -17,7 +17,14 @@ class ChannelCreate(commands.Cog):
                         createdby = e.user
                         break
 
+        embed = discord.Embed(color=discord.Color.green(
 
+        ), timestamp=channel.created_at, description=f"**New Channell created #{channel.name}**")
+
+        if createdby:
+            embed.add_field(
+                name='Created by', value=f'{createdby} ({createdby.id})', inline=False
+            )
         
 def setup(bot):
     bot.add_cog(ChannelCreate(bot))
