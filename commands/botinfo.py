@@ -32,7 +32,7 @@ class Botinfo(commands.Cog):
     async def botinfo(self, ctx):
         embed = discord.Embed(
             title = "All about Utility Bot!",
-            description = "Hello! I am Utility Bot I'm here to help you manage and moderate your server with a touch of fun! I was written in Python by Flop#7234 using discord.py! Type u!help to get a link to our website for a list of commands!",
+            description = "Hello! I am Utility Bot I'm here to help you manage and moderate your server with a touch of fun! I was written in Python by Flop#7234 using discord.py and python3.7! Type u!help to get a link to our website for a list of commands!",
             color = discord.Color.orange()
         )   
         
