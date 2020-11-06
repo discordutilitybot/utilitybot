@@ -48,8 +48,8 @@ class ChannelCreate(commands.Cog):
                 name='Created by', value=f'{createdby} ({createdby.id})', inline=False
             )
         embed.set_author(name=channel.guild.name,
-                         icon_url=str(channel.guild.icon_url)
-        )
+                         icon_url=str(channel.guild.icon_url, size=1048)
+        )              
         embed.set_footer(
             text=f"Channel ID: {channel.id} | Guild ID: {channel.guild.id}")
         
