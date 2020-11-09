@@ -41,7 +41,7 @@ class ChannelCreate(commands.Cog):
 
         embed = discord.Embed(color=discord.Color.green(
 
-        ), timestamp=channel.created_at, description=f"**New Channell created #{channel.name}**")
+        ), timestamp=channel.created_at, description=f"**New Channel created #{channel.name}**")
 
         if createdby:
             embed.add_field(
