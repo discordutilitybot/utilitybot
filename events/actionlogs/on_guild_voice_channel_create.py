@@ -41,6 +41,13 @@ class GuildVoice(commands.Cog):
     embed = discord.Embed(color=discord.Color.green 
     ), timestamp=voice_channel.created_at, description=f"**New voice channel created #{voice_channel.name"
 
+    if createdby:
+        embed.add_field(
+            name='Created by', value=f'{createdby} ({createdby.id})', inline=False
+        )
+        embed.set_footer(
+            text=f"Channel ID: {voice_channel.id} | Guild ID: {voice_channel.guild.id"
+        )
 def setup(bot):
     bot.add_cog(GuildVoice(bot))
     bot.logging.info("$GREENLoaded event $CYANGuildVoice")
