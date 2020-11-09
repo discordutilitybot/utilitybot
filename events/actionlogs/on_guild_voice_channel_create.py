@@ -48,6 +48,10 @@ class GuildVoice(commands.Cog):
         embed.set_footer(
             text=f"Channel ID: {voice_channel.id} | Guild ID: {voice_channel.guild.id"
         )
+    try:
+        await actionlogch.send(embed=embed)
+    except Exception:
+        pass
 def setup(bot):
     bot.add_cog(GuildVoice(bot))
     bot.logging.info("$GREENLoaded event $CYANGuildVoice")
