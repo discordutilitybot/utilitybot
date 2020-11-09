@@ -1,4 +1,5 @@
-# Utility Bot the server management bot.
+# Utility Bot
+## The ultimate server management bot.
 [![Discord](https://img.shields.io/static/v1?label=Utilitybot%20Discord&logo=discord&message=%3E11%20members&color=%237289DA&logoColor=white)](https://discord.gg/xAmmxPG)
 [![Website](https://img.shields.io/badge/website-visit-brightgreen)](https://utilitybot.co)
 [![Twitter Follow](https://img.shields.io/twitter/follow/utilitybot1?style=social)](https://twitter.com/utilitybot1)
@@ -43,7 +44,7 @@ To report security/vulnerabilities in the bot or code, please email security@uti
 The default command to get help is u!help. 
 You can also join our support/community server with the link above.
 
-> **NOTE**: Support will not be provided if you attempt to self-host Utility Bot. It is NOT recommended!
+> **NOTE**: Support will not be provided if you attempt to self-host Utility Bot. It is **NOT** recommended!
 
 
   
