@@ -52,6 +52,7 @@ class GuildVoice(commands.Cog):
         await actionlogch.send(embed=embed)
     except Exception:
         pass
+    
 def setup(bot):
     bot.add_cog(GuildVoice(bot))
     bot.logging.info("$GREENLoaded event $CYANGuildVoice")
