@@ -85,8 +85,6 @@ class Commanderror(commands.Cog):
             
         
 
-
-"""Add the cog"""
 def setup(bot):
     try:
         bot.add_cog(Commanderror(bot))
