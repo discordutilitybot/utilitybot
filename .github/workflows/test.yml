@@ -15,3 +15,30 @@ jobs:
       - name: Run All Scripts in /cogs
         run: |
           cd cogs
+          python3 hypixel.py
+          
+          python3 moderation.py
+          
+          python3 conf.py
+
+          python3 logging.py
+
+      - name: Run All scripts in /commands
+        run: |
+          cd /commands
+
+          python3 avatar.py
+
+          python3 botinfo.py
+
+          python3 botstatus.py
+
+          python3 github.py
+
+          python3 guildinfo.py
+
+          python3 help.py
+
+          python3 invite.py
+
+          python3 twitter.py
