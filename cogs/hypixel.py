@@ -24,11 +24,17 @@ class Hypixel(commands.Cog):
 
         async with channel.typing():
             async with aiohttp.ClientSession() as session:
+                
                 async with session.get(f'https://api.slothpixel.me/api/players/{user}') as resp:
                     player = await resp.json()
 
+                 async with session.get(f'https://api.slothpixel.me/api/guilds/{arg1}') as resp:
+                        guild = await resp.json()
+
         color = ctx.author.color
-        embed = discord.Embed(title=f'{user} Hypixel stats', colour=color, timestamp=date.datetime.utcnow())
+        embed = discord.Embed(title=f'{user} Hypixel stats', colour=color, timestamp=datetime.datetime.utcnow())
+        if player['rank'] == 'MVP_PLUS_PLUS':
+            embed.add_field(name="PlayerRank", value="MVP++", inline=False)
 
        
         
