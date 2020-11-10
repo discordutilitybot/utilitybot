@@ -28,30 +28,32 @@ class GuildVoice(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     @commands.Cog.listener()
-    actionlogch = self.bot.db.execute(f"SELECT logging_action FROM guild_settings WHERE id = ?")
+    async def on_guild_voice_channel_create(self, channel):
+        actionlogch = self.bot.db.execute(f"SELECT logging_action FROM guild_settings WHERE id = ?")
 
-    if actionlogch:
-        createdby = None
-        if channel.guild.me.guild_permissions.view_audit_log:
-            async for e in channel.guild.audit_logs(action=discord.AuditLogAction.voice_channel_create, limit=5):
-                if e.target.id == channel.id:
-                    createdby = e.user
-                    break
+        if actionlogch:
+            createdby = None
+            if channel.guild.me.guild_permissions.view_audit_log:
+                async for e in channel.guild.audit_logs(action=discord.AuditLogAction.voice_channel_create, limit=5):
+                    if e.target.id == channel.id:
+                        createdby = e.user
+                        break
 
-    embed = discord.Embed(color=discord.Color.green 
-    ), timestamp=voice_channel.created_at, description=f"**New voice channel created #{voice_channel.name"
-
-    if createdby:
-        embed.add_field(
+    
+        embed = discord.Embed(color=discord.Color.green 
+        ),  timestamp=voice_channel.created_at, description=f"**New voice channel created #{voice_channel.name}"
+        
+        if createdby:
+            embed.add_field(
             name='Created by', value=f'{createdby} ({createdby.id})', inline=False
-        )
+            )
         embed.set_footer(
             text=f"Channel ID: {voice_channel.id} | Guild ID: {voice_channel.guild.id}"
         )
-    try:
-        await actionlogch.send(embed=embed)
-    except Exception:
-        pass
+        try:
+            await actionlogch.send(embed=embed)
+        except Exception:
+            pass
     
 def setup(bot):
     bot.add_cog(GuildVoice(bot))

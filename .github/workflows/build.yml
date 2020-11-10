@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@main
 
 
-      - name: Install deps for bot 
+      - name: Run
         run: | 
           python bot.py
 

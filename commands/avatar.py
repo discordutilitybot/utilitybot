@@ -36,6 +36,7 @@ class Avatar(commands.Cog):
             user = ctx.author
             
         member = None
+        
         if ctx.guild:
             member = ctx.guild.get_member(user.id)
         await ctx.send(embed=discord.Embed(
