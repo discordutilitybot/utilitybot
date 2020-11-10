@@ -1,0 +1,17 @@
+name: Test
+on: 
+  push:
+    branches:
+      - dev
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Code
+        uses: actions/checkout@main
+
+      - name: Run All Scripts in /cogs
+        run: |
+          cd cogs

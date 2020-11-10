@@ -1,4 +1,5 @@
 ARG version=3.6
+ARG file="./utilitybot.py"
 ARG entrypoint="python"
 
 FROM python:$version
@@ -10,7 +11,8 @@ RUN apt-get update \
     && apt get-upgrade \
     && apt-install git \
     && apt install curl \
-    && apt install python3-pip 
+    && apt install python3-pip \
+    && apt install yarn
 
 
 RUN pip3 install --upgrade pip
@@ -23,4 +25,4 @@ COPY /cogs /
 COPY /events /
 
 ENTRYPOINT [ $entrypoint ]
-CMD ["./utilitybot.py"]
+CMD [${file}]

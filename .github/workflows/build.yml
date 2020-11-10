@@ -9,7 +9,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps: 
-      - name: Pull code
+      - name: Pull Code
         uses: actions/checkout@main
 
 
