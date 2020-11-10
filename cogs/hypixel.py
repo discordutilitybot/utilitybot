@@ -16,11 +16,25 @@ class Hypixel(commands.Cog):
 
         if user is None:
             await ctx.send(f"Please specifiy a valid username or uuid.", delete_after=5)
+            return
 
         if 'error' in player:
             await ctx.send(f"{user} Is not a valid username.")
+            return
+
+        async with channel.typing():
+            async with aiohttp.ClientSession() as session:
+                async with session.get(f'https://api.slothpixel.me/api/players/{user}') as resp:
+                    player = await resp.json()
+
+        color = ctx.author.color
+        embed = discord.Embed(title=f'{user} Hypixel stats', colour=color, timestamp=date.datetime.utcnow())
+
+       
+        
 
 
 def setup(bot):
     bot.add_cog(Hypixel(bot))
-    bot.logger.info('$GREENLoaded $BLUE"hypixel" $GREENcog!')
+    bot.logging.info('$GREENLoaded $BLUE"hypixel" $GREENcog!')
+   
