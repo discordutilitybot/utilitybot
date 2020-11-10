@@ -15,7 +15,6 @@ jobs:
 
       - name: Install deps for bot 
         run: | 
-          pip3 install requirements.txt
           python bot.py
 
 
