@@ -46,7 +46,7 @@ class GuildVoice(commands.Cog):
             name='Created by', value=f'{createdby} ({createdby.id})', inline=False
         )
         embed.set_footer(
-            text=f"Channel ID: {voice_channel.id} | Guild ID: {voice_channel.guild.id"
+            text=f"Channel ID: {voice_channel.id} | Guild ID: {voice_channel.guild.id}"
         )
     try:
         await actionlogch.send(embed=embed)
