@@ -24,7 +24,7 @@ class Hypixel(commands.Cog):
 
         async with channel.typing():
             async with aiohttp.ClientSession() as session:
-                
+
                 async with session.get(f'https://api.slothpixel.me/api/players/{user}') as resp:
                     player = await resp.json()
 
@@ -33,8 +33,23 @@ class Hypixel(commands.Cog):
 
         color = ctx.author.color
         embed = discord.Embed(title=f'{user} Hypixel stats', colour=color, timestamp=datetime.datetime.utcnow())
+
         if player['rank'] == 'MVP_PLUS_PLUS':
             embed.add_field(name="PlayerRank", value="MVP++", inline=False)
+
+        elif player['rank'] == 'MVP_PLUS':
+            embed.add_field(name="PlayerRank", value="MVP+", inline=False)
+
+        elif player['rank'] == "MVP":
+            embed.add_field(name="PlayerRank", value="MVP", inline=False)
+        
+
+        elif player['rank'] == "VIP_PLUS":
+            embed.add_field(name="PlayerRank", value="VIP+", inline=False)
+
+        elif player['rank'] == "VIP":
+            embed.add_field(name="PlayerRank", value="VIP", inline=False)
+        
 
        
         
