@@ -36,3 +36,4 @@ class Twitter(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Twitter(bot))
+    bot.logging.info("$GREENLoaded twitter $GREENcommand")
