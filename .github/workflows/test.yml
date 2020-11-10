@@ -14,7 +14,7 @@ jobs:
 
       - name: Run All Scripts in /cogs
         run: |
-          cd cogs
+          cd /cogs
           python3 hypixel.py
           
           python3 moderation.py
@@ -42,3 +42,16 @@ jobs:
           python3 invite.py
 
           python3 twitter.py
+
+      - name: Run utils
+        run: |
+          cd /utils
+
+          python3 errors.py
+
+          python3 permissions.py
+
+          python3 prefix.py
+
+          python3 status.py
+
