@@ -15,9 +15,9 @@ class Ready(commands.Cog):
             pass
 
         self.bot.logging(f"$GREENBot: $CYAN{self.bot.user}")
-        self.bot.logging.info(f"$GREENGuilds: $CYAN{len(self.bot.guild)}")
+        self.bot.logging.info(f"$GREENGuilds: $CYAN{len(self.bot.guilds)}")
         self.bot.logger.info(f"$GREENUsers: $CYAN{len(self.bot.users)}")
-
+        
 
 def setup(bot):
     try:
