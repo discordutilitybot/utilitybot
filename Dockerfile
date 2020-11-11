@@ -7,14 +7,6 @@ FROM python:$version
 WORKDIR /utilitybot /
 
 # Update system packages and pip
-RUN apt-get update \
-    && apt get-upgrade \
-    && apt-install git \
-    && apt install curl \
-    && apt install python3-pip \
-    && apt install yarn
-
-
 RUN pip3 install --upgrade pip
 
 COPY requirements.txt . 
