@@ -1,5 +1,5 @@
 ARG version=3.6
-ARG file="./utilitybot.py"
+ARG file="./bot.py"
 ARG entrypoint="python"
 
 FROM python:$version
