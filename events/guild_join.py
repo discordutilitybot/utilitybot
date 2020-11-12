@@ -44,8 +44,8 @@ class GuildJoin(commands.Cog):
             color=discord.Color.orange())
         
 
-        
-    
+        self.bot.db.execute("INSERT into guild_settings (")
+
         
 def setup(bot):
     try:
