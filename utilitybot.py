@@ -36,6 +36,14 @@ class Utilitybot(commands.Bot):
         self.launchtime = datetime.datetime.now(datetime.timezone.utc)
         self.db = asyncpg.pool.Pool = None
         self.started = False
+
+        logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
+        self.logger = logging.getLogger('Utility')
+        stdout = logging.StreamHandler(sys.stdout)
+        stdout.setLevel(logging.INFO)
+        self.logger.addHandler(stdout)
+        gateway = logging.getLogger('discord.gateway')
+        gateway.addHandler(stdout)
         
         
     async def load_commands(self):

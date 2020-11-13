@@ -68,7 +68,8 @@ async def start_db():
         exit()
         
 
-logging = logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
 
-bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.ynfnS5yEFSQZk54iJqXalegsrdU")
+bot.load_extension("commands.twitter")
+
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.pRjHPIbyFBgaMGr96tE_WNsxIiE")
 logging.info("Yes")

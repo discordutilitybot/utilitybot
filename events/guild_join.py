@@ -43,8 +43,13 @@ class GuildJoin(commands.Cog):
             permissions=permissions,
             color=discord.Color.orange())
         
+        # Insert global guild data
+        self.bot.db.execute("INSERT INTO guilds (guild_id, guild_roles, guild_channels, guild_messages, guild_voice_channels, guild_categorys)")
 
-        self.bot.db.execute("INSERT into guild_settings (")
+        # Insert data for guild settings and prefix's..
+        self.bot.db.execute("INSERT INTO guild_settings (guild_id, muted_role,  guild_prefix,   logging_moderation, logging_action, logging_leave,  logging_join, greet_message ) ")
+
+
 
         
 def setup(bot):
