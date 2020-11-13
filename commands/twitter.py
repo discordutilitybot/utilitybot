@@ -31,9 +31,9 @@ class Twitter(commands.Cog):
 
     @commands.command()
     async def twitter(self, ctx):
-        await ctx.send("Here's a link to utility bot's twitter \n [twitter](twitter.com/utilitybot1)")
+        await ctx.send("Here's a link to utility bot's twitter \n twitter.com/utilitybot1")
 
 
 def setup(bot):
     bot.add_cog(Twitter(bot))
-    bot.logging.info("$GREENLoaded twitter $GREENcommand")
+    bot.logging.info("Loaded twitter command")

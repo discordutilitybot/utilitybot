@@ -71,5 +71,5 @@ async def start_db():
 
 bot.load_extension("commands.twitter")
 
-bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.pRjHPIbyFBgaMGr96tE_WNsxIiE")
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.q2AM2cNKUUG5jvJ7vdC58aTWeWs")
 logging.info("Yes")

@@ -43,5 +43,5 @@ class Help(commands.Cog):
             
 def setup(bot):
     bot.add_cog(Help(bot))
-    bot.logger.info(f'$GREENLoaded $BLUE"help" $GREENcommand!')
+    bot.logger.info(f'Loaded $BLUE"help" command!')
 

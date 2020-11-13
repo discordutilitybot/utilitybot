@@ -39,10 +39,10 @@ class Utilitybot(commands.Bot):
         self.started = False
 
         logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
-        self.logger = logging.getLogger('Utility')
+        self.logging = logging.getLogger('Utility')
         stdout = logging.StreamHandler(sys.stdout)
         stdout.setLevel(logging.INFO)
-        self.logger.addHandler(stdout)
+        self.logging.addHandler(stdout)
         gateway = logging.getLogger('discord.gateway')
         gateway.addHandler(stdout)
         
