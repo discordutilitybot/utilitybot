@@ -47,7 +47,7 @@ class GuildJoin(commands.Cog):
         self.bot.db.execute("INSERT INTO guilds (guild_id, guild_roles, guild_channels, guild_messages, guild_voice_channels, guild_categorys)")
 
         # Insert data for guild settings and prefix's..
-        self.bot.db.execute("INSERT INTO guild_settings (guild_id, muted_role,  guild_prefix,   logging_moderation, logging_action, logging_leave,  logging_join, greet_message ) ")
+        self.bot.db.execute(f"INSERT INTO guild_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, greet_message) VALUES ({guild.id}, Muted,")
 
 
 
