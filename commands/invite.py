@@ -36,4 +36,4 @@ class Invite(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Invite(bot))
-    bot.logger.info(f'Loaded "invite" command!')
+    bot.logging.info(f'Loaded "invite" command!')

@@ -54,4 +54,4 @@ class Avatar(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Avatar(bot))
-    bot.logger.info(f'$GREENLoaded $BLUE"avatar $GREENcommand!')
+    bot.logging.info(f'Loaded avatar command!')

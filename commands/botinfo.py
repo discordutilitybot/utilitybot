@@ -43,4 +43,4 @@ class Botinfo(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Botinfo(bot))
-    bot.logger.info(f'$GREENLoaded $BLUE"botinfo" $GREENcommand!')
+    bot.logging.info(f'$GREENLoaded $BLUE"botinfo" $GREENcommand!')

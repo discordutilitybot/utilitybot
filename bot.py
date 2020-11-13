@@ -70,6 +70,6 @@ async def start_db():
 
 
 bot.load_extension("commands.twitter")
-
+bot.load_extension("commands.avatar")
 bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.q2AM2cNKUUG5jvJ7vdC58aTWeWs")
 logging.info("Yes")

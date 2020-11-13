@@ -39,4 +39,4 @@ class GuildInfo(commands.Cog):
 
 def setup(bot):
     bot.add_cog(GuildInfo(bot))
-    bot.logger.info(f'Loaded "guildinfo" command!')
+    bot.logging.info(f'Loaded "guildinfo" command!')
