@@ -77,18 +77,14 @@ class Commanderror(commands.Cog):
             td = datetime.timedelta(seconds=error.retry_after)
             await ctx.send(f"This Command Is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
 
-        """Probably wont need this since the commands wont be NSFW. yuck."""
-        if isinstance(error, commands.NSFWChannelRequired):
-                await ctx.send("You need NSFW channel permissions to run this command.")
-        
+    
         
             
-        
-
+    
 def setup(bot):
     try:
         bot.add_cog(Commanderror(bot))
-        bot.logging.info("$GREENLoaded event $CYANCommandError")
+        bot.logging.info("Loaded event CommandError")
     except Exception:
-        bot.logging.error("$REDError loading event $CYANCommandError")
+        bot.logging.error("Error loading event CommandError")
     

@@ -47,7 +47,7 @@ class GuildJoin(commands.Cog):
         self.bot.db.execute("INSERT INTO guilds (guild_id, guild_roles, guild_channels, guild_messages, guild_voice_channels, guild_categorys)")
 
         # Insert data for guild settings and prefix's..
-        self.bot.db.execute(f"INSERT INTO guild_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, greet_message) VALUES ({guild.id}, Muted,")
+        self.bot.db.execute(f"INSERT INTO guild_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, greet_message, greet_channel) VALUES ({guild.id}, Muted,")
 
 
 
@@ -55,8 +55,8 @@ class GuildJoin(commands.Cog):
 def setup(bot):
     try:
         bot.add_cog(GuildJoin(bot)) 
-        bot.logging.info("$GREENLoaded event $CYANGuildJoin")
+        bot.logging.info("Loaded event GuildJoin")
     except Exception:
         bot.logging.error(
-            f'$REDError while loading event $CYAN"GuildJoin"'
+            f'error while loading event GuildJoin'
         )
