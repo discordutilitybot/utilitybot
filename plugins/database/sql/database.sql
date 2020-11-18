@@ -18,8 +18,7 @@ CREATE TABLE guild_settings (
     logging_action BIGINT DEFAULT NULL,
     /* You can toggle join logs but action logs already toggles it on but if you want less logs you can toggle logging_leave or logging_join.*/
     logging_join BIGINT DEFAULT NULL,
-    greet_message VARCHAR(80) DEFAULT NULL,
-    greet_channel BIGINT DEFAULT NULL
+    logging_leave BIGINT DEFAULT NULL,
     PRIMARY KEY (muted_role, guild_prefix, logging_moderation, logging_action, logging_leave, logging_join),
 );  FOREIGN KEY (guild_id) REFERENCES guilds(guilds_id)
 
