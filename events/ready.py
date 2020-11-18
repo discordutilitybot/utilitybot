@@ -14,9 +14,10 @@ class Ready(commands.Cog):
         except Exception:
             pass
 
-        self.bot.logging(f"$GREENBot: $CYAN{self.bot.user}")
-        self.bot.logging.info(f"$GREENGuilds: $CYAN{len(self.bot.guilds)}")
-        self.bot.logger.info(f"$GREENUsers: $CYAN{len(self.bot.users)}")
+        self.bot.logging(f"Bot:{self.bot.user}")
+        self.bot.logger.info(f"D: {self.bot.user.id}")
+        self.bot.logging.info(f"Guilds: {len(self.bot.guilds)}")
+        self.bot.logger.info(f"Users: {len(self.bot.users)}")
         
 
 def setup(bot):

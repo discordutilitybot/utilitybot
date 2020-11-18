@@ -52,7 +52,7 @@ bot = Utilitybot(
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
      intents=intents,
     case_insensitive=True,
-    owner_id=388788632686690305
+    owner_id=388788632686690305,
     chunk_guilds_at_startup=False,
 )
 
@@ -75,5 +75,6 @@ async def start_db():
 
 bot.load_extension("commands.twitter")
 bot.load_extension("commands.avatar")
+
 bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.FJnBUBlvS-aLrjnM8_1FCQceuIw")
 logging.info("Yes")
