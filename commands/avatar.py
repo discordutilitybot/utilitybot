@@ -42,13 +42,13 @@ class Avatar(commands.Cog):
         await ctx.send(embed=discord.Embed(
             color=member.color if member else ctx.author.color
         ).set_image(
-            url=str(user.avatar_url_as(static_format='png', size=1048))
+            url=str(user.avatar_url_as(static_format='png', size=2048))
         ))
 
         if user is None:
            await ctx.send(embed=discord.Embed(
                color=member.color if member else ctx.author.color.set_image(
-                   url=str(user.avatar_url_as(static_format='png', size=1048))
+                   url=str(user.avatar_url_as(static_format='png', size=2048))
                )
             ))
 
