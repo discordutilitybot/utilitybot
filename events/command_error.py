@@ -32,9 +32,6 @@ import aiohttp
 import random
 import os
 
-"""Local stuff (commands)"""
-
-
 
 class Commanderror(commands.Cog):
 
@@ -50,36 +47,23 @@ class Commanderror(commands.Cog):
             return
 
         if isinstance(error, commands.CommandNotFound):
-            await ctx.send('Command not found, there may be a typo in the command.')
+            return await ctx.send('Command not found, there may be a typo in the command.')
        
         if isinstance(error, commands.NoPrivateMessage):
-            await ctx.send("You cannot use commands in a private message please go to a server to run commands.")
+            return await ctx.send("You cannot use commands in a private message please go to a server to run commands.")
         
         if isinstance(error, commands.MissingPermissions):
-            """Check if the user has the right permissions if they dont return the error if they do then return true"""
-            for roles in ctx.guild.permissions:
-                if roles == False:
-                    await ctx.send("You dont have the permissions to perform this command")
-                else:
-                    return True
+            return await ctx.send("You dont have the permissions to perform this command")
             
         if isinstance(error, commands.BotMissingPermissions):
-           for permission in ctx.bot.permissions:
-                if permission == False:
-                   return await ctx.send("I am missing permissions to perform this command.")
-                else:
-                    return True
+            return await ctx.send("You dont have the permissions to perform this command")
 
         if isinstance(error, commands.NoPrivateMessage):
-            await ctx.send("You need to run this command in a server for it to work")
+            return await ctx.send("You can't run this command here!")
 
         if isinstance(error, commands.CommandOnCooldown):
             td = datetime.timedelta(seconds=error.retry_after)
-            await ctx.send(f"This Command Is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
-
-    
-        
-            
+            return await ctx.send(f"This Command Is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
     
 def setup(bot):
     try:

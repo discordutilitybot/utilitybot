@@ -9,9 +9,9 @@ class Greetmsg(commands.Cog):
     
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        if self.bot.db.execute("SELECT greet_message FROM guild_settings WHERE id = ?"):
-            joinchan = self.bot.db("")
-            joinlog = self.bot.db
+        if self.bot.db.execute("SELECT logging_leave FROM guild_settings WHERE id = ?"):
+            joinchan = self.bot.db("SELECT ")
+        
 
 
 def setup(bot):
