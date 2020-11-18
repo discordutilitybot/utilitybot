@@ -24,7 +24,6 @@ import discord
 from discord.ext import commands
 
 
-"""Get a link to utility bot's twitter"""
 class Twitter(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
