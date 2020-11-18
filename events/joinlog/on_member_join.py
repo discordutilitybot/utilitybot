@@ -3,7 +3,7 @@ from discord.ext import commands
 import datetime
 from discord import Member
 
-class Greetmsg(commands.Cog):
+class Joinlog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
@@ -18,8 +18,6 @@ class Greetmsg(commands.Cog):
                 '{user}': str(member),
                 '{user.name}': member.name,
             }   '{count}': str(member.guild.member_count)
-        
-
         
             if logch:
                 embed =  discord.Embed(title="Member Joined", url="https://tenor.com/view/penguin-hello-hi-hey-there-cutie-gif-3950966")
@@ -39,7 +37,6 @@ class Greetmsg(commands.Cog):
                         pass
 
 
-                
 def setup(bot):
     bot.add_cog(Greetmsg(bot))
     bot.logger.info("Event Loaded Greetmsg!")
