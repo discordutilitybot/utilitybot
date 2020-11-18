@@ -68,7 +68,6 @@ class Commanderror(commands.Cog):
 def setup(bot):
     try:
         bot.add_cog(Commanderror(bot))
-        bot.logging.info("Loaded event CommandError")
-    except Exception:
-        bot.logging.error("Error loading event CommandError")
+        bot.logger.info("Loaded event CommandError")
+
     
