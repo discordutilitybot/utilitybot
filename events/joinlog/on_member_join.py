@@ -33,6 +33,12 @@ class Greetmsg(commands.Cog):
 
                 embed.add_footer(name="Member Count:", value=f{guild.members})
 
+                try:
+                    await logch.send(embed)
+                    except Exception:
+                        pass
+
+
                 
 def setup(bot):
     bot.add_cog(Greetmsg(bot))
