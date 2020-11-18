@@ -11,7 +11,7 @@ class Greetmsg(commands.Cog):
     async def on_member_join(self, member):
         if self.bot.db.execute("SELECT logging_join FROM guild_settings WHERE id = ?"):
             usedinvite = Noneg
-            joinchan = self.bot.db.execute("SELECT logging_join FROM guild_settings WHERE id = ?")
+            logch = self.bot.db.execute("SELECT logging_join FROM guild_settings WHERE id = ?")
 
             vars  = {
                 '{user.mention}': member.mention,
@@ -21,7 +21,7 @@ class Greetmsg(commands.Cog):
         
 
         
-            if joinchan:
+            if logch:
                 embed =  discord.Embed(title="Member Joined", url="https://tenor.com/view/penguin-hello-hi-hey-there-cutie-gif-3950966")
 
                 embed.set_author(name=f"{member}", icon_url=str(
@@ -29,7 +29,9 @@ class Greetmsg(commands.Cog):
 
                 embed.add_field(name='Account Created', value=datetime.datetime.utcnow() - member.created_at) + 'ago', inline=False)
                 if used invite:
-                    embed.add_field(name="Invite used", value=used_invite, inline=False)
+                    embed.add_field(name="Invite used:", value=used_invite, inline=False)
+
+                embed.add_footer(name="Member Count:", value=f{guild.members})
 
                 
 def setup(bot):
