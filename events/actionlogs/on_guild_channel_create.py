@@ -62,8 +62,5 @@ def setup(bot):
     try:
         bot.add_cog(ChannelCreate(bot))
         bot.logging.info("$GREENLoaded event $CYANChannelCreate")
-    except Exception:
-        bot.logging.error(
-            f'$REDError while loading event $CYAN"ChannelCreate"'
-        )
+   
 

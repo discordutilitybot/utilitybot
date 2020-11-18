@@ -39,4 +39,4 @@ class Joinlog(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Greetmsg(bot))
-    bot.logger.info("Event Loaded Greetmsg!")
+    bot.logging.info("Event Loaded Greetmsg!")
