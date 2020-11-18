@@ -29,7 +29,7 @@ class Joinlog(commands.Cog):
                 if used invite:
                     embed.add_field(name="Invite used:", value=used_invite, inline=False)
 
-                embed.add_footer(name="Member Count:", value=f{guild.members})
+                embed.add_footer(name="Member Count:", value=f"{guild.members}")
 
                 try:
                     await logch.send(embed)
