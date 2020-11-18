@@ -31,7 +31,7 @@ class Twitter(commands.Cog):
 
     @commands.command()
     async def twitter(self, ctx):
-        await ctx.send("Here's a link to utility bot's twitter \n twitter.com/utilitybot1")
+        await ctx.send("Here's a link to utility bot's twitter \nhttps://twitter.com/utilitybot1")
 
 
 def setup(bot):
