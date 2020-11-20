@@ -53,7 +53,6 @@ class GuildJoin(commands.Cog):
 
         
 def setup(bot):
-    try:
-        bot.add_cog(GuildJoin(bot)) 
-        bot.logging.info("Loaded event GuildJoin")
+    bot.add_cog(GuildJoin(bot)) 
+    bot.logging.info("Loaded event GuildJoin")
     

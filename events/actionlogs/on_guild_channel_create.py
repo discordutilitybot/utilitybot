@@ -59,8 +59,7 @@ class ChannelCreate(commands.Cog):
             pass
 
 def setup(bot):
-    try:
-        bot.add_cog(ChannelCreate(bot))
-        bot.logging.info("$GREENLoaded event $CYANChannelCreate")
+    bot.add_cog(ChannelCreate(bot))
+    bot.logging.info("$GREENLoaded event $CYANChannelCreate")
    
 

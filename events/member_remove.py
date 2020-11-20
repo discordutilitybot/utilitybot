@@ -88,7 +88,6 @@ class MemberRemove(commands.Cog):
      
 
 def setup(bot):
-    try:
-        bot.add_cog(MemberRemove(bot))
-        bot.logging.info(f'Loaded event MemberRemove')
+    bot.add_cog(MemberRemove(bot))
+    bot.logging.info(f'Loaded event MemberRemove')
   

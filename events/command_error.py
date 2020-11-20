@@ -66,8 +66,8 @@ class Commanderror(commands.Cog):
             return await ctx.send(f"This Command Is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
     
 def setup(bot):
-    try:
-        bot.add_cog(Commanderror(bot))
-        bot.logging.info("Loaded event CommandError")
+
+    bot.add_cog(Commanderror(bot))
+    bot.logging.info("Loaded event CommandError")
 
     
