@@ -42,7 +42,7 @@ load_dotenv(dotenv_path)
 
 POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
-TOKEN = os.environ.get('token')
+TOKEN = os.environ.get('discord_token')
 #intents = discord.Intents()
 #intents.value = 1607
 
@@ -77,4 +77,4 @@ bot.load_extension("commands.twitter")
 bot.load_extension("commands.avatar")
 bot.load_extension('events.ready')
 
-bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.2UqyGjVIC_DdZuyqn6gfdzVN84w")
+bot.run(TOKEN)
