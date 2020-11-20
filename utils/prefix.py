@@ -28,3 +28,6 @@ from discord.ext import commands
 # Make sure its always asynchronous (since dpy is async duh)
 async def get_prefix(ctx, bot, message):
     prefix = await (await bot.db.execute(f"SELECT guild_prefix FROM guild_settings WHERE id = {ctx.guild.id}", message.guild.id)).fetchone()
+    if bot.dev:
+        return commands.when_mentioned_or(prefix, 'u!')(bot, message)
+    return commands.when_mentioned_or(prefix, 'u!')(bot, message)
