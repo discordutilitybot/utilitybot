@@ -77,4 +77,4 @@ bot.load_extension("commands.twitter")
 bot.load_extension("commands.avatar")
 bot.load_extension('events.ready')
 
-bot.run(TOKEN)
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.FUs92uP17Z-Hu4wu7u6ZYi2HeMk'")
