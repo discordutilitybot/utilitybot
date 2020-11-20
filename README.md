@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/discordutilitybot/utilitybot/dev"><img src="https://imgur.com/pY1WUFX.png" alt="Utility Bot - Discord Bot"></a>
+  <a href="https://github.com/discordutilitybot/utilitybot/dev"><img src="https://cdn.discordapp.com/attachments/700807345630085201/767113014905405470/69435453.png" alt="Utility Bot - Discord Bot"></a>
   <br>
   Utility Bot
   <br>
