@@ -43,14 +43,14 @@ load_dotenv(dotenv_path)
 POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 TOKEN = os.environ.get('token')
-intents = discord.Intents()
-intents.value = 1607
+#intents = discord.Intents()
+#intents.value = 1607
 
 bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.dnd,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
-     intents=intents,
+    #intents=intents,
     case_insensitive=True,
     owner_id=388788632686690305,
     chunk_guilds_at_startup=False,
@@ -75,6 +75,6 @@ async def start_db():
 
 bot.load_extension("commands.twitter")
 bot.load_extension("commands.avatar")
+bot.load_extension('events.ready')
 
-bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.FJnBUBlvS-aLrjnM8_1FCQceuIw")
-logging.info("Yes")
+bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.2UqyGjVIC_DdZuyqn6gfdzVN84w")

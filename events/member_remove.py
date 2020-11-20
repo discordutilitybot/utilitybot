@@ -20,6 +20,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
+
+
 import discord
 from discord.ext import commands
 import datetime
@@ -59,6 +61,8 @@ class MemberRemove(commands.Cog):
                         reason = e.reason
                     break
 
+
+
         embed = discord.Embed(title="Member Left", url="https://tenor.com/view/bear-hug-wave-bye-gif-12388210")
 
     
@@ -87,7 +91,9 @@ class MemberRemove(commands.Cog):
             pass
      
 
+
+
 def setup(bot):
     bot.add_cog(MemberRemove(bot))
     bot.logging.info(f'Loaded event MemberRemove')
-  
+
