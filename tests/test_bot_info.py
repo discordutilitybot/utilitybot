@@ -9,12 +9,12 @@ from .command import botinfo
 class TestBotInfo(unittest.TestCase):
 
     async def setUp(self):
-        self.app = bot_info.app.setup()
+        self.app = botinfo.app.setup()
         self.app.testing = True
     
     async def test_bot_info(self):
-        greeting = "Testing bot info."
-        self.assertEqual(app.botinfo(), greeting)
+        logmsg = "Testing bot info."
+        self.assertEqual(self.app.botinfo(), logmsg)
 
 
 if __name__ == "__main__":

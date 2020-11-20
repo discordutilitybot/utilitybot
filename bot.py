@@ -37,12 +37,12 @@ from dotenv import load_dotenv
 
 
 
-dotenv_path = join(dirname(__file__), '.env')
+dotenv_path = join(dirname(__file__), 'config.env')
 load_dotenv(dotenv_path)
 
 POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
-TOKEN = os.environ.get('discord_token')
+token = os.environ.get('discord_token')
 #intents = discord.Intents()
 #intents.value = 1607
 
@@ -73,8 +73,7 @@ async def start_db():
         
 
 
-bot.load_extension("commands.twitter")
-bot.load_extension("commands.avatar")
-bot.load_extension('events.ready')
+bot.load_extension("command.twitter")
+bot.load_extension("command.avatar")
 
-bot.run("NzQyMTk2OTExNTIzNjI3MDY4.XzCmvQ.FUs92uP17Z-Hu4wu7u6ZYi2HeMk'")
+bot.run(token)
