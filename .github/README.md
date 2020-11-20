@@ -36,7 +36,7 @@
 
 
 # Plugins
-Utility Bot is a bot that makes managing servers from any size easy with per-channel mutes, moderation, memes, music and lots more!
+Utility Bot is a bot that makes managing servers of any size easy with per-channel mutes, moderation, memes, music and lots more!
 
 Here are a few examples:
 
@@ -47,12 +47,12 @@ Here are a few examples:
 - Utilites
 - Purge
 - Edit roles
-- Logging categorys e.g: moderation, action logs message logs.
+- Logging categories e.g: moderation, action logs message logs.
 
 # Join the community!
 [discord](https://discord.gg/7ERYgW73Ay)
-**Utility Bot** Is still in development and we appreciate constructive critiscm and feedback to make our bot better and better. We also appreciate pull requests to update commands and more! so don't hesitate and start contributing today
+We are still working on **Utility Bot** and we appreciate constructive critiscm and feedback to better develop the bot. We also appreciate pull requests to update commands and more! So don't hesitate to contribute.
 # License
 Released under the [MIT License](https://opensource.org/licenses/MIT) license.
 
-Artwork created by [PineappleRind](https://github.com/pineapplerind) 
+Logo created by [PineappleRind](https://pineapplerind.github.io) 
