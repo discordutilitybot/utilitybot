@@ -22,9 +22,7 @@
   <a href="https://github.com/ambv/black">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
   </a>
-  <a href=https://api.codacy.com/project/badge/Coverage/1c524e61cd8640e79b80d406eda8754b>
-    <img src=https://api.codacy.com/project/badge/Coverage/1c524e61cd8640e79b80d406eda8754b>
-  </a>
+
 
 <p align="center">
   <a href="#overview">Overview</a>
