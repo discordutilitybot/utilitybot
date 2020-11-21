@@ -22,7 +22,7 @@
   <a href="https://github.com/ambv/black">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
   </a>
-
+  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/0a2a57d65f614f01b011af69c4ecaf43)](https://www.codacy.com/gh/discordutilitybot/utilitybot/dashboard?    utm_source=github.com&amp;utm_medium=referral&amp;utm_content=discordutilitybot/utilitybot&amp;utm_campaign=Badge_Grade)
 
 <p align="center">
   <a href="#overview">Overview</a>
