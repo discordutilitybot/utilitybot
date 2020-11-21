@@ -1,4 +1,4 @@
 import unittest
 import unittest.mock
-import .command
+import . command from .
 from .command import invite
