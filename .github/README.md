@@ -36,6 +36,8 @@
   <a href="#license">License</a>
 </p>
 
+# Overview
+Our goal of utility bot is to make managing a server easy and convienent with per-channel mutes moderation, entertainment music and lots more
 
 # Plugins
 Utility Bot is a bot that makes managing servers of any size easy with per-channel mutes, moderation, memes, music and lots more!
