@@ -6,7 +6,7 @@ __pycache__/
 # Config file for private data
 *.env
 *config.env
-
+*secrets.py
 
 # Distribution / packaging
 .Python

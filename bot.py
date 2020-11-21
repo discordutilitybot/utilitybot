@@ -34,7 +34,7 @@ import dotenv
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
-
+from secrets import token
 
 
 dotenv_path = join(dirname(__file__), 'config.env')
@@ -42,7 +42,7 @@ load_dotenv(dotenv_path)
 
 POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
-token = os.environ.get('discord_token')
+#token = os.environ.get('discord_token')
 #intents = discord.Intents()
 #intents.value = 1607
 
