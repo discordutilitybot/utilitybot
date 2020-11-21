@@ -29,7 +29,7 @@
 <p align="center">
   <a href="#overview">Overview</a>
   •
-  <a href="#installation">Installation</a>
+  <a href="#setup">Setup</a>
   •
   <a href="#plugins">Plugins</a>
   •
