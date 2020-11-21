@@ -22,9 +22,10 @@
   <a href="https://github.com/ambv/black">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
   </a>
- 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1c524e61cd8640e79b80d406eda8754b)](https://www.codacy.com/gh/codacy/codacy-coverage-reporter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-coverage-reporter&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/1c524e61cd8640e79b80d406eda8754b)]
+  <a href=https://api.codacy.com/project/badge/Coverage/1c524e61cd8640e79b80d406eda8754b>
+    
+  </a>
+
 <p align="center">
   <a href="#overview">Overview</a>
   •
