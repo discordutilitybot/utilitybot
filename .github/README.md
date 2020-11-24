@@ -22,10 +22,14 @@
   <a href="https://github.com/ambv/black">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
   </a>
+  <a href="https://app.codacy.com/project/badge/Grade/0a2a57d65f614f01b011af69c4ecaf43">
+    <img src="https://app.codacy.com/project/badge/Grade/0a2a57d65f614f01b011af69c4ecaf43">
+  </a>
+  
 <p align="center">
   <a href="#overview">Overview</a>
   •
-  <a href="#installation">Installation</a>
+  <a href="#setup">Setup</a>
   •
   <a href="#plugins">Plugins</a>
   •
@@ -34,6 +38,8 @@
   <a href="#license">License</a>
 </p>
 
+# Overview
+Our goal of utility bot is to make managing a server easy and convienent with per-channel mutes moderation, entertainment music and lots more
 
 # Plugins
 Utility Bot is a bot that makes managing servers of any size easy with per-channel mutes, moderation, memes, music and lots more!
