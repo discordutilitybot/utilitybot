@@ -57,5 +57,5 @@ class Hypixel(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Hypixel(bot))
-    bot.logging.info('$GREENLoaded $BLUE"hypixel" $GREENcog!')
+    bot.logging.info('Loaded hypixel cog!')
    
