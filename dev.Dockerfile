@@ -1,4 +1,4 @@
-# This is utilitybot.co's development docker file that will **not** be uploaded to github this is for development purposes so there will be likely lots of errors and runtime problems that shouldnt be for production
+# This is utilitybot.co's development docker file that will **not** be uploaded to GitHub. This is for development purposes, so there will be likely lots of errors and runtime problems that should be fixed for production
 
 ARG version=3.6
 ARG file="./bot.py"
