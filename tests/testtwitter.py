@@ -3,8 +3,8 @@ import unittest.mock
 import discord
 from discord.ext import commands
 
-import .commands
-from .command import twitter
+#import .command
+#from .command import twitter
 
 class TestTwitter(unittest.TestCase):
 
@@ -14,7 +14,7 @@ class TestTwitter(unittest.TestCase):
     
 
     async def test_twitter(self):
-        logmsgg = "Testing twitter"
+        logmsg = "Testing twitter"
         self.assertEqual(self.app.twitter(), logmsg)
 
 if __name__ == "__main__":
