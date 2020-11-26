@@ -1,7 +1,9 @@
 import unittest
 import unittest.mock
-import . command from .
-from .command import invite
+import discord
+from discord.ext import commands
+import .command 
+from .command import github
 
 class Testinvite(unittest.TestCase):
 
@@ -14,4 +16,4 @@ class Testinvite(unittest.TestCase):
         self.assertTrue(self.app.invite(), logmsg)
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main()-
