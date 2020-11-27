@@ -6,4 +6,6 @@ on:
       - dev
 
 jobs:
-  
+  pull:
+    
+

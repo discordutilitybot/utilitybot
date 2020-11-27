@@ -4,26 +4,13 @@ ARG version=3.6
 ARG file="./bot.py"
 ARG entrypoint="python3"
 
-FROM python:$version-
+FROM python:$version
 
 WORKDIR /utilitybot /
 
 # Update system packages and pip
 RUN pip3 install --upgrade pip
-RUN apt-get update
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-    bzip2 \
-    ca-certificates \
-    curl \
-    file \
-    fonts-dejavu-core \
-    g++ \
-    git \
-    less \
-    libz-dev \
-    locales \
-\
+
 RUN git clone https://github.com/discordutilitybot/utilitybot.git
 COPY requirements.txt . 
 RUN pip install -r requirements.txt
