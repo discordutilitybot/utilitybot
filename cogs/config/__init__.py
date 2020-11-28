@@ -1,0 +1,1 @@
+# Lets you view the server config.
