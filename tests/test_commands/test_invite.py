@@ -1,7 +1,5 @@
 import unittest
 import unittest.mock
-import discord
-from discord.ext import commands
 import .command 
 from .command import github
 
