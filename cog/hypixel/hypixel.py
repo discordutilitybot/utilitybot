@@ -29,7 +29,7 @@ class Hypixel(commands.Cog):
                 async with session.get(f'https://api.slothpixel.me/api/players/{user}') as resp:
                     player = await resp.json()
 
-                 async with session.get(f'https://api.slothpixel.me/api/guilds/{arg1}') as resp:
+                async with session.get(f'https://api.slothpixel.me/api/guilds/{arg1}') as resp:
                         guild = await resp.json()
 
         color = ctx.author.color

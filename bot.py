@@ -76,6 +76,6 @@ async def start_db():
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
 bot.load_extension("command.github")
-bot.load_extension("cogs.hypixel")
+bot.load_extension("cog.hypixel.hypixel")
 
 bot.run(token)
