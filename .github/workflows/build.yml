@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         ubuntu-latest: [20.04, 18.04]
-        python-version: [3.6, 3.7]
+        python-version: [3.6]
 
     steps:
     - name: Git checkout
