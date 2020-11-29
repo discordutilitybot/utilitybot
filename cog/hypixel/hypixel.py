@@ -46,11 +46,11 @@ class Hypixel(commands.Cog):
 
         else:
             embed.add_field(name="PlayerRank", value=player['rank'], inline)
-       embed.add_field(name="Discord:", value=player["links"]["DISCORD"], inline=False)
-       embed.add_field(name="Online:", value=player['online'], inline=False)
-       embed.add_field(name="Minecraft version:", value=player['mc_version'], inline=False)
-       embed.add_field(name="Last game played:", value=player['last_game'], inline=False)
-       await ctx.send(embed=embed)
+        embed.add_field(name="Discord:", value=player["links"]["DISCORD"], inline=False)
+        embed.add_field(name="Online:", value=player['online'], inline=False)
+        embed.add_field(name="Minecraft version:", value=player['mc_version'], inline=False)
+        embed.add_field(name="Last game played:", value=player['last_game'], inline=False)
+        await ctx.send(embed=embed)
 
 
 def setup(bot):
