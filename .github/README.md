@@ -63,4 +63,4 @@ Released under the [MIT License](https://opensource.org/licenses/MIT) license.
 
 Logo created by [PineappleRind](https://pineapplerind.github.io) 
 
-# If you need a hypixel stat api slothpixel is what you need. [slothpixel](https://docs.slothpixel.me/)
+### If you need a hypixel stat api slothpixel is what you need. [slothpixel](https://docs.slothpixel.me/)
