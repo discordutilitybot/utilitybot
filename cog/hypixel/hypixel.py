@@ -29,7 +29,7 @@ class Hypixel(commands.Cog):
                 async with session.get(f'https://api.slothpixel.me/api/players/{user}') as resp:
                     player = await resp.json()
 
-                async with session.get(f'https://api.slothpixel.me/api/guilds/{arg1}') as resp:
+                async with session.get(f'https://api.slothpixel.me/api/guilds/{user}') as resp:
                         guild = await resp.json()
 
         color = ctx.author.color
@@ -45,7 +45,7 @@ class Hypixel(commands.Cog):
             embed.add_field(name="PlayerRank", value="VIP+", inline=False)
 
         else:
-            embed.add_field(name="PlayerRank", value=player['rank'], inline)
+            embed.add_field(name="PlayerRank", value=player['rank'], inline=False)
         embed.add_field(name="Discord:", value=player["links"]["DISCORD"], inline=False)
         embed.add_field(name="Online:", value=player['online'], inline=False)
         embed.add_field(name="Minecraft version:", value=player['mc_version'], inline=False)
