@@ -46,6 +46,11 @@ class Hypixel(commands.Cog):
 
         else:
             embed.add_field(name="PlayerRank", value=player['rank'], inline=False)
+        embed.add_field(name="Level:", value=player["level"], inline=False)
+        if "error" in guild:
+            embed.add_field(name="Guild:", value=f"{user} isn't in a guild")
+        else:
+            embed.add_field(name="Guild:", value=guild["name"])
         embed.add_field(name="Discord:", value=player["links"]["DISCORD"], inline=False)
         embed.add_field(name="Online:", value=player['online'], inline=False)
         embed.add_field(name="Minecraft version:", value=player['mc_version'], inline=False)
