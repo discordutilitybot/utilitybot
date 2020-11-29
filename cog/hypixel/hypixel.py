@@ -36,27 +36,27 @@ class Hypixel(commands.Cog):
         embed = discord.Embed(title=f'{user} Hypixel stats', colour=color, timestamp=datetime.datetime.utcnow())
 
         if player['rank'] == 'MVP_PLUS_PLUS':
-            embed.add_field(name="PlayerRank", value="MVP++", inline=False)
+            embed.add_field(name="PlayerRank", value="MVP++")
 
         elif player['rank'] == 'MVP_PLUS':
-            embed.add_field(name="PlayerRank", value="MVP+", inline=False)
+            embed.add_field(name="PlayerRank", value="MVP+")
 
         elif player['rank'] == "VIP_PLUS":
-            embed.add_field(name="PlayerRank", value="VIP+", inline=False)
+            embed.add_field(name="PlayerRank", value="VIP+")
 
         else:
-            embed.add_field(name="PlayerRank", value=player['rank'], inline=False)
-        embed.add_field(name="Level:", value=player["level"], inline=False)
+            embed.add_field(name="PlayerRank", value=player['rank'])
+        embed.add_field(name="Level:", value=player["level"])
         if "error" in guild:
             embed.add_field(name="Guild:", value=f"{user} isn't in a guild")
         else:
             embed.add_field(name="Guild:", value=guild["name"])
-        embed.add_field(name="Discord:", value=player["links"]["DISCORD"], inline=False)
-        embed.add_field(name="Online:", value=player['online'], inline=False)
-        embed.add_field(name="Minecraft version:", value=player['mc_version'], inline=False)
-        embed.add_field(name="Last game played:", value=player['last_game'], inline=False)
+        embed.add_field(name="Discord:", value=player["links"]["DISCORD"])
+        embed.add_field(name="Online:", value=player['online'])
+        embed.add_field(name="Minecraft version:", value=player['mc_version'])
+        embed.add_field(name="Last game played:", value=player['last_game'])
         await ctx.send(embed=embed)
-        await bot.logging.info({player})
+        await self.bot.logging.info({player})
 
 
 def setup(bot):
