@@ -122,4 +122,4 @@ class Moderation(commands.Cog, name="Moderation"):
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
-    bot.logger.info('$GREENLoaded $BLUE"moderation" $GREENcog!')
+    bot.logging.info('Loaded moderation cog!')
