@@ -56,6 +56,7 @@ class Hypixel(commands.Cog):
         embed.add_field(name="Minecraft version:", value=player['mc_version'], inline=False)
         embed.add_field(name="Last game played:", value=player['last_game'], inline=False)
         await ctx.send(embed=embed)
+        await bot.logging.info({player})
 
 
 def setup(bot):
