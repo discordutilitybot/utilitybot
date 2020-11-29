@@ -10,7 +10,7 @@
   <a href="https://discord.gg/7ERYgW73Ay">
     <img src="https://discordapp.com/api/guilds/742193197673087027/widget.png?style=shield" alt="Discord Server">
   </a>
-  <a href="https://github.com/discordutilitybot/utilitybot/actions">
+  <a href="https://github.com/discordutilitybot/utilitybot/actions/Build">
     <img src="https://img.shields.io/github/workflow/status/discordutilitybot/utilitybot/   Tests?label=tests" alt="GitHub Actions">
   </a>
   <a href="https://github.com/Rapptz/discord.py/">
@@ -62,3 +62,5 @@ We are still working on **Utility Bot** and we appreciate constructive critiscm 
 Released under the [MIT License](https://opensource.org/licenses/MIT) license.
 
 Logo created by [PineappleRind](https://pineapplerind.github.io) 
+
+### If you need a hypixel stat API slothpixel is what you need. [slothpixel](https://docs.slothpixel.me/)
