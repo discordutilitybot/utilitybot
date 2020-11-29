@@ -10,7 +10,7 @@
   <a href="https://discord.gg/7ERYgW73Ay">
     <img src="https://discordapp.com/api/guilds/742193197673087027/widget.png?style=shield" alt="Discord Server">
   </a>
-  <a href="https://github.com/discordutilitybot/utilitybot/actions/build">
+  <a href="https://github.com/discordutilitybot/utilitybot/actions/Build">
     <img src="https://img.shields.io/github/workflow/status/discordutilitybot/utilitybot/   Tests?label=tests" alt="GitHub Actions">
   </a>
   <a href="https://github.com/Rapptz/discord.py/">
