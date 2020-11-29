@@ -3,6 +3,7 @@ from discord.ext import commands
 import aiohttp
 import datetime
 from aiohttp import ClientSession
+
 class Hypixel(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
