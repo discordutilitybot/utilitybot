@@ -33,7 +33,7 @@ class Hypixel(commands.Cog):
                         guild = await resp.json()
 
         color = ctx.author.color
-        embed = discord.Embed(title=f'{user} Hypixel Stats, colour=color, timestamp=datetime.datetime.utcnow())
+        embed = discord.Embed(title=f'{user} Hypixel Stats', colour=color, timestamp=datetime.datetime.utcnow())
 
         if player['rank'] == 'MVP_PLUS_PLUS':
             embed.add_field(name="PlayerRank", value="MVP++")
