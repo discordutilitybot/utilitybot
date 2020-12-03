@@ -17,7 +17,7 @@ class RoleCreate(commands.Cog):
             embed.set_author(name=role.guild.name,
                         icon_url=str(role.guild.icon_url))
             embed.set_footer(text=f"Role ID: {role.id}")
-            ))
+            
 
         try:
             await logch.send(embed=embed)
