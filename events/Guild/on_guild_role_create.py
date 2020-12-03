@@ -10,7 +10,7 @@ class RoleCreate(commands.Cog):
     @commands.Cog.listener()
     logch = self.bot.db.execute("SELECT logging_action FROM guild_settings WHERE id = ?")
 
-    if logh:
+    if logch:
         embed = discord.Embed(color=discord.Color.green(), timestamp=datetime.datetime.now(
             datetime.utc), description=f'**A new role was create**\m{role.mention}')
         embed.set_author(name=role.guild.name,
