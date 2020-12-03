@@ -8,15 +8,16 @@ class RoleCreate(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
-    logch = self.bot.db.execute("SELECT logging_action FROM guild_settings WHERE id = ?")
+    async def on_guild_role_create(self, role)
+        logch = self.bot.db.execute("SELECT logging_action FROM guild_settings WHERE id = ?")
 
-    if logch:
-        embed = discord.Embed(color=discord.Color.green(), timestamp=datetime.datetime.now(
-            datetime.utc), description=f'**A new role was create**\m{role.mention}')
-        embed.set_author(name=role.guild.name,
+        if logch:
+            embed = discord.Embed(color=discord.Color.green(), timestamp=datetime.datetime.now(
+                datetime.utc), description=f'**A new role was create**\m{role.mention}')
+            embed.set_author(name=role.guild.name,
                         icon_url=str(role.guild.icon_url))
-        embed.set_footer(text=f"Role ID: {role.id}")
-        ))
+            embed.set_footer(text=f"Role ID: {role.id}")
+            ))
 
         try:
             await logch.send(embed=embed)
