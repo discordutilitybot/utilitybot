@@ -8,7 +8,7 @@ class RoleCreate(commands.Cog):
         self.bot = bot
 
     @commands.Cog.listener()
-    async def on_guild_role_create(self, role)
+    async def on_guild_role_create(self, role):
         logch = self.bot.db.execute("SELECT logging_action FROM guild_settings WHERE id = ?")
 
         if logch:
