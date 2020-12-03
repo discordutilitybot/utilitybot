@@ -49,12 +49,11 @@ class Moderation(commands.Cog, name="Moderation"):
         for reasons in reason:
             if not reasons:
                 await ctx.send(f"Please specify a reason to ban {member}.")
-
-        for members in member:
-            if not members:
-                await ctx.send(f"Pleasy specify a member to ban {member.mention}")
-
-    @commands.has_permissions(mute_members=True)
+        
+        if not member:
+            return await ctx.send("You must specify a member to kick.")
+            
+    @commands.has_permissions(mute_members=True)    
     @commands.command(aliases=["silence, stfu"])
     async def mute(self, ctx, member: discord.Member, reason=None, modlogs: TextChannel = None):
 
