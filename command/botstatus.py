@@ -33,4 +33,4 @@ class Ping(commands.Cog):
         
 def setup(bot):
     bot.add_cog(Ping(bot))
-    bot.logger.info(f'$GREENLoaded $BLUE"botstatus" $GREENcommand!')
+    bot.logger.info(f'Loaded ping command')
