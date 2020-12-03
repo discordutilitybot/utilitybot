@@ -10,8 +10,8 @@
   <a href="https://discord.gg/7ERYgW73Ay">
     <img src="https://discordapp.com/api/guilds/742193197673087027/widget.png?style=shield" alt="Discord Server">
   </a>
-  <a href="https://github.com/discordutilitybot/utilitybot/actions/Build">
-    <img src="https://img.shields.io/github/workflow/status/discordutilitybot/utilitybot/   Tests?label=tests" alt="GitHub Actions">
+  <a href="https://github.com/discordutilitybot/utilitybot/actions/">
+    <img src="https://img.shields.io/github/workflow/status/discordutilitybot/utilitybot/ Build?label=Build" alt="GitHub Actions">
   </a>
   <a href="https://github.com/Rapptz/discord.py/">
      <img src="https://img.shields.io/badge/discord-py-blue.svg" alt="discord.py">
@@ -39,10 +39,10 @@
 </p>
 
 # Overview
-Our goal of utility bot is to make managing a server easy and convienent with per-channel mutes moderation, entertainment music and lots more
+The goal of UtilityBot is to make managing a server easy and convienent with many useful commands!
 
 # Plugins
-Utility Bot is a bot that makes managing servers of any size easy with per-channel mutes, moderation, memes, music and lots more!
+Utility Bot is a bot that makes managing servers of any size easy, with per-channel mutes, moderation, memes, and lots more!
 
 Here are a few examples:
 
