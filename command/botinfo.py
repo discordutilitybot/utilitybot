@@ -32,15 +32,15 @@ class Botinfo(commands.Cog):
     async def botinfo(self, ctx):
         embed = discord.Embed(
             title = "All about Utility Bot!",
-            description = "Hello! I am Utility Bot I'm here to help you manage and moderate your server with a touch of fun! I was written in Python by Flop#7234 using discord.py and python3.7! Type u!help to get a link to our website for a list of commands!",
+            description = "Hello! I am Utility Bot I'm here to help you manage and moderate your server with a touch of fun! I was written in Python by Flop#7234 using discord.py and python3.6! Type u!help to get a link to our website for a list of commands!",
             color = discord.Color.orange()
         )   
         
-        embed.set_image(url="https://discord.com/channels/@me/700807345630085201/767113082446807070")
-        embed.set_thumbnail(url="https://discord.com/channels/@me/700807345630085201/767113082446807070")
+        embed.set_image(url="https://cdn.discordapp.com/avatars/742196911523627068/e53fa8ac8c8492ea6d67e7e217520e26.png?size=2048")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/742196911523627068/e53fa8ac8c8492ea6d67e7e217520e26.png?size=2048")
         embed.set_footer(text=f"Guilds: {len(self.bot.guilds)}. Utility Bot The Server Management Bot.")
 
-        await ctx.send(embed)
+        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(Botinfo(bot))

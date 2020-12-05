@@ -9,8 +9,10 @@ class Commands(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def commands.moderation(self, ctx):
-        
+    async def commands(self, ctx, category):
+
+        if 'error' in category:
+            await ctx.send(":x:That category isn't availaible")
 def setup(bot):
     bot.add_cog(Commands(bot))
     bot.logging.info("Loaded cog Commands")
