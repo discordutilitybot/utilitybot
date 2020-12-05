@@ -16,11 +16,11 @@ class Hypixel(commands.Cog):
                 player = await resp.json()
 
         if user is None:
-            await ctx.send(f"Please specifiy a valid username or uuid.", delete_after=5)
+            await ctx.send(f" :x: Please specifiy a valid username or uuid.", delete_after=6)
             return
 
         if 'error' in player:
-            await ctx.send(f"{user} Is not a valid username.")
+            await ctx.send(f":x:{user} Is not a valid username.")
             return
 
         async with channel.typing():

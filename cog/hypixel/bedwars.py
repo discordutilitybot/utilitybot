@@ -6,7 +6,9 @@ import datetime
 class Bedwars(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-
+    
+    @commands.command()
+    
 def setup(bot):
     bot.add_cog(Bedwars(bot))
     bot.logging.info("Loaded bedwars command!")
