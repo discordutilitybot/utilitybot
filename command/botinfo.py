@@ -40,6 +40,7 @@ class Botinfo(commands.Cog):
         embed.set_thumbnail(url="https://discord.com/channels/@me/700807345630085201/767113082446807070")
         embed.set_footer(text=f"Guilds: {len(self.bot.guilds)}. Utility Bot The Server Management Bot.")
 
+        await ctx.send(embed)
 
 def setup(bot):
     bot.add_cog(Botinfo(bot))

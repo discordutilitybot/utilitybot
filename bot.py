@@ -49,7 +49,7 @@ bot = Utilitybot(
     status=discord.Status.dnd,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
     #intents=intents,
-    case_insensitive=True,
+    case_insensitive=False,
     owner_id=388788632686690305,
     chunk_guilds_at_startup=False,
     
