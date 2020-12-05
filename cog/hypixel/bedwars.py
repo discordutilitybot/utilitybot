@@ -10,6 +10,7 @@ class Bedwars(commands.Cog):
     
     @commands.command(aliases=['bw', 'bws'])
     async def bedwars(self, ctx, user):
+        channel = ctx.message.channel
         async with channel.typing():
             async with aiohttp.ClientSession() as session:
                 async with session.get(f'https://api.slothpixel.me/api/players/{user}') as resp:
