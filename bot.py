@@ -77,5 +77,5 @@ bot.load_extension("command.avatar")
 bot.load_extension("command.github")
 bot.load_extension("cog.admin.admin")
 bot.load_extension("cog.hypixel.hypixel")
-
+bot.load_extension("cog.hypixel.bedwars")
 bot.run(token)

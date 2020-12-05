@@ -18,16 +18,16 @@ class Bedwars(commands.Cog):
 
             color = ctx.author.color
             embed = discord.Embed(title=f'{user} Bedwars stats', colour=color, timestamp=datetime.datetime.utcnow())
-            embed.add_field(name="Stars:", value=player["stats"]["BedWars"]["level"], inline=False)
-            embed.add_field(name="Wins:", value=player["stats"]["BedWars"]["wins"], inline=False)
-            embed.add_field(name="Games played:", value=player["stats"]["BedWars"]["games_played"], inline=False)
-            embed.add_field(name="W/l ratio:", value=player["stats"]["BedWars"]["w_l"], inline=False)
-            embed.add_field(name="Final Kills:", value=player["stats"]["BedWars"]["final_kills"], inline=False)
-            embed.add_field(name="Final Deaths:", value=player["stats"]["BedWars"]["final_deaths"], inline=False)
-            embed.add_field(name="Normal Kills:", value=player["stats"]["BedWars"]["kills"], inline=False)
-            embed.add_field(name="Normal Deaths:", value=player["stats"]["BedWars"]["deaths"], inline=False)
-            embed.add_field(name="FKDR:", value=player["stats"]["BedWars"]["final_k_d"], inline=False)
-            embed.add_field(name="Current Winstreak:", value=player["stats"]["BedWars"]["winstreak"], inline=False)
+            embed.add_field(name="Stars:", value=player["stats"]["BedWars"]["level"])
+            embed.add_field(name="Wins:", value=player["stats"]["BedWars"]["wins"])
+            embed.add_field(name="Games played:", value=player["stats"]["BedWars"]["games_played"])
+            embed.add_field(name="W/l ratio:", value=player["stats"]["BedWars"]["w_l"])
+            embed.add_field(name="Final Kills:", value=player["stats"]["BedWars"]["final_kills"])
+            embed.add_field(name="Final Deaths:", value=player["stats"]["BedWars"]["final_deaths"])
+            embed.add_field(name="Normal Kills:", value=player["stats"]["BedWars"]["kills"])
+            embed.add_field(name="Normal Deaths:", value=player["stats"]["BedWars"]["deaths"])
+            embed.add_field(name="FKDR:", value=player["stats"]["BedWars"]["final_k_d"])
+            embed.add_field(name="Current Winstreak:", value=player["stats"]["BedWars"]["winstreak"])
             await ctx.send(embed=embed)
             return
 
