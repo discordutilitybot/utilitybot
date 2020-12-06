@@ -10,7 +10,7 @@ CREATE TABLE guilds (
 
 CREATE TABLE guild_settings (
     /* Default muted role is generated everytime the bot joins the guild although this can be updated*/
-    guild_id int(20) NOT NULL DEFAULT 0,
+    guild_id INT(20) NOT NULL DEFAULT 0,
     muted_role INT(20) DEFAULT 'Muted',
     guild_prefix VARCHAR(15) DEFAULT 'u!',
     /* These are different types of logging you can have moderation logs e.g: a ban log or just action logs..*/
@@ -21,7 +21,9 @@ CREATE TABLE guild_settings (
     logging_leave BIGINT DEFAULT NULL,
     logging_leave BIGINT DEFAULT NULL,
     PRIMARY KEY (muted_role, guild_prefix, logging_moderation, logging_action, logging_leave, logging_join, logging_leave),
-);  FOREIGN KEY (guild_id) REFERENCES guilds(guild_id)
+    guild_id int FOREIGN KEY REFERENCES guilds(guild_id)
+
+);  
 
 CREATE TABLE warns (
     user_id int FOREIGN KEY REFERENCES users(user_id),
