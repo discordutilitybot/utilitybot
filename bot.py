@@ -71,6 +71,8 @@ async def start_db():
         exit()
         
 
+
+
 bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")

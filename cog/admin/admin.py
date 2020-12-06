@@ -114,10 +114,9 @@ class Moderation(commands.Cog, name="Moderation"):
             await ctx.send("You can't warn the Owner of the Server!")
 
         if ctx.author == member:
-            await ctx.send("You can't wwarn your self.")
+            await ctx.send("You can't warn your self.")
             
         
-        # Update warnings for the user in db
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
