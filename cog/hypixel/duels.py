@@ -14,8 +14,9 @@ class Duels(commands.Cog):
                 async with session.get(f'https://api.slothpixel.me/api/guilds/{user}') as resp:
                     player = await resp.json()
                     color = ctx.author.color
-                if 'error' in player:
-                    embed = discord.Embed(title=f"{player is not a player", colour=color,
+
+                if 'error' in user:
+                    embed = discord.Embed(title=f"{user} is not a player", colour=color,
                                                   timestamp=datetime.datetime.utcnow())
                     await ctx.send(embed=embed)
 
@@ -23,3 +24,6 @@ class Duels(commands.Cog):
 def setup(bot):
     bot.add_cog(Duels(bot))
     bot.logging.info("Loaded duels command")
+
+
+    
