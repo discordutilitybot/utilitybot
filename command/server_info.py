@@ -15,8 +15,8 @@ class Serverinfo(commands.Cog):
         embed = discord.Embed(
             title = 'Server Stats',
             description = f'Stats for Guild: {ctx.guild.name}',
-            colour=discord.Colour.blue(),
-            timestamp=datetime.utcnow()
+            colour=discord.Colour.blue()
+           
         )
         embed.add_field(name = 'Owner:', value = ctx.guild.owner)
         embed.add_field(name = 'Server ID:', value = ctx.guild.id)
