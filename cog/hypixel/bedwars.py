@@ -12,7 +12,7 @@ class Bedwars(commands.Cog):
     async def bedwars(self, ctx, user):
         channel = ctx.message.channel
 
-         if 'error' in user:
+        if 'error' in user:
                 embed = discord.Embed(title=f"{user} is not a user", colour=color,
                                                   timestamp=datetime.datetime.utcnow())
                 await ctx.send(embed=embed)
