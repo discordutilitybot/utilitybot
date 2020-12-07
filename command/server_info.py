@@ -36,3 +36,7 @@ class Serverinfo(commands.Cog):
         embed.add_field(name = 'Server Created At:', value = ctx.guild.created_at.strftime("%d/%m/%Y %H:%M:%S"))
         embed.set_thumbnail(url= ctx.guild.icon_url)
         await ctx.send(embed=embed)
+
+def setup(bot):
+    bot.add_cog(Serverinfo(bot))
+    bot.logging.info("Loaded serverinfo command")

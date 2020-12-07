@@ -81,5 +81,5 @@ bot.load_extension("cog.admin.admin")
 bot.load_extension("cog.hypixel.hypixel")
 bot.load_extension("cog.hypixel.bedwars")
 bot.load_extension("command.botinfo")
-
+bot.load_extension("command.server_info")
 bot.run(token)
