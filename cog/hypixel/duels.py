@@ -12,7 +12,7 @@ class Duels(commands.Cog):
         async with channel.typing():
             async with aiohttp.ClientSession() as session:
                 async with session.get(f'https://api.slothpixel.me/api/guilds/{user}') as resp:
-                    player = await resp.json()
+                    user = await resp.json()
                     color = ctx.author.color
 
                 if 'error' in user:
@@ -26,4 +26,3 @@ def setup(bot):
     bot.logging.info("Loaded duels command")
 
 
-    
