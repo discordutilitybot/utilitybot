@@ -32,7 +32,7 @@ class Github(commands.Cog):
     @commands.command(aliases=['src, oss, source'])
     async def github(self, ctx):
         await ctx.send("You can find Utility Bot's source code here: \n https://github.com/discordutilitybot/utilitybot.")
-        s
+        
 
 def setup(bot):
     bot.add_cog(Github(bot))

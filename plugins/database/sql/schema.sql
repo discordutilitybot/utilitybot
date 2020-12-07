@@ -1,11 +1,7 @@
 CREATE TABLE guilds (
     guild_id INT(20) NOT NULL DEFAULT 0,
-    /* Amount of roles the guild has not the role id's...*/
-    guild_roles BIGINT NOT NULL DEFAULT 0,
-    guild_channels BIGINT NOT NULL DEFAULT 0,
-    guild_messages BIGINT NOT NULL DEFAULT 0,
-    guild_voice_channels BIGINT NOT NULL DEFAULT 0,
-    guild_categorys BIGINT NOT NULL DEFAULT 0
+    gui
+    PRIMARY KEY (guild_id)
 )
 
 CREATE TABLE guild_settings (
