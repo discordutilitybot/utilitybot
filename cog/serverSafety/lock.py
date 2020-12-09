@@ -11,7 +11,6 @@ class LockCog(commands.Cog, name="serverChannelsLock"):
 
 
     @commands.command(name = 'lock',
-                        command_prefix='u!',
                         usage="<#channel/ID>",
                         description="Lock the channel.")
     @commands.guild_only()
