@@ -32,3 +32,4 @@ class LockCog(commands.Cog, name="serverChannelsLock"):
 
 def setup(bot):
     bot.add_cog(LockCog(bot))
+    bot.logging.info("Loaded locking command!")
