@@ -71,8 +71,6 @@ async def start_db():
         exit()
         
 
-
-
 bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
@@ -83,4 +81,6 @@ bot.load_extension("cog.hypixel.bedwars")
 bot.load_extension("cog.hypixel.duels")
 bot.load_extension("command.botinfo")
 bot.load_extension("command.server_info")
+
+
 bot.run(token)
