@@ -25,8 +25,7 @@
   <a href="https://app.codacy.com/project/badge/Grade/0a2a57d65f614f01b011af69c4ecaf43">
     <img src="https://app.codacy.com/project/badge/Grade/0a2a57d65f614f01b011af69c4ecaf43">
   </a>
-  <a href="https://www.patreon.com/bePatron?u=41200895" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async              src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
-  
+ 
 <p align="center">
   <a href="#overview">Overview</a>
   •
