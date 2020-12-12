@@ -17,7 +17,7 @@ jobs:
         run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u Matt-Gleich --password-stdin
       - name: 🏗️ Building Images
         run: |
-          docker build -t docker.pkg.github.com/discordutilitybot/utilitybot/utilitybot ./utilitybot
+          docker build -t docker.pkg.github.com/discordutilitybot/utilitybot/utilitybot 
           
       - name: 🚀 Pushing Images to Github Packages
         run: |
