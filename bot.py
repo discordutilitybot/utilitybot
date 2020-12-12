@@ -41,12 +41,12 @@ load_dotenv(dotenv_path)
 POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
-#intents = discord.Intents()
-#intents.value = 1607
+intents = discord.Intents()
+intents.value = discord.Intents.all()
 
 bot = Utilitybot(
     command_prefix="u!",
-    status=discord.Status.dnd,
+    status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
     #intents=intents,
     case_insensitive=False,
@@ -81,6 +81,7 @@ bot.load_extension("cog.hypixel.bedwars")
 bot.load_extension("cog.hypixel.duels")
 bot.load_extension("command.botinfo")
 bot.load_extension("command.server_info")
+bot.load_extension("cog.serverSafety.lock")
 
 
 bot.run(token)
