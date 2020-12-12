@@ -42,7 +42,7 @@
 The goal of UtilityBot is to make managing a server easy and convienent with many useful commands!
 
 # Plugins
-Utility Bot is a bot that makes managing servers of any size easy, with per-channel mutes, moderation, memes, and lots more!
+Utility Bot is a bot that makes managing servers of any size easy, with per-channel mutes, moderation, memes, premium features and lots more!
 
 Here are a few examples:
 
