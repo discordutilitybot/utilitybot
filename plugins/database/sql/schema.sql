@@ -1,7 +1,10 @@
 CREATE TABLE guilds (
-    guild_id INT(20) NOT NULL DEFAULT 0,
-    gui
-    PRIMARY KEY (guild_id)
+    guild_id 
+    /* For api */
+    guild_roles INT(15) NOT NULL DEFAULT 0,
+    guild_channels INT(15) NOT NULL DEFAULT 0,
+    guild_name VARCHAR(20) NOT NULL DEFAULT 0,
+    PRIMARY KEY int (guild_id)
 )
 
 CREATE TABLE guild_settings (

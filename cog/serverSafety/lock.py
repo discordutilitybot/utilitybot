@@ -4,15 +4,11 @@ from discord.ext import commands
 
 
 
-class LockCog(commands.Cog, name="serverChannelsLock"):
+class LockCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
-
-    @commands.command(name = 'lock',
-                        usage="<#channel/ID>",
-                        description="Lock the channel.")
+    @commands.command(name = 'lock', usage="<#channel/ID>",description="Lock the channel.")
     @commands.guild_only()
     async def lock (self, ctx, channel):
 
