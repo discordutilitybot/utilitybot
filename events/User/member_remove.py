@@ -61,8 +61,6 @@ class MemberRemove(commands.Cog):
                         reason = e.reason
                     break
 
-
-
         embed = discord.Embed(title="Member Left", url="https://tenor.com/view/bear-hug-wave-bye-gif-12388210")
 
     

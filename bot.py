@@ -55,9 +55,6 @@ bot = Utilitybot(
     
 )
 
-# Remove default help command in discord.py
-bot.remove_command('help')
-
 async def start_db():
     try:
         login_data = {
