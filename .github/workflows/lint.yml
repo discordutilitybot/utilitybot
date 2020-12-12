@@ -25,4 +25,4 @@ jobs:
           flake8 src --count --max-complexity=10 --max-line-length=79 --statistics
       - name: Lint
         run: |
-          pylint src
+          pylint command
