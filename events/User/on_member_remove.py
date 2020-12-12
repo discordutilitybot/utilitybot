@@ -89,8 +89,6 @@ class MemberRemove(commands.Cog):
             pass
      
 
-
-
 def setup(bot):
     bot.add_cog(MemberRemove(bot))
     bot.logging.info(f'Loaded event MemberRemove')

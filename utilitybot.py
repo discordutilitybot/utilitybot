@@ -37,6 +37,7 @@ class Utilitybot(commands.Bot):
         self.launchtime = datetime.datetime.now(datetime.timezone.utc)
         self.db = asyncpg.pool.Pool = None
         self.started = False
+        self.premium_guilds = {}
 
         logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
         self.logging = logging.getLogger('Utility')
@@ -48,14 +49,26 @@ class Utilitybot(commands.Bot):
         
         
     async def load_commands(self):
-        pass
+        try:
+            for ext in resolve_extensions(self, 'command.*'):
+                self.load_extension(ext)
+        except Exception:
+            self.logging.info('Failed to load commands :(')
+        
 
     async def load_cogs(self):
-        pass
+        try:
+            for ext in resolve_extensions(self, 'cog.*'):
+                self.load_extension(ext)
+        except Exception:
+            self.logging.info('Failed to load cogs:(')
 
-    async def load_utils(self):
-        pass
 
     async def load_events(self):
-        pass
+        try:
+            for ext in resolve_extensions(self, 'cog.*'):
+                self.load_extension(ext)
+
+        except Exception:
+            self.logging.info('Failed to load events:(')
 
