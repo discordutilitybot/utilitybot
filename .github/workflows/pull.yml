@@ -1,26 +1,25 @@
-name: pull
-
+name: Pull
 on:
   push:
     branches:
       - dev
+  pull_request:
+    branches:
+      - dev
 
 jobs:
-  pull:
+  test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v1
-      
-    
-      - name: Python checkout
-        uses: actions/setup-python@v2
-      
-      - name: Install dependencies
+      - name: 🔐 Login to Github Packages
+        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u Matt-Gleich --password-stdin
+      - name: 🏗️ Building Images
         run: |
-          python -m pip install --upgrade pip
-          pip install flake8 pytest
-          pip install -r requirements.txt
-      
-      - name: Pull docker image
+          docker build -t docker.pkg.github.com/discordutilitybot/utilitybot/utilitybot ./utilitybot
+          
+      - name: 🚀 Pushing Images to Github Packages
         run: |
-          docker pull docker.pkg.github.com/discordutilitybot/utilitybot/utilitybot:1.1
+          docker push docker.pkg.github.com/discordutilitybot/utilitybot/utilitybot
+          docker push docker.pkg.github.com/matt-gleich/dockerfiles/docker-and-python
