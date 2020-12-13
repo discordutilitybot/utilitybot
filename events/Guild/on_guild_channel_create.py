@@ -22,6 +22,7 @@ SOFTWARE."""
 
 import discord
 from discord.ext import commands
+from discord.utils import get
 
 class ChannelCreate(commands.Cog):
     def __init__(self, bot):
@@ -29,7 +30,7 @@ class ChannelCreate(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_channel_create(self, channel):
-        actionlogch = self.bot.db.execute(f"SELECT logging_action FROM guild_settings WHERE id = {channel.guild.id}")
+        actionlogch = self.bot.get_channel(742195223664394310)
 
         if actionlogch:
             createdby =  None
@@ -48,7 +49,7 @@ class ChannelCreate(commands.Cog):
                 name='Created by', value=f'{createdby} ({createdby.id})', inline=False
             )
         embed.set_author(name=channel.guild.name,
-                         icon_url=str(channel.guild.icon_url, size=1048)
+                         icon_url=str(channel.guild.icon_url, size=2048)
         )              
         embed.set_footer(
             text=f"Channel ID: {channel.id} | Guild ID: {channel.guild.id}")

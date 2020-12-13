@@ -51,7 +51,7 @@ class Utilitybot(commands.Bot):
     async def load_commands(self):
         try:
             for ext in resolve_extensions(self, 'command.*'):
-                self.load_extension(ext)
+                self.load_extension(reslove_extensions)
         except Exception:
             self.logging.info('Failed to load commands :(')
         
@@ -59,7 +59,7 @@ class Utilitybot(commands.Bot):
     async def load_cogs(self):
         try:
             for ext in resolve_extensions(self, 'cog.*'):
-                self.load_extension(ext)
+                self.load_extension(reslove_extensions)
         except Exception:
             self.logging.info('Failed to load cogs:(')
 
@@ -67,8 +67,8 @@ class Utilitybot(commands.Bot):
     async def load_events(self):
         try:
             for ext in resolve_extensions(self, 'cog.*'):
-                self.load_extension(ext)
+                self.load_extension(reslove_extensions)
 
         except Exception:
-            self.logging.info('Failed to load events:(')
+            self.logging.info('Failed to load :(')
 

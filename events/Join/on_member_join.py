@@ -25,7 +25,7 @@ class Joinlog(commands.Cog):
             embed =  discord.Embed(title="Member Joined", url="https://tenor.com/view/penguin-hello-hi-hey-there-cutie-gif-3950966")
 
             embed.set_author(name=f"{member}", icon_url=str(
-                member.avatar_url_as(static_format='png', size=2048)))
+                member.avatar_url_as(static_format='png', size=2048))
 
             embed.add_field(name='Account Created', value=datetime.datetime.utcnow() - member.created_at), + 'ago', inline=False)
             if used invite:

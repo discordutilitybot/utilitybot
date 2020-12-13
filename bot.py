@@ -79,6 +79,6 @@ bot.load_extension("cog.hypixel.duels")
 bot.load_extension("command.botinfo")
 bot.load_extension("command.server_info")
 bot.load_extension("cog.serverSafety.lock")
-
+bot.load_extension("events.Guild.on_guild_channel_create")
 
 bot.run(token)
