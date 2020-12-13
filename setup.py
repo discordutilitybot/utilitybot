@@ -16,6 +16,6 @@ setup(name='utilitybot',
     long_description=readme,
     include_package_data=False,
     install_requires='requirements.txt',
-     python_requires='>=3.5.2',
+    python_requires='>=3.5.2',
 
 )
