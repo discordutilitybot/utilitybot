@@ -19,10 +19,14 @@ class StaffCheck(commands.Converter):
         if type(argument) != discord.Member:
             return False
         if argument.top_role.position >= ctx.guild.me.top_role.position:
-            await ctx.send(
-                "You cannot punish someone with a role higher or equal to mine :("
-            )
-            return False
+            try:
+                await ctx.send(
+                    "You cannot punish someone with a role higher than or equal to mine :("
+                )
+            except Exception:
+                return False
+        
+            
 class Moderation(commands.Cog, name="Moderation"):
 
     def __init__(self, bot):
