@@ -3,12 +3,26 @@ from discord.ext import commands
 from discord import utils
 from discord import TextChannel, Member
 from discord import Role
+from discord.ext import tasks
 import asyncpg
 import asyncio
 import re
+from discord import Member, TextChannel, Role
 #from .utils import *
 #from .utils.permissions import permissions
 
+
+
+class StaffCheck(commands.Converter):
+    async def convert(self, ctx, argument):
+        argument = await Member().convert(ctx, argument)
+        if type(argument) != discord.Member:
+            return False
+        if argument.top_role.position >= ctx.guild.me.top_role.position:
+            await ctx.send(
+                "You cannot punish someone with a role higher or equal to mine :("
+            )
+            return False
 class Moderation(commands.Cog, name="Moderation"):
 
     def __init__(self, bot):
