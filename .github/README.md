@@ -66,8 +66,8 @@ Logo created by [PineappleRind](https://pineapplerind.github.io)
 
 # Credits
 
-[Flop](https://github.com/andrewnijmeh) - Main bot developer
-[Aditya Kapoor](https://github.com/thecodingguru) - Secondary bot developer
-[PineappleRind](https://pineapplerind.github.io/) - Web developer and designer
+- [Flop](https://github.com/andrewnijmeh) - Main bot developer
+- [Aditya Kapoor](https://github.com/thecodingguru) - Secondary bot developer
+- [PineappleRind](https://pineapplerind.github.io/) - Web developer and designer
 
 ### If you need a hypixel stat API slothpixel is what you need. [slothpixel](https://docs.slothpixel.me/)
