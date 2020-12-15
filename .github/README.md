@@ -66,7 +66,7 @@ Logo created by [PineappleRind](https://pineapplerind.github.io)
 
 # Credits
 
-- [Flop](https://github.com/andrewnijmeh) - Main bot developer
+- [Andrew Nijmeh](https://github.com/andrewnijmeh) - Main bot developer
 - [Aditya Kapoor](https://github.com/thecodingguru) - Secondary bot developer
 - [PineappleRind](https://pineapplerind.github.io/) - Web developer and designer
 
