@@ -63,7 +63,7 @@ async def start_db():
 
         bot.db = asyncpg.create_pool(**login_data)
     except KeyboardInterrupt:
-        exit()
+        pass
         
 
 bot.load_extension("command.help")
@@ -79,5 +79,6 @@ bot.load_extension("command.botinfo")
 bot.load_extension("command.server_info")
 bot.load_extension("cog.serverSafety.lock")
 bot.load_extension("events.Guild.on_guild_channel_create")
+bot.load_extension("cog.music.join")
 
 bot.run(token)
