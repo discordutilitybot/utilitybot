@@ -48,7 +48,7 @@ bot = Utilitybot(
     command_prefix="u!",
     status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
-    #intents=intents,
+    intents=intents,
     case_insensitive=False,
     owner_id=388788632686690305,
     chunk_guilds_at_startup=False,

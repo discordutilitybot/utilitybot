@@ -20,55 +20,29 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
-import sys
 import discord
 from discord.ext import commands
-import asyncio
-import asyncpg
 import datetime
 import aiohttp
-import json
+import async_timeout
+import asyncio
 import logging
+import sys
+
+class Utilitybot(commands.AutoShardedBot):
 
 
-class Utilitybot(commands.Bot):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
         self.launchtime = datetime.datetime.now(datetime.timezone.utc)
-        self.db = asyncpg.pool.Pool = None
         self.started = False
-        self.premium_guilds = {}
 
         logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
-        self.logging = logging.getLogger('Utility')
+        self.logging = logging.getLogger('Bot')
+
         stdout = logging.StreamHandler(sys.stdout)
-        stdout.setLevel(logging.INFO)
         self.logging.addHandler(stdout)
         gateway = logging.getLogger('discord.gateway')
         gateway.addHandler(stdout)
-        
-        
-    async def load_commands(self):
-        try:
-            for ext in resolve_extensions(self, 'command.*'):
-                self.load_extension(resolve_extensions)
-        except Exception:
-            self.logging.info('Failed to load commands :(')
-        
-
-    async def load_cogs(self):
-        try:
-            for ext in resolve_extensions(self, 'cog.*'):
-                self.load_extension(resolve_extensions)
-        except Exception:
-            self.logging.info('Failed to load cogs:(')
-
-
-    async def load_events(self):
-        try:
-            for ext in resolve_extensions(self, 'cog.*'):
-                self.load_extension(resolve_extensions)
-
-        except Exception:
-            self.logging.info('Failed to load :(')
-
+    
