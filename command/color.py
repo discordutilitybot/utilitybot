@@ -12,8 +12,8 @@ class Color(commands.Cog):
         color_picked = ["#"+''.join([random.choice('0123456789ABCDEF') for j in range(6)])
             for i in range(number_of_colors)]
 
-        await ctx.send(embed=discord.Embed(color=color_picked, description = "Random color: " + color_picked)
+        await ctx.send(embed=discord.Embed(color=color_picked, description="Random color: " + color_picked)
 
 def setup(bot):
-    bot.add_cog(Color(bot))
-    bot.logging.info('Loaded color command')
+    bot.add_cog(Color(bot)
+    bot.logging.info("Loaded color command!")

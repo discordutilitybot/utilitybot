@@ -25,7 +25,6 @@ from discord.ext import commands
 import datetime
 import aiohttp
 import async_timeout
-import asyncio
 import logging
 import sys
 
