@@ -36,7 +36,15 @@ class StaffCheckNoMessage(commands.Converter):
             return argument
         else: 
             return False
-        
+# Check muted role for guild or default role
+
+class MuteCheck(commands.Converter):
+    async def convert(self, ctx, guild, argument):
+        argument = await Member().convert(ctx, argument)
+        message = message.guild.id
+        muted = self.bot.db.execute(f"SELECT muted_roles FROM guild_settings WHERE id = {message}") or discord.utils.get(
+            ctx.guild.roles, name="Muted"
+        )
 class Moderation(commands.Cog, name="Moderation"):
 
     def __init__(self, bot):

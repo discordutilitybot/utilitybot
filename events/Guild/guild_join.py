@@ -39,15 +39,16 @@ class GuildJoin(commands.Cog):
         permissions = discord.Permissions(send_messages=False, speak=False, read_messages=True)
         await self.bot.create_role(
             name="Muted", 
-            reason="Utility bot's Default Muted Role on join. ",
+            reason="Utility bot's Default Muted Role on join. (used for muting)",
             permissions=permissions,
             color=discord.Color.orange())
         
-       
+        # Insert global guild data
         self.bot.db.execute("INSERT INTO guilds (guild_id, guild_roles, guild_channels, guild_messages, guild_voice_channels, guild_categorys)")
-_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, logging_leave, logging_messages) VALUES ({guild.id}, Muted,")
 
-        self.bot.db.execute(f"INSERT INTO guild
+        # Insert data for guild settings and prefix's..
+        self.bot.db.execute(f"INSERT INTO guild_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, logging_leave, logging_messages) VALUES ({guild.id}, Muted,")
+
 
 
         
