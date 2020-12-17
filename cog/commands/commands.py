@@ -9,11 +9,12 @@ class Commands(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def commands(self, ctx, category):
+    async def commands(self, ctx):
 
+        category = ctx.author.message
 
         if 'error' in category:
-            await ctx.send(":x:That category isn't availaible")
+            await ctx.send(":x: That category isn't availaible")
         
 
         if category == "moderation":
@@ -24,12 +25,11 @@ class Commands(commands.Cog):
                 color = color
 
             )
-
             embed.add_field(name="u!ban [member] (optional reason)", value="Bans a user with an optional reason.", inline=False)
             embed.add_field(name="u!kick [member] (optional reason)", value="Kicks a user with an optional reason.", inline=False)
             embed.add_field(name="u!mute [member] (optional reason)", value="Mutes a user with a specified amount of time,", inline=False)
-            # Note: if you dont specify a user it deletes all messages no matter what user it is and the default count is 10 messages.
             embed.add_field(name="u!purge (optional member) (optional count)", value="Purges message either from a specific user and or a specific amount.", inline=False)
+            
             
 def setup(bot):
     bot.add_cog(Commands(bot))

@@ -34,6 +34,7 @@ import dotenv
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
+import json
 
 dotenv_path = join(dirname(__file__), 'config.env')
 load_dotenv(dotenv_path)
@@ -42,9 +43,8 @@ POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
 
-
 bot = Utilitybot(
-    command_prefix="u!",
+    command_prefix=get_prefix(),
     status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
     case_insensitive=False,
@@ -53,6 +53,26 @@ bot = Utilitybot(
     
 )
 
+def get_prefix(bot, message):
+    with open("prefixes.json", "w") as f:
+        prefixes = json.load(f)
+
+    message =  message.guild.id
+    return prefixes[str(message.guild.id)] or bot.db.execute(f"SELECT prefix FROM guild_settings WHERE id = {message}")
+
+@bot.command() 
+@commands.has_permissions(adminstrator=True) 
+async def prefix(ctx, prefix):
+
+    with open("prefixes.json", "r") as f:
+        prefixes = json.load(f)
+    
+    prefixes[str(guild.id)] = prefix
+
+
+    with open("prefixes.json", "w") as f:
+        json.dump(prefixes, f)
+        
 async def start_db():
     try:
         login_data = {
@@ -70,7 +90,6 @@ bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
 bot.load_extension("command.github")
-#bot.load_extension("command.color")
 bot.load_extension("cog.admin.admin")
 bot.load_extension("cog.hypixel.hypixel")
 bot.load_extension("cog.hypixel.bedwars")
