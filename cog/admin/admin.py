@@ -8,8 +8,7 @@ import asyncpg
 import asyncio
 import re
 from discord import Member, TextChannel, Role
-#from .utils import *
-#from .utils.permissions import permissions
+
 
 
 
@@ -25,8 +24,19 @@ class StaffCheck(commands.Converter):
                 )
             except Exception:
                 return False
+
+# Check if a staff has a message (manage_message)      
+class StaffCheckNoMessage(commands.Converter):
+    async def convert(self, ctx, argument):
+        argument = await Member().convert(ctx, argument)
+        permission = argument.guild_permissions.manage_nessages
+        if ctx.author.id == ctx.author.id and argument.id == ctx.author.id:
+            return argument
+        if not permission: 
+            return argument
+        else: 
+            return False
         
-            
 class Moderation(commands.Cog, name="Moderation"):
 
     def __init__(self, bot):
