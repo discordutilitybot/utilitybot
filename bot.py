@@ -43,6 +43,13 @@ POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
 
+def get_prefix(bot, message):
+    with open("prefixes.json", "w") as f:
+        prefixes = json.load(f)
+
+    message =  message.guild.id
+    return prefixes[str(message.guild.id)] or bot.db.execute(f"SELECT prefix FROM guild_settings WHERE id = {message}")
+
 bot = Utilitybot(
     command_prefix=get_prefix(),
     status=discord.Status.online,
@@ -53,16 +60,9 @@ bot = Utilitybot(
     
 )
 
-def get_prefix(bot, message):
-    with open("prefixes.json", "w") as f:
-        prefixes = json.load(f)
-
-    message =  message.guild.id
-    return prefixes[str(message.guild.id)] or bot.db.execute(f"SELECT prefix FROM guild_settings WHERE id = {message}")
-
 @bot.command() 
 @commands.has_permissions(adminstrator=True) 
-async def prefix(ctx, prefix):
+async def prefix(ctx, guild, prefix):
 
     with open("prefixes.json", "r") as f:
         prefixes = json.load(f)
@@ -72,7 +72,7 @@ async def prefix(ctx, prefix):
 
     with open("prefixes.json", "w") as f:
         json.dump(prefixes, f)
-        
+
 async def start_db():
     try:
         login_data = {
