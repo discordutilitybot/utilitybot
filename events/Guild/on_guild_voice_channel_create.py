@@ -57,4 +57,4 @@ class GuildVoice(commands.Cog):
     
 def setup(bot):
     bot.add_cog(GuildVoice(bot))
-    bot.logging.info("$GREENLoaded event $CYANGuildVoice")
+    bot.logging.info("Loaded event GuildVoice")
