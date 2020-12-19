@@ -26,5 +26,5 @@ class Lock(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(LockCog(bot))
+    bot.add_cog(Lock(bot))
     bot.logging.info("Loaded locking command!")
