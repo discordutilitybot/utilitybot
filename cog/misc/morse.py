@@ -5,7 +5,7 @@ from operator import itemgetter
 import base64
 import binascii
 import re
-from Cogs import Nullify
+
 
 
 class Morse(commands.Cog):
@@ -117,4 +117,4 @@ class Morse(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Morse(bot))
-    bot.logging.info("Loaded cog!")
+    bot.logging.info("Loaded cog morse cog!")
