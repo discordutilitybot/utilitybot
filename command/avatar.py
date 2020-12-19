@@ -20,14 +20,15 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
+import typing
+
 import discord
 from discord.ext import commands
 
+
 class Avatar(commands.Cog):
     def __init__(self, bot):
-        self.bot_check
-
-    
+        self.bot = bot
 
     @commands.command(name="avatar", aliases=["av", "pfp"])
     @commands.max_concurrency(1, per=commands.BucketType.user)
@@ -48,9 +49,9 @@ class Avatar(commands.Cog):
             url=str(target.avatar_url_as(static_format="png", size=2048))
         ).set_author(
             name=f"{target}'s Avatar"
-        )))
-            ))
+        ))
+
 
 def setup(bot):
     bot.add_cog(Avatar(bot))
-    bot.logging.info(f'Loaded avatar command!')
+    bot.logging.info('Loaded avatar command')
