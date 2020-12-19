@@ -44,9 +44,8 @@ DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
 
 
-
 bot = Utilitybot(
-    command_prefix=get_prefix(),
+    command_prefix='u!',
     status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
     case_insensitive=False,
@@ -54,25 +53,6 @@ bot = Utilitybot(
     chunk_guilds_at_startup=False,
     
 )
-def get_prefix(bot, message):
-    with open("prefixes.json", "w") as f:
-        prefixes = json.load(f)
-
-    message =  message.guild.id
-    return prefixes[str(message.guild.id)] or bot.db.execute(f"SELECT prefix FROM guild_settings WHERE id = {message}")
-    
-@bot.command() 
-@commands.has_permissions(adminstrator=True) 
-async def prefix(ctx, guild, prefix):
-
-    with open("prefixes.json", "r") as f:
-        prefixes = json.load(f)
-    
-    prefixes[str(guild.id)] = prefix
-
-
-    with open("prefixes.json", "w") as f:
-        json.dump(prefixes, f)
 
 async def start_db():
     try:

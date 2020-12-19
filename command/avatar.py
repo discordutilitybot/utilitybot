@@ -29,27 +29,26 @@ class Avatar(commands.Cog):
 
     
 
-    @commands.command(alias=["av"])
-    async def avatar(self, ctx, user: discord.Member):
-        
-        if not user:
-            user = ctx.author
-            
-        member = None
-        
-        if ctx.guild:
-            member = ctx.guild.get_member(user.id)
+    @commands.command(name="avatar", aliases=["av", "pfp"])
+    @commands.max_concurrency(1, per=commands.BucketType.user)
+    async def avatar(self, ctx, target: typing.Union[discord.Member, discord.User, str, None]):
+        if isinstance(target, str):
+            return await ctx.send(embed=discord.Embed(
+                description=f"User \"{target}\" not found",
+                color=ctx.author.color,
+                timestamp=ctx.message.created_at
+            ))
+        if not target:
+            target = ctx.author
         await ctx.send(embed=discord.Embed(
-            color=member.color if member else ctx.author.color
+            color=target.color,
+            timestamp=ctx.message.created_at,
+            description=target.mention
         ).set_image(
-            url=str(user.avatar_url_as(static_format='png', size=2048))
-        ))
-
-        if user is None:
-           await ctx.send(embed=discord.Embed(
-               color=member.color if member else ctx.author.color.set_image(
-                   url=str(user.avatar_url_as(static_format='png', size=2048))
-               )
+            url=str(target.avatar_url_as(static_format="png", size=2048))
+        ).set_author(
+            name=f"{target}'s Avatar"
+        )))
             ))
 
 def setup(bot):
