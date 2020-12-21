@@ -28,6 +28,7 @@ ffmpeg_options = {
 
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 players = {}
+
 class YTDLSource(discord.PCMVolumeTransformer):
     def __init__(self, source, *, data, volume=0.5):
         super().__init__(source, volume)
@@ -69,12 +70,14 @@ class Music(commands.Cog):
           embed.set_thumbnail(url = 'https://images-ext-1.discordapp.net/external/jM4yYJy0MXntKVzqbDTLUi72OfQneGULXCMZoBbFwhw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/739305861951782985/407c829335208d72834df10e45721c5b.webp?width=701&height=701')
           await ctx.send(embed = embed)
           players[ctx.guild.id]=player
+
     @commands.command()
     async def pause(self, ctx):
         state = ctx.get_voice_state(ctx.message.guild)
         if state.is_playing():
           player = state.player
           player.pause()
+
     @commands.command()
     async def join(self, ctx):
       if ctx.author.voice and ctx.author.voice.channel:
@@ -84,13 +87,14 @@ class Music(commands.Cog):
             title='I have joined the voice chat, say u!leave for me to leave the voice channel.',
             colour=discord.Colour.green()
         )
-        await ctx.send(embed = embed)
+        await ctx.send(embed=embed)
       else:
         embed = discord.Embed(
             title = ':musical_note: You have to be in a voice channel for me to join!',
             colour = discord.Colour.red()
         )
-        await ctx.send(embed = embed)
+        await ctx.send(embed=embed)
+
     @commands.command(pass_context = True)
     async def leave(self, ctx):
 
@@ -107,6 +111,7 @@ class Music(commands.Cog):
             colour = discord.Colour.red()
         )
         await ctx.send(embed = embed)
+        
     @commands.command(pass_context=True)
     async def skip(self, ctx):
       channel = await ctx.voice_client.disconnect()
