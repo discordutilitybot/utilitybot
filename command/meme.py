@@ -4,11 +4,11 @@ import aiohttp
 from aiohttp import ClientSession
 import random
 
-class Meme(commands.Cog):
+class Memecommand(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
   
-    @commands.command()
+    @commands.command(aliases=["dankmeme"])
     async def meme(self, ctx):
         embed = discord.Embed(title="Meme")
 
@@ -20,5 +20,5 @@ class Meme(commands.Cog):
              await ctx.send(embed=embed)
 
 def setup(bot):
-  bot.add_cog(Meme(bot))
+  bot.add_cog(Memecommand(bot))
   bot.logging.info("Loaded meme command")

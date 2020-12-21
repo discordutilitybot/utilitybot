@@ -82,5 +82,6 @@ bot.load_extension("cog.serverSafety.lock")
 bot.load_extension("events.Guild.on_guild_channel_create")
 bot.load_extension("cog.music.music")
 bot.load_extension("events.command_error")
+bot.load_extension("command.meme")
 
 bot.run(token)
