@@ -66,7 +66,7 @@ async def start_db():
     except KeyboardInterrupt:
         pass
         
-
+bot.remove_command("help")
 bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
@@ -80,6 +80,7 @@ bot.load_extension("command.botinfo")
 bot.load_extension("command.server_info")
 bot.load_extension("cog.serverSafety.lock")
 bot.load_extension("events.Guild.on_guild_channel_create")
-#bot.load_extension("cog.music.music")
+bot.load_extension("cog.music.music")
+bot.load_extension("events.command_error")
 
 bot.run(token)

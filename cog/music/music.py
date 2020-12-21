@@ -1,65 +1,125 @@
+import asyncio
 from discord.ext import commands
-import lavalink
-from discord import utils
-from discord import Embed
+import discord
+import youtube_dl
+import os
+from datetime import datetime
 
-class MusicCog(commands.Cog):
-  def __init__(self, bot):
-    self.bot = bot
-    self.bot.music = lavalink.Client(self.bot.user.id)
-    self.bot.music.add_node('localhost', 7000, 'testing', 'na', 'music-node')
-    self.bot.add_listener(self.bot.music.voice_update_handler, 'on_socket_response')
-    self.bot.music.add_event_hook(self.track_hook)
+youtube_dl.utils.bug_reports_message = lambda: ''
 
-  @commands.command(name='join')
-  async def join(self, ctx):
-    print('join command worked')
-    member = utils.find(lambda m: m.id == ctx.author.id, ctx.guild.members)
-    if member is not None and member.voice is not None:
-      vc = member.voice.channel
-      player = self.bot.music.player_manager.create(ctx.guild.id, endpoint=str(ctx.guild.region))
-      if not player.is_connected:
-        player.store('channel', ctx.channel.id)
-        await self.connect_to(ctx.guild.id, str(vc.id))
 
-  @commands.command(name='play')
-  async def play(self, ctx, *, query):
-    try:
-      player = self.bot.music.player_manager.get(ctx.guild.id)
-      query = f'ytsearch:{query}'
-      results = await player.node.get_tracks(query)
-      tracks = results['tracks'][0:10]
-      i = 0
-      query_result = ''
-      for track in tracks:
-        i = i + 1
-        query_result = query_result + f'{i}) {track["info"]["title"]} - {track["info"]["uri"]}\n'
-      embed = Embed()
-      embed.description = query_result
+ytdl_format_options = {
+    'format': 'bestaudio/best',
+    'outtmpl': '%(extractor)s-%(id)s-%(title)s.%(ext)s',
+    'restrictfilenames': True,
+    'noplaylist': True,
+    'nocheckcertificate': True,
+    'ignoreerrors': False,
+    'logtostderr': False,
+    'quiet': True,
+    'no_warnings': True,
+    'default_search': 'auto',
+    'source_address': '0.0.0.0' # bind to ipv4 since ipv6 addresses cause issues sometimes
+}
 
-      await ctx.channel.send(embed=embed)
+ffmpeg_options = {
+    'options': '-vn'
+}
 
-      def check(m):
-        return m.author.id == ctx.author.id
-      
-      response = await self.bot.wait_for('message', check=check)
-      track = tracks[int(response.content)-1]
+ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
+players = {}
+class YTDLSource(discord.PCMVolumeTransformer):
+    def __init__(self, source, *, data, volume=0.5):
+        super().__init__(source, volume)
 
-      player.add(requester=ctx.author.id, track=track)
-      if not player.is_playing:
-        await player.play()
+        self.data = data
 
-    except Exception as error:
-      print(error)
-  
-  async def track_hook(self, event):
-    if isinstance(event, lavalink.events.QueueEndEvent):
-      guild_id = int(event.player.guild_id)
-      await self.connect_to(guild_id, None)
-      
-  async def connect_to(self, guild_id: int, channel_id: str):
-    ws = self.bot._connection._get_websocket(guild_id)
-    await ws.voice_state(str(guild_id), channel_id)
+        self.title = data.get('title')
+        self.url = data.get('url')
 
+    @classmethod
+    async def from_url(cls, url, *, loop=None, stream=False):
+        loop = loop or asyncio.get_event_loop()
+        data = await loop.run_in_executor(None, lambda: ytdl.extract_info(url, download=not stream))
+
+        if 'entries' in data:
+            # take first item from a playlist
+            data = data['entries'][0]
+
+        filename = data['url'] if stream else ytdl.prepare_filename(data)
+        return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
+
+class Music(commands.Cog):
+    def __init__(self, bot):
+        self.bot = bot
+    @commands.command()
+    async def play(self, ctx, *, url: str = None):
+       
+      if url == None:
+        await ctx.send('```c!play [youtube title or URL]```')
+      async with ctx.typing():
+          player = await YTDLSource.from_url(url, stream=True)
+          ctx.voice_client.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
+          embed = discord.Embed(
+            title = 'Song requested by: ' + str(ctx.author),
+            description = '```Now playing: {}'.format(player.title) + '\n\nRequested by: ' + str(ctx.author) + '```',
+            colour = discord.Colour.green(),
+            timestamp=datetime.utcnow()
+          )
+          embed.set_thumbnail(url = 'https://images-ext-1.discordapp.net/external/jM4yYJy0MXntKVzqbDTLUi72OfQneGULXCMZoBbFwhw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/739305861951782985/407c829335208d72834df10e45721c5b.webp?width=701&height=701')
+          await ctx.send(embed = embed)
+          players[ctx.guild.id]=player
+    @commands.command()
+    async def pause(self, ctx):
+        state = ctx.get_voice_state(ctx.message.guild)
+        if state.is_playing():
+          player = state.player
+          player.pause()
+    @commands.command()
+    async def join(self, ctx):
+      if ctx.author.voice and ctx.author.voice.channel:
+        channel = ctx.author.voice.channel
+        await channel.connect()
+        embed = discord.Embed(
+            title='I have joined the voice chat, say u!leave for me to leave the voice channel.',
+            colour=discord.Colour.green()
+        )
+        await ctx.send(embed = embed)
+      else:
+        embed = discord.Embed(
+            title = ':musical_note: You have to be in a voice channel for me to join!',
+            colour = discord.Colour.red()
+        )
+        await ctx.send(embed = embed)
+    @commands.command(pass_context = True)
+    async def leave(self, ctx):
+
+      if ctx.author.voice and ctx.author.voice.channel:
+        await ctx.voice_client.disconnect()
+        embed = discord.Embed(
+            title='I have left the voice chat, say u!join for me to join again!',
+            colour=discord.Colour.red()
+        )
+        await ctx.send(embed = embed)
+      else:
+        embed = discord.Embed(
+            title = 'You have to be in a voice channel for me to leave!',
+            colour = discord.Colour.red()
+        )
+        await ctx.send(embed = embed)
+    @commands.command(pass_context=True)
+    async def skip(self, ctx):
+      channel = await ctx.voice_client.disconnect()
+      if ctx.author.voice and ctx.author.voice.channel:
+        channel = ctx.author.voice.channel
+        await channel.connect()
+        embed = discord.Embed(
+          title = 'Skip requested by: ' + str(ctx.author),
+          description = '```Previous song skipped```',
+          colour = discord.Colour.green(),
+          timestamp=datetime.utcnow()
+        )
+        embed.set_thumbnail(url = 'https://images-ext-1.discordapp.net/external/jM4yYJy0MXntKVzqbDTLUi72OfQneGULXCMZoBbFwhw/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/739305861951782985/407c829335208d72834df10e45721c5b.webp?width=701&height=701')
+        await ctx.send(embed = embed)
 def setup(bot):
-  bot.add_cog(MusicCog(bot))
+    bot.add_cog(Music(bot))

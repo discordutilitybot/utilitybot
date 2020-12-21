@@ -64,7 +64,9 @@ class Commanderror(commands.Cog):
         if isinstance(error, commands.CommandOnCooldown):
             td = datetime.timedelta(seconds=error.retry_after)
             return await ctx.send(f"This Command Is on cooldown please wait {td.format_timespan(td)}", delete_after=5)
-    
+
+        if isinstance(error, commands.CommandNotFound):
+            return await ctx.send(f"Command not found! :( Please try again")
 def setup(bot):
 
     bot.add_cog(Commanderror(bot))
