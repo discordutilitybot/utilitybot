@@ -50,8 +50,7 @@ bot = Utilitybot(
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
     case_insensitive=False,
     owner_id=388788632686690305,
-    chunk_guilds_at_startup=False,
-    
+    chunk_guilds_at_startup=False
 )
 
 async def start_db():
@@ -70,6 +69,7 @@ bot.remove_command("help")
 bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
+bot.load_extension("command.color")
 bot.load_extension("command.github")
 bot.load_extension("cog.admin.admin")
 bot.load_extension("cog.hypixel.guild")
