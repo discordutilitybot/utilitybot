@@ -43,7 +43,6 @@ POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
 
-
 bot = Utilitybot(
     command_prefix='u!',
     status=discord.Status.online,
@@ -52,13 +51,16 @@ bot = Utilitybot(
     chunk_guilds_at_startup=False,
     
 )
+bot.remove_command("help")
+bot.load_extension('command.help')
 
 async def start_db():
     try:
         login_data = {
             "user": "postgres",
             "password": POSTGRES_PASSWORD,
-            "database": DATABASE
+            "database": DATABASE,
+            "host": '127.0.0.1'
         }
 
         bot.db = asyncpg.create_pool(**login_data)
@@ -68,6 +70,6 @@ async def start_db():
 for files in os.listdir('./command'):
      if files.endswith('.py'):
         bot.load_extension(f'command.{files[:-3]}')
-       
+        bot.load_extension
 
-bot.run(token)
+bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.ZGyMam5wpeAMUK_KV-wemMCZdmM')
