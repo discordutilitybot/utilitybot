@@ -9,7 +9,7 @@ class Latency(commands.Cog):
   @commands.command(name="ping", aliases=['pong, latency'])
   async def ping(self, ctx):
     pong = round(self.bot.latency * 1000)
-    await ctx.send(f":white_check_mark: Pong in {pong}ms")
+    await ctx.send(f":ping_pong: Pong in {pong}ms")
 
 
 def setup(bot):

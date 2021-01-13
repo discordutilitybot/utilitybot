@@ -9,22 +9,18 @@ class Lock(commands.Cog):
         self.bot = bot
 
     @commands.command(name = 'lock', usage="<#channel/ID>",description="Lock the channel.")
+    @commands.has_permissions()
     @commands.guild_only()
-    async def lock (self, ctx, channel):
+    async def lock(self, ctx, channel: discord.TextChannel=None):
 
-        
-        channel = re.findall(r'\d+', channel) # 
-        channel = self.bot.get_channel(int(channel[0]))
+        overwrite = ctx.channel.overwrites_for(ctx.guild.default_role)
+        overwrite.send_messages = False
+        await ctx.channel.set_permissions(ctx.guild.default_role, overwrite=overwrite)
+        await ctx.send("Channel successfully locked.")
 
-        if channel is None:
-            await channel.edit(name=f"Locked-{channel.name}")
-            await channel.set_permissions(ctx.guild.default_role, send_messages=False)
-            embed = discord.Embed(title = f"#{channel.name} channel(s) locked with success!", description = f"", color = 0x2fa737) 
-            await ctx.channel.send(embed = embed)
-        else:
-            await ctx.channel.send("Channel not found!")
+   
 
 
 def setup(bot):
     bot.add_cog(Lock(bot))
-    bot.logging.info("Loaded locking command!")
+    bot.logging.info("Loaded lock command!")

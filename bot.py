@@ -51,9 +51,8 @@ bot = Utilitybot(
     chunk_guilds_at_startup=False,
     
 )
-bot.remove_command("help")
-bot.load_extension('command.help')
 
+bot.load_extension("cog.serverSafety.lock")
 async def start_db():
     try:
         login_data = {
