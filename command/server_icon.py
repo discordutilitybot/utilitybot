@@ -6,7 +6,7 @@ class Servericon(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def server_icon(self, ctx):
+    async def servericon(self, ctx):
         member = ctx.author.color
         guild = ctx.message.author
         

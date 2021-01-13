@@ -6,7 +6,7 @@ class Serverinfo(commands.Cog):
         self.bot = bot
 
     @commands.command(aliases=['guildinfo, ginfo, serverinfo'])
-    async def server_info(self, ctx):
+    async def serverinfo(self, ctx):
         statuses = [len(list(filter(lambda m: str(m.status) == "online", ctx.guild.members))),
                                                     len(list(filter(lambda m: str(m.status) == "idle", ctx.guild.members))),
 					                                len(list(filter(lambda m: str(m.status) == "dnd", ctx.guild.members))),

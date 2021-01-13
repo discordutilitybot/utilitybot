@@ -71,4 +71,4 @@ for files in os.listdir('./command'):
         bot.load_extension(f'command.{files[:-3]}')
         bot.load_extension
 
-bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.ZGyMam5wpeAMUK_KV-wemMCZdmM')
+bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.qDyXi8X_YS9MUcthUuNl3vmhQU4')
