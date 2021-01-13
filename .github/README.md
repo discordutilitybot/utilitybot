@@ -70,3 +70,6 @@ Logo created by [PineappleRind](https://pineapplerind.github.io)
 - [Aditya Kapoor](https://github.com/thecodingguru) - Secondary bot developer
 - [PineappleRind](https://pineapplerind.github.io/) - Web developer and designer
 
+
+# Donators
+> Over here we will have a list of all our donators who have donated via patreon! you can donate via clicking on the sponsor button on the top of the repository and clickong on the patreon link.
