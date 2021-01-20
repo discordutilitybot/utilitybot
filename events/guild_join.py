@@ -44,12 +44,10 @@ class GuildJoin(commands.Cog):
             color=discord.Color.orange())
         
        
-        self.bot.db.execute("INSERT INTO guilds (guild_id, guild_roles, guild_channels, guild_messages, guild_voice_channels, guild_categorys)")
-_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, logging_leave, logging_messages) VALUES ({guild.id}, Muted,")
+        
 
-        self.bot.db.execute(f"INSERT INTO guild
-
-
+        
+    
         
 def setup(bot):
     bot.add_cog(GuildJoin(bot)) 

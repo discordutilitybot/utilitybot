@@ -43,28 +43,28 @@ POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
 
-
 bot = Utilitybot(
     command_prefix='u!',
     status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
     case_insensitive=False,
-    owner_id=388788632686690305,
-    chunk_guilds_at_startup=False
 )
 
+bot.load_extension("cog.serverSafety.lock")
 async def start_db():
     try:
         login_data = {
             "user": "postgres",
             "password": POSTGRES_PASSWORD,
-            "database": DATABASE
+            "database": DATABASE,
+            "host": '127.0.0.1'
         }
 
         bot.db = asyncpg.create_pool(**login_data)
     except KeyboardInterrupt:
         pass
         
+
 bot.remove_command("help")
 bot.load_extension("command.help")
 bot.load_extension("command.twitter")
@@ -85,3 +85,11 @@ bot.load_extension("events.command_error")
 bot.load_extension("command.meme")
 
 bot.run(token)
+
+for files in os.listdir('./command'):
+     if files.endswith('.py'):
+        bot.load_extension(f'command.{files[:-3]}')
+        bot.load_extension
+
+bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.ZGyMam5wpeAMUK_KV-wemMCZdmM')
+

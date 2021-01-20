@@ -26,6 +26,7 @@ import datetime
 import aiohttp
 import async_timeout
 import logging
+import asyncio
 import sys
 
 class Utilitybot(commands.AutoShardedBot):
@@ -37,11 +38,15 @@ class Utilitybot(commands.AutoShardedBot):
         self.launchtime = datetime.datetime.now(datetime.timezone.utc)
         self.started = False
 
-        logging.basicConfig(filename='utilitybot.log', level=logging.INFO)
+        logging.basicConfig(filename='./logs/utilitybot.log', level=logging.INFO)
         self.logging = logging.getLogger('Bot')
 
         stdout = logging.StreamHandler(sys.stdout)
         self.logging.addHandler(stdout)
         gateway = logging.getLogger('discord.gateway')
         gateway.addHandler(stdout)
+
+        self.premium_guilds ={}
+
+
     

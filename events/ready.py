@@ -3,8 +3,9 @@ from discord.ext import commands
 
 
 class Ready(commands.Cog):
-    def __init__(self, bot):
+    def __init__(self, bot, id, guild_name, joined_at):
         self.bot = bot
+
 
 
     @commands.Cog.listener()
@@ -19,19 +20,11 @@ class Ready(commands.Cog):
         self.bot.logging.info(f"Guilds: {len(self.bot.guilds)}")
         self.bot.logging.info(f"Users: {len(self.bot.users)}")
         
-        # Im not sure why but dpy discards member updates (e.g if they update nickname etc etc) Ffrom memebers that arent cached so i need them to be cached for updates and features
-        # note: Features like logging will continue to work as normal when members are cached.
-        [await self.chunk(g) for g in sorted(self.bot.guilds, key=lambda g: g.member_count, reverse=True) if self.bot.should_chunk(g)]
-        async def chunk(self, guild):
-            try:
-                guild.chunk()
-            except Exception:
-                self.bot.logging.error(
-                    f"Failed to chunk guilds {guild}"
-                )
-        
-        
+        query = """INSERT INTO guilds ( id, guild_name)
+                VALUES ($1, $2, $3 )
+                ON CONFLICT DO NOTHING"""
+        await self.bot.db.execute(query, self.guild_id, self.ctx.guild.name)
 def setup(bot):
     bot.add_cog(Ready(bot))
-    bot.logging.info(f"$REENLoaded event $CYANReady!")
+    bot.logging.info(f"Loaded event Ready!")
   
