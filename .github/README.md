@@ -57,6 +57,7 @@ Here are a few examples:
 
 # Join the community!
 [discord](https://discord.gg/7ERYgW73Ay)
+## 
 We are still working on **Utility Bot** and we appreciate constructive critiscm and feedback to better develop the bot. We also appreciate pull requests to update commands and more! So don't hesitate to contribute.
 
 # License
@@ -67,6 +68,9 @@ Logo created by [PineappleRind](https://pineapplerind.github.io)
 # Credits
 
 - [Andrew Nijmeh](https://github.com/andrewnijmeh) - Main bot developer
-- [Aditya Kapoor](https://github.com/thecodingguru) - Secondary bot developer
-- [PineappleRind](https://pineapplerind.github.io/) - Web developer and designer
+- [Aditya Kapoor](https://github.com/thecodingguru) - Web developer and secondary bot developer
+- [PineappleRind](https://pineapplerind.github.io/) - Web developer, designer and assistant bot developer
 
+
+# Donators
+> Over here we will have a list of all our donators who have donated via patreon! you can donate via clicking on the sponsor button on the top of the repository and clickong on the patreon link.

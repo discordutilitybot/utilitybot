@@ -10,9 +10,6 @@ import re
 import datetime
 from discord import Member, TextChannel, Role
 
-
-
-
 class StaffCheck(commands.Converter):
     async def convert(self, ctx, argument):
         argument = await Member().convert(ctx, argument)
@@ -75,6 +72,37 @@ class Moderation(commands.Cog, name="Moderation"):
                 await ctx.send('```diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod```')
                 
 
+    @commands.command()
+    @commands.cooldown(1, 5, commands.BucketType.guild)
+    @commands.has_permissions(ban_members=True)
+    async def ban(self, ctx, target: discord.Member = None, *, arg: str = None):
+        arg2 = arg or 'No reason provided'
+        embed = discord.Embed(
+            title = str(target)  ' was kicked from ' + ctx.guild.name,
+            description='Reason: ' + arg2,
+            colour = discord.Colour.orange(),
+            timestamp=datetime.datetime.utcnow()
+        ) 
+        embed2 = discord.Embed(
+            title= 'You wer kicked from ' + ctx.guild.name,
+            description='Reason' + arg2,
+            colour=discord.Colour.orange(),
+            timestamp=datetime.datetime.utcnow()
+        )
+
+        if target == None:
+            await ctx.send('u!kick [member] [reason (Optional)]')
+        else:
+            try:
+                await target.send(embed=embed2)
+        except:
+            await ctx.send('diff\n-Failed to DM user, user most likely has DMs off.')
+        try:
+            await ctx.send(embed=embed)
+            await target.kick(reason=arg2)
+        except:
+            await ctx.send('```diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod```')
+            
 def setup(bot):
     bot.add_cog(Moderation(bot))
     bot.logging.info('Loaded moderation cog!')

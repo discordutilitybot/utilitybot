@@ -48,8 +48,6 @@ bot = Utilitybot(
     status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!help", type=3),
     case_insensitive=False,
-    chunk_guilds_at_startup=False,
-    
 )
 
 bot.load_extension("cog.serverSafety.lock")
@@ -66,9 +64,36 @@ async def start_db():
     except KeyboardInterrupt:
         pass
         
+
+bot.remove_command("help")
+bot.load_extension("command.help")
+bot.load_extension("command.twitter")
+bot.load_extension("command.avatar")
+bot.load_extension("command.color")
+bot.load_extension("command.github")
+bot.load_extension("cog.admin.admin")
+bot.load_extension("cog.hypixel.guild")
+bot.load_extension("cog.hypixel.hypixel")
+bot.load_extension("cog.hypixel.bedwars")
+bot.load_extension("cog.hypixel.duels")
+bot.load_extension("command.botinfo")
+bot.load_extension("command.server_info")
+bot.load_extension("cog.serverSafety.lock")
+bot.load_extension("events.Guild.on_guild_channel_create")
+bot.load_extension("cog.music.music")
+bot.load_extension("events.command_error")
+bot.load_extension("command.meme")
+
+bot.run(token)
+
 for files in os.listdir('./command'):
      if files.endswith('.py'):
         bot.load_extension(f'command.{files[:-3]}')
         bot.load_extension
 
+<<<<<<< HEAD
 bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.qDyXi8X_YS9MUcthUuNl3vmhQU4')
+=======
+bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.ZGyMam5wpeAMUK_KV-wemMCZdmM')
+
+>>>>>>> baa4090670408740e79aa3e2716ac2398d3f7dd1
