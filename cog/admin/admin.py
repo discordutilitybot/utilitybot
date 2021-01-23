@@ -102,8 +102,24 @@ class Moderation(commands.Cog, name="Moderation"):
             await target.kick(reason=arg2)
         except:
             await ctx.send('```diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod```')
+
     @commands.command()
-    @commands.cooldown(1, 5 commands.BucketType.guild)
+    @commands.cooldown(1, 5, commands.BucketType.guild)
+    @has_permissions(ban_members=True)
+    async def unban(self, ctx, *, member):
+        bannedUsers = await ctx.guild.bans()
+        name, discriminator = member.split("#")
+
+        for ban in bannedUsers:
+            user = ban.user
+
+            if(user.name, user.discriminator) == (name, discriminator):
+                await ctx.guild.unban(user)
+                await ctx.send(f"{user.mention} was unbanned.")
+                return
+
+    @commands.command()
+    @commands.cooldown(1, 5, commands.BucketType.guild)
     @commands.has_permissions(manage_messages=True)
     async def purge(self, ctx, arg: str=None, *):
         mention = ctx.author.mention
@@ -128,6 +144,9 @@ class Moderation(commands.Cog, name="Moderation"):
                 await ctx.send(embed=embed)
         except:
             await ctx.send(":x: Failed to purge messages.")
+    @commands.command()
+    @commands.cooldown(1, 5, commands.BucketType.guild)
+    @commands.has_permissions(manage)
 def setup(bot):
     bot.add_cog(Moderation(bot))
     bot.logging.info('Loaded moderation cog!')
