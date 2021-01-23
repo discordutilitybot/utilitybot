@@ -102,7 +102,32 @@ class Moderation(commands.Cog, name="Moderation"):
             await target.kick(reason=arg2)
         except:
             await ctx.send('```diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod```')
-            
+    @commands.command()
+    @commands.cooldown(1, 5 commands.BucketType.guild)
+    @commands.has_permissions(manage_messages=True)
+    async def purge(self, ctx, arg: str=None, *):
+        mention = ctx.author.mention
+        if arg == None:
+            await ctx.send(':x: **You did not specify an amount do delete | u!purge [amount]')
+        try:
+            if int(arg) > 400:
+                embed = discord.Embed(
+                    title =  "I can't purge over 400 messages!",
+                    colour = discord.Colour.red()
+                )
+                await ctx.send(embed=embed)
+
+            if int(arg) < 401:
+                purge = int(arg) + 1
+                await ctx.channel.purge(limit=purge)
+                embed = discord.Embed(
+                    title = str(arg) +  ':giff: Messages were purged!'
+                    description = 'Command Executed by: ' + mention + '\n,
+                    colour = discord.Colour.green()
+                )
+                await ctx.send(embed=embed)
+        except:
+            await ctx.send(":x: Failed to purge messages.")
 def setup(bot):
     bot.add_cog(Moderation(bot))
     bot.logging.info('Loaded moderation cog!')
