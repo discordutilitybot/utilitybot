@@ -78,7 +78,7 @@ class Moderation(commands.Cog, name="Moderation"):
     async def ban(self, ctx, target: discord.Member = None, *, arg: str = None):
         arg2 = arg or 'No reason provided'
         embed = discord.Embed(
-            title = str(target)  ' was kicked from ' + ctx.guild.name,
+            title = str(target)  ' was kicked from '   + ctx.guild.name,
             description='Reason: ' + arg2,
             colour = discord.Colour.orange(),
             timestamp=datetime.datetime.utcnow()
@@ -146,7 +146,25 @@ class Moderation(commands.Cog, name="Moderation"):
             await ctx.send(":x: Failed to purge messages.")
     @commands.command()
     @commands.cooldown(1, 5, commands.BucketType.guild)
-    @commands.has_permissions(manage)
+    @commands.has_permissions(kick_members=True)
+    async def warn(self, ctx, target: discord.Member = None, *, arg: str = None):
+        arg2 = arg or 'No reason provided'
+        embed = discord.Embed(
+            title = str(target) + 'Has been warned by' + str(ctx.author),
+            description = 'Reason: ' + arg2,self
+            colour = discord.Colour.orange(),
+            timestamp=datetime.utcnow()
+        )
+        if target == None:
+            await ctx.send('u!warn [member] [reason] (Optional)]')
+            pass
+        else:
+            try:
+                timestamp=datetime.utcnow()
+                await target.send('```diff\n-You were warned in ' + ctx.guild.name + '\n\nExecuted by: ' + str(ctx.author) +'\nReason: ' + arg2 + '\n' + str(timestamp) + '```')
+                await ctx.send(embed = embed)
+            except:
+                await ctx.send('```diff\n-Failed to dm user, most likely user put dms off.```')
 def setup(bot):
     bot.add_cog(Moderation(bot))
     bot.logging.info('Loaded moderation cog!')
