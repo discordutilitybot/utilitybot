@@ -69,7 +69,6 @@ bot.remove_command("help")
 bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
-bot.load_extension("command.color")
 bot.load_extension("command.github")
 bot.load_extension("cog.admin.admin")
 bot.load_extension("cog.hypixel.guild")
@@ -91,9 +90,4 @@ for files in os.listdir('./command'):
         bot.load_extension(f'command.{files[:-3]}')
         bot.load_extension
 
-<<<<<<< HEAD
 bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.qDyXi8X_YS9MUcthUuNl3vmhQU4')
-=======
-bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.ZGyMam5wpeAMUK_KV-wemMCZdmM')
-
->>>>>>> baa4090670408740e79aa3e2716ac2398d3f7dd1

@@ -78,7 +78,7 @@ class Moderation(commands.Cog, name="Moderation"):
     async def ban(self, ctx, target: discord.Member = None, *, arg: str = None):
         arg2 = arg or 'No reason provided'
         embed = discord.Embed(
-            title = str(target)  ' was kicked from '   + ctx.guild.name,
+            title='kick',
             description='Reason: ' + arg2,
             colour = discord.Colour.orange(),
             timestamp=datetime.datetime.utcnow()
@@ -95,8 +95,8 @@ class Moderation(commands.Cog, name="Moderation"):
         else:
             try:
                 await target.send(embed=embed2)
-        except:
-            await ctx.send('diff\n-Failed to DM user, user most likely has DMs off.')
+            except:
+                await ctx.send('diff\n-Failed to DM user, user most likely has DMs off.')
         try:
             await ctx.send(embed=embed)
             await target.kick(reason=arg2)
@@ -137,7 +137,7 @@ class Moderation(commands.Cog, name="Moderation"):
                 purge = int(arg) + 1
                 await ctx.channel.purge(limit=purge)
                 embed = discord.Embed(
-                    title = str(arg) +  ':giff: Messages were purged!'
+                    title = str(arg) +  ':giff: Messages were purged!',
                     description = 'Command Executed by: ' + mention + '\n,
                     colour = discord.Colour.green()
                 )
