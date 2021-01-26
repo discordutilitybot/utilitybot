@@ -144,6 +144,7 @@ class Moderation(commands.Cog, name="Moderation"):
                 await ctx.send(embed=embed)
         except:
             await ctx.send(":x: Failed to purge messages.")
+
     @commands.command()
     @commands.cooldown(1, 5, commands.BucketType.guild)
     @commands.has_permissions(kick_members=True)
@@ -161,10 +162,11 @@ class Moderation(commands.Cog, name="Moderation"):
         else:
             try:
                 timestamp=datetime.utcnow()
-                await target.send('```diff\n-You were warned in ' + ctx.guild.name + '\n\nExecuted by: ' + str(ctx.author) +'\nReason: ' + arg2 + '\n' + str(timestamp) + '```')
-                await ctx.send(embed = embed)
+                await target.send('You were warned in ' + ctx.guild.name)
+                await ctx.send(embed=embed)
             except:
-                await ctx.send('```diff\n-Failed to dm user, most likely user put dms off.```')
+                await ctx.send('Failed to DM user :(.')
+            
     @commands.command()
     @commands.cooldown(1, 5 commands.BucketType.guild)
     @commands.has_permissions(mute_members=True)
