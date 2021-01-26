@@ -45,7 +45,7 @@ class GuildJoin(commands.Cog):
         
        
         
-
+        
         
     
         
