@@ -165,6 +165,49 @@ class Moderation(commands.Cog, name="Moderation"):
                 await ctx.send(embed = embed)
             except:
                 await ctx.send('```diff\n-Failed to dm user, most likely user put dms off.```')
+    @commands.command()
+    @commands.cooldown(1, 5 commands.BucketType.guild)
+    @commands.has_permissions(mute_members=True)
+    async def mute(self, ctx, member: discord.Member = None, length: int = None, *, reason=None):
+        guild = ctx.guild
+        role = discord.utils.get(guild.roles, name="Muted")
+        if member == None or reason == None:
+            await ctx.send(":x: Parameters required | u!mute [member] [time in seconds] [reason]")
+            pass
+        else:
+        try:
+            await member.add_roles(role, reason=reason)
+            await ctx.send(f"Muted {member} for reason {reason} \n Mute Length: {length} seconds")
+            try:
+                await member.send(f"You were muted in the server {ctx.guild.name} for {reason} you weremuted by {ctx.author}. for  {lenght} seconds")
+            except:
+                await ctx.send("Failed to DM user :(.")
+        except:
+            await.send("Failed to mute member, Make sure Utility Bot has Admin or manage roles permissions.")
+        try:
+            await asyncio.sleep(length)
+            await member.remove_roles(role)
+            await ctx.send(f"You were unmuted in {ctx.guild.name} after {length} seconds.")
+
+        except:
+            await ctx.send('Failed to auto unmute member, Make sure Utility Bot has Admin or manage roles permissions.')
+    
+    @commands.cooldown(1, 5, commands.BucketType.guild)
+    @commands.has_permissions(kick_members = True)
+    async def unmute(self, ctx, member: discord.Member=None):
+        if member == None:
+          await ctx.send('```All parameters required | c!unmute [member]```')
+        else:
+          try:
+            mutedRole = discord.utils.get(ctx.guild.roles, name="Muted")
+            await member.remove_roles(role)
+            await ctx.send(f"Unmuted {member.mention}")
+          except:
+            await ctx.send('')  
+          try:
+            await member.send(f"You were unmuted in the server {ctx.guild.name}")
+          except:
+            await ctx.send('Failed to DM user :(.')
 def setup(bot):
     bot.add_cog(Moderation(bot))
     bot.logging.info('Loaded moderation cog!')
