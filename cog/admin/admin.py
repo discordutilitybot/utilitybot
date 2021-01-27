@@ -210,6 +210,7 @@ class Moderation(commands.Cog, name="Moderation"):
             await member.send(f"You were unmuted in the server {ctx.guild.name}")
           except:
             await ctx.send('Failed to DM user :(.')
+            
 def setup(bot):
     bot.add_cog(Moderation(bot))
     bot.logging.info('Loaded moderation cog!')
