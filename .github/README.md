@@ -7,8 +7,8 @@
 <h4 align="center">Moderation, Games, Utilites, Music and much more!</h4>
 
 <p align="center">
-  <a href="https://discord.gg/7ERYgW73Ay">
-    <img src="https://discordapp.com/api/guilds/742193197673087027/widget.png?style=shield" alt="Discord Server">
+  <a href="https://discord.gg/3fBcFFsm6U">
+    <img src="https://discordapp.com/api/guilds/790349905675026434/widget.png?style=shield" alt="Discord Server">
   </a>
   <a href="https://github.com/discordutilitybot/utilitybot/actions/">
     <img src="https://img.shields.io/github/workflow/status/discordutilitybot/utilitybot/Linting" alt="GitHub Actions">
