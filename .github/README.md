@@ -7,11 +7,11 @@
 <h4 align="center">Moderation, Games, Utilites, Music and much more!</h4>
 
 <p align="center">
-  <a href="https://discord.gg/7ERYgW73Ay">
-    <img src="https://discordapp.com/api/guilds/742193197673087027/widget.png?style=shield" alt="Discord Server">
+  <a href="https://discord.gg/3fBcFFsm6U">
+    <img src="https://discordapp.com/api/guilds/790349905675026434/widget.png?style=shield" alt="Discord Server">
   </a>
   <a href="https://github.com/discordutilitybot/utilitybot/actions/">
-    <img src="https://img.shields.io/github/workflow/status/discordutilitybot/utilitybot/ Build?label=Build" alt="GitHub Actions">
+    <img src="https://img.shields.io/github/workflow/status/discordutilitybot/utilitybot/Linting" alt="GitHub Actions">
   </a>
   <a href="https://github.com/Rapptz/discord.py/">
      <img src="https://img.shields.io/badge/discord-py-blue.svg" alt="discord.py">
@@ -65,12 +65,15 @@ Released under the [MIT License](https://opensource.org/licenses/MIT) license.
 
 Logo created by [PineappleRind](https://pineapplerind.github.io) 
 
-# Credits
-
-- [Andrew Nijmeh](https://github.com/andrewnijmeh) - Main bot developer
-- [Aditya Kapoor](https://github.com/thecodingguru) - Web developer and secondary bot developer
-- [PineappleRind](https://pineapplerind.github.io/) - Web developer, designer and assistant bot developer
+# Contributors
+Andrew Nijmeh
+PineappleRind
+Aditya Kapoor
+flopana
+svcodes
+yak-fumblepack
 
 
 # Donators
 > Over here we will have a list of all our donators who have donated via patreon! you can donate via clicking on the sponsor button on the top of the repository and clickong on the patreon link.
+
