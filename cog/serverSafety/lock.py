@@ -30,6 +30,7 @@ class Lock(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.states = {}
+        
     @commands.has_permissions(manage_channels=True)
     @commands.command(pass_context=True, name="lockdown")
     async def lockdown(self, ctx):
