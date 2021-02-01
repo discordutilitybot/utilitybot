@@ -32,7 +32,7 @@ class Invite(commands.Cog):
     
     @commands.command(aliases=['inv, botinvite'])
     async def invite(self, ctx):
-        await ctx.send("Here is the invite link for utilitybot: \n")
+        await ctx.send("Here is the invite link for utilitybot: https://discord.com/api/oauth2/authorize?client_id=790399381840068619&permissions=2147483639&scope=bot \n")
 
 def setup(bot):
     bot.add_cog(Invite(bot))
