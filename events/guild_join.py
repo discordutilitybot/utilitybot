@@ -35,7 +35,7 @@ class GuildJoin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-       
+        
         permissions = discord.Permissions(send_messages=False, speak=False, read_messages=True)
         await self.bot.create_role(
             name="Muted", 
@@ -43,7 +43,7 @@ class GuildJoin(commands.Cog):
             permissions=permissions,
             color=discord.Color.orange())
 
-        await ctx.send("**Thank you for adding me!** :white_check_mark:\n - My prefix is u! but you can change it using u!prefix [prefix]\n - You can see a list of commands by typing u!help\n - If you need help, feel free to join our support server https://utilitybot.co/suppor")
+        await self.channel.send("**Thank you for adding me!** :white_check_mark:\n - My prefix is u! but you can change it using u!prefix [prefix]\n - You can see a list of commands by typing u!help\n - If you need help, feel free to join our support server https://utilitybot.co/suppor")
 
         
        

@@ -34,7 +34,7 @@ class MemberRemove(commands.Cog):
     @commands.Cog.listener()
     # For kick, ban it will be more specific in the log this is just a global event for kick ban etc
     async def on_member_remove(self, member):
-        query = f"""SELECT logging_leave FROM guild_settings WHERE id = {self.bot} """
+        query = f"""SELECT logging FROM guild_settings WHERE id = {self.bot} """
         leavech = self.bot.db.execute(query)
         if leavech:
             moderator = None
