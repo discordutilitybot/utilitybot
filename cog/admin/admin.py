@@ -10,7 +10,7 @@ import re
 import datetime
 from discord import Member, TextChannel, Role
 
-class Moderation(commands.Cog, name="Moderation"):
+class Admin(commands.Cog, name="Moderation"):
 
     def __init__(self, bot):
         self.bot = bot
@@ -42,12 +42,12 @@ class Moderation(commands.Cog, name="Moderation"):
             try:
                 await target.send(embed=embed2)
             except:
-                await ctx.send('diff\n-Failed to DM user, user most likely has DMs off.')
+                await ctx.send('\n-Failed to DM user, user most likely has DMs off.')
             try:
                 await ctx.send(embed=embed)
                 await target.kick(reason = arg2)
             except:
-                await ctx.send('```diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod```')
+                await ctx.send('diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod')
                 
 
     @commands.command()
@@ -127,7 +127,7 @@ class Moderation(commands.Cog, name="Moderation"):
     async def warn(self, ctx, target: discord.Member = None, *, arg: str = None):
         arg2 = arg or 'No reason provided'
         embed = discord.Embed(
-            title = str(target) + 'Has been warned by' + str(ctx.author),
+            title = str(target) +' Has been warned by ' + str(ctx.author),
             description = 'Reason: ' + arg2,
             colour = discord.Colour.orange(),
             timestamp=datetime.datetime.utcnow()
@@ -215,5 +215,5 @@ class Moderation(commands.Cog, name="Moderation"):
             await ctx.send('\n-Failed to change users nickname.\nCheck if I have manage nicknames permissions or if the user is a higher rank than me.')
 
 def setup(bot):
-    bot.add_cog(Moderation(bot))
-    bot.logging.info('Loaded moderation cog!')
+    bot.add_cog(Admin(bot))
+    bot.logging.info('Loaded Admin cog!')

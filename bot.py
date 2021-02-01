@@ -70,22 +70,18 @@ bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
 bot.load_extension("command.github")
+bot.load_extension("cog.admin.admin")
 bot.load_extension("cog.hypixel.guild")
 bot.load_extension("cog.hypixel.hypixel")
 bot.load_extension("cog.hypixel.bedwars")
 bot.load_extension("cog.hypixel.duels")
 bot.load_extension("command.botinfo")
 bot.load_extension("command.server_info")
+bot.load_extension("command.server_icon")
 bot.load_extension("events.Guild.on_guild_channel_create")
-bot.load_extension("cog.music.music")
 bot.load_extension("events.command_error")
 bot.load_extension("command.meme")
+bot.load_extension("cog.misc.games")
+
 
 bot.run(token)
-
-for files in os.listdir('./command'):
-     if files.endswith('.py'):
-        bot.load_extension(f'command.{files[:-3]}')
-        bot.load_extension
-
-bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.qDyXi8X_YS9MUcthUuNl3vmhQU4')

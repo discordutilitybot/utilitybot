@@ -23,7 +23,7 @@ SOFTWARE."""
 import discord
 import re 
 from discord.ext import commands
-import load_moderation
+
 
 
 class Lock(commands.Cog):

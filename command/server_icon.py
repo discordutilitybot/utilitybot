@@ -15,6 +15,7 @@ class Servericon(commands.Cog):
                    url=str(guild.avatar_url_as(static_format='png', size=2048))
                )
             ))
+            
 def setup(bot):
     bot.add_cog(Servericon(bot))
     bot.logging.info("Loaded Servericon command")
