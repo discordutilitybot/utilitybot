@@ -36,9 +36,9 @@ class Botinfo(commands.Cog):
             color = discord.Color.orange()
         )   
         
-        embed.set_image(url="https://cdn.discordapp.com/avatars/742196911523627068/e53fa8ac8c8492ea6d67e7e217520e26.png?size=2048")
-        embed.set_thumbnail(url="https://cdn.discordapp.com/avatars/742196911523627068/e53fa8ac8c8492ea6d67e7e217520e26.png?size=2048")
-        embed.set_footer(text=f"Guilds: {len(self.bot.guilds)}. Utility Bot The Server Management Bot.")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/790349906648498219/805846213475827722/Screen_Shot_2021-01-04_at_7.png?size=2048")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/790349906648498219/805846213475827722/Screen_Shot_2021-01-04_at_7.png?size=2048")
+        embed.set_footer(text=f"Server: {len(self.bot.guilds)}. Utility Bot The Server Management Bot.")
 
         await ctx.send(embed=embed)
 

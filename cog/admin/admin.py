@@ -47,7 +47,7 @@ class Admin(commands.Cog, name="Moderation"):
                 await ctx.send(embed=embed)
                 await target.kick(reason = arg2)
             except:
-                await ctx.send('diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod')
+                await ctx.send('Failed to kick member, check for the following:\n - Utility Bot requires kick permissions\n - Not high enough on role hiearchy\n- Member is an admin/mod')
                 
 
     @commands.command()
@@ -56,30 +56,30 @@ class Admin(commands.Cog, name="Moderation"):
     async def ban(self, ctx, target: discord.Member = None, *, arg: str = None):
         arg2 = arg or 'No reason provided'
         embed = discord.Embed(
-            title='kick',
+            title='ban',
             description='Reason: ' + arg2,
             colour = discord.Colour.orange(),
             timestamp=datetime.datetime.utcnow()
         ) 
         embed2 = discord.Embed(
-            title= 'You wer kicked from ' + ctx.guild.name,
+            title= 'You were banned from ' + ctx.guild.name,
             description='Reason' + arg2,
             colour=discord.Colour.orange(),
             timestamp=datetime.datetime.utcnow()
         )
 
         if target == None:
-            await ctx.send('u!kick [member] [reason (Optional)]')
+            await ctx.send('u!ban [member] [reason (Optional)]')
         else:
             try:
                 await target.send(embed=embed2)
             except:
-                await ctx.send('diff\n-Failed to DM user, user most likely has DMs off.')
+                await ctx.send('\n-Failed to DM user, user most likely has DMs off.')
         try:
             await ctx.send(embed=embed)
             await target.kick(reason=arg2)
         except:
-            await ctx.send('diff\n-Failed to kick member, check for the following:\n\nUtility Bot requires kick permissions\nNot high enough on role hiearchy\n-Member is an admin/mod```')
+            await ctx.send(' - Failed to ban member, check for the following:\n - Utility Bot requires ban permissions\n - Not high enough on role hiearchy - \n - u!pMember is an admin/mod')
 
     @commands.command()
     @commands.cooldown(1, 5, commands.BucketType.guild)
@@ -114,7 +114,7 @@ class Admin(commands.Cog, name="Moderation"):
                 purge = int(arg) + 1
                 await ctx.channel.purge(limit=purge)
                 embed = discord.Embed(
-                    title = str(arg) +  ':giff: Messages were purged!',
+                    title = str(arg) +  'Messages were purged!',
                     colour = discord.Colour.green()
                 )
                 await ctx.send(embed=embed)

@@ -46,7 +46,7 @@ token = os.environ.get('discord_token')
 bot = Utilitybot(
     command_prefix='u!',
     status=discord.Status.online,
-    activity= discord.Game(name="utilitybot.co | u!help", type=3),
+    activity= discord.Game(name="utilitybot.co | u!invite", type=3),
     case_insensitive=False,
 )
 
@@ -57,7 +57,7 @@ async def start_db():
             "user": "postgres",
             "password": POSTGRES_PASSWORD,
             "database": DATABASE,
-            "host": '127.0.0.1'
+            "host": '172.105.104.44'
         }
 
         bot.db = asyncpg.create_pool(**login_data)
@@ -82,6 +82,8 @@ bot.load_extension("events.Guild.on_guild_channel_create")
 bot.load_extension("events.command_error")
 bot.load_extension("command.meme")
 bot.load_extension("cog.misc.games")
-
+bot.load_extension("command.invite")
+bot.load_extension("command.talk")
+bot.load_extension("command.ping")
 
 bot.run(token)
