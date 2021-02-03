@@ -30,7 +30,7 @@ class Help(commands.Cog):
         self.bot = bot
 
 
-    async def helpp(self, ctx):
+    async def help(self, ctx):
         embed = discord.Embed(colour=ctx.author.color, description=f'''Here\'s some helpful links
     [Commands](https://utilitybot.co/commands)
     [Support Server](sereverlinkhere)
