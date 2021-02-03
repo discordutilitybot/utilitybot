@@ -66,12 +66,12 @@ Released under the [MIT License](https://opensource.org/licenses/MIT) license.
 Logo created by [PineappleRind](https://pineapplerind.github.io) 
 
 # Contributors
-Andrew Nijmeh
-PineappleRind
-Aditya Kapoor
-flopana
-svcodes
-yak-fumblepack
+- Andrew Nijmeh
+- PineappleRind
+- Aditya Kapoor
+- flopana
+- svcodes
+- yak-fumblepack
 
 
 # Donators
