@@ -35,6 +35,7 @@ import os
 from os.path import join, dirname
 from dotenv import load_dotenv
 import json
+import datetime
 
 dotenv_path = join(dirname(__file__), 'config.env')
 load_dotenv(dotenv_path)
@@ -49,6 +50,7 @@ bot = Utilitybot(
     activity= discord.Game(name="utilitybot.co | u!invite", type=3),
     case_insensitive=False,
 )
+bot.remove_command("help")
 
 bot.load_extension("cog.serverSafety.lock")
 async def start_db():
@@ -85,5 +87,25 @@ bot.load_extension("cog.misc.games")
 bot.load_extension("command.invite")
 bot.load_extension("command.talk")
 bot.load_extension("command.ping")
+bot.load_extension('command.about')
+bot.load_extension("command.channelinfo")
+
+@bot.command(aliases = ['commands'])
+@commands.cooldown(1, 5, commands.BucketType.guild)
+async def help(ctx):
+    embed = discord.Embed(
+        title = 'List of available Commands, all Commands are case insensitive',
+        colour = discord.Colour.blue(),
+        description = '`Important Links:` [websbite] (https://utilitybot.co)',
+        timestamp=datetime.datetime.utcnow()
+    )
+    embed.add_field(name = 'Commands Categories 📖', value = '`Utility, Fun, Bot, Moderation`', inline = False)
+    embed.add_field(name = 'Bot 🤖', value = '`help, info, invite, ping`', inline = False)
+    embed.add_field(name = 'Fun 🎉', value = '`eightball, coinflip`', inline = False)
+    embed.add_field(name = 'Utility ⚙️', value = '`servericon, avatar, channel_information`', inline = False)
+    embed.add_field(name = 'Moderation ⚒️', value = '`poll, ban, unban, mute, unmute, warn, kick,purge, nick`', inline = False)
+    embed.set_footer(text = 'Utility Bot, The ultimate server management bot')
+    embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/790349906648498219/805846213475827722/Screen_Shot_2021-01-04_at_7.png?size=2048')
+    await ctx.send(embed=embed)
 
 bot.run(token)
