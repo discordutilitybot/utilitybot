@@ -96,7 +96,7 @@ async def help(ctx):
     embed = discord.Embed(
         title = 'List of available Commands, all Commands are case insensitive',
         colour = discord.Colour.blue(),
-        description = '`Important Links:` [websbite] (https://utilitybot.co)',
+        description = '`Social medias `https://utilitybot.co, https://discord.gg/3fBcFFsm6U, https://twitter.com/utilitybot1 ',
         timestamp=datetime.datetime.utcnow()
     )
     embed.add_field(name = 'Commands Categories 📖', value = '`Utility, Fun, Bot, Moderation`', inline = False)
