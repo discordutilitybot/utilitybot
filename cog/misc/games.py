@@ -10,7 +10,7 @@ class RNG(commands.Cog):
     @commands.command()
     async def roll(self, ctx, num):
         final = random.randint(1, num)
-        await ctx.send(num)
+        await ctx.send(final)
     
     @commands.command(aliases=["cf"])
     async def coinflip(self, ctx):

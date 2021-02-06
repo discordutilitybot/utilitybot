@@ -37,19 +37,28 @@ class Admin(commands.Cog, name="Moderation"):
         )
 
         if target == None:
-            await ctx.send('u!kick [member] [reason (Optional)]')
+            embed = discord.Embed(
+                title = 'You must specify a user to kick.',
+                colour = discord.Colour.orange(),
+                timestamp=datetime.datetime.utcnow()
+            )
+            await ctx.send(embed=embed)
         else:
             try:
                 await target.send(embed=embed2)
             except:
-                await ctx.send('\n-Failed to DM user, user most likely has DMs off.')
+                embed = discord.Embed(
+                title = 'Failed to DM user, user most likely has DMS off.',
+                colour = discord.Colour.orange(),
+                timestamp=datetime.datetime.utcnow()
+                )
+                await ctx.send(embed=embed)
             try:
                 await ctx.send(embed=embed)
-                await target.kick(reason = arg2)
+                await target.kick(reason=arg2)
             except:
-                await ctx.send('Failed to kick member, check for the following:\n - Utility Bot requires kick permissions\n - Not high enough on role hiearchy\n- Member is an admin/mod')
+                pass
                 
-
     @commands.command()
     @commands.cooldown(1, 5, commands.BucketType.guild)
     @commands.has_permissions(ban_members=True)
@@ -69,17 +78,26 @@ class Admin(commands.Cog, name="Moderation"):
         )
 
         if target == None:
-            await ctx.send('u!ban [member] [reason (Optional)]')
+            embed = discord.Embed(
+                title = 'You must specify a user to ban.',
+                colour = discord.Colour.orange(),
+                timestamp=datetime.datetime.utcnow()
+            )
+            await ctx.send(embed=embed)
         else:
             try:
                 await target.send(embed=embed2)
             except:
-                await ctx.send('\n-Failed to DM user, user most likely has DMs off.')
+                embed = discord.Embed(
+                    title='Failed to DM user, user most likely has DMs off.',
+                    timestamp=datetime.datetime.utcnow()
+                )
+                await ctx.send(embed=embed)
         try:
             await ctx.send(embed=embed)
             await target.kick(reason=arg2)
         except:
-            await ctx.send(' - Failed to ban member, check for the following:\n - Utility Bot requires ban permissions\n - Not high enough on role hiearchy - \n - u!pMember is an admin/mod')
+            pass
 
     @commands.command()
     @commands.cooldown(1, 5, commands.BucketType.guild)
@@ -93,7 +111,10 @@ class Admin(commands.Cog, name="Moderation"):
 
             if(user.name, user.discriminator) == (name, discriminator):
                 await ctx.guild.unban(user)
-                await ctx.send(f"{user.mention} was unbanned.")
+                embed = discord.Embed(
+                    title=f'{user.mention} was unbanned.'
+                )
+                await ctx.send(embed=embed)
                 return
 
     @commands.command()
@@ -101,7 +122,10 @@ class Admin(commands.Cog, name="Moderation"):
     @commands.has_permissions(manage_messages=True)
     async def purge(self, ctx, arg: str=None):
         if arg == None:
-            await ctx.send(':x: **You did not specify an amount do delete | u!purge [amount]')
+            embed = discord.Embed(
+                title='You must specify an amount to purge.'
+            )
+            await ctx.send(embed=embed)
         try:
             if int(arg) > 400:
                 embed = discord.Embed(
@@ -117,7 +141,7 @@ class Admin(commands.Cog, name="Moderation"):
                     title = str(arg) +  'Messages were purged!',
                     colour = discord.Colour.green()
                 )
-                await ctx.send(embed=embed)
+                await ctx.send(embed=embed, delete_after=3)
         except:
             await ctx.send(":x: Failed to purge messages.")
 
@@ -149,23 +173,28 @@ class Admin(commands.Cog, name="Moderation"):
        guild = ctx.guild
        mutedRole = discord.utils.get(guild.roles, name="Muted")
        if member == None or reason == None:
-          await ctx.send('```All parameters required | c!mute [member] [time in seconds)] [reason]```')
+          embed = discord.Embed(
+              title = 'You must specify a user/reason to mute.'
+          )
+          await ctx.send(embed=embed)
           pass
        else:
           if not mutedRole:
-            await ctx.send('```Create a muted role named `Muted`!```')
+            await ctx.send('Create a muted role named Muted!')
             pass
           else:
             try:  
               await member.add_roles(mutedRole, reason=reason)
-              await ctx.send(f"```Muted {member} for reason: {reason}\nMute Length: {length} seconds\nMute Command executed by: {ctx.author}```")
+              await ctx.send(f"Muted {member} for reason: {reason}\nMute Length: {length} seconds\nMute Command executed by: {ctx.author}")
               try:
-                await member.send(f"```You were muted in the server {guild.name} for {reason}\nMute Command executed by: {ctx.author}\nMute Length: {length} seconds```")
+                await member.send(f"You were muted in the server {guild.name} for {reason}\nMute Command executed by: {ctx.author}\nMute Length: {length} seconds")
               except:
-                await ctx.send('```diff\n-Failed to dm user```')  
+                await ctx.send('diff\n-Failed to dm user')  
             except:
-              await ctx.send('```diff\n- Failed to mute member, check for the following:\n\n- Mute role not created\n- Member is a moderator/administrator\n- I do not have manage roles permissions```')
-            
+                embed = discord.Embed(
+                    title='Failed to mute user.'
+                )
+                await ctx.send(embed=embed)
           
             if ctx.guild.id == 751476973477560412:
               updates = ctx.guild.get_channel(785572711300464691)
@@ -186,16 +215,25 @@ class Admin(commands.Cog, name="Moderation"):
     @commands.has_permissions(kick_members = True)
     async def unmute(self, ctx, member: discord.Member=None):
         if member == None:
-          await ctx.send('```All parameters required | c!unmute [member]```')
+          embed = discord.Embed(
+              title='You specify a member to unmute'
+          )
+          await ctx.send(embed=embed)
         else:
           try:
             mutedRole = discord.utils.get(ctx.guild.roles, name="Muted")
             await member.remove_roles(mutedRole)
-            await ctx.send(f"Unmuted {member.mention}")
+            embed = discord.Embed(
+                title=f' Unmuted {member.mention}.'
+            )
+            await ctx.send(embed=embed)
           except:
             await ctx.send('')  
           try:
-            await member.send(f"You were unmuted in the server {ctx.guild.name}")
+            embed = discord.Embed(
+                title = F'You were unmuted in {ctx.guild.name}.'
+            )
+            await ctx.send(embed=embed)
           except:
             await ctx.send('Failed to DM user :(.')
 

@@ -31,7 +31,11 @@ class Github(commands.Cog):
 
     @commands.command(aliases=['src, oss, source'])
     async def github(self, ctx):
-        await ctx.send("You can find Utility Bot's source code here: \n https://github.com/discordutilitybot/utilitybot.")
+        embed = discord.Embed(
+            title='https://github.com/discordutilitybot/utilitybot',
+        )
+        await ctx.send(embed=embed)
+      
         
 
 def setup(bot):

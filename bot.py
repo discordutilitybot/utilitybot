@@ -44,12 +44,29 @@ POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
 
+def get_prefix(bot, message):
+    with open('prefixes.json', 'r') as f:
+        prefixes = json.load(f)
+
+    return prefixes[str(message.guild.id)]
+
 bot = Utilitybot(
-    command_prefix='u!',
+    command_prefix=get_prefix,
     status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!invite", type=3),
     case_insensitive=False,
 )
+
+@bot.event()
+async def on_guild_join(guild):
+    with open('prefixes.json', 'r') as f:
+        prefixes = json.load(f)
+
+    prefixes[str(guild.id)] = 'u!'
+
+    with open('prefixes.json', 'w') as f:
+        json.dump(prefixes, f)
+
 bot.remove_command("help")
 
 bot.load_extension("cog.serverSafety.lock")
@@ -63,12 +80,12 @@ async def start_db():
         }
 
         bot.db = asyncpg.create_pool(**login_data)
+        bot.logging.info("Connected to database pool.")
     except KeyboardInterrupt:
         pass
         
 
 bot.remove_command("help")
-bot.load_extension("command.help")
 bot.load_extension("command.twitter")
 bot.load_extension("command.avatar")
 bot.load_extension("command.github")

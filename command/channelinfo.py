@@ -1,15 +1,17 @@
 import discord
 from discord.ext import commands
 import datetime
+import asyncio
+from typing import Optional
 
 
 class Channelinfo(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
   
-    @commands.command()
-    @commands.cooldown(1, 5, commands.BucketType.guild)
-    async def channel_info(self, ctx, chan: [discord.TextChannel]):
+  @commands.command()
+  @commands.cooldown(1, 5, commands.BucketType.guild)
+  async def channelinfo(self, ctx, chan: Optional[discord.TextChannel]):
         channel = chan
         if channel == None:
             channel = ctx.channel

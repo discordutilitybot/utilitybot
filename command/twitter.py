@@ -30,8 +30,10 @@ class Twitter(commands.Cog):
 
     @commands.command()
     async def twitter(self, ctx):
-        await ctx.send("Here's a link to utility bot's twitter \nhttps://twitter.com/utilitybot1")
-
+        embed = discord.Embed(
+            title = 'https://twitter.com/utilitybot1'
+        )
+        await ctx.send(embed=embed)
 
 def setup(bot):
     bot.add_cog(Twitter(bot))

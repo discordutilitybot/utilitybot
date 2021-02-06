@@ -28,5 +28,15 @@ class Premium(commands.Cog):
     self.bot = bot
     self.premium = {}
 
-    def is_premium_guild(self, ctx):
-      return ctx.message.guilld.id == 
+  def is_premium(self, ctx):
+    return ctx.message.guilld.id == [702173174107996170, 800132845552271413, 467930052470767636, 751476973477560412]
+    
+  @commands.command()
+  @has_premium()
+  async def test(self, ctx):
+    pass
+
+
+def setup(bot):
+  bot.add_cog(Premium(bot))
+  bot.logging.info("Loaded premium cog!")

@@ -62,7 +62,6 @@ class Morse(commands.Cog):
 		
 	@commands.command(pass_context=True)
 	async def morse(self, ctx, *, content = None):
-		"""ascii to morse code"""
 
 		if content == None:
 			await ctx.send("Usage `{}morse [content]`".format(ctx.prefix))

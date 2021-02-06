@@ -78,4 +78,4 @@ class Polls(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Polls(bot))
-    bot.logging.info("Loaded cog!")
+    bot.logging.info("Loaded poll system!")
