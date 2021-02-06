@@ -25,10 +25,7 @@ class Hypixel(commands.Cog):
 
         async with channel.typing():
             async with aiohttp.ClientSession() as session:
-
-                async with session.get(f'https://api.slothpixel.me/api/players/{user}') as resp:
-                    player = await resp.json()
-
+                # second request here was redundant so i removed it
                 async with session.get(f'https://api.slothpixel.me/api/guilds/{user}') as resp:
                         guild = await resp.json()
 

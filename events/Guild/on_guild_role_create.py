@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 import datetime
 
+
 class RoleCreate(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -18,9 +19,10 @@ class RoleCreate(commands.Cog):
             embed.set_footer(text=f"Role ID: {role.id}")
             try:
                 await logch.send(embed=embed)
-            except Exception:
+            except discord.HTTPException:
                 pass
-        
+
+
 def setup(bot):
     bot.add_cog(RoleCreate(bot))
     bot.logging.info("Loaded event RoleCreate")

@@ -28,31 +28,29 @@ from discord.utils import get
 import asyncpg
 import logging
 
+
 class GuildJoin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-       
         permissions = discord.Permissions(send_messages=False, speak=False, read_messages=True)
-        await self.bot.create_role(
-            name="Muted", 
+        await guild.create_role(  # await self.bot.create_role(``: bot doesn't have the create_role attr, changed that to ``guild``
+            name="Muted",
             reason="Utility bot's Default Muted Role on join. (used for muting)",
             permissions=permissions,
             color=discord.Color.orange())
-        
+
         # Insert global guild data
-        self.bot.db.execute("INSERT INTO guilds (guild_id, guild_roles, guild_channels, guild_messages, guild_voice_channels, guild_categorys)")
+        self.bot.db.execute(
+            "INSERT INTO guilds (guild_id, guild_roles, guild_channels, guild_messages, guild_voice_channels, guild_categorys)")
 
         # Insert data for guild settings and prefix's..
-        self.bot.db.execute(f"INSERT INTO guild_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, logging_leave, logging_messages) VALUES ({guild.id}, Muted,")
+        self.bot.db.execute(
+            f"INSERT INTO guild_settings (guild_id, muted_role, guild_prefix,  logging_moderation, logging_action, logging_join, logging_leave, logging_messages) VALUES ({guild.id}, Muted,")
 
 
-
-        
 def setup(bot):
-    bot.add_cog(GuildJoin(bot)) 
+    bot.add_cog(GuildJoin(bot))
     bot.logging.info("Loaded event GuildJoin")
-    

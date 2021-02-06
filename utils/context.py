@@ -23,7 +23,6 @@ import discord
 from discord.ext import commands
 
 
-
 class Context(commands.Context):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -46,8 +45,10 @@ class Context(commands.Context):
             discord.Color.red(),
             discord.Color.teal()
         ]
-    
+
     async def modlog(self, embed: discord.Embed):
         pass
 
-    async actionlog(self, embed: discord.Embed)
+    async def actionlog(self, embed: discord.Embed):
+        # wow you screwed that up
+        pass

@@ -33,6 +33,7 @@ class Avatar(commands.Cog):
     @commands.command(name="avatar", aliases=["av", "pfp"])
     @commands.max_concurrency(1, per=commands.BucketType.user)
     async def avatar(self, ctx, target: typing.Union[discord.Member, discord.User, str, None]):
+        # why....??????????
         if isinstance(target, str):
             return await ctx.send(embed=discord.Embed(
                 description=f"User \"{target}\" not found",
