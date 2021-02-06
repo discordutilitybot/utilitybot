@@ -28,8 +28,8 @@ class Premium(commands.Cog):
     self.bot = bot
     self.premium = {}
 
-  def is_premium(self, ctx):
-    return ctx.message.guilld.id == [702173174107996170, 800132845552271413, 467930052470767636, 751476973477560412]
+  def is_premium(self, ctx):  # guilld
+    return ctx.message.guild.id == [702173174107996170, 800132845552271413, 467930052470767636, 751476973477560412]
     
   @commands.command()
   @has_premium()

@@ -1,13 +1,13 @@
 import discord
 from discord.ext import commands
-
+from datetime import datetime
 
 class Userinfo(commands.Cog):
-  def __init__(self, bot:
+  def __init__(self, bot):  # missing parentheses
     self.bot = bot
   
   @commands.command()
-  async def userinfo(ctx, target: Optional[Member]):
+  async def userinfo(ctx, target: Optional[discord.Member]):
     if ctx.author.guild_permissions.administrator:
         x = ctx.guild.members
         if target in x:
@@ -34,6 +34,6 @@ class Userinfo(commands.Cog):
     else:
         await ctx.send(f'Not enough permissions')
 
-def setup(Userinfo):
+def setup(bot):  # nice one
   bot.add_cog(Userinfo(bot))
   bot.logging.info("Loaded userinfo command")

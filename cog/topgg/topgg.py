@@ -8,7 +8,7 @@ class TopGG(commands.Cog):
     self.bot = bot
     self.token =  ''
     
-    self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True, # This posts guild every 30 minute intervalds)
+    self.dblpy = dbl.DBLClient(self.bot, self.token, autopost=True)  # This posts guild every 30 minute intervalds
 
     async def on_guild_post():
         bot.logging.info("Server count posted!")

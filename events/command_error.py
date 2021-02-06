@@ -37,24 +37,24 @@ class Commanderror(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-    
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
-            
+
         """checks the discord errors vs the python exceptions/errors and returns true if there is none"""
+        # note from contributor: this does not do that, do you have any idea what you're doing?
         if hasattr(ctx.command, "on_error"):
             return
 
         if isinstance(error, commands.CommandNotFound):
             return await ctx.send('Command not found, there may be a typo in the command.')
-       
+
         if isinstance(error, commands.NoPrivateMessage):
             return await ctx.send("You cannot use commands in a private message please go to a server to run commands.")
-        
+
         if isinstance(error, commands.MissingPermissions):
             return await ctx.send("You dont have the permissions to perform this command")
-            
+
         if isinstance(error, commands.BotMissingPermissions):
             return await ctx.send("You dont have the permissions to perform this command")
 
@@ -63,9 +63,10 @@ class Commanderror(commands.Cog):
 
         if isinstance(error, commands.CommandNotFound):
             return await ctx.send(f"Command not found! :( Please try again")
-def setup(bot):
 
+        # You're eating errors, anything that doesn't match will just be eaten.
+
+
+def setup(bot):
     bot.add_cog(Commanderror(bot))
     bot.logging.info("Loaded event CommandError")
-
-    

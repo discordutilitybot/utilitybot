@@ -1,7 +1,8 @@
 import discord
-import discord.ext 
+import discord.ext
 from discord.ext import commands
 import datetime
+
 
 class RoleDelete(commands.Cog):
     def __init__(self, bot):
@@ -15,12 +16,12 @@ class RoleDelete(commands.Cog):
                 datetime.timezone.utc), description=f'**The role** `{role.name}` **was deleted**')
             embed.set_author(name=role.guild.name,
                              icon_url=str(role.guild.icon_url))
-            embed.set_footer(text=f"Role ID: {role.id}") 
+            embed.set_footer(text=f"Role ID: {role.id}")
             try:
                 await logch.send(embed=embed)
-            except Exception:
+            except discord.HTTPException:
                 pass
-    
+
 
 def setup(bot):
     bot.add_cog(RoleDelete(bot))

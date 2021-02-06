@@ -34,7 +34,7 @@ class Invite(commands.Cog):
     async def invite(self, ctx):
        embed = discord.Embed(
            title = 'https://discord.com/api/oauth2/authorize?client_id=790399381840068619&permissions=2147483639&scope=bot'
-
+           # why the title
        )
        await ctx.send(embed=embed)
 

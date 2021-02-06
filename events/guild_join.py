@@ -28,31 +28,29 @@ from discord.utils import get
 import asyncpg
 import logging
 
+
 class GuildJoin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        
+        # A few problems here:
+        #
+        # await self.bot.create_role(``: bot doesn't have the create_role attr, changed that to ``guild``
+        #
+        # ``self.channel``: self.channel is undefined
         permissions = discord.Permissions(send_messages=False, speak=False, read_messages=True)
-        await self.bot.create_role(
-            name="Muted", 
+        await guild.create_role(
+            name="Muted",
             reason="Utility bot's Default Muted Role on join.",
             permissions=permissions,
             color=discord.Color.orange())
 
-        await self.channel.send("**Thank you for adding me!** :white_check_mark:\n - My prefix is u! but you can change it using u!prefix [prefix]\n - You can see a list of commands by typing u!help\n - If you need help, feel free to join our support server https://utilitybot.co/suppor")
+        await self.channel.send(
+            "**Thank you for adding me!** :white_check_mark:\n - My prefix is u! but you can change it using u!prefix [prefix]\n - You can see a list of commands by typing u!help\n - If you need help, feel free to join our support server https://utilitybot.co/suppor")
 
-        
-       
-        
-        
-        
-    
-        
+
 def setup(bot):
-    bot.add_cog(GuildJoin(bot)) 
+    bot.add_cog(GuildJoin(bot))
     bot.logging.info("Loaded event GuildJoin")
-    

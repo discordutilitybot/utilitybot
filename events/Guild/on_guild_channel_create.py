@@ -24,6 +24,7 @@ import discord
 from discord.ext import commands
 from discord.utils import get
 
+
 class ChannelCreate(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -32,8 +33,8 @@ class ChannelCreate(commands.Cog):
     async def on_guild_channel_create(self, channel):
         actionlogch = self.bot.get_channel(742195223664394310)
 
+        createdby = None
         if actionlogch:
-            createdby =  None
             if channel.guild.me.guild_permissions.view_audit_log:
                 async for e in channel.guild.audit_logs(action=discord.AuditLogAction.channel_create, limit=5):
                     if e.target.id == channel.id:
@@ -50,17 +51,16 @@ class ChannelCreate(commands.Cog):
             )
         embed.set_author(name=channel.guild.name,
                          icon_url=str(channel.guild.icon_url, size=2048)
-        )              
+                         )
         embed.set_footer(
             text=f"Channel ID: {channel.id} | Guild ID: {channel.guild.id}")
-        
+
         try:
             await actionlogch.send(embed=embed)
-        except Exception:
+        except discord.HTTPException:
             pass
+
 
 def setup(bot):
     bot.add_cog(ChannelCreate(bot))
     bot.logging.info("$GREENLoaded event $CYANChannelCreate")
-   
-

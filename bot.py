@@ -44,19 +44,24 @@ POSTGRES_PASSWORD = os.environ.get("database_password")
 DATABASE = os.environ.get('database')
 token = os.environ.get('discord_token')
 
+
+# I see you stole code here
 def get_prefix(bot, message):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
 
     return prefixes[str(message.guild.id)]
 
+
 bot = Utilitybot(
     command_prefix=get_prefix,
     status=discord.Status.online,
-    activity= discord.Game(name="utilitybot.co | u!invite", type=3),
+    activity=discord.Game(name="utilitybot.co | u!invite", type=3),
     case_insensitive=False,
 )
 
+
+# more stolen code
 @bot.event()
 async def on_guild_join(guild):
     with open('prefixes.json', 'r') as f:
@@ -67,9 +72,12 @@ async def on_guild_join(guild):
     with open('prefixes.json', 'w') as f:
         json.dump(prefixes, f)
 
+
 bot.remove_command("help")
 
 bot.load_extension("cog.serverSafety.lock")
+
+
 async def start_db():
     try:
         login_data = {
@@ -83,7 +91,7 @@ async def start_db():
         bot.logging.info("Connected to database pool.")
     except KeyboardInterrupt:
         pass
-        
+
 
 bot.remove_command("help")
 bot.load_extension("command.twitter")
@@ -107,23 +115,28 @@ bot.load_extension("command.ping")
 bot.load_extension('command.about')
 bot.load_extension("command.channelinfo")
 
-@bot.command(aliases = ['commands'])
+
+# Ever heard of subclassing commands.HelpCommand?
+@bot.command(aliases=['commands'])
 @commands.cooldown(1, 5, commands.BucketType.guild)
 async def help(ctx):
     embed = discord.Embed(
-        title = 'List of available Commands, all Commands are case insensitive',
-        colour = discord.Colour.blue(),
-        description = '`Social medias `https://utilitybot.co, https://discord.gg/3fBcFFsm6U, https://twitter.com/utilitybot1 ',
+        title='List of available Commands, all Commands are case insensitive',
+        colour=discord.Colour.blue(),
+        description='`Social medias `https://utilitybot.co, https://discord.gg/3fBcFFsm6U, https://twitter.com/utilitybot1 ',
         timestamp=datetime.datetime.utcnow()
     )
-    embed.add_field(name = 'Commands Categories 📖', value = '`Utility, Fun, Bot, Moderation`', inline = False)
-    embed.add_field(name = 'Bot 🤖', value = '`help, botinfo, invite, ping`', inline = False)
-    embed.add_field(name = 'Fun 🎉', value = '`eightball, coinflip`', inline = False)
-    embed.add_field(name = 'Integrations 🎉', value = '`hypixel, bedwars, duels, guild, meme`', inline = False)
-    embed.add_field(name = 'Utility ⚙️', value = '`servericon, avatar, channel_information`', inline = False)
-    embed.add_field(name = 'Moderation ⚒️', value = '`poll, ban, unban, mute, unmute, warn, kick,purge, nick`', inline = False)
-    embed.set_footer(text = 'Utility Bot, The ultimate server management bot')
-    embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/790349906648498219/805846213475827722/Screen_Shot_2021-01-04_at_7.png?size=2048')
+    embed.add_field(name='Commands Categories 📖', value='`Utility, Fun, Bot, Moderation`', inline=False)
+    embed.add_field(name='Bot 🤖', value='`help, botinfo, invite, ping`', inline=False)
+    embed.add_field(name='Fun 🎉', value='`eightball, coinflip`', inline=False)
+    embed.add_field(name='Integrations 🎉', value='`hypixel, bedwars, duels, guild, meme`', inline=False)
+    embed.add_field(name='Utility ⚙️', value='`servericon, avatar, channel_information`', inline=False)
+    embed.add_field(name='Moderation ⚒️', value='`poll, ban, unban, mute, unmute, warn, kick,purge, nick`',
+                    inline=False)
+    embed.set_footer(text='Utility Bot, The ultimate server management bot')
+    embed.set_thumbnail(
+        url='https://cdn.discordapp.com/attachments/790349906648498219/805846213475827722/Screen_Shot_2021-01-04_at_7.png?size=2048')
     await ctx.send(embed=embed)
+
 
 bot.run(token)
