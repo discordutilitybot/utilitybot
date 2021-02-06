@@ -55,9 +55,6 @@ Here are a few examples:
 - Edit roles
 - Logging categories e.g: moderation, action logs message logs.
 
-# Join the community!
-[discord](https://discord.gg/7ERYgW73Ay)
-## 
 We are still working on **Utility Bot** and we appreciate constructive critiscm and feedback to better develop the bot. We also appreciate pull requests to update commands and more! So don't hesitate to contribute.
 
 # License
