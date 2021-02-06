@@ -72,5 +72,5 @@ Logo created by [PineappleRind](https://pineapplerind.github.io)
 
 
 # Donators
-> Over here we will have a list of all our donators who have donated via patreon! you can donate via clicking on the sponsor button on the top of the repository and clickong on the patreon link.
+> Over here we will have a list of all our donators who have donated via patreon! you can donate via clicking on the sponsor button on the top of the repository and clicking on the patreon link.
 
