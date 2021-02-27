@@ -51,13 +51,13 @@ def get_prefix(bot, message):
     return prefixes[str(message.guild.id)]
 
 bot = Utilitybot(
-    command_prefix=get_prefix,
+    command_prefix='u!',
     status=discord.Status.online,
     activity= discord.Game(name="utilitybot.co | u!invite", type=3),
     case_insensitive=False,
 )
 
-@bot.event()
+@bot.event
 async def on_guild_join(guild):
     with open('prefixes.json', 'r') as f:
         prefixes = json.load(f)
@@ -112,8 +112,8 @@ bot.load_extension("command.channelinfo")
 async def help(ctx):
     embed = discord.Embed(
         title = 'List of available Commands, all Commands are case insensitive',
-        colour = discord.Colour.blue(),
-        description = '`Social medias `https://utilitybot.co, https://discord.gg/3fBcFFsm6U, https://twitter.com/utilitybot1 ',
+        colour = discord.Colour.orange(),
+        description = '`Important links `https://utilitybot.co, https://discord.gg/3fBcFFsm6U, https://twitter.com/utilitybot1, https://top.gg/bot/790399381840068619#/  ',
         timestamp=datetime.datetime.utcnow()
     )
     embed.add_field(name = 'Commands Categories 📖', value = '`Utility, Fun, Bot, Moderation`', inline = False)
@@ -126,4 +126,4 @@ async def help(ctx):
     embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/790349906648498219/805846213475827722/Screen_Shot_2021-01-04_at_7.png?size=2048')
     await ctx.send(embed=embed)
 
-bot.run(token)
+bot.run('NzkwMzk5MzgxODQwMDY4NjE5.X-ACyQ.g9EGJ-VrLMbznPIH-WG2spJoDbI')
